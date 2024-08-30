@@ -255,11 +255,12 @@ body{
 }
 
 .btn-default.btn-highlighted:hover{
-	border-color: var(--accent-color);
+	border-color: #bf1e2e;
 }
 
 .btn-default.btn-highlighted::after{
-	background-color: var(--accent-color);
+	background-color: #bf1e2e;
+	
 }
 
 .btn-large{
@@ -506,7 +507,7 @@ header.main-header .header-sticky.active{
 
 .main-menu ul li a:hover,
 .main-menu ul li a:focus{
-	color: var(--accent-color);
+	color: #000000;
 }
 
 .main-menu ul ul{
@@ -523,7 +524,7 @@ header.main-header .header-sticky.active{
 	left: 0;
 	top: 100%;
 	overflow: hidden;
-	background-color: var(--accent-color);
+	background-color:#bf1e2e;
 	transition: all 0.3s ease-in-out;
 	text-align: left;
 }
@@ -1675,7 +1676,7 @@ header.main-header .header-sticky.active{
 .footer-links h3{
 	font-size: 24px;
 	font-weight: 700;
-	color: var(--accent-color);
+	color: #fff;
 	text-transform: capitalize;
 	margin-bottom: 40px;
 }
@@ -1698,7 +1699,7 @@ header.main-header .header-sticky.active{
     position: absolute;
     top: 3px;
     left: 0;
-    background-image: url("../images/readmore-arrow.svg");
+    background-image: url("../images/next\ \(1\).png");
     background-repeat: no-repeat;
     background-position: center center;
     width: 20px;
@@ -1720,7 +1721,7 @@ header.main-header .header-sticky.active{
 }
 
 .footer-links ul li:hover a{
-	color: var(--accent-color);
+	color: #000000;
 }
 
 .footer-contact-box .footer-info-box{
@@ -1778,8 +1779,8 @@ header.main-header .header-sticky.active{
 
 .footer-copyright .footer-social-links ul li a{
 	background-color: transparent;
-	color: var(--accent-color);
-	border: 2px solid var(--accent-color);
+	color: #fff;
+	border: 2px solid #bf1e2e;
     height: 36px;
     width: 36px;
     border-radius: 100%;
@@ -3098,8 +3099,8 @@ header.main-header .header-sticky.active{
 
 .contact-social-list ul li a{
 	background-color: transparent;
-    color: var(--accent-color);
-    border: 2px solid var(--accent-color);
+    color: #fff;
+    border: 2px solid #bf1e2e;
     height: 36px;
     width: 36px;
     border-radius: 100%;
