@@ -298,7 +298,7 @@ body{
 	right: 0;
 	bottom: 0;
 	z-index: 1000;
-	background-color: var(--accent-color);
+	background-color:#fff;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -306,9 +306,9 @@ body{
 
 .loading-container,
 .loading{
-	height: 100px;
+	height:100px;
 	position: relative;
-	width: 100px;
+	width:100px;
 	border-radius: 100%;
 }
 
@@ -401,6 +401,43 @@ body{
     text-transform: uppercase;
     margin-bottom: 20px;
 }
+svg {
+	position: absolute;
+	width: 240px;
+	height: 120px;
+	top: 0; right: 0;
+	bottom: 0; left: 0; 
+	margin: auto;
+  }
+  
+  svg #plug,
+  svg #socket {
+	fill:#bf1e2e;
+  }
+  
+  svg #loop-normal {
+	fill: none;
+	stroke: #bf1e2e;
+	stroke-width: 12;
+  }
+  
+  svg #loop-offset {
+	display: none;
+  }
+  
+  .credit {
+	position: absolute;
+	bottom: 50px;
+	width: 100%;
+	text-align: center;
+  }
+  
+  .credit a {
+	color: #bf1e2e;
+	font: 800 75% "Open Sans", sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+  }
 
 .section-title p{
 	margin-top: 30px;
@@ -590,7 +627,7 @@ header.main-header .header-sticky.active{
 }
 
 .slicknav_btn{
-	background: var(--accent-color);
+	background: #bf1e2e;
 	padding: 6px 0 0;
 	width: 38px;
 	height: 38px;
@@ -625,7 +662,7 @@ header.main-header .header-sticky.active{
 	position: absolute;
     width: 100%;
 	padding: 0;
-	background: var(--accent-color);
+	background: #bf1e2e;
 }
 
 .slicknav_menu ul{
@@ -1227,7 +1264,7 @@ header.main-header .header-sticky.active{
 	font-size: 18px;
 	font-weight: 700;
 	text-transform: capitalize;
-	color: var(--accent-color);
+	color: #bf1e2e;
 	padding-right: 30px;
 	transition: 0.4s ease-in-out;
 }
@@ -1242,7 +1279,7 @@ header.main-header .header-sticky.active{
     top: 1px;
     right: 0;
     bottom: 0;
-    background-image: url("../images/readmore-arrow.svg");
+    background-image: url("../images/arrow.svg");
     background-repeat: no-repeat;
     background-position: center center;
     width: 24px;
@@ -1808,7 +1845,88 @@ header.main-header .header-sticky.active{
 	margin: 0 40px;
 	overflow: hidden;
 	border-radius: 40px;
-	background: url('../images/page-header-bg.jpg') no-repeat center center;
+	/* background: url('../images/page-header-bg.jpg') no-repeat center center; */
+	background-size: cover;
+	padding: 220px 0 120px;
+	position: relative;
+	margin-top: -103px;
+}
+.project{
+	margin: 0 40px;
+	overflow: hidden;
+	border-radius: 40px;
+	background: url('../images/our-projects-bg.png') no-repeat center center;
+	background-size: cover;
+	padding: 220px 0 120px;
+	position: relative;
+	margin-top: -103px;
+}
+.career{
+	margin: 0 40px;
+	overflow: hidden;
+	border-radius: 40px;
+	background: url('../images/careers-banner.jpg') no-repeat center center;
+	background-size: cover;
+	padding: 220px 0 120px;
+	position: relative;
+	margin-top: -103px;
+}
+.conatact{
+	margin: 0 40px;
+	overflow: hidden;
+	border-radius: 40px;
+	background: url('../images/contact-us-bg.png') no-repeat center center;
+	background-size: cover;
+	padding: 220px 0 120px;
+	position: relative;
+	margin-top: -103px;
+}
+.about{
+	margin: 0 40px;
+	overflow: hidden;
+	border-radius: 40px;
+	background: url('../images/about-us.jpg') no-repeat center center;
+	background-size: cover;
+	padding: 220px 0 120px;
+	position: relative;
+	margin-top: -103px;
+}
+
+.about-hse{
+	margin: 0 40px;
+	overflow: hidden;
+	border-radius: 40px;
+	background: url('../images/hse-policy\ \(1\).jpg') no-repeat center center;
+	background-size: cover;
+	padding: 220px 0 120px;
+	position: relative;
+	margin-top: -103px;
+}
+.certificate{
+	margin: 0 40px;
+	overflow: hidden;
+	border-radius: 40px;
+	background: url('../images/certificates-banner-2\ \(1\).jpg') no-repeat center center;
+	background-size: cover;
+	padding: 220px 0 120px;
+	position: relative;
+	margin-top: -103px;
+}
+.staff{
+	margin: 0 40px;
+	overflow: hidden;
+	border-radius: 40px;
+	background: url('../images/staff-banner-2\ \(1\).jpg') no-repeat center center;
+	background-size: cover;
+	padding: 220px 0 120px;
+	position: relative;
+	margin-top: -103px;
+}
+.vahcle{
+	margin: 0 40px;
+	overflow: hidden;
+	border-radius: 40px;
+	background: url('../images/equipments-banner-2.jpg') no-repeat center center;
 	background-size: cover;
 	padding: 220px 0 120px;
 	position: relative;
@@ -2139,7 +2257,7 @@ header.main-header .header-sticky.active{
 
 .video-play-button a i{
 	font-size: 30px;
-	color: var(--accent-color);
+	color:#bf1e2e;
 }
 
 .what-we-do{
@@ -3099,8 +3217,8 @@ header.main-header .header-sticky.active{
 
 .contact-social-list ul li a{
 	background-color: transparent;
-    color: #fff;
-    border: 2px solid #bf1e2e;
+    color: #bf1e2e;
+    border: 2px solid #fff;
     height: 36px;
     width: 36px;
     border-radius: 100%;
@@ -3400,7 +3518,7 @@ header.main-header .header-sticky.active{
 	}
 
 	.navbar{
-		padding: 20px 0px;
+		padding: 2px 0px;
 	}
 
 	.hero.bg-section{

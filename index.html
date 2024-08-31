@@ -13,7 +13,9 @@
 	<!-- Page Title -->
 	<title>AGTc</title>
 	<!-- Favicon Icon -->
-	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon/android-chrome-192x192.png">
+
+
 	<!-- Google Fonts Css-->
 	<link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -35,15 +37,54 @@
 	<!-- Main Custom Css -->
 	<link href="css/custom.css" rel="stylesheet" media="screen">
 </head>
+
 <body>
 
     <!-- Preloader Start -->
 	<div class="preloader">
-		<div class="loading-container">
-			<div class="loading"></div>
-			<div id="loading-icon"><img src="images/loader.svg" alt=""></div>
-		</div>
+		<svg id="preloader" width="240px" height="120px" viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  
+            <path id="loop-normal" class="st1" d="M120.5,60.5L146.48,87.02c14.64,14.64,38.39,14.65,53.03,0s14.64-38.39,0-53.03s-38.39-14.65-53.03,0L120.5,60.5
+          L94.52,87.02c-14.64,14.64-38.39,14.64-53.03,0c-14.64-14.64-14.64-38.39,0-53.03c14.65-14.64,38.39-14.65,53.03,0z">
+              <animate attributeName="stroke-dasharray" from="500, 50" to="450 50" begin="0s" dur="2s" repeatCount="indefinite" />
+              <animate attributeName="stroke-dashoffset" from="-40" to="-540" begin="0s" dur="2s" repeatCount="indefinite" />
+            </path>
+          
+            <path id="loop-offset" d="M146.48,87.02c14.64,14.64,38.39,14.65,53.03,0s14.64-38.39,0-53.03s-38.39-14.65-53.03,0L120.5,60.5L94.52,87.02c-14.64,14.64-38.39,14.64-53.03,0c-14.64-14.64-14.64-38.39,0-53.03c14.65-14.64,38.39-14.65,53.03,0L120.5,60.5L146.48,87.02z"></path>
+          
+            <path id="socket" d="M7.5,0c0,8.28-6.72,15-15,15l0-30C0.78-15,7.5-8.28,7.5,0z">
+              <animateMotion
+                dur="2s"
+                repeatCount="indefinite"
+                rotate="auto"
+                keyTimes="0;1"
+                keySplines="0.42, 0.0, 0.58, 1.0"
+              >
+                <mpath xlink:href="#loop-offset"/>
+              </animateMotion>
+            </path>
+            
+          <path id="plug" d="M0,9l15,0l0-5H0v-8.5l15,0l0-5H0V-15c-8.29,0-15,6.71-15,15c0,8.28,6.71,15,15,15V9z">
+            <animateMotion
+              dur="2s"
+                rotate="auto"
+                repeatCount="indefinite"
+                keyTimes="0;1"    
+                keySplines="0.42, 0, 0.58, 1"
+            >
+              <mpath xlink:href="#loop-normal"/>
+            </animateMotion>
+          </path>   
+            
+          </svg>
+          
+          <div class="credit">
+            <a href="https://algharafacontracting.com/" target="_blank">Al Gharafa Trading and Contracting </a>
+          </div>
 	</div>
+
+    
+
 	<!-- Preloader End -->
 
     <!-- Header Start -->
@@ -53,7 +94,7 @@
 				<div class="container-fluid">
 					<!-- Logo Start -->
 					<a class="navbar-brand" href="index.html">
-						<img src="images/AGTC-Logo_Red-Black 2 (4).png" alt="Logo">
+						<img src="images/AGTC-Logo_Red-Black 2.png" alt="Logo">
 					</a>
 					<!-- Logo End -->
 
@@ -129,7 +170,7 @@
     
                                             <div class="hero-content-body wow fadeInUp" data-wow-delay="0.5s">
                                                 <a href="#" class="btn-default">get started</a>
-                                                <a href="#" class="btn-default btn-highlighted">view Projects</a>
+                                                <a href="project.html" class="btn-default btn-highlighted">view Projects</a>
                                             </div>
                                         </div>
                                         <!-- Hero Content End -->
@@ -230,7 +271,7 @@
                                 </div>
                                 <div class="about-support-content">
                                     <p>call support center 24X7</p>
-                                    <h3>(+974) 66554433</h3>
+                                    <h3>(+974)66554433</h3>
                                 </div>
                             </div>
                         </div>
@@ -280,12 +321,7 @@
                                 <!-- Service Body Title End -->
     
                                 <!-- Service Content Start -->
-                                <div class="service-content">
-                                    <p>Our construction services</p>
-                                    <div class="service-content-footer">
-                                        <a href="#" class="readmore-btn">view more</a>
-                                    </div>
-                                </div>   
+                                 
                                 <!-- Service Content End -->                         
                             </div>
                             <!-- Service Body End -->
@@ -315,12 +351,7 @@
                                 <!-- Service Body Title End -->
     
                                 <!-- Service Content Start -->
-                                <div class="service-content">
-                                    <p>Our construction services</p>
-                                    <div class="service-content-footer">
-                                        <a href="#" class="readmore-btn">view more</a>
-                                    </div>
-                                </div>   
+                                
                                 <!-- Service Content End -->                         
                             </div>
                             <!-- Service Body End -->
@@ -350,12 +381,7 @@
                                 <!-- Service Body Title End -->
     
                                 <!-- Service Content Start -->
-                                <div class="service-content">
-                                    <p>Our construction services</p>
-                                    <div class="service-content-footer">
-                                        <a href="#" class="readmore-btn">view more</a>
-                                    </div>
-                                </div>   
+                                
                                 <!-- Service Content End -->                         
                             </div>
                             <!-- Service Body End -->
@@ -385,12 +411,7 @@
                                 <!-- Service Body Title End -->
     
                                 <!-- Service Content Start -->
-                                <div class="service-content">
-                                    <p>Our construction services</p>
-                                    <div class="service-content-footer">
-                                        <a href="#" class="readmore-btn">view more</a>
-                                    </div>
-                                </div>   
+                                
                                 <!-- Service Content End -->                         
                             </div>
                             <!-- Service Body End -->
@@ -428,12 +449,7 @@
                                 <!-- Service Body Title End -->
     
                                 <!-- Service Content Start -->
-                                <div class="service-content">
-                                    <p>Our construction services</p>
-                                    <div class="service-content-footer">
-                                        <a href="#" class="readmore-btn">view more</a>
-                                    </div>
-                                </div>   
+                               
                                 <!-- Service Content End -->                         
                             </div>
                             <!-- Service Body End -->
@@ -464,12 +480,7 @@
                                 <!-- Service Body Title End -->
     
                                 <!-- Service Content Start -->
-                                <div class="service-content">
-                                    <p>Our construction services</p>
-                                    <div class="service-content-footer">
-                                        <a href="#" class="readmore-btn">view more</a>
-                                    </div>
-                                </div>   
+                               
                                 <!-- Service Content End -->                         
                             </div>
                             <!-- Service Body End -->
@@ -501,12 +512,7 @@
                                 <!-- Service Body Title End -->
     
                                 <!-- Service Content Start -->
-                                <div class="service-content">
-                                    <p>Our construction services</p>
-                                    <div class="service-content-footer">
-                                        <a href="#" class="readmore-btn">view more</a>
-                                    </div>
-                                </div>   
+                                
                                 <!-- Service Content End -->                         
                             </div>
                             <!-- Service Body End -->
@@ -537,12 +543,7 @@
                                 <!-- Service Body Title End -->
     
                                 <!-- Service Content Start -->
-                                <div class="service-content">
-                                    <p>Our construction services</p>
-                                    <div class="service-content-footer">
-                                        <a href="#" class="readmore-btn">view more</a>
-                                    </div>
-                                </div>   
+                               
                                 <!-- Service Content End -->                         
                             </div>
                             <!-- Service Body End -->
@@ -690,7 +691,7 @@
                             <div class="project-image" data-cursor-text="View">
                                 <a href="#">
                                     <figure>
-                                        <img src="images/our-project-1.jpg" alt="">
+                                        <img src="images/main-P001a.jpg" alt="">
                                     </figure>
                                 </a>
                             </div>
@@ -707,9 +708,7 @@
                                 <!-- Project Content Start -->
                                 <div class="project-content">
                                     <p>A Residential Complex comprising of 35 Flats, With a built-up area of 4,531.10 m² will cater to the ever-increasing need of housing services at Umm Ghuwailina.</p>
-                                    <div class="project-content-footer">
-                                        <a href="#" class="readmore-btn">view more</a>
-                                    </div>
+                                    
                                 </div>
                                 <!-- Project Content End -->                       
                             </div>
@@ -725,7 +724,7 @@
                             <div class="project-image" data-cursor-text="View">
                                 <a href="#">
                                     <figure>
-                                        <img src="images/our-project-2.jpg" alt="">
+                                        <img src="images/main-P001b.jpg" alt="">
                                     </figure>
                                 </a>
                             </div>
@@ -744,9 +743,7 @@
                                 <div class="project-content">
                                     <p>A Compound Villa comprising of 4 Villas, With a built-up area of 4,720 m² will cater to the ever-increasing need of housing services at Izghawa.
                                     </p>
-                                    <div class="project-content-footer">
-                                        <a href="#" class="readmore-btn">view more</a>
-                                    </div>
+                                    
                                 </div>
                                 <!-- Project Content End -->                       
                             </div>
@@ -762,7 +759,7 @@
                             <div class="project-image" data-cursor-text="View">
                                 <a href="#">
                                     <figure>
-                                        <img src="images/our-project-3.jpg" alt="">
+                                        <img src="images/main.jpg" alt="">
                                     </figure>
                                 </a>
                             </div>
@@ -780,9 +777,7 @@
                                 <div class="project-content">
                                     <p>A Compound Villa comprising of 6 Villas, With a built-up area of 4,780 m² will cater to the ever-increasing need of housing services at Izghawa.
                                         </p>
-                                    <div class="project-content-footer">
-                                        <a href="#" class="readmore-btn">view more</a>
-                                    </div>
+                                   
                                 </div>
                                 <!-- Project Content End -->                       
                             </div>
@@ -798,7 +793,7 @@
                             <div class="project-image" data-cursor-text="View">
                                 <a href="#">
                                     <figure>
-                                        <img src="images/our-project-4.jpg" alt="">
+                                        <img src="images/main-1.jpg" alt="">
                                     </figure>
                                 </a>
                             </div>
@@ -817,9 +812,7 @@
                                 <div class="project-content">
                                     <p>A Compound villas comprising of 50 Villas, Clubhouse, Swimming Pool, Substation and Guard Rooms for our prestigious tenant “Iskan”. With a built-up area of 13,439.90 m² will cater to the ever increasing need of housing services for government employees.
                                     </p>
-                                    <div class="project-content-footer">
-                                        <a href="#" class="readmore-btn">view more</a>
-                                    </div>
+                                    
                                 </div>
                                 <!-- Project Content End -->                       
                             </div>
@@ -872,154 +865,7 @@
     <!-- Cta Box Section End -->
 
     <!-- Our Testiminial Start -->
-    <div class="our-testimonial">
-        <div class="container">
-            <div class="row section-row">
-                <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">testimonials</h3>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">What people are saying about us</h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.25s">We specialize in a wide range of construction services, including residential, commercial, and industrial projects.</p>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Testimonial Slider Start -->
-                    <div class="testimonial-slider">
-                        <div class="swiper">
-                            <div class="swiper-wrapper" data-cursor-text="Drag">
-                                <!-- Testimonial Slide Start -->
-                                <div class="swiper-slide">
-                                    <div class="testimonial-item">
-                                        <div class="testimonial-header">
-                                            <div class="testimonial-rating">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <div class="testimonial-content">
-                                                <p>We specialize in a wide range of construction services, including residential, commercial, and industrial projects. From initial design to final inspection, we work closely with our clients to understand their unique needs and vision.</p>									
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-body">
-                                            <div class="author-image">
-                                                <figure class="image-anime">
-                                                    <img src="images/author-1.jpg" alt="">
-                                                </figure>
-                                            </div>            
-                                            <div class="author-content">
-                                                <h3>johan duo</h3>
-                                                <p>project manager</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Testimonial Slide End -->
-
-                                <!-- Testimonial Slide Start -->
-                                <div class="swiper-slide">
-                                    <div class="testimonial-item">
-                                        <div class="testimonial-header">
-                                            <div class="testimonial-rating">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <div class="testimonial-content">
-                                                <p>We specialize in a wide range of construction services, including residential, commercial, and industrial projects. From initial design to final inspection, we work closely with our clients to understand their unique needs and vision.</p>									
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-body">
-                                            <div class="author-image">
-                                                <figure class="image-anime">
-                                                    <img src="images/author-2.jpg" alt="">
-                                                </figure>
-                                            </div>            
-                                            <div class="author-content">
-                                                <h3>Jane Smith</h3>
-                                                <p>interior designer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Testimonial Slide End -->
-
-                                <!-- Testimonial Slide Start -->
-                                <div class="swiper-slide">
-                                    <div class="testimonial-item">
-                                        <div class="testimonial-header">
-                                            <div class="testimonial-rating">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <div class="testimonial-content">
-                                                <p>We specialize in a wide range of construction services, including residential, commercial, and industrial projects. From initial design to final inspection, we work closely with our clients to understand their unique needs and vision.</p>									
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-body">
-                                            <div class="author-image">
-                                                <figure class="image-anime">
-                                                    <img src="images/author-3.jpg" alt="">
-                                                </figure>
-                                            </div>            
-                                            <div class="author-content">
-                                                <h3>chris martinez</h3>
-                                                <p>logistics coordinator</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Testimonial Slide End -->
-
-                                <!-- Testimonial Slide Start -->
-                                <div class="swiper-slide">
-                                    <div class="testimonial-item">
-                                        <div class="testimonial-header">
-                                            <div class="testimonial-rating">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <div class="testimonial-content">
-                                                <p>We specialize in a wide range of construction services, including residential, commercial, and industrial projects. From initial design to final inspection, we work closely with our clients to understand their unique needs and vision.</p>									
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-body">
-                                            <div class="author-image">
-                                                <figure class="image-anime">
-                                                    <img src="images/author-4.jpg" alt="">
-                                                </figure>
-                                            </div>            
-                                            <div class="author-content">
-                                                <h3>alis white</h3>
-                                                <p>structural engineer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Testimonial Slide End -->
-                            </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-                    <!-- Testimonial Slider End -->
-                </div>
-            </div>
-        </div>
-    </div>
+   
     <!-- Our Testiminial End -->
 
     <!-- Our FAQs Section Start -->
