@@ -4534,7 +4534,8 @@ fieldset:disabled .btn {
     display: flex;
     flex-wrap: inherit;
     align-items: center;
-    justify-content: space-between
+    justify-content: space-between;
+    
 }
 
 .navbar-brand {
@@ -4775,7 +4776,8 @@ fieldset:disabled .btn {
 
     .navbar-expand-lg .navbar-collapse {
         display: flex !important;
-        flex-basis: auto
+        flex-basis: auto;
+        /* padding-top: 50px; */
     }
 
     .navbar-expand-lg .navbar-toggler {

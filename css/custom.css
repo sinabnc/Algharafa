@@ -124,6 +124,7 @@ body{
 .container-xxl{
     padding-right: 15px;
     padding-left: 15px;
+	
 }
 
 .image-anime{
@@ -503,6 +504,7 @@ header.main-header .header-sticky.active{
 .navbar{
 	padding: 20px 80px;
 	align-items: center;
+	
 }
 
 .navbar-brand{
@@ -774,6 +776,7 @@ header.main-header .header-sticky.active{
 	background: linear-gradient(180deg, rgba(14, 13, 27, 0) 0%, rgba(14, 13, 27, 0.55) 40.5%);
 	background-repeat: no-repeat;
 	background-position: center center;
+	margin-top: 400px;
 	top: 0;
 	bottom: 0;
 	right: 0;
@@ -1304,7 +1307,7 @@ header.main-header .header-sticky.active{
 
 .cta-box{
 	position: relative;
-	background: var(--primary-color) url("../images/cta-box-bg.png") no-repeat;
+	background: #343131 url("../images/cta-box-bg.png") no-repeat;
 	background-position: right bottom;
 	background-size: auto;
 	padding: 100px 0;
@@ -1313,6 +1316,12 @@ header.main-header .header-sticky.active{
 .cta-box .section-title h2{
 	color: var(--white-color);
 }
+#image-logo{
+    width: 200px;
+    padding-right: 15px;
+    
+}
+
 
 .cta-box .section-title p{
 	color: var(--white-color);
