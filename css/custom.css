@@ -968,10 +968,14 @@ header.main-header .header-sticky.active{
 /************************************/
 
 .our-service{
-	background: var(--secondary-color) url("../images/our-service-bg.png") no-repeat;
+	background: #343131 url("../images/our-service-bg.png") no-repeat;
     background-position: right top;
     background-size: auto;
 	padding: 100px 0 70px;
+	
+}
+.our-ser{
+	color: #ffff;
 }
 
 .service-item{
@@ -1319,6 +1323,7 @@ header.main-header .header-sticky.active{
 #image-logo{
     width: 200px;
     padding-right: 15px;
+	margin-left: 23px;
     
 }
 
