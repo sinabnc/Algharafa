@@ -1508,7 +1508,7 @@ header.main-header .header-sticky.active{
 }
 
 .faq-accordion .accordion-button:not(.collapsed){
-    color: var(--accent-color);
+    color:#bf1e2e;
 }
 
 .faq-accordion .accordion-item .accordion-button::after,
@@ -1519,7 +1519,7 @@ header.main-header .header-sticky.active{
 	top: 50%;
 	bottom: auto;
 	transform: translate(0px, -50%) rotate(-90deg);
-	background-image: url("../images/long-arrow.svg");
+	background-image: url("/images/down-arrow.png");
 	background-repeat: no-repeat;
 	background-position: right center;
 	background-size: auto;
@@ -3375,7 +3375,7 @@ header.main-header .header-sticky.active{
 }
 
 .faq-section .faq-accordion .accordion-button:not(.collapsed){
-    color: var(--accent-color);
+    color: #bf1e2e;
 }
 
 .faq-section  .faq-accordion .accordion-item .accordion-button::after,
@@ -3386,7 +3386,7 @@ header.main-header .header-sticky.active{
 	top: 50%;
 	bottom: auto;
 	transform: translate(0px, -50%) rotate(-90deg);
-	background-image: url("../images/long-arrow.svg");
+	background-image: url("/images/down-arrow.png");
 	background-repeat: no-repeat;
 	background-position: right center;
 	background-size: auto;
