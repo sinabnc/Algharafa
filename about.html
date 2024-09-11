@@ -66,7 +66,12 @@
     justify-content: center; /* Center the menu items */
 }
 
-
+.landscape-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9; /* You can adjust this ratio as needed */
+        object-fit: cover; /* This will crop the image if necessary */
+    }
 
 
 
@@ -412,7 +417,6 @@
 				</div>
 				<!-- Section Title End -->
 			</div>
-
 			<div class="row">
 				<div class="col-lg-4 col-md-6">
 					<!-- Team Member Item Start -->
@@ -420,47 +424,47 @@
 						<!-- Team Image Start -->
 						<div class="team-image">
 							<figure class="image-anime">
-								<img src="images/team-1.jpg" alt="">
+								<img src="images/team-1.jpg" alt="" class="landscape-image">
 							</figure>
 						</div>
 						<!-- Team Image End -->
-
+			
 						<!-- Team Body Start -->
 						
 						<!-- Team Body End -->
 					</div>
 					<!-- Team Member Item End -->
 				</div>
-
+			
 				<div class="col-lg-4 col-md-6">
 					<!-- Team Member Item Start -->
 					<div class="team-member-item wow fadeInUp" data-wow-delay="0.5s">
 						<!-- Team Image Start -->
 						<div class="team-image">
 							<figure class="image-anime">
-								<img src="images/team-2.jpg" alt="">
+								<img src="images/team-2.jpg" alt="" class="landscape-image">
 							</figure>
 						</div>
 						<!-- Team Image End -->
-
+			
 						<!-- Team Body Start -->
 						
 						<!-- Team Body End -->
 					</div>
 					<!-- Team Member Item End -->
 				</div>
-
+			
 				<div class="col-lg-4 col-md-6">
 					<!-- Team Member Item Start -->
 					<div class="team-member-item wow fadeInUp" data-wow-delay="0.75s">
 						<!-- Team Image Start -->
 						<div class="team-image">
 							<figure class="image-anime">
-								<img src="images/team-3.jpg" alt="">
+								<img src="images/team-3.jpg" alt="" class="landscape-image">
 							</figure>
 						</div>
 						<!-- Team Image End -->
-
+			
 						<!-- Team Body Start -->
 						
 						<!-- Team Body End -->
@@ -468,6 +472,7 @@
 					<!-- Team Member Item End -->
 				</div>
 			</div>
+			
 		</div>
 	 </div>
 	<!-- Our Team End -->
@@ -502,20 +507,7 @@
                     <!-- About Footer End -->
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-12">
-                    <!-- Footer Quick Links Start -->
-                    <div class="footer-links">
-                        <h3>our services</h3>
-                        <ul>                            
-                            <li><a href="#">building construction</a></li>
-                            <li><a href="#">architecture design</a></li>
-                            <li><a href="#">building renovation</a></li>
-                            <li><a href="#">flooring & roofing</a></li>
-                            <li><a href="#">building maintenance</a></li>
-                        </ul>
-                    </div>
-                    <!-- Footer Quick Links End -->
-                </div>
+               
 
                 <div class="col-lg-3 col-md-4 col-12">
                     <!-- Footer Links Start -->
@@ -523,9 +515,9 @@
                         <h3>company</h3>
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">contact us</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="project.html">Projects</a></li>
+                            <li><a href="contact.html">contact us</a></li>
                         </ul>
                     </div>
                     <!-- Footer Links End -->
