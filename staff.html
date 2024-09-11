@@ -20,6 +20,9 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+
 	<!-- Bootstrap Css -->
 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<!-- SlickNav Css -->
@@ -52,6 +55,7 @@
     position: relative; /* Ensure correct positioning */
 }
 
+
 /* Make sure the navbar brand (logo) is centered */
 .navbar-brand {
     position: relative;
@@ -65,10 +69,25 @@
     display: flex;
     justify-content: center; /* Center the menu items */
 }
+.highlight {
+    color: #d42a2a;
+}
 
+.section-title {
+    background-color: #d42a2a;
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
 
+table th, table td {
+    text-align: center;
+}
 
-
+tfoot td {
+    font-weight: bold;
+}
 
 </style>
 
@@ -106,7 +125,7 @@
                                     <li class="nav-item"><a class="nav-link" href="staff.html">MANAGEMENT & STAFF</a></li>
                                     <li class="nav-item"><a class="nav-link" href="vahcle.html">VEHICLES & EQUIPMENTS</a></li>
                                     <li class="nav-item"><a class="nav-link" href="mep.html">MEP</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="mep.html">CARPENTRY DIVISION</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="carpentry.html">CARPENTRY DIVISION</a></li>
 
 
                                 </ul>
@@ -138,313 +157,317 @@
 
     <!-- Page Header Start -->
 	<div class="page-header parallaxie staff">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<!-- Page Header Box Start -->
-					<div class="page-header-box">
-						<h1 class="text-anime-style-3" data-cursor="-opaque">MANAGEMENT & STAFF</h1>
-						<nav class="wow fadeInUp">
-							
-						</nav>
-					</div>
-					<!-- Page Header Box End -->
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Page Header End -->
-
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Page Header Box Start -->
+                    <div class="page-header-box">
+                        <h1 class="text-anime-style-3" data-cursor="-opaque">MANAGEMENT & STAFF</h1>
+                        <nav class="wow fadeInUp">
+                            
+                        </nav>
+                    </div>
+                    <!-- Page Header Box End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+    
     <!-- Page About Us Start -->
-    <div class="container mt-5 gradient-background">
-        <h2 class="text-center mb-5">LIST OF MANAGEMENT & STAFFS</h2>
-    
-        <div class="row">
-            <div class="col-md-3">
-                <ul class="sidebar">
-                    <li class="active" onclick="showTable('management')">MANAGEMENT</li>
-                    <li onclick="showTable('project')">PROJECT MANAGEMENT & TECHNICAL</li>
-                    <li onclick="showTable('administration')">ADMINISTRATION</li>
-                    <li onclick="showTable('worksite')">WORK SITE</li>
-                </ul>
+    <div class="container mt-5">
+        <h1 class="text-center">List of <span class="highlight">Manpower & Camps</span></h1>
+        <div class="row mt-4">
+            <!-- Civil Section -->
+            <div class="col-md-4">
+                <h4 class="text-center section-title">CIVIL</h4>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Sl No</th>
+                            <th>Position</th>
+                            <th>Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Foreman</td><td>8</td></tr>
+                        <tr><td>2</td><td>Assistant Foreman</td><td>10</td></tr>
+                        <tr><td>3</td><td>Carpenter</td><td>28</td></tr>
+                        <tr><td>4</td><td>General Labour</td><td>32</td></tr>
+                        <tr><td>5</td><td>Mason</td><td>35</td></tr>
+                        <tr><td>6</td><td>Painter</td><td>12</td></tr>
+                        <tr><td>7</td><td>Scaffolder</td><td>15</td></tr>
+                        <tr><td>8</td><td>Steel Fixer</td><td>35</td></tr>
+                        <tr><td>9</td><td>Store Keeper</td><td>4</td></tr>
+                        <tr><td>10</td><td>Surveyor Helper</td><td>4</td></tr>
+                        <tr><td>11</td><td>Welder</td><td>6</td></tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="col-md-9">
-                <table id="management" class="content-table active">
-                    <tr>
-                        <th>Position</th>
-                        <th>Count</th>
-                    </tr>
-                    <tr>
-                        <td>Chairman</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Manager</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Finance Manager</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>ADMIN./HR Manager</td>
-                        <td>1</td>
-                    </tr>
+
+            <!-- MEP Section -->
+            <div class="col-md-4">
+                <h4 class="text-center section-title">MEP</h4>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Sl No</th>
+                            <th>Position</th>
+                            <th>Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>12</td><td>Electricians</td><td>22</td></tr>
+                        <tr><td>13</td><td>Mechanical Foreman</td><td>2</td></tr>
+                        <tr><td>14</td><td>Electrical Foreman</td><td>2</td></tr>
+                        <tr><td>15</td><td>MEP Assistant Foreman</td><td>5</td></tr>
+                        <tr><td>16</td><td>Multi-Skilled Technicians</td><td>10</td></tr>
+                        <tr><td>17</td><td>Plumber</td><td>23</td></tr>
+                        <tr><td>18</td><td>MEP Store Keeper</td><td>3</td></tr>
+                        <tr><td>19</td><td>HVAC Foreman</td><td>2</td></tr>
+                        <tr><td>20</td><td>HVAC Technicians</td><td>17</td></tr>
+                        <tr><td>21</td><td>Helpers</td><td>41</td></tr>
+                    </tbody>
                 </table>
-    
-                <table id="project" class="content-table">
-                    <tr>
-                        <th>Position</th>
-                        <th>Count</th>
-                    </tr>
-                    <tr>
-                        <td>Architect / ID Designer</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Civil Engineers</td>
-                        <td>4</td>
-                    </tr>
-                    <tr>
-                        <td>Construction Manager</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Document Controller</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>MEP Draftsman</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>MEP Manager</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Senior Electrical Engineer</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Electrical Engineer</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>PMV Officer</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Procurement Officer</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>QA/QC Engineer</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Quantity Surveyor</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Surveyor</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Technical Manager</td>
-                        <td>1</td>
-                    </tr>
+            </div>
+
+            <!-- Logistics and General Section -->
+            <div class="col-md-4">
+                <h4 class="text-center section-title">LOGISTICS</h4>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Sl No</th>
+                            <th>Position</th>
+                            <th>Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>22</td><td>Drivers</td><td>6</td></tr>
+                        <tr><td>23</td><td>Operators</td><td>7</td></tr>
+                        <tr><td>24</td><td>Mechanic</td><td>1</td></tr>
+                    </tbody>
                 </table>
-    
-                <table id="administration" class="content-table">
-                    <tr>
-                        <th>Position</th>
-                        <th>Count</th>
-                    </tr>
-                    <tr>
-                        <td>HR Officer</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Accountant</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>PRO/Liason Officer</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Site Coordinator</td>
-                        <td>1</td>
-                    </tr>
-                </table>
-    
-                <table id="worksite" class="content-table">
-                    <tr>
-                        <th>Position</th>
-                        <th>Count</th>
-                    </tr>
-                    <tr>
-                        <td>Safety Officer</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Safety Manager</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Site Supervisor</td>
-                        <td>1</td>
-                    </tr>
+
+                <h4 class="text-center section-title">GENERAL</h4>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Sl No</th>
+                            <th>Position</th>
+                            <th>Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>25</td><td>Security</td><td>12</td></tr>
+                        <tr><td>26</td><td>Camp Boss</td><td>2</td></tr>
+                        <tr><td>27</td><td>Office Boy</td><td>2</td></tr>
+                        <tr><td>28</td><td>Traffic Supervisor</td><td>1</td></tr>
+                        <tr><td>29</td><td>Time Keeper</td><td>2</td></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2"><strong>Grand Total</strong></td>
+                            <td><strong>349</strong></td>
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
         </div>
     </div>
 
-    <div class="container mt-5 gradient-background" class="gradient-background">
-        <h2 class="text-center mb-5">LIST OF MANPOWER (LABOURS)</h2>
-    
-        <div class="row">
-            <div class="col-md-3">
-                <ul class="sidebar">
-                    <li class="active" onclick="showTable('civil')">CIVIL</li>
-                    <li onclick="showTable('mep')">MEP</li>
-                    <li onclick="showTable('logistics')">LOGISTICS</li>
-                    <li onclick="showTable('general')">GENERAL</li>
-                </ul>
+    <div class="container mt-5">
+        <h1 class="text-center">List of <span class="highlight">Management & Staffs</span></h1>
+        <div class="row mt-4">
+            <!-- Civil Section -->
+            <div class="col-md-4">
+                <h4 class="text-center section-title">MANAGEMENT</h4>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Sl No</th>
+                            <th>Position</th>
+                            <th>Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Chairman</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>General Manager</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Finance Manager</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Admin/HR Manager</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="col-md-9">
-                <table id="civil" class="content-table active">
-                    <tr>
-                        <th>Position</th>
-                        <th>Count</th>
-                    </tr>
-                    <tr>
-                        <td>Foreman</td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td>Assistant Foreman</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>Carpenter</td>
-                        <td>9</td>
-                    </tr>
-                    <tr>
-                        <td>General Labours</td>
-                        <td>32</td>
-                    </tr>
-                    <tr>
-                        <td>Mason</td>
-                        <td>35</td>
-                    </tr>
-                    <tr>
-                        <td>Painter</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Scaffolder</td>
-                        <td>7</td>
-                    </tr>
-                    <tr>
-                        <td>Steel Fixer</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>Storekeeper</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Surveyor Helper</td>
-                        <td>7</td>
-                    </tr>
-                    <tr>
-                        <td>Welder</td>
-                        <td>1</td>
-                    </tr>
+
+            <!-- MEP Section -->
+            <div class="col-md-4">
+                <h4 class="text-center section-title">PROJECT MANAGEMENT & TECHNICAL</h4>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <td>5</td>
+                            <td>Construction Manager</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Technical Manager</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Project Engineers</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>QA/QC Engineer</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Structural Draftsman</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Document Controller</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>MEP Manager</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Senior Mechanical Engineer</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Mechanical Engineer</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Senior Electrical Engineer</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>Electrical Engineer</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>MEP Draftsman</td>
+                            <td>2</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>12</td><td>Electricians</td><td>22</td></tr>
+                        <tr><td>13</td><td>Mechanical Foreman</td><td>2</td></tr>
+                        <tr><td>14</td><td>Electrical Foreman</td><td>2</td></tr>
+                        <tr><td>15</td><td>MEP Assistant Foreman</td><td>5</td></tr>
+                        <tr><td>16</td><td>Multi-Skilled Technicians</td><td>10</td></tr>
+                        <tr><td>17</td><td>Plumber</td><td>23</td></tr>
+                        <tr><td>18</td><td>MEP Store Keeper</td><td>3</td></tr>
+                        <tr><td>19</td><td>HVAC Foreman</td><td>2</td></tr>
+                        <tr><td>20</td><td>HVAC Technicians</td><td>17</td></tr>
+                        <tr><td>21</td><td>Helpers</td><td>41</td></tr>
+                    </tbody>
                 </table>
-    
-                <table id="mep" class="content-table">
-                    <tr>
-                        <th>Position</th>
-                        <th>Count</th>
-                    </tr>
-                    <tr>
-                        <td>Electricians</td>
-                        <td>9</td>
-                    </tr>
-                    <tr>
-                        <td>Mechanical Foreman</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>MEP Assistant Foreman</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>Multi-Skilled Technicians</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Plumber</td>
-                        <td>4</td>
-                    </tr>
-                    <tr>
-                        <td>MEP Storekeeper</td>
-                        <td>1</td>
-                    </tr>
+            </div>
+
+            <!-- Logistics and General Section -->
+            <div class="col-md-4">
+                <h4 class="text-center section-title">ADMINISTRATION</h4>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Sl No</th>
+                            <th>Position</th>
+                            <th>Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>24</td>
+                            <td>HR Officer</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Accountant</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>PRO/Liason Officer</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>Site Coordinator</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
                 </table>
-    
-                <table id="logistics" class="content-table">
-                    <tr>
-                        <th>Position</th>
-                        <th>Count</th>
-                    </tr>
-                    <tr>
-                        <td>Drivers</td>
-                        <td>6</td>
-                    </tr>
-                    <tr>
-                        <td>Operators</td>
-                        <td>7</td>
-                    </tr>
-                    <tr>
-                        <td>Mechanic</td>
-                        <td>1</td>
-                    </tr>
-                </table>
-    
-                <table id="general" class="content-table">
-                    <tr>
-                        <th>Position</th>
-                        <th>Count</th>
-                    </tr>
-                    <tr>
-                        <td>Security</td>
-                        <td>12</td>
-                    </tr>
-                    <tr>
-                        <td>Camp Boss</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Office Boy</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Traffic Supervisor</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Timekeeper</td>
-                        <td>2</td>
-                    </tr>
+
+                <h4 class="text-center section-title">SITE</h4>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Sl No</th>
+                            <th>Position</th>
+                            <th>Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>28</td>
+                            <td>Safety Officer</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>Store Manager</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>Site Supervisor</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2"><strong>Grand Total</strong></td>
+                            <td><strong>349</strong></td>
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
         </div>
     </div>
-<br><br><br>
-               
+              <br><br><br> 
     <!-- Contact Us Section End -->
 
     <!-- Footer Start -->
@@ -601,48 +624,32 @@
     <!-- Text Effect js file -->
     <script src="js/SplitText.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- Wow js file -->
     <script src="js/wow.js"></script>
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
 	<script src="../../assets/js/theme-panel.js"></script>
     <script>
-        function showTable(tableId) {
-            var tables = document.querySelectorAll('.content-table');
-            var sidebarItems = document.querySelectorAll('.sidebar li');
-            
-            tables.forEach(function(table) {
-                table.classList.remove('active');
-            });
-            
-            sidebarItems.forEach(function(item) {
-                item.classList.remove('active');
-            });
-    
-            document.getElementById(tableId).classList.add('active');
-            event.target.classList.add('active');
-        }
-        function showTable(tableId) {
-            // Remove 'active' class from all tables
-            const tables = document.querySelectorAll('.content-table');
-            tables.forEach(table => {
-                table.classList.remove('active');
-            });
-    
-            // Show the selected table
-            const selectedTable = document.getElementById(tableId);
-            selectedTable.classList.add('active');
-    
-            // Remove 'active' class from all sidebar items
-            const sidebarItems = document.querySelectorAll('.sidebar li');
-            sidebarItems.forEach(item => {
-                item.classList.remove('active');
-            });
-    
-            // Add 'active' class to the clicked sidebar item
-            const selectedSidebarItem = document.querySelector(`.sidebar li[onclick="showTable('${tableId}')"]`);
-            selectedSidebarItem.classList.add('active');
-        }
+       function showTable(tableId) {
+        // Hide all tables
+        var tables = document.querySelectorAll('.content-table');
+        tables.forEach(function (table) {
+            table.classList.add('d-none');
+        });
+
+        // Show the selected table
+        document.getElementById(tableId).classList.remove('d-none');
+
+        // Remove 'active' class from all nav items and add it to the clicked one
+        var navItems = document.querySelectorAll('.nav-link');
+        navItems.forEach(function (navItem) {
+            navItem.classList.remove('active');
+        });
+
+        document.getElementById(tableId + '-tab').classList.add('active');
+    }
+      
     </script>
 </body>
 

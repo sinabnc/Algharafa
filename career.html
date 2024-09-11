@@ -21,6 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
 	<!-- Bootstrap Css -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<!-- SlickNav Css -->
 	<link href="css/slicknav.min.css" rel="stylesheet">
@@ -67,6 +68,91 @@
 }
 
 
+/* Search Form */
+.search-container {
+    margin-bottom: 30px;
+}
+
+input.form-control, select.form-select {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button.btn-danger {
+    padding: 10px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Job Card Styling */
+.job-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.job-details {
+    flex-grow: 1;
+}
+
+.job-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.job-info span {
+    display: inline-block;
+    margin-right: 15px;
+    color: #777;
+}
+
+.salary-range {
+    font-size: 16px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.apply-btn {
+    background-color: #d42a2a;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+    background-color: #c11d1d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .job-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .job-details {
+        margin-bottom: 15px;
+    }
+
+    .salary-range, .apply-btn {
+        margin-top: 10px;
+    }
+}
 
 
 
@@ -106,7 +192,7 @@
                                     <li class="nav-item"><a class="nav-link" href="staff.html">MANAGEMENT & STAFF</a></li>
                                     <li class="nav-item"><a class="nav-link" href="vahcle.html">VEHICLES & EQUIPMENTS</a></li>
                                     <li class="nav-item"><a class="nav-link" href="mep.html">MEP</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="mep.html">CARPENTRY DIVISION</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="carpentry.html">CARPENTRY DIVISION</a></li>
 
 
                                 </ul>
