@@ -2528,7 +2528,7 @@ header.main-header .header-sticky.active{
 }
 
 .cta-contact-info .cta-contact-item:hover .cta-contact-content p a{
-	color: var(--accent-color);
+	color: #bf1e2e;
 }
 
 .service-images-slider{
