@@ -1440,7 +1440,7 @@ header.main-header .header-sticky.active{
 /************************************/
 
 .our-faqs{
-	background: var(--secondary-color) url("../images/our-faqs-bg.png") no-repeat;
+	background: var(--secondary-color);
 	background-position: right bottom;
 	background-size: auto;
 	padding: 100px 0;
