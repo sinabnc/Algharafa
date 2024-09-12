@@ -1630,8 +1630,8 @@ header.main-header .header-sticky.active{
 /***      13. Contact Us Css	  ***/
 /************************************/
 
-.contact-us{
-	background: var(--secondary-color) url("../images/contact-us-bg.png") no-repeat;
+.conatact-us{
+	background: var(--secondary-color) url("https://img.freepik.com/free-photo/particle-lines-futuristic-network-background_53876-129729.jpg?ga=GA1.1.1762933581.1717666058&semt=ais_hybridg") no-repeat;
 	background-position: center center;
 	background-size: cover;
 	padding: 100px 0;
@@ -1870,7 +1870,7 @@ header.main-header .header-sticky.active{
 	margin: 0 40px;
 	overflow: hidden;
 	border-radius: 40px;
-	background: url('../images/our-projects-bg.png') no-repeat center center;
+	background: url('https://img.freepik.com/free-photo/still-life-yoga-equipment_23-2151725307.jpg?ga=GA1.1.1762933581.1717666058&semt=ais_hybrid') no-repeat center center;
 	background-size: cover;
 	padding: 220px 0 120px;
 	position: relative;
@@ -1906,6 +1906,7 @@ header.main-header .header-sticky.active{
 	position: relative;
 	margin-top: -103px;
 }
+
 
 .about-hse{
 	margin: 0 40px;
