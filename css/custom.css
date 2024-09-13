@@ -166,6 +166,7 @@ body{
     object-fit: cover;
     -webkit-transform-origin: left;
     transform-origin: left;
+	border-radius: 10px;
 }
 
 .row{
@@ -1906,7 +1907,16 @@ header.main-header .header-sticky.active{
 	position: relative;
 	margin-top: -103px;
 }
-
+.mep{
+	margin: 0 40px;
+	overflow: hidden;
+	border-radius: 40px;
+	background: url('https://media.istockphoto.com/id/1194832499/photo/vineyard-vines-sunset-in-spain-in-autumn.webp?a=1&b=1&s=612x612&w=0&k=20&c=voISsi6JazdFpyedGjOXBUiOz2V7a4XwaErgavRSbPs=') no-repeat center center;
+	background-size: cover;
+	padding: 220px 0 120px;
+	position: relative;
+	margin-top: -103px;
+}
 
 .about-hse{
 	margin: 0 40px;
