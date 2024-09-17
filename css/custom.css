@@ -969,10 +969,11 @@ header.main-header .header-sticky.active{
 /************************************/
 
 .our-service{
-	background: #12223B url("../images/our-service-bg.png") no-repeat;
+	background: #fff url("../images/our-service-bg.png") no-repeat;
     background-position: right top;
     background-size: auto;
 	padding: 100px 0 70px;
+	color: #12223B;
 	
 }
 .our-ser{
