@@ -67,8 +67,9 @@
     justify-content: center; /* Center the menu items */
 }
 #banner{
-    height: 750px;
+    height: 760px;
 }
+
 .our-ser{
     color:#12223B;
 }
@@ -130,7 +131,10 @@
                     </div>
                     <!-- Let’s Start Button Start -->
                     <div class="header-btn d-inline-flex">
-                        <a href="contact.html" class="btn-default">Contact Us</a>
+                        <select class="form-select" id="languageSelector" onchange="changeLanguage()">
+                            <option value="en">🇬🇧 English</option>
+                            <option value="ar">🇸🇦 Arabic</option>
+                        </select>
                     </div>
                     <!-- Let’s Start Button End -->
                 </div>
@@ -166,7 +170,7 @@
                                         <div class="hero-content">
                                             <div class="section-title">
                                                 <h3 class="wow fadeInUp">welcome to AGTC</h3>
-                                                <h1 class="text-anime-style-3" data-cursor="-opaque">Transforming Visions Into Reality</h1>
+                                                <h1 id="tran" class="text-anime-style-3" data-cursor="-opaque">Transforming Visions Into Reality</h1>
                                                 <p class="wow fadeInUp" data-wow-delay="0.25s">we specialize in turning visions into reality with exceptional craftsmanship and meticulous attention to detail. With years of experience and a commitment to quality.</p>
                                             </div>
     
@@ -1029,6 +1033,12 @@
 
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        function changeLanguage() {
+            const selectedLanguage = document.getElementById("languageSelector").value;
+            // Language switching logic here
+        }
+        </script>
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>
     <!-- Validator js file -->

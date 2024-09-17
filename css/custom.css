@@ -374,7 +374,7 @@ body{
 }
 
 .section-title{
-	margin-bottom: 40px;
+	margin-bottom:5px;
 }
 
 .section-title h1{
@@ -382,7 +382,7 @@ body{
 	font-weight: 800;
 	line-height: 1.1em;
 	letter-spacing: -0.03em;
-	margin-bottom: 0;
+	margin: 0px;
 	cursor: none;
 }
 
@@ -402,7 +402,7 @@ body{
 	line-height: 1.1em;
 	letter-spacing: 0.13em;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
 }
 svg {
 	position: absolute;
@@ -783,7 +783,7 @@ header.main-header .header-sticky.active{
 	right: 0;
 	left: 0;
 	width: 100%;
-	height: 300px;
+	height:100%;
 	z-index: 1;
 }
 
@@ -798,6 +798,7 @@ header.main-header .header-sticky.active{
 .hero.hero-slider .hero-slider-layout .hero-slide .hero-slider-image img{
 	width: 100%;
 	height: 100%;
+	margin-top: -1;
 	object-fit: cover;
 }
 
@@ -811,7 +812,7 @@ header.main-header .header-sticky.active{
 
 .hero-slider-layout .swiper-pagination{
 	z-index: 2;
-    bottom: 100px;
+    bottom: 175px;
 }
 
 .hero-slider-layout .swiper-pagination .swiper-pagination-bullet{
@@ -3503,7 +3504,7 @@ header.main-header .header-sticky.active{
 	}
 
 	.section-title h3{
-		margin-bottom: 15px;
+		margin-bottom: 5px;
 	}
 
 	.section-row .section-title p{
