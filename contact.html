@@ -78,12 +78,9 @@
 	<div class="preloader">
 		<img src="images/726.gif" alt="" srcset="">
 	</div>
-
-    
-
 	<!-- Preloader End -->
 
-    <!-- Header Start -->
+	<!-- Header Start -->
 	<header class="main-header">
     <div class="header-sticky">
         <nav class="navbar navbar-expand-lg">
@@ -98,38 +95,36 @@
                 <div class="collapse navbar-collapse main-menu">
                     <div class="nav-menu-wrapper">
                         <ul class="navbar-nav mr-auto" id="menu">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item submenu"><a class="nav-link" href="about.html">About Us</a>
+                            <li class="nav-item"><a class="nav-link" id="nav-home" href="index.html">Home</a></li>
+                            <li class="nav-item submenu"><a class="nav-link" id="nav-about" href="about.html">About Us</a>
                                 <ul>
-                                    <li class="nav-item "><a class="nav-link" href="about.html">CHAIRMAN'S MESSAGE</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="about-hse.html">HSE & QC POLICY</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="staff.html">MANAGEMENT & STAFF</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="vahcle.html">VEHICLES & EQUIPMENTS</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="mep.html">MEP</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="carpentry.html">CARPENTRY DIVISION</a></li>
-
-
+                                    <li class="nav-item "><a class="nav-link" id="nav-message" href="about.html">CHAIRMAN'S MESSAGE</a></li>
+                                    <li class="nav-item"><a class="nav-link" id="nav-hse" href="about-hse.html">HSE & QC POLICY</a></li>
+                                    <li class="nav-item"><a class="nav-link" id="nav-staff" href="staff.html">MANAGEMENT & STAFF</a></li>
+                                    <li class="nav-item"><a class="nav-link" id="nav-vehicle" href="vahcle.html">VEHICLES & EQUIPMENTS</a></li>
+                                    <li class="nav-item"><a class="nav-link" id="nav-mep" href="mep.html">MEP</a></li>
+                                    <li class="nav-item"><a class="nav-link" id="nav-carpentry" href="carpentry.html">CARPENTRY DIVISION</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="certificate.html">certificate</a></li>
-                            <li class="nav-item submenu"><a class="nav-link" href="#">Projects</a>
+                            <li class="nav-item"><a class="nav-link" id="nav-certificates" href="certificate.html">certificate</a></li>
+                            <li class="nav-item submenu"><a class="nav-link" id="nav-projects" href="#">Projects</a>
                                 <ul>
-                                    <li class="nav-item "><a class="nav-link" href="project-on.html">ongoing projects</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="project.html">completed projects</a></li>
+                                    <li class="nav-item "><a class="nav-link" id="nav-ongoing-projects" href="project-on.html">ongoing projects</a></li>
+                                    <li class="nav-item"><a class="nav-link" id="nav-completed-projects" href="project.html">completed projects</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="career.html">career</a></li>
-                            <li class="nav-item highlighted-menu"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                            <li class="nav-item"><a class="nav-link" id="nav-career" href="career.html">career</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
                         </ul>
                     </div>
-                    <!-- Let’s Start Button Start -->
+                    <!-- Language Switcher -->
                     <div class="header-btn d-inline-flex">
                         <select class="form-select" id="languageSelector" onchange="changeLanguage()">
                             <option value="en">🇬🇧 English</option>
                             <option value="ar">🇸🇦 Arabic</option>
                         </select>
-                 </div>
-                    <!-- Let’s Start Button End -->
+                    </div>
                 </div>
                 <!-- Main Menu End -->
                 <div class="navbar-toggle"></div>
@@ -145,147 +140,101 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<!-- Page Header Box Start -->
 					<div class="page-header-box">
-						<h1 class="text-anime-style-3" data-cursor="-opaque">Contact Us</h1>
-						<nav class="wow fadeInUp">
-							
-						</nav>
+						<h1 class="text-anime-style-3" id="page-title">Contact Us</h1>
 					</div>
-					<!-- Page Header Box End -->
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- Page Header End -->
     
-
     <!-- Contact Information Section Start -->
     <div class="contact-information">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <!-- Contact Info Item Start -->
-                    <div class="contact-info-item wow fadeInUp" data-wow-delay="0.25s">                        
+                    <div class="contact-info-item">                        
                         <div class="icon-box">
                             <img src="images/telephone.png" alt="">
                         </div>
                         <div class="contact-info-body">
-                            <h3>call support center 24/7</h3>
-                            <p>(+974) 66554433</p>
-                            <p>(+974) 66554429</p>
-                            <p>(+974) 33529395</p>
+                            <h3 id="call-support-title">call support center 24/7</h3>
+                            <p id="phone-numbers">(+974) 66554433<br>(+974) 66554429<br>(+974) 33529395</p>
                         </div>
                     </div>
-                    <!-- Contact Info Item End -->
                 </div>
 
                 <div class="col-md-4">
-                    <!-- Contact Info Item Start -->
-                    <div class="contact-info-item wow fadeInUp" data-wow-delay="0.5s">                        
+                    <div class="contact-info-item">                        
                         <div class="icon-box">
                             <img src="images/mail.png" alt="">
                         </div>
                         <div class="contact-info-body">
-                            <h3>write to us</h3>
-                            <p>info@algharafacontracting.com</p>
-                            <p>algharafacontractin.com</p>
+                            <h3 id="write-to-us-title">write to us</h3>
+                            <p id="email-address">info@algharafacontracting.com</p>
                         </div>
                     </div>
-                    <!-- Contact Info Item End -->
                 </div>
 
                 <div class="col-md-4">
-                    <!-- Contact Info Item Start -->
-                    <div class="contact-info-item wow fadeInUp" data-wow-delay="0.75s">                        
+                    <div class="contact-info-item">                        
                         <div class="icon-box">
                             <img src="images/map.png" alt="">
                         </div>
                         <div class="contact-info-body">
-                            <h3>visit us</h3>
-                            <p>Palm Tower B, 1606, Street No. 810
-                                Zone No.60, P.O. Box: 6488, Doha - Qatar</p>
+                            <h3 id="visit-us-title">visit us</h3>
+                            <p id="address">Palm Tower B, 1606, Street No. 810 Zone No.60, P.O. Box: 6488, Doha - Qatar</p>
                         </div>
                     </div>
-                    <!-- Contact Info Item End -->
                 </div>
             </div>
         </div>
     </div>
     <!-- Contact Information Section End -->
+
     <br><br>
+
     <!-- Page Contact Us Start -->
     <div class="contact-us page-contact-us d-flex align-items-center justify-content-center" style="min-height: 100vh;">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
-                    <!-- Contact Form start -->
-                    <div class="contact-form wow fadeInUp text-center" data-wow-delay="0.5s">
-                        <!-- Section Title Start -->
+                    <div class="contact-form text-center">
                         <div class="section-title">
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Ready to get started? Let's chat.</h2>
-                            <p>Please fill out the form below, and a member of our team will get back to you as soon as possible.</p>
+                            <h2 class="text-anime-style-3" id="ready-to-start">Ready to get started? Let's chat.</h2>
+                            <p id="fill-form">Please fill out the form below, and a member of our team will get back to you as soon as possible.</p>
                         </div>
-                        <!-- Section Title End -->
-    
                         <form id="contactForm" action="/submit-form" method="POST" data-toggle="validator">
                             <div class="row">
                                 <div class="form-group col-md-6 mb-3">
                                     <input type="text" name="name" class="form-control" id="name" placeholder="Enter Your name" required="">
-                                    <div class="help-block with-errors"></div>
                                 </div>
-    
                                 <div class="form-group col-md-6 mb-3">
                                     <input type="email" name="email" class="form-control" id="email" placeholder="Enter Your email" required="">
-                                    <div class="help-block with-errors"></div>
                                 </div>
-    
                                 <div class="form-group col-md-6 mb-3">
                                     <input type="text" name="phone" class="form-control" id="phone" placeholder="Phone number" required="">
-                                    <div class="help-block with-errors"></div>
                                 </div>
-    
                                 <div class="form-group col-md-6 mb-3">
                                     <input type="text" name="subject" class="form-control" id="subject" placeholder="Subject" required="">
-                                    <div class="help-block with-errors"></div>
                                 </div>
-    
                                 <div class="form-group col-md-12 mb-4">
                                     <textarea name="msg" class="form-control" id="msg" rows="3" placeholder="Message" required=""></textarea>
-                                    <div class="help-block with-errors"></div>
                                 </div>
-    
                                 <div class="col-md-12">
-                                    <button type="submit" class="btn btn-default">Submit</button>
-                                    <div id="msgSubmit" class="h3 hidden"></div>
+                                    <button type="submit" class="btn btn-default" id="submit-btn">Submit</button>
                                 </div>
                             </div>
                         </form>
                     </div>
-                    <!-- Contact Form end -->
                 </div>
             </div>
         </div>
     </div>
     <!-- Page Contact Us End -->
 
-    <!-- Googme Map Start -->
-    <div class="google-map">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Google Map Iframe Start -->
-                    <div class="google-map-iframe">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d408746.1095048016!2d51.526673!3d25.3182!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45c4d34c9f03eb%3A0x4d708356aff376cc!2sKOTRA%20(Commercial%20Section%20of%20Korean%20Embassy)!5e1!3m2!1sen!2sus!4v1725017567543!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <!-- Google Map Iframe End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Googme Map End -->
-
-    <!-- Footer Start -->
+	<!-- Footer Start -->
 	<footer class="main-footer">
         <div class="container">
             <div class="row">
@@ -312,7 +261,7 @@
                     <!-- About Footer End -->
                 </div>
 
-               
+                
 
                 <div class="col-lg-3 col-md-4 col-12">
                     <!-- Footer Links Start -->
@@ -473,6 +422,101 @@
         });
 
     });
+
+    const translations = {
+        en: {
+            "nav-home": "Home",
+            "nav-about": "About Us",
+            "nav-message": "CHAIRMAN'S MESSAGE",
+            "nav-hse": "HSE & QC POLICY",
+            "nav-staff": "MANAGEMENT & STAFF",
+            "nav-vehicle": "VEHICLES & EQUIPMENTS",
+            "nav-mep": "MEP",
+            "nav-carpentry": "CARPENTRY DIVISION",
+            "nav-certificates": "certificate",
+            "nav-projects": "Projects",
+            "nav-ongoing-projects": "ongoing projects",
+            "nav-completed-projects": "completed projects",
+            "nav-career": "career",
+            "nav-contact": "Contact Us",
+            "page-title": "Contact Us",
+            "call-support-title": "call support center 24/7",
+            "phone-numbers": "(+974) 66554433<br>(+974) 66554429<br>(+974) 33529395",
+            "write-to-us-title": "write to us",
+            "email-address": "info@algharafacontracting.com",
+            "visit-us-title": "visit us",
+            "address": "Palm Tower B, 1606, Street No. 810 Zone No.60, P.O. Box: 6488, Doha - Qatar",
+            "ready-to-start": "Ready to get started? Let's chat.",
+            "fill-form": "Please fill out the form below, and a member of our team will get back to you as soon as possible.",
+            "submit-btn": "Submit",
+            "footer-description": "Transforming Visions into Reality: Your Trusted Partner in Construction Excellence.",
+            "footer-contact-title": "Contact Info",
+            "footer-address": "Palm Tower B, 1606, Street No. 810 Zone No.60, P.O. Box: 6488, Doha - Qatar",
+            "footer-phone": "Mobile: (+974) 66554433",
+            "footer-email": "Email: info@algharafacontracting.com",
+            "footer-quick-links-title": "Quick Links",
+            "footer-home": "Home",
+            "footer-about": "About Us",
+            "footer-certificates": "Certificates",
+            "footer-contact": "Contact",
+            "footer-newsletter-title": "Newsletter",
+            "newsletter-email": "Email Address",
+            "newsletter-btn": "Subscribe",
+            "footer-copyright": "© 2024 Al Gharafa Trading & Contracting. All Rights Reserved"
+        },
+        ar: {
+            "nav-home": "الصفحة الرئيسية",
+            "nav-about": "معلومات عنا",
+            "nav-message": "رسالة الرئيس",
+            "nav-hse": "سياسة الصحة والسلامة والجودة",
+            "nav-staff": "الإدارة والموظفين",
+            "nav-vehicle": "المركبات والمعدات",
+            "nav-mep": "ميكانيكا وكهرباء وسباكة",
+            "nav-carpentry": "قسم النجارة",
+            "nav-certificates": "الشهادات",
+            "nav-projects": "المشاريع",
+            "nav-ongoing-projects": "المشاريع الجارية",
+            "nav-completed-projects": "المشاريع المكتملة",
+            "nav-career": "الوظائف",
+            "nav-contact": "اتصل بنا",
+            "page-title": "اتصل بنا",
+            "call-support-title": "اتصل بمركز الدعم على مدار الساعة",
+            "phone-numbers": "(+974) 66554433<br>(+974) 66554429<br>(+974) 33529395",
+            "write-to-us-title": "اكتب لنا",
+            "email-address": "info@algharafacontracting.com",
+            "visit-us-title": "زورنا",
+            "address": "برج بالم بي، 1606، شارع رقم 810، المنطقة رقم 60، صندوق بريد: 6488، الدوحة - قطر",
+            "ready-to-start": "مستعد للبدء؟ دعنا نتحدث.",
+            "fill-form": "يرجى ملء النموذج أدناه، وسيتواصل معك عضو من فريقنا في أقرب وقت ممكن.",
+            "submit-btn": "إرسال",
+            "footer-description": "تحويل الرؤى إلى حقيقة: شريكك الموثوق في التميز في البناء.",
+            "footer-contact-title": "معلومات الاتصال",
+            "footer-address": "برج بالم بي، 1606، شارع رقم 810، المنطقة رقم 60، صندوق بريد: 6488، الدوحة - قطر",
+            "footer-phone": "موبايل: (+974) 66554433",
+            "footer-email": "البريد الإلكتروني: info@algharafacontracting.com",
+            "footer-quick-links-title": "روابط سريعة",
+            "footer-home": "الصفحة الرئيسية",
+            "footer-about": "معلومات عنا",
+            "footer-certificates": "الشهادات",
+            "footer-contact": "اتصل",
+            "footer-newsletter-title": "النشرة الإخبارية",
+            "newsletter-email": "عنوان البريد الإلكتروني",
+            "newsletter-btn": "اشترك",
+            "footer-copyright": "© 2024 شركة الغرافة للتجارة والمقاولات. جميع الحقوق محفوظة"
+        }
+    };
+
+    function changeLanguage() {
+        const selectedLanguage = document.getElementById('languageSelector').value;
+
+        // Loop through all translation elements
+        Object.keys(translations[selectedLanguage]).forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.innerHTML = translations[selectedLanguage][id];
+            }
+        });
+    }
 </script>
 
     

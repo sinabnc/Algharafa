@@ -402,7 +402,7 @@ body{
 	line-height: 1.1em;
 	letter-spacing: 0.13em;
     text-transform: uppercase;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
 }
 svg {
 	position: absolute;
@@ -533,7 +533,7 @@ header.main-header .header-sticky.active{
 	font-size: 18px;
 	font-weight: 500;
 	padding: 15px 15px !important;
-	color: var(--white-color);
+	color: #D37676;
 	text-transform: capitalize;
 	transition: all 0.3s ease-in-out;
 }
@@ -548,7 +548,7 @@ header.main-header .header-sticky.active{
 
 .main-menu ul li a:hover,
 .main-menu ul li a:focus{
-	color: #000000;
+	color: #bf1e2e;
 }
 
 .main-menu ul ul{
