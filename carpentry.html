@@ -305,18 +305,18 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item"><a class="nav-link" href="career.html" id="nav-career">Career</a></li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html" id="nav-contact">Contact</a></li>
 
                             </ul>
                         </div>
-                        <!-- Let’s Start Button Start -->
+                        <!-- Language Selector Start -->
                         <div class="header-btn d-inline-flex">
                             <select class="form-select" id="languageSelector" onchange="changeLanguage()">
                                 <option value="en">🇬🇧 English</option>
                                 <option value="ar">🇸🇦 Arabic</option>
                             </select>
                         </div>
-                        <!-- Let’s Start Button End -->
+                        <!-- Language Selector End -->
                     </div>
                     <!-- Main Menu End -->
                     <div class="navbar-toggle"></div>
@@ -588,10 +588,6 @@
         </table>
     </div>
     <br><br><br>
-    
-   
-
-    </div>
     <!-- Cta Box Section End -->
 
     <!-- Contact Us Section Start -->
@@ -720,154 +716,95 @@
     <script>
         const translations = {
             en: {
-                navHome: "Home",
-                navAbout: "About Us",
-                navChairmanMessage: "CHAIRMAN'S MESSAGE",
-                navHsePolicy: "HSE & QC POLICY",
-                navManagementStaff: "MANAGEMENT & STAFF",
-                navVehiclesEquipments: "VEHICLES & EQUIPMENTS",
-                navMep: "MEP",
-                navCarpentry: "CARPENTRY DIVISION",
-                navCertificate: "Certificate",
-                navProjects: "Projects",
-                navOngoingProjects: "Ongoing Projects",
-                navCompletedProjects: "Completed Projects",
-                navCareer: "Career",
-                navContact: "Contact Us",
-                pageHeaderTitle: "CARPENTRY DIVISION",
-                servicesTitle: "Our Services",
-                servicesDescription: "At Al Gharafa Carpentry Division, we pride ourselves on our extensive range of high-quality wooden products, crafted with precision and care. Explore our diverse offerings below:",
-                serviceContent: "",
-                tableSlNo: "Sl No",
-                tableServices: "Services",
-                serviceWoodenChairs: "Wooden Chairs",
-                serviceKitchenCabinet: "Kitchen Cabinet",
-                serviceSpindleMoulder: "Spindle Moulder",
-                serviceFlushDoor: "Flush Door",
-                servicePanelDoor: "Panel Door",
-                serviceDecorDoor: "Décor Door",
-                serviceToiletCubicles: "Toilet Cubicles",
-                plantMachineriesTitle: "Plant and Machineries",
-                machineryList1: {
-                    panelSaw: "Panel Saw Machines",
-                    woodSurfacePlaner: "Wood Surface Planer",
-                    spindleMoulder: "Spindle Moulder",
-                    thicknessPlaner: "Thickness Planer"
-                },
-                machineryList2: {
-                    radialArmSaw: "Radial Arm Saw",
-                    bandSaw: "Band Saw",
-                    miterSaw: "Miter Saw"
-                },
-                machineryList3: {
-                    edgeBanderPvc: "Edge Bander-PVC",
-                    benchGrinder: "Bench Grinder",
-                    sprayPaintBooth: "Multi-Function Spray Paint Booth",
-                    hotPressMachine: "Hot Press Machine"
-                },
-                woodMachineryListTitle: "Wood Machinery List",
-                woodMachinerySlNo: "Sl No",
-                woodMachineryType: "Machinery Type",
-                woodMachineryBrand: "Brand",
-                woodMachineryPanelSaw: "Panel Saw",
-                woodMachinerySurfacePlaner: "Wood Surface Planer",
-                woodMachinerySpindleMoulder: "Spindle Moulder",
-                woodMachineryThicknessPlaner: "Thickness Planer",
-                woodMachineryRadialArmSaw: "Radial Arm Saw",
-                woodMachineryBandSaw: "Band Saw",
-                woodMachineryEdgeBanderPvc: "Edge Bander-PVC",
-                woodMachineryEdgeBanderWood: "Edge Bander-Wood",
-                woodMachineryBenchGrinder: "Bench Grinder",
-                woodMachineryPaintBooth: "Paint Booth",
-                woodMachineryHotPress: "Hot & Cold Pressing Machine",
-                woodMachinerySandingMachine: "Sanding Machine",
-                woodMachineryVeneerLaserCutting: "Veneer Laser Cutting Machine",
-                woodMachineryVeneerStitching: "Veneer Stitching Machine",
-                woodMachineryCircularSaw: "Circular Saw"
+                "page-header-title": "CARPENTRY DIVISION",
+                "services-title": "Our Services",
+                "services-description": "At Al Gharafa Carpentry Division, we pride ourselves on our extensive range of high-quality wooden products, crafted with precision and care. Explore our diverse offerings below:",
+                "service-wooden-chairs": "Wooden Chairs",
+                "service-kitchen-cabinet": "Kitchen Cabinet",
+                "service-spindle-moulder": "Spindle Moulder",
+                "service-flush-door": "Flush Door",
+                "service-panel-door": "Panel Door",
+                "service-decor-door": "Décor Door",
+                "service-toilet-cubicles": "Toilet Cubicles",
+                "plant-machineries-title": "Plant and Machineries",
+                "wood-machinery-list-title": "Wood Machinery List",
+                "wood-machinery-panel-saw": "Panel Saw",
+                "wood-machinery-surface-planer": "Wood Surface Planer",
+                "wood-machinery-spindle-moulder": "Spindle Moulder",
+                "wood-machinery-thickness-planer": "Thickness Planer",
+                "wood-machinery-radial-arm-saw": "Radial Arm Saw",
+                "wood-machinery-band-saw": "Band Saw",
+                "wood-machinery-edge-bander-pvc": "Edge Bander-PVC",
+                "wood-machinery-edge-bander-wood": "Edge Bander-Wood",
+                "wood-machinery-bench-grinder": "Bench Grinder",
+                "wood-machinery-paint-booth": "Paint Booth",
+                "wood-machinery-hot-press": "Hot & Cold Pressing Machine",
+                "wood-machinery-sanding-machine": "Sanding Machine",
+                "wood-machinery-veneer-laser-cutting": "Veneer Laser Cutting Machine",
+                "wood-machinery-veneer-stitching": "Veneer Stitching Machine",
+                "wood-machinery-circular-saw": "Circular Saw",
+                "wood-machinery-felder": "Felder",
+                "wood-machinery-compact": "Compact",
+                "wood-machinery-makita": "Makita",
+                "wood-machinery-centuara": "Centuara",
+                "wood-machinery-tempora": "Tempora",
+                "wood-machinery-fravol": "Fravol",
+                "wood-machinery-firat": "Firat",
+                "wood-machinery-steton": "Steton",
+                "wood-machinery-scm": "SCM"
             },
             ar: {
-                navHome: "الصفحة الرئيسية",
-                navAbout: "معلومات عنا",
-                navChairmanMessage: "رسالة الرئيس",
-                navHsePolicy: "سياسة الصحة والسلامة والبيئة",
-                navManagementStaff: "الإدارة والموظفون",
-                navVehiclesEquipments: "المركبات والمعدات",
-                navMep: "الميكانيكا والكهرباء",
-                navCarpentry: "قسم النجارة",
-                navCertificate: "الشهادات",
-                navProjects: "المشاريع",
-                navOngoingProjects: "المشاريع الجارية",
-                navCompletedProjects: "المشاريع المنجزة",
-                navCareer: "الوظائف",
-                navContact: "اتصل بنا",
-                pageHeaderTitle: "قسم النجارة",
-                servicesTitle: "خدماتنا",
-                servicesDescription: "في قسم النجارة في الغرافة، نفخر بمجموعة واسعة من المنتجات الخشبية عالية الجودة، التي يتم تصنيعها بدقة وعناية. استكشف عروضنا المتنوعة أدناه:",
-                serviceContent: "",
-                tableSlNo: "رقم",
-                tableServices: "الخدمات",
-                serviceWoodenChairs: "كراسي خشبية",
-                serviceKitchenCabinet: "خزانة مطبخ",
-                serviceSpindleMoulder: "آلة تفريز الأسطوانات",
-                serviceFlushDoor: "باب مزخرف",
-                servicePanelDoor: "باب لوحي",
-                serviceDecorDoor: "باب ديكور",
-                serviceToiletCubicles: "حجرات المرحاض",
-                plantMachineriesTitle: "المصانع والآلات",
-                machineryList1: {
-                    panelSaw: "ماكينة منشار الألواح",
-                    woodSurfacePlaner: "ماكينة تسوية سطح الخشب",
-                    spindleMoulder: "آلة تفريز الأسطوانات",
-                    thicknessPlaner: "ماكينة تسوية السماكة"
-                },
-                machineryList2: {
-                    radialArmSaw: "منشار الذراع الشعاعي",
-                    bandSaw: "منشار شريطي",
-                    miterSaw: "منشار زاوية"
-                },
-                machineryList3: {
-                    edgeBanderPvc: "ماكينة شريط الحافة - PVC",
-                    benchGrinder: "ماكينة طحن",
-                    sprayPaintBooth: "كابينة رش متعددة الوظائف",
-                    hotPressMachine: "ماكينة ضغط حراري"
-                },
-                woodMachineryListTitle: "قائمة ماكينات الخشب",
-                woodMachinerySlNo: "رقم",
-                woodMachineryType: "نوع الآلة",
-                woodMachineryBrand: "العلامة التجارية",
-                woodMachineryPanelSaw: "منشار الألواح",
-                woodMachinerySurfacePlaner: "ماكينة تسوية سطح الخشب",
-                woodMachinerySpindleMoulder: "آلة تفريز الأسطوانات",
-                woodMachineryThicknessPlaner: "ماكينة تسوية السماكة",
-                woodMachineryRadialArmSaw: "منشار الذراع الشعاعي",
-                woodMachineryBandSaw: "منشار شريطي",
-                woodMachineryEdgeBanderPvc: "ماكينة شريط الحافة - PVC",
-                woodMachineryEdgeBanderWood: "ماكينة شريط الحافة - خشب",
-                woodMachineryBenchGrinder: "ماكينة طحن",
-                woodMachineryPaintBooth: "كابينة رش",
-                woodMachineryHotPress: "ماكينة ضغط حراري",
-                woodMachinerySandingMachine: "ماكينة صنفرة",
-                woodMachineryVeneerLaserCutting: "ماكينة قطع الليزر للورنيش",
-                woodMachineryVeneerStitching: "ماكينة خياطة الورنيش",
-                woodMachineryCircularSaw: "منشار دائري"
+                "page-header-title": "قسم النجارة",
+                "services-title": "خدماتنا",
+                "services-description": "في قسم النجارة في الغرافة، نفخر بمجموعة واسعة من المنتجات الخشبية عالية الجودة، التي تم تصنيعها بدقة وعناية. استكشف عروضنا المتنوعة أدناه:",
+                "service-wooden-chairs": "كراسي خشبية",
+                "service-kitchen-cabinet": "خزانة مطبخ",
+                "service-spindle-moulder": "آلة تشكيل عمود",
+                "service-flush-door": "باب فلاش",
+                "service-panel-door": "باب لوحي",
+                "service-decor-door": "باب مزخرف",
+                "service-toilet-cubicles": "حاويات المرحاض",
+                "plant-machineries-title": "المعدات والآلات",
+                "wood-machinery-list-title": "قائمة المعدات الخشبية",
+                "wood-machinery-panel-saw": "منشار اللوح",
+                "wood-machinery-surface-planer": "آلة تسوية الخشب",
+                "wood-machinery-spindle-moulder": "آلة تشكيل عمود",
+                "wood-machinery-thickness-planer": "آلة تسوية السماكة",
+                "wood-machinery-radial-arm-saw": "منشار الذراع الشعاعي",
+                "wood-machinery-band-saw": "منشار الشريط",
+                "wood-machinery-edge-bander-pvc": "آلة شريط الحافة - PVC",
+                "wood-machinery-edge-bander-wood": "آلة شريط الحافة - خشب",
+                "wood-machinery-bench-grinder": "طاحونة السطح",
+                "wood-machinery-paint-booth": "كابينة الطلاء",
+                "wood-machinery-hot-press": "آلة الضغط الساخن والبارد",
+                "wood-machinery-sanding-machine": "آلة الصنفرة",
+                "wood-machinery-veneer-laser-cutting": "آلة قطع الفينير بالليزر",
+                "wood-machinery-veneer-stitching": "آلة خياطة الفينير",
+                "wood-machinery-circular-saw": "منشار دائري",
+                "wood-machinery-felder": "فيلدر",
+                "wood-machinery-compact": "كومباكت",
+                "wood-machinery-makita": "ماكيتا",
+                "wood-machinery-centuara": "سنتورا",
+                "wood-machinery-tempora": "تمبورا",
+                "wood-machinery-fravol": "فرافول",
+                "wood-machinery-firat": "فيرات",
+                "wood-machinery-steton": "ستيتون",
+                "wood-machinery-scm": "SCM"
             }
         };
 
         function changeLanguage() {
             const lang = document.getElementById('languageSelector').value;
-            document.querySelectorAll('[id^="nav"]').forEach(element => {
-                element.textContent = translations[lang][element.id.replace('nav', '')];
+            const translation = translations[lang];
+
+            Object.keys(translation).forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.textContent = translation[id];
+                }
             });
-            document.getElementById('pageHeaderTitle').textContent = translations[lang].pageHeaderTitle;
-            document.getElementById('servicesTitle').textContent = translations[lang].servicesTitle;
-            document.getElementById('servicesDescription').textContent = translations[lang].servicesDescription;
-            document.getElementById('woodMachineryListTitle').textContent = translations[lang].woodMachineryListTitle;
-            document.querySelectorAll('[id^="woodMachinery"]').forEach(element => {
-                element.textContent = translations[lang][element.id.replace('woodMachinery', '')];
-            });
-            document.querySelectorAll('[id^="machinery"]').forEach(element => {
-                element.textContent = translations[lang][element.id.replace('machinery', '')];
-            });
+
+           
         }
     </script>
     <script src="js/jquery-3.7.1.min.js"></script>

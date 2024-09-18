@@ -73,91 +73,83 @@
 </style>
 
 <body>
-
     <!-- Preloader Start -->
-	<div class="preloader">
-		<img src="images/726.gif" alt="" srcset="">
-	</div>
-
-    
-
-	<!-- Preloader End -->
+    <div class="preloader">
+        <img src="images/726.gif" alt="" srcset="">
+    </div>
+    <!-- Preloader End -->
 
     <!-- Header Start -->
-	<header class="main-header">
-    <div class="header-sticky">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <!-- Logo Start -->
-                <a class="navbar-brand" href="index.html">
-                    <img id="image-logo" src="images/Untitled-1.png" alt="Logo">
-                </a>
-                <!-- Logo End -->
+    <header class="main-header">
+        <div class="header-sticky">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <!-- Logo Start -->
+                    <a class="navbar-brand" href="index.html">
+                        <img id="image-logo" src="images/Untitled-1.png" alt="Logo">
+                    </a>
+                    <!-- Logo End -->
 
-                <!-- Main Menu Start -->
-                <div class="collapse navbar-collapse main-menu">
-                    <div class="nav-menu-wrapper">
-                        <ul class="navbar-nav mr-auto" id="menu">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item submenu"><a class="nav-link" href="about.html">About Us</a>
-                                <ul>
-                                    <li class="nav-item "><a class="nav-link" href="about.html">CHAIRMAN'S MESSAGE</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="about-hse.html">HSE & QC POLICY</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="staff.html">MANAGEMENT & STAFF</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="vahcle.html">VEHICLES & EQUIPMENTS</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="mep.html">MEP</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="carpentry.html">CARPENTRY DIVISION</a></li>
-
-
-                                </ul>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="certificate.html">certificate</a></li>
-                            <li class="nav-item submenu"><a class="nav-link" href="#">Projects</a>
-                                <ul>
-                                    <li class="nav-item "><a class="nav-link" href="project-on.html">ongoing projects</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="project.html">completed projects</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="career.html">career</a></li>
-                           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-
-                        </ul>
+                    <!-- Main Menu Start -->
+                    <div class="collapse navbar-collapse main-menu">
+                        <div class="nav-menu-wrapper">
+                            <ul class="navbar-nav mr-auto" id="menu">
+                                <li class="nav-item"><a class="nav-link" href="index.html" id="homeLink">Home</a></li>
+                                <li class="nav-item submenu"><a class="nav-link" href="about.html" id="aboutUsLink">About Us</a>
+                                    <ul>
+                                        <li class="nav-item"><a class="nav-link" href="about.html" id="chairmansMessageLink">CHAIRMAN'S MESSAGE</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="about-hse.html" id="hsePolicyLink">HSE & QC POLICY</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="staff.html" id="managementStaffLink">MANAGEMENT & STAFF</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="vahcle.html" id="vehiclesEquipmentsLink">VEHICLES & EQUIPMENTS</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="mep.html" id="mepLink">MEP</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="carpentry.html" id="carpentryDivisionLink">CARPENTRY DIVISION</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="certificate.html" id="certificateLink">certificate</a></li>
+                                <li class="nav-item submenu"><a class="nav-link" href="#" id="projectsLink">Projects</a>
+                                    <ul>
+                                        <li class="nav-item"><a class="nav-link" href="project-on.html" id="ongoingProjectsLink">ongoing projects</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="project.html" id="completedProjectsLink">completed projects</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="career.html" id="careerLink">career</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html" id="contactLink">Contact</a></li>
+                            </ul>
+                        </div>
+                        <!-- Let’s Start Button Start -->
+                        <div class="header-btn d-inline-flex">
+                            <select class="form-select" id="languageSelector" onchange="changeLanguage()">
+                                <option value="en">🇬🇧 English</option>
+                                <option value="ar">🇸🇦 Arabic</option>
+                            </select>
+                        </div>
+                        <!-- Let’s Start Button End -->
                     </div>
-                    <!-- Let’s Start Button Start -->
-                     <div class="header-btn d-inline-flex">
-                        <select class="form-select" id="languageSelector" onchange="changeLanguage()">
-                            <option value="en">🇬🇧 English</option>
-                            <option value="ar">🇸🇦 Arabic</option>
-                        </select>
-                 </div>
-                    <!-- Let’s Start Button End -->
+                    <!-- Main Menu End -->
+                    <div class="navbar-toggle"></div>
                 </div>
-                <!-- Main Menu End -->
-                <div class="navbar-toggle"></div>
-            </div>
-        </nav>
-        <div class="responsive-menu"></div>
-    </div>
-</header>
+            </nav>
+            <div class="responsive-menu"></div>
+        </div>
+    </header>
 
     <!-- Page Header Start -->
-	<div class="page-header parallaxie project">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<!-- Page Header Box Start -->
-					<div class="page-header-box">
-						<h1 class="text-anime-style-3" data-cursor="-opaque">10 Villas (G+F+PH)</h1>
-						<nav class="wow fadeInUp">
-							
-						</nav>
-					</div>
-					<!-- Page Header Box End -->
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Page Header End -->
+    <div class="page-header parallaxie project">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Page Header Box Start -->
+                    <div class="page-header-box">
+                        <h1 class="text-anime-style-3" id="projectTitle" data-cursor="-opaque">10 Villas (G+F+PH)</h1>
+                        <nav class="wow fadeInUp">
+                        </nav>
+                    </div>
+                    <!-- Page Header Box End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
 
     <!-- Page Project Details Start -->
     <div class="page-project-single">
@@ -176,21 +168,21 @@
 
                         <!-- Project Details Content Start -->
                         <div class="project-details-content">
-                            <p class="wow fadeInUp" data-wow-delay="0.25s">A Compound Villa comprising of 10 Villas, with a built-up area of 8,000.00 m² will cater to the ever-increasing need of housing services at Izghawa.</p>
+                            <p id="projectDescription" class="wow fadeInUp" data-wow-delay="0.25s">A Compound Villa comprising of 10 Villas, with a built-up area of 8,000.00 m² will cater to the ever-increasing need of housing services at Izghawa.</p>
 
                             <!-- <p class="wow fadeInUp" data-wow-delay="0.5s">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga harum quidem rerum facilis est et expedita distinctio.</p>
                             
                             <div class="project-details-title wow fadeInUp">
-                                <h3>Building better development</h3>
+                                <h3 id="buildingDevelopmentTitle">Building better development</h3>
                             </div>
 
-                            <p class="wow fadeInUp" data-wow-delay="0.25s">Aenean sed adipiscing diam donec adipiscing tristique risus. Nunc pulvinar sapien et ligula ullamcorper malesuada. Venenatis urna cursus eget nunc scelerisque viverra mauris in. A cras semper auctor neque vitae tempus.</p>
+                            <p id="projectDescription2" class="wow fadeInUp" data-wow-delay="0.25s">Aenean sed adipiscing diam donec adipiscing tristique risus. Nunc pulvinar sapien et ligula ullamcorper malesuada. Venenatis urna cursus eget nunc scelerisque viverra mauris in. A cras semper auctor neque vitae tempus.</p>
 
                             <ul class="wow fadeInUp" data-wow-delay="0.5s">
-                                <li>Building the future with ideas</li>
-                                <li>Engineering the better way</li>
-                                <li>Designing future with excellence</li>
-                                <li>Discovering possibility in concrete</li>
+                                <li id="buildingFutureIdeas">Building the future with ideas</li>
+                                <li id="engineeringBetterWay">Engineering the better way</li>
+                                <li id="designFutureExcellence">Designing future with excellence</li>
+                                <li id="discoveringPossibility">Discovering possibility in concrete</li>
                             </ul> -->
                         </div>
                         <!-- Project Details Content End -->
@@ -200,7 +192,7 @@
                             <div class="row project-gallery-items">
                                 <div class="col-lg-12">
                                     <div class="project-gallery-title wow fadeInUp">
-                                        <h2>project gallery</h2>
+                                        <h2 id="galleryTitle">project gallery</h2>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-6">
@@ -214,7 +206,6 @@
                                     </div>
                                     <!-- Project Gallery Item End -->
                                 </div>
-    
                                 <div class="col-md-3 col-6">
                                     <!-- Project Gallery Item Start -->
                                     <div class="project-gallery-item wow fadeInUp" data-wow-delay="0.25s">
@@ -226,7 +217,6 @@
                                     </div>
                                     <!-- Project Gallery Item End -->
                                 </div>
-
                                 <div class="col-md-3 col-6">
                                     <!-- Project Gallery Item Start -->
                                     <div class="project-gallery-item wow fadeInUp" data-wow-delay="0.5s">
@@ -238,7 +228,6 @@
                                     </div>
                                     <!-- Project Gallery Item End -->
                                 </div>
-
                                 <div class="col-md-3 col-6">
                                     <!-- Project Gallery Item Start -->
                                     <div class="project-gallery-item wow fadeInUp" data-wow-delay="0.75s">
@@ -256,7 +245,7 @@
                     </div>
                     <!-- Project Single Content End -->
                 </div>
-                
+
                 <div class="col-lg-4">
                     <!-- Project Sidebar Start -->
                     <div class="project-sidebar">
@@ -267,8 +256,8 @@
                                     <img src="images/location.png" alt="">
                                 </div>
                                 <div class="project-info-content">                                    
-                                    <p>location</p>
-                                    <h3>Izghawa</h3>
+                                    <p id="locationLabel">location</p>
+                                    <h3 id="location">Izghawa</h3>
                                 </div>
                             </div>
                             <!-- Portfolio Info Item End -->
@@ -279,15 +268,10 @@
                                     <img src="images/maximize.png" alt="">
                                 </div>
                                 <div class="project-info-content">                                    
-                                    <p>8000㎡</p>
-                                    <h3>Total Built-Up Area
-                                    </h3>
+                                    <p id="areaLabel">8000㎡</p>
+                                    <h3 id="totalBuiltUpArea">Total Built-Up Area</h3>
                                 </div>
                             </div>
-                            <!-- Portfolio Info Item End -->
-
-                            <!-- Portfolio Info Item Start -->
-                            
                             <!-- Portfolio Info Item End -->
 
                             <!-- Portfolio Info Item Start -->
@@ -296,8 +280,8 @@
                                     <img src="images/check-mark.png" alt="">
                                 </div>
                                 <div class="project-info-content">                                    
-                                    <p>Completed</p>
-                                    <h3>Profile staus</h3>
+                                    <p id="statusLabel">Completed</p>
+                                    <h3 id="profileStatus">Profile status</h3>
                                 </div>
                             </div>
                             <!-- Portfolio Info Item End -->
@@ -429,6 +413,85 @@
 	<!-- Footer End -->
 
     <!-- Jquery Library File -->
+    <script>
+        const translations = {
+            en: {
+                homeLink: "Home",
+                aboutUsLink: "About Us",
+                chairmansMessageLink: "CHAIRMAN'S MESSAGE",
+                hsePolicyLink: "HSE & QC POLICY",
+                managementStaffLink: "MANAGEMENT & STAFF",
+                vehiclesEquipmentsLink: "VEHICLES & EQUIPMENTS",
+                mepLink: "MEP",
+                carpentryDivisionLink: "CARPENTRY DIVISION",
+                certificateLink: "certificate",
+                projectsLink: "Projects",
+                ongoingProjectsLink: "ongoing projects",
+                completedProjectsLink: "completed projects",
+                careerLink: "career",
+                contactLink: "Contact",
+                projectTitle: "10 Villas (G+F+PH)",
+                projectDescription: "A Compound Villa comprising of 10 Villas, with a built-up area of 8,000.00 m² will cater to the ever-increasing need of housing services at Izghawa.",
+                buildingDevelopmentTitle: "Building better development",
+                projectDescription2: "Aenean sed adipiscing diam donec adipiscing tristique risus. Nunc pulvinar sapien et ligula ullamcorper malesuada. Venenatis urna cursus eget nunc scelerisque viverra mauris in. A cras semper auctor neque vitae tempus.",
+                buildingFutureIdeas: "Building the future with ideas",
+                engineeringBetterWay: "Engineering the better way",
+                designFutureExcellence: "Designing future with excellence",
+                discoveringPossibility: "Discovering possibility in concrete",
+                galleryTitle: "project gallery",
+                locationLabel: "location",
+                location: "Izghawa",
+                areaLabel: "8000㎡",
+                totalBuiltUpArea: "Total Built-Up Area",
+                statusLabel: "Completed",
+                profileStatus: "Profile status"
+            },
+            ar: {
+                homeLink: "الرئيسية",
+                aboutUsLink: "معلومات عنا",
+                chairmansMessageLink: "رسالة الرئيس",
+                hsePolicyLink: "سياسة HSE & QC",
+                managementStaffLink: "الإدارة والموظفين",
+                vehiclesEquipmentsLink: "المركبات والمعدات",
+                mepLink: "MEP",
+                carpentryDivisionLink: "قسم النجارة",
+                certificateLink: "شهادة",
+                projectsLink: "المشاريع",
+                ongoingProjectsLink: "المشاريع الجارية",
+                completedProjectsLink: "المشاريع المنجزة",
+                careerLink: "المسيرة المهنية",
+                contactLink: "اتصال",
+                projectTitle: "10 فيلات (G+F+PH)",
+                projectDescription: "فيلا مجمع تتكون من 10 فيلات، بمساحة مبنية تبلغ 8000.00 م² ستلبي الحاجة المتزايدة لخدمات الإسكان في إزغاوة.",
+                buildingDevelopmentTitle: "بناء تطوير أفضل",
+                projectDescription2: "Aenean sed adipiscing diam donec adipiscing tristique risus. Nunc pulvinar sapien et ligula ullamcorper malesuada. Venenatis urna cursus eget nunc scelerisque viverra mauris in. A cras semper auctor neque vitae tempus.",
+                buildingFutureIdeas: "بناء المستقبل بالأفكار",
+                engineeringBetterWay: "هندسة الطريقة الأفضل",
+                designFutureExcellence: "تصميم المستقبل بالتميز",
+                discoveringPossibility: "اكتشاف الإمكانيات في الخرسانة",
+                galleryTitle: "معرض المشروع",
+                locationLabel: "الموقع",
+                location: "إزغاوة",
+                areaLabel: "8000㎡",
+                totalBuiltUpArea: "إجمالي المساحة المبنية",
+                statusLabel: "مكتمل",
+                profileStatus: "حالة الملف"
+            }
+        };
+        
+        function changeLanguage() {
+            const selectedLanguage = document.getElementById("languageSelector").value;
+            const elementsToTranslate = document.querySelectorAll("[id]");
+        
+            elementsToTranslate.forEach(element => {
+                const translationKey = element.id;
+                if (translations[selectedLanguage][translationKey]) {
+                    element.textContent = translations[selectedLanguage][translationKey];
+                }
+            });
+        }
+        
+    </script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>
