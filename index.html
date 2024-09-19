@@ -92,18 +92,25 @@
     }
 
     .goog-te-gadget-simple {
-        background-color: #FFF;
-        border-left: 1px solid #D5D5D5;
-        border-top: 1px solid #9B9B9B;
+        height: 37px;
+        background-color: #ca3030 !important;
+        border-left: 1px solid #C63C51;
+        border-top: 1px solid #C63C51;
         border-bottom: 1px solid #ffffff;
         border-right: 1px solid #D5D5D5;
-        border-radius: 10px !important;
+        border-radius: 5px !important;
         font-size: 10pt;
         display: inline-block;
         padding-top: 1px;
         padding-bottom: 2px;
         cursor: pointer;
     }
+    .goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span{
+        font-family: emoji;
+        color: #fff;
+       
+    }
+ 
 
     .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
         font-family: emoji;
@@ -1080,271 +1087,11 @@
       
       <!-- Google Translate API -->
       <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <!-- <script>
-        // Initialize Swiper
-        const swiper = new Swiper('.swiper', {
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            autoplay: {
-                delay: 5000,
-            },
-        });
-
-        function changeLanguage() {
-            const language = document.getElementById('languageSelector').value;
-
-            // Define translations for the entire page
-            const translations = {
-                en: {
-                    // Hero Slider
-                    heroTitle1: "Welcome to AGTC",
-                    heroHeading1: "Transforming Visions Into Reality",
-                    heroDescription1: "We specialize in turning visions into reality with exceptional craftsmanship and meticulous attention to detail. With years of experience and a commitment to quality.",
-                    heroButton1: "Get Started",
-                    heroButton2: "View Projects",
-                    heroTitle2: "Welcome to AGTC",
-                    heroHeading2: "Transforming Visions Into Reality",
-                    heroDescription2: "We specialize in turning visions into reality with exceptional craftsmanship and meticulous attention to detail. With years of experience and a commitment to quality.",
-                    heroButton3: "Get Started",
-                    heroButton4: "View Projects",
-                    
-                    // Main Menu
-                    navHome: "Home",
-                    navAbout: "About Us",
-                    navChairmansMessage: "CHAIRMAN'S MESSAGE",
-                    navHsePolicy: "HSE & QC POLICY",
-                    navManagementStaff: "MANAGEMENT & STAFF",
-                    navVehiclesEquipments: "VEHICLES & EQUIPMENTS",
-                    navMep: "MEP",
-                    navCarpentry: "CARPENTRY DIVISION",
-                    navCertificate: "certificate",
-                    navProjects: "Projects",
-                    navOngoingProjects: "ongoing projects",
-                    navCompletedProjects: "completed projects",
-                    navCareer: "career",
-                    navContact: "Contact",
-                    aboutUsTitle: "معلومات عنا",
-                    aboutUsHeading: "بناء هياكل تدوم مدى الحياة",
-                    aboutUsDescription: "شركة الغرافة للتجارة والمقاولات ذ.م.م (AGTC) هي شركة قطرية 100٪ مملوكة من قبل السيد الشيخ عيسى بن حمد بن جاسم بن ثاني آل ثاني ومسجلة في الدوحة. تأسيس AGTC منذ عام 2007 هو تطور طبيعي لسياسة شركة عيسى بن حمد (EBH Co.) في النمو المسيطر والتنويع.",
-                    aboutUsService1: "خدمات شاملة",
-                    aboutUsService2: "تكنولوجيا متقدمة",
-                    aboutUsService3: "اتصال شفاف",
-                    downloadBrochure: "تحميل الكتيب",
-                    supportText: "اتصل بمركز الدعم على مدار الساعة",
-                    supportNumber: "(+974)66554433",
-                    servicesSectionTitle: "our services",
-                servicesHeading: "Our construction services",
-                serviceCivilTitle: "Civil Department",
-                serviceArchTitle: "architecture design",
-                serviceElectrTitle: "Electrical Department",
-                serviceMechTitle: "Mechanical Department",
-                serviceDesignTitle: "Design & project",
-                servicePurchTitle: "Purchasing Department",
-                serviceLogisTitle: "Logistics Department",
-                serviceProjMngTitle: "Projects Management",
-                whyChooseUsTitle: 'why choose us?',
-            whyChooseUsHeading: "Why we're your best choice",
-            whyChooseUsDescription: 'By assembling the experienced construction management organization and utilizing the numerous construction equipment’s and fabrication resources companies across Qatar, AGTC will be able to provide a more efficient and cost-effective service to our clients, especially in residential, commercial, industrial, infrastructural, sports facilities and landscaping construction works.',
-            whyChooseObjectivesTitle: 'Our Objectives',
-            whyChooseObjectivesDescription: 'The objectives of AGTC is to undertake all aspects of engineering and construction activities related to civil, mechanical, electrical, plus engineering procurements, testing and commissioning and startup services.',
-            whyChooseCompletedProjects: 'project completed',
-            whyChooseStrengthsTitle: 'Our Strengths',
-            whyChooseStrengthsDescription: 'The strength of AGTC lies in its access to the vast reserves and resources of the companies across Qatar. Which owns a vast fleet of construction and earth moving equipment’s in the region. On the other hand, AGTC has a vast pool of skilled manpower and team of professional managers / engineers and experienced supervisory personnel.',
-            whyChoosePhilosophyTitle: 'the philosophy',
-            whyChoosePhilosophyDescription: 'The philosophy of AGTC is Quality, Reliability and Expertise in Services. The Management and Manpower team are committed to implement this philosophy on day to works.',
-            ourProjectsTitle: 'our projects',
-            ourProjectsHeading: 'Explore our diverse range of projects',
-            ourProjectsDescription: 'We specialize in a wide range of construction services, including residential, commercial, and industrial projects.',
-            project1Title: 'B+G+7 Residential Complex',
-            project1Description: 'A Residential Complex comprising of 35 Flats, With a built-up area of 4,531.10 m² will cater to the ever-increasing need of housing services at Umm Ghuwailina.',
-            project2Title: '4 Villas (G+F+PH)',
-            project2Description: 'A Compound Villa comprising of 4 Villas, With a built-up area of 4,720 m² will cater to the ever-increasing need of housing services at Izghawa.',
-            project3Title: '6 Villa (G+1+PH) & Ancillary',
-            project3Description: 'A Compound Villa comprising of 6 Villas, With a built-up area of 4,780 m² will cater to the ever-increasing need of housing services at Izghawa.',
-            project4Title: '50 Villas(G+1+PH)',
-            project4Description: 'A Compound villas comprising of 50 Villas, Clubhouse, Swimming Pool, Substation and Guard Rooms for our prestigious tenant “Iskan”. With a built-up area of 13,439.90 m² will cater to the ever-increasing need of housing services for government employees.',
-            viewAllProjectsBtn: 'view all projects',
-            ctaBoxTitle: "Let's build something great together!",
-            ctaBoxDescription: 'Don\'t wait any longer to bring your construction dreams to life. Partner with ATGC and experience unparalleled service and quality.',
-            ctaBoxBtn: 'contact'
-                },
-                ar: {
-                    // Hero Slider
-                    heroTitle1: "مرحبا بكم في AGTC",
-                    heroHeading1: "تحويل الرؤى إلى واقع",
-                    heroDescription1: "نحن متخصصون في تحويل الرؤى إلى واقع مع حرفية استثنائية واهتمام دقيق بالتفاصيل. مع سنوات من الخبرة واهتمام بالجودة.",
-                    heroButton1: "ابدأ الآن",
-                    heroButton2: "عرض المشاريع",
-                    heroTitle2: "مرحبا بكم في AGTC",
-                    heroHeading2: "تحويل الرؤى إلى واقع",
-                    heroDescription2: "نحن متخصصون في تحويل الرؤى إلى واقع مع حرفية استثنائية واهتمام دقيق بالتفاصيل. مع سنوات من الخبرة واهتمام بالجودة.",
-                    heroButton3: "ابدأ الآن",
-                    heroButton4: "عرض المشاريع",
-                    // Main Menu
-                    navHome: "الرئيسية",
-                    navAbout: "معلومات عنا",
-                    navChairmansMessage: "رسالة رئيس مجلس الإدارة",
-                    navHsePolicy: "سياسة الصحة والسلامة والبيئة",
-                    navManagementStaff: "الإدارة والموظفين",
-                    navVehiclesEquipments: "المركبات والمعدات",
-                    navMep: "MEP",
-                    navCarpentry: "قسم النجارة",
-                    navCertificate: "الشهادات",
-                    navProjects: "المشاريع",
-                    navOngoingProjects: "المشاريع الجارية",
-                    navCompletedProjects: "المشاريع المكتملة",
-                    navCareer: "الوظائف",
-                    navContact: "اتصل بنا",
-                    aboutUsTitle: "معلومات عنا",
-                    aboutUsHeading: "بناء هياكل تدوم مدى الحياة",
-                    aboutUsDescription: "شركة الغرافة للتجارة والمقاولات ذ.م.م (AGTC) هي شركة قطرية 100٪ مملوكة من قبل السيد الشيخ عيسى بن حمد بن جاسم بن ثاني آل ثاني ومسجلة في الدوحة. تأسيس AGTC منذ عام 2007 هو تطور طبيعي لسياسة شركة عيسى بن حمد (EBH Co.) في النمو المسيطر والتنويع.",
-                    aboutUsService1: "خدمات شاملة",
-                    aboutUsService2: "تكنولوجيا متقدمة",
-                    aboutUsService3: "اتصال شفاف",
-                    downloadBrochure: "تحميل الكتيب",
-                    supportText: "اتصل بمركز الدعم على مدار الساعة",
-                    supportNumber: "(+974)66554433",
-                    servicesSectionTitle: "خدماتنا",
-                servicesHeading: "خدماتنا في البناء",
-                serviceCivilTitle: "قسم المدني",
-                serviceArchTitle: "تصميم معماري",
-                serviceElectrTitle: "قسم الكهرباء",
-                serviceMechTitle: "قسم الميكانيكا",
-                serviceDesignTitle: "التصميم والمشاريع",
-                servicePurchTitle: "قسم الشراء",
-                serviceLogisTitle: "قسم اللوجستيات",
-                serviceProjMngTitle: "إدارة المشاريع",
-                whyChooseUsTitle: 'لماذا تختارنا؟',
-            whyChooseUsHeading: 'لماذا نحن خيارك الأفضل',
-            whyChooseUsDescription: 'من خلال تجميع منظمة إدارة البناء ذات الخبرة واستغلال العديد من معدات البناء والموارد التصنيعية في جميع أنحاء قطر، ستتمكن AGTC من تقديم خدمة أكثر كفاءة وفعالية من حيث التكلفة لعملائنا، خاصة في أعمال البناء السكنية والتجارية والصناعية والبنية التحتية والمنشآت الرياضية والتنسيق الخارجي.',
-            whyChooseObjectivesTitle: 'أهدافنا',
-            whyChooseObjectivesDescription: 'تتمثل أهداف AGTC في القيام بجميع جوانب الأنشطة الهندسية والبناء المتعلقة بالهندسة المدنية والميكانيكية والكهربائية، بالإضافة إلى المشتريات الهندسية، والاختبار، والتكليف، وخدمات بدء التشغيل.',
-            whyChooseCompletedProjects: 'المشاريع المكتملة',
-            whyChooseStrengthsTitle: 'قوانا',
-            whyChooseStrengthsDescription: 'تكمن قوة AGTC في وصولها إلى الاحتياطيات والموارد الواسعة للشركات في جميع أنحاء قطر. التي تمتلك أسطولًا كبيرًا من معدات البناء وتحريك التربة في المنطقة. من ناحية أخرى، تمتلك AGTC مجموعة واسعة من اليد العاملة الماهرة وفريق من المديرين / المهندسين المحترفين والأشخاص المشرفين ذوي الخبرة.',
-            whyChoosePhilosophyTitle: 'الفلسفة',
-            whyChoosePhilosophyDescription: 'تتمثل فلسفة AGTC في الجودة والموثوقية والخبرة في الخدمات. تلتزم إدارة وفريق العمال بتنفيذ هذه الفلسفة في العمل اليومي.',
-            ourProjectsTitle: 'مشاريعنا',
-            ourProjectsHeading: 'استكشف مجموعة مشاريعنا المتنوعة',
-            ourProjectsDescription: 'نتخصص في مجموعة واسعة من خدمات البناء، بما في ذلك المشاريع السكنية والتجارية والصناعية.',
-            project1Title: 'مجمع سكني B+G+7',
-            project1Description: 'مجمع سكني يتكون من 35 شقة، بمساحة مبنية قدرها 4,531.10 متر مربع سيلبي الحاجة المتزايدة لخدمات الإسكان في أم غويلينة.',
-            project2Title: '4 فيلات (G+F+PH)',
-            project2Description: 'مجمع فيلات يتكون من 4 فيلات، بمساحة مبنية قدرها 4,720 متر مربع سيلبي الحاجة المتزايدة لخدمات الإسكان في إزغاوة.',
-            project3Title: '6 فيلات (G+1+PH) وملحقاتها',
-            project3Description: 'مجمع فيلات يتكون من 6 فيلات، بمساحة مبنية قدرها 4,780 متر مربع سيلبي الحاجة المتزايدة لخدمات الإسكان في إزغاوة.',
-            project4Title: '50 فيلا (G+1+PH)',
-            project4Description: 'مجمع فيلات يتكون من 50 فيلا، وبيت النادي، وحمام سباحة، ومحطة تحويل، وغرف حارس لعملائنا المميزين "إسكان". بمساحة مبنية قدرها 13,439.90 متر مربع سيلبي الحاجة المتزايدة لخدمات الإسكان لموظفي الحكومة.',
-            viewAllProjectsBtn: 'عرض جميع المشاريع',
-            ctaBoxTitle: 'لنقم ببناء شيء رائع معًا!',
-            ctaBoxDescription: 'لا تنتظر أكثر لجعل أحلامك في البناء تتحقق. تعاون مع ATGC واختبر خدمة وجودة لا مثيل لها.',
-            ctaBoxBtn: 'اتصل بنا'
-                }
-            };
-
-            // Update text content for hero slider
-            document.getElementById('heroTitle1').innerText = translations[language].heroTitle1;
-            document.getElementById('heroHeading1').innerText = translations[language].heroHeading1;
-            document.getElementById('heroDescription1').innerText = translations[language].heroDescription1;
-            document.getElementById('heroButton1').innerText = translations[language].heroButton1;
-            document.getElementById('heroButton2').innerText = translations[language].heroButton2;
-
-            document.getElementById('heroTitle2').innerText = translations[language].heroTitle2;
-            document.getElementById('heroHeading2').innerText = translations[language].heroHeading2;
-            document.getElementById('heroDescription2').innerText = translations[language].heroDescription2;
-            document.getElementById('heroButton3').innerText = translations[language].heroButton3;
-            document.getElementById('heroButton4').innerText = translations[language].heroButton4;
-
-            // Update text content for main menu
-            document.getElementById('navHome').innerText = translations[language].navHome;
-            document.getElementById('navAbout').innerText = translations[language].navAbout;
-            document.getElementById('navChairmansMessage').innerText = translations[language].navChairmansMessage;
-            document.getElementById('navHsePolicy').innerText = translations[language].navHsePolicy;
-            document.getElementById('navManagementStaff').innerText = translations[language].navManagementStaff;
-            document.getElementById('navVehiclesEquipments').innerText = translations[language].navVehiclesEquipments;
-            document.getElementById('navMep').innerText = translations[language].navMep;
-            document.getElementById('navCarpentry').innerText = translations[language].navCarpentry;
-            document.getElementById('navCertificate').innerText = translations[language].navCertificate;
-            document.getElementById('navProjects').innerText = translations[language].navProjects;
-            document.getElementById('navOngoingProjects').innerText = translations[language].navOngoingProjects;
-            document.getElementById('navCompletedProjects').innerText = translations[language].navCompletedProjects;
-            document.getElementById('navCareer').innerText = translations[language].navCareer;
-            document.getElementById('navContact').innerText = translations[language].navContact;
-            document.getElementById('aboutUsTitle').innerText = translations[language].aboutUsTitle;
-            document.getElementById('aboutUsHeading').innerText = translations[language].aboutUsHeading;
-            document.getElementById('aboutUsDescription').innerText = translations[language].aboutUsDescription;
-            document.getElementById('aboutUsService1').innerText = translations[language].aboutUsService1;
-            document.getElementById('aboutUsService2').innerText = translations[language].aboutUsService2;
-            document.getElementById('aboutUsService3').innerText = translations[language].aboutUsService3;
-            document.getElementById('downloadBrochure').innerText = translations[language].downloadBrochure;
-            document.getElementById('supportText').innerText = translations[language].supportText;
-            document.getElementById('supportNumber').innerText = translations[language].supportNumber;
-            document.getElementById('servicesSectionTitle').innerText = translations[language].servicesSectionTitle;
-        document.getElementById('servicesHeading').innerText = translations[language].servicesHeading;
-        document.getElementById('serviceCivilTitle').innerText = translations[language].serviceCivilTitle;
-        document.getElementById('serviceArchTitle').innerText = translations[language].serviceArchTitle;
-        document.getElementById('serviceElectrTitle').innerText = translations[language].serviceElectrTitle;
-        document.getElementById('serviceMechTitle').innerText = translations[language].serviceMechTitle;
-        document.getElementById('serviceDesignTitle').innerText = translations[language].serviceDesignTitle;
-        document.getElementById('servicePurchTitle').innerText = translations[language].servicePurchTitle;
-        document.getElementById('serviceLogisTitle').innerText = translations[language].serviceLogisTitle;
-        document.getElementById('serviceProjMngTitle').innerText = translations[language].serviceProjMngTitle;
-        document.getElementById('whyChooseUsTitle').innerText = translations[language].whyChooseUsTitle;
-    document.getElementById('whyChooseUsHeading').innerText = translations[language].whyChooseUsHeading;
-    document.getElementById('whyChooseUsDescription').innerText = translations[language].whyChooseUsDescription;
-    document.getElementById('whyChooseObjectivesTitle').innerText = translations[language].whyChooseObjectivesTitle;
-    document.getElementById('whyChooseObjectivesDescription').innerText = translations[language].whyChooseObjectivesDescription;
-    document.getElementById('whyChooseCompletedProjects').innerText = translations[language].whyChooseCompletedProjects;
-    document.getElementById('whyChooseStrengthsTitle').innerText = translations[language].whyChooseStrengthsTitle;
-    document.getElementById('whyChooseStrengthsDescription').innerText = translations[language].whyChooseStrengthsDescription;
-    document.getElementById('whyChoosePhilosophyTitle').innerText = translations[language].whyChoosePhilosophyTitle;
-    document.getElementById('whyChoosePhilosophyDescription').innerText = translations[language].whyChoosePhilosophyDescription;
-    document.getElementById('ourProjectsTitle').innerText = translations[language].ourProjectsTitle;
-    document.getElementById('ourProjectsHeading').innerText = translations[language].ourProjectsHeading;
-    document.getElementById('ourProjectsDescription').innerText = translations[language].ourProjectsDescription;
-    document.getElementById('project1Title').innerText = translations[language].project1Title;
-    document.getElementById('project1Description').innerText = translations[language].project1Description;
-    document.getElementById('project2Title').innerText = translations[language].project2Title;
-    document.getElementById('project2Description').innerText = translations[language].project2Description;
-    document.getElementById('project3Title').innerText = translations[language].project3Title;
-    document.getElementById('project3Description').innerText = translations[language].project3Description;
-    document.getElementById('project4Title').innerText = translations[language].project4Title;
-    document.getElementById('project4Description').innerText = translations[language].project4Description;
-    document.getElementById('viewAllProjectsBtn').innerText = translations[language].viewAllProjectsBtn;
-    document.getElementById('ctaBoxTitle').innerText = translations[language].ctaBoxTitle;
-    document.getElementById('ctaBoxDescription').innerText = translations[language].ctaBoxDescription;
-    document.getElementById('ctaBoxBtn').innerText = translations[language].ctaBoxBtn;
-            // Adjust the page direction for RTL languages
-           
-        }
-    </script> -->
-    <!-- Bootstrap js file -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',  // Default language (English)
-                includedLanguages: 'en,ar',  // Only allow English and Arabic
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
-
-        function changeLanguage() {
-            var selectedLanguage = document.getElementById("languageSelector").value;
-            var translateElement = document.querySelector(".goog-te-combo");
-
-            if (translateElement) {
-                translateElement.value = selectedLanguage;  // Set the language value
-                translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
-            }
-        }
-    </script>
+    
+    
 
     <!-- Google Translate API -->
-    <script type="text/javascript"
-        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+   
     <script src="js/bootstrap.min.js"></script>
     <!-- Validator js file -->
     <script src="js/validator.min.js"></script>
