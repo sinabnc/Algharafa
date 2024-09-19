@@ -72,13 +72,33 @@
         aspect-ratio: 16 / 9; /* You can adjust this ratio as needed */
         object-fit: cover; /* This will crop the image if necessary */
     }
-
+	.goog-te-gadget img {
+        vertical-align: middle;
+        border: none;
+        display: none !important;
+    }
+    .goog-te-gadget-simple {
+    background-color: #FFF;
+    border-left: 1px solid #D5D5D5;
+    border-top: 1px solid #9B9B9B;
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #D5D5D5;
+    border-radius: 10px !important;
+    font-size: 10pt;
+    display: inline-block;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    cursor: pointer;}
+    .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+    font-family: emoji;
+    text-decoration: underline;
+}
 
 
 </style>
 
 <body>
-
+	
     <!-- Preloader Start -->
     <div class="preloader">
         <img src="images/726.gif" alt="" srcset="">
@@ -123,11 +143,10 @@
                             </ul>
                         </div>
                         <!-- Let’s Start Button Start -->
-                        <div class="header-btn d-inline-flex">
-                            <select class="form-select" id="languageSelector" onchange="changeLanguage()">
-                                <option value="en">🇬🇧 English</option>
-                                <option value="ar">🇸🇦 Arabic</option>
-                            </select>
+						<div class="header-btn d-inline-flex">
+                            <!-- Custom Language Selector for Google Translate -->
+                            <div id="google_translate_element"></div>
+                         
                         </div>
                         <!-- Let’s Start Button End -->
                     </div>
@@ -588,102 +607,29 @@
 	<!-- Footer End -->
 
     <!-- Jquery Library File -->
-	<script>
-        // Language switch function
-        function changeLanguage() {
-            var lang = document.getElementById('languageSelector').value;
-
-            // Example translations
-            var translations = {
-                'en': {
-                    'home': 'Home',
-                    'aboutUs': 'About Us',
-                    'chairmansMessage': 'CHAIRMAN\'S MESSAGE',
-                    'hsePolicy': 'HSE & QC POLICY',
-                    'managementStaff': 'MANAGEMENT & STAFF',
-                    'vehiclesEquipment': 'VEHICLES & EQUIPMENTS',
-                    'mep': 'MEP',
-                    'carpentryDivision': 'CARPENTRY DIVISION',
-                    'certificate': 'Certificate',
-                    'projects': 'Projects',
-                    'ongoingProjects': 'Ongoing Projects',
-                    'completedProjects': 'Completed Projects',
-                    'career': 'Career',
-                    'contact': 'Contact Us',
-                    'chairmansMessageHeader': 'CHAIRMAN\'S MESSAGE',
-                    'aboutUsTitle': 'About Us',
-                    'chairmansMessageTitle': 'CHAIRMAN\'S MESSAGE',
-                    'chairmansMessageContent': 'As we anticipate the future and draw inspiration from our ancestors’ vision for beloved Qatar, Al-Gharafa Trading and Contracting is dedicated to an exceptional plan that defines the Qatari identity. Our commitment reflects a passion for delivering superior services and solutions in contracting and construction. While client satisfaction is a common goal, we aim higher by positioning ourselves as partners striving for excellence and leadership. To achieve this, we have established quality, occupational safety, and speed of accomplishment as standards. These are realized through expert teams and meticulous plans, executed with full awareness and unwavering commitment at every stage. We eagerly anticipate strengthening relationships and forging partnerships with our clients to fulfill our vision and strategic objectives. Thank you for your trust. We are confident that your experience with us will be exceptional and unique.',
-                    'historyContent1': 'We specialize in a wide range of construction services, including residential, commercial, and industrial projects. From initial design to final inspection, we work closely with our clients to understand their unique needs and vision.',
-                    'historyContent2': 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
-                    'ourMission': 'Our Mission',
-                    'missionContent': 'Al Gharafa Trading and Contracting Co. W.L.L is dedicated to providing value added general contracting services to its Client via successful partnership with them throughout the whole construction process, and consult technological and professional improvement of its team.',
-                    'ourVision': 'Our Vision',
-                    'visionContent': 'Our vision is to maintain our growth as one of the leading contracting companies in the State of Qatar by delivering unique projects for exceptional clients and this in line with Qatar 2030 vision. In that regard, AGTC is committed to delivering high quality.',
-                    'ourValues': 'Our Values',
-                    'valuesContent': 'Integrity – Quality – Customer Satisfaction – Health & Safety – Reliability – Teamwork – Innovation – Environmental Responsibility – Community Involvement – Financial Responsibility.',
-                    'ourTeamTitle': 'Team',
-                    'ourTeamSubtitle': 'Our Team',
-                    'ourTeamDescription': 'We specialize in a wide range of construction services, including residential, commercial, and industrial projects.'
-                },
-                'ar': {
-                    'home': 'الرئيسية',
-                    'aboutUs': 'من نحن',
-                    'chairmansMessage': 'رسالة الرئيس',
-                    'hsePolicy': 'سياسة الصحة والسلامة والبيئة',
-                    'managementStaff': 'الإدارة والموظفين',
-                    'vehiclesEquipment': 'المركبات والمعدات',
-                    'mep': 'MEP',
-                    'carpentryDivision': 'قسم النجارة',
-                    'certificate': 'الشهادات',
-                    'projects': 'المشاريع',
-                    'ongoingProjects': 'المشاريع الجارية',
-                    'completedProjects': 'المشاريع المكتملة',
-                    'career': 'الوظائف',
-                    'contact': 'اتصل بنا',
-                    'chairmansMessageHeader': 'رسالة الرئيس',
-                    'aboutUsTitle': 'معلومات عنا',
-                    'chairmansMessageTitle': 'رسالة الرئيس',
-                    'chairmansMessageContent': 'بينما نتطلع إلى المستقبل ونستلهم من رؤية أسلافنا لقطر الحبيبة، فإن شركة الغرافة للتجارة والمقاولات ملتزمة بخطة استثنائية تحدد الهوية القطرية. تعكس التزامنا شغفًا بتقديم خدمات وحلول متميزة في المقاولات والبناء. بينما رضا العملاء هدف مشترك، نهدف إلى أعلى من ذلك من خلال وضع أنفسنا كشركاء نسعى لتحقيق التميز والقيادة. لتحقيق ذلك، قمنا بتحديد الجودة والسلامة المهنية وسرعة الإنجاز كمعايير. يتم تحقيق ذلك من خلال فرق الخبراء والخطط الدقيقة، المنفذة بوعي كامل والتزام ثابت في كل مرحلة. نتطلع بترقب لتعزيز العلاقات وإقامة شراكات مع عملائنا لتحقيق رؤيتنا وأهدافنا الاستراتيجية. شكرًا لثقتكم. نحن واثقون من أن تجربتكم معنا ستكون استثنائية وفريدة.',
-                    'historyContent1': 'نحن متخصصون في مجموعة واسعة من خدمات البناء، بما في ذلك المشاريع السكنية والتجارية والصناعية. من التصميم الأولي إلى التفتيش النهائي، نعمل عن كثب مع عملائنا لفهم احتياجاتهم الفريدة ورؤيتهم.',
-                    'historyContent2': 'من المعروف أن القارئ سوف ينشغل بمحتوى الصفحة القابل للقراءة عند النظر إلى تخطيطها. النقطة من استخدام لوريم إيبسوم هي أنه يحتوي على توزيع طبيعي إلى حد ما للحروف.',
-                    'ourMission': 'مهمتنا',
-                    'missionContent': 'تلتزم شركة الغرافة للتجارة والمقاولات بتقديم خدمات المقاولات العامة ذات القيمة المضافة لعملائها من خلال الشراكة الناجحة معهم طوال عملية البناء، واستشارة التحسين التكنولوجي والمهني لفريقها.',
-                    'ourVision': 'رؤيتنا',
-                    'visionContent': 'رؤيتنا هي الحفاظ على نموّنا كواحدة من الشركات الرائدة في مجال المقاولات في دولة قطر من خلال تقديم مشاريع فريدة لعملاء استثنائيين وهذا يتماشى مع رؤية قطر 2030. في هذا الصدد، تلتزم AGTC بتقديم جودة عالية.',
-                    'ourValues': 'قيمنا',
-                    'valuesContent': 'النزاهة – الجودة – رضا العملاء – الصحة والسلامة – الاعتمادية – العمل الجماعي – الابتكار – المسؤولية البيئية – المشاركة المجتمعية – المسؤولية المالية.',
-                    'ourTeamTitle': 'فريق العمل',
-                    'ourTeamSubtitle': 'فريقنا',
-                    'ourTeamDescription': 'نحن متخصصون في مجموعة واسعة من خدمات البناء، بما في ذلك المشاريع السكنية والتجارية والصناعية.'
-                }
-            };
-
-            // Apply translations
-            document.querySelector('.navbar-brand img').alt = translations[lang].home;
-            document.querySelector('#menu .nav-item:nth-child(1) a').textContent = translations[lang].home;
-            document.querySelector('#menu .nav-item:nth-child(2) a').textContent = translations[lang].aboutUs;
-            document.querySelector('#menu .nav-item:nth-child(3) a').textContent = translations[lang].certificate;
-            document.querySelector('#menu .nav-item:nth-child(4) a').textContent = translations[lang].projects;
-            document.querySelector('#menu .nav-item:nth-child(5) a').textContent = translations[lang].career;
-            document.querySelector('#menu .nav-item:nth-child(6) a').textContent = translations[lang].contact;
-            document.querySelector('.text-anime-style-3').textContent = translations[lang].chairmansMessageHeader;
-            document.querySelector('.section-title h3').textContent = translations[lang].aboutUsTitle;
-            document.querySelector('.section-title h2').textContent = translations[lang].chairmansMessageTitle;
-            document.querySelector('.about-us-content p').textContent = translations[lang].chairmansMessageContent;
-            document.querySelector('#historyContent1').textContent = translations[lang].historyContent1;
-            document.querySelector('#historyContent2').textContent = translations[lang].historyContent2;
-            document.querySelector('#ourMission').textContent = translations[lang].ourMission;
-            document.querySelector('#missionContent').textContent = translations[lang].missionContent;
-            document.querySelector('#ourVision').textContent = translations[lang].ourVision;
-            document.querySelector('#visionContent').textContent = translations[lang].visionContent;
-            document.querySelector('#ourValues').textContent = translations[lang].ourValues;
-            document.querySelector('#valuesContent').textContent = translations[lang].valuesContent;
-            document.querySelector('#ourTeamTitle').textContent = translations[lang].ourTeamTitle;
-            document.querySelector('#ourTeamSubtitle').textContent = translations[lang].ourTeamSubtitle;
-            document.querySelector('#ourTeamDescription').textContent = translations[lang].ourTeamDescription;
-        }
-    </script>
+	<script type="text/javascript">
+		function googleTranslateElementInit() {
+		  new google.translate.TranslateElement({
+			pageLanguage: 'en',  // Default language (English)
+			includedLanguages: 'en,ar',  // Only allow English and Arabic
+			layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+		  }, 'google_translate_element');
+		}
+	  
+		function changeLanguage() {
+		  var selectedLanguage = document.getElementById("languageSelector").value;
+		  var translateElement = document.querySelector(".goog-te-combo");
+	  
+		  if (translateElement) {
+			translateElement.value = selectedLanguage;  // Set the language value
+			translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
+		  }
+		}
+	  </script>
+	  
+	  <!-- Google Translate API -->
+	  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	  
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>

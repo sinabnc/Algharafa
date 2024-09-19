@@ -154,7 +154,27 @@ button.btn-danger {
     }
 }
 
-
+.goog-te-gadget img {
+        vertical-align: middle;
+        border: none;
+        display: none !important;
+    }
+    .goog-te-gadget-simple {
+    background-color: #FFF;
+    border-left: 1px solid #D5D5D5;
+    border-top: 1px solid #9B9B9B;
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #D5D5D5;
+    border-radius: 10px !important;
+    font-size: 10pt;
+    display: inline-block;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    cursor: pointer;}
+    .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+    font-family: emoji;
+    text-decoration: underline;
+}
 
 </style>
 
@@ -208,10 +228,9 @@ button.btn-danger {
                         </div>
                         <!-- Let’s Start Button Start -->
                         <div class="header-btn d-inline-flex">
-                            <select class="form-select" id="languageSelector" onchange="changeLanguage()">
-                                <option value="en">🇬🇧 English</option>
-                                <option value="ar">🇸🇦 Arabic</option>
-                            </select>
+                            <!-- Custom Language Selector for Google Translate -->
+                            <div id="google_translate_element"></div>
+
                         </div>
                         <!-- Let’s Start Button End -->
                     </div>
@@ -408,109 +427,29 @@ button.btn-danger {
                 <!-- Footer Copyright Section End -->
             </div>
         </footer>
-        <script>
-            const translations = {
-            en: {
-                navHome: "Home",
-                navAbout: "About Us",
-                navChairmanMessage: "CHAIRMAN'S MESSAGE",
-                navHsePolicy: "HSE & QC POLICY",
-                navManagementStaff: "MANAGEMENT & STAFF",
-                navVehiclesEquipments: "VEHICLES & EQUIPMENTS",
-                navMep: "MEP",
-                navCarpentry: "CARPENTRY DIVISION",
-                navCertificate: "certificate",
-                navProjects: "Projects",
-                navOngoingProjects: "ongoing projects",
-                navCompletedProjects: "completed projects",
-                navCareer: "career",
-                navContact: "Contact Us",
-                pageHeaderTitle: "Career",
-                searchJobTitlePlaceholder: "Job Title",
-                searchJobType: ["Fulltime", "Part-time", "Internship"],
-                searchLocationPlaceholder: "Location",
-                searchButton: "Search",
-                job1Title: "Civil Engineer",
-                job1Info: ["Fulltime", "Engineering", "Doha"],
-                job1Salary: "$60K–100K / year",
-                job2Title: "Civil Engineer",
-                job2Info: ["Fulltime", "Design", "Remote"],
-                job2Salary: "$30K–60K / year",
-                applyNow: "Apply Now"
-            },
-            ar: {
-                navHome: "الرئيسية",
-                navAbout: "من نحن",
-                navChairmanMessage: "رسالة الرئيس",
-                navHsePolicy: "سياسة السلامة والجودة",
-                navManagementStaff: "الإدارة والموظفون",
-                navVehiclesEquipments: "المركبات والمعدات",
-                navMep: "الأنظمة الميكانيكية والكهربائية والصحية",
-                navCarpentry: "قسم النجارة",
-                navCertificate: "الشهادات",
-                navProjects: "المشاريع",
-                navOngoingProjects: "المشاريع الجارية",
-                navCompletedProjects: "المشاريع المنجزة",
-                navCareer: "وظائف",
-                navContact: "اتصل بنا",
-                pageHeaderTitle: "وظائف",
-                searchJobTitlePlaceholder: "عنوان الوظيفة",
-                searchJobType: ["دوام كامل", "دوام جزئي", "تدريب"],
-                searchLocationPlaceholder: "الموقع",
-                searchButton: "بحث",
-                job1Title: "مهندس مدني",
-                job1Info: ["دوام كامل", "هندسة", "الدوحة"],
-                job1Salary: "$60K–100K / سنة",
-                job2Title: "مهندس مدني",
-                job2Info: ["دوام كامل", "تصميم", "عن بُعد"],
-                job2Salary: "$30K–60K / سنة",
-                applyNow: "تقدم الآن"
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                pageLanguage: 'en',  // Default language (English)
+                includedLanguages: 'en,ar',  // Only allow English and Arabic
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+              }, 'google_translate_element');
             }
-        };
-
-        function changeLanguage() {
-            const lang = document.getElementById('languageSelector').value;
-            const t = translations[lang];
-
-            // Update navigation links
-            document.getElementById('nav-home').innerText = t.navHome;
-            document.getElementById('nav-about').innerText = t.navAbout;
-            document.getElementById('nav-chairman-message').innerText = t.navChairmanMessage;
-            document.getElementById('nav-hse-policy').innerText = t.navHsePolicy;
-            document.getElementById('nav-management-staff').innerText = t.navManagementStaff;
-            document.getElementById('nav-vehicles-equipments').innerText = t.navVehiclesEquipments;
-            document.getElementById('nav-mep').innerText = t.navMep;
-            document.getElementById('nav-carpentry').innerText = t.navCarpentry;
-            document.getElementById('nav-certificate').innerText = t.navCertificate;
-            document.getElementById('nav-projects').innerText = t.navProjects;
-            document.getElementById('nav-ongoing-projects').innerText = t.navOngoingProjects;
-            document.getElementById('nav-completed-projects').innerText = t.navCompletedProjects;
-            document.getElementById('nav-career').innerText = t.navCareer;
-            document.getElementById('nav-contact').innerText = t.navContact;
-
-            // Update page header
-            document.getElementById('page-header-title').innerText = t.pageHeaderTitle;
-
-            // Update search form placeholders
-            document.getElementById('search-job-title').placeholder = t.searchJobTitlePlaceholder;
-            document.getElementById('search-job-type').innerHTML = t.searchJobType.map(type => `<option>${type}</option>`).join('');
-            document.getElementById('search-location').placeholder = t.searchLocationPlaceholder;
-            document.getElementById('search-button').innerText = t.searchButton;
-
-            // Update job listings
-            document.getElementById('job-1-title').innerText = t.job1Title;
-            document.getElementById('job-1-info').innerHTML = t.job1Info.map(info => `<span>${info}</span>`).join('');
-            document.getElementById('job-1-salary').innerText = t.job1Salary;
-
-            document.getElementById('job-2-title').innerText = t.job2Title;
-            document.getElementById('job-2-info').innerHTML = t.job2Info.map(info => `<span>${info}</span>`).join('');
-            document.getElementById('job-2-salary').innerText = t.job2Salary;
-
-            // Update apply now buttons
-            document.querySelectorAll('.apply-btn').forEach(btn => btn.innerText = t.applyNow);
-        }
-
-        </script>
+          
+            function changeLanguage() {
+              var selectedLanguage = document.getElementById("languageSelector").value;
+              var translateElement = document.querySelector(".goog-te-combo");
+          
+              if (translateElement) {
+                translateElement.value = selectedLanguage;  // Set the language value
+                translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
+              }
+            }
+          </script>
+          
+          <!-- Google Translate API -->
+          <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+          
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <script src="js/jquery-3.7.1.min.js"></script>

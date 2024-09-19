@@ -66,7 +66,27 @@
     justify-content: center; /* Center the menu items */
 }
 
-
+.goog-te-gadget img {
+    vertical-align: middle;
+    border: none;
+    display: none !important;
+}
+.goog-te-gadget-simple {
+background-color: #FFF;
+border-left: 1px solid #D5D5D5;
+border-top: 1px solid #9B9B9B;
+border-bottom: 1px solid #ffffff;
+border-right: 1px solid #D5D5D5;
+border-radius: 10px !important;
+font-size: 10pt;
+display: inline-block;
+padding-top: 1px;
+padding-bottom: 2px;
+cursor: pointer;}
+.VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+font-family: emoji;
+text-decoration: underline;
+}
 
 
 
@@ -121,10 +141,9 @@
                         </div>
                         <!-- Language Selector Start -->
                         <div class="header-btn d-inline-flex">
-                            <select class="form-select" id="languageSelector" onchange="changeLanguage()">
-                                <option value="en">🇬🇧 English</option>
-                                <option value="ar">🇸🇦 Arabic</option>
-                            </select>
+                            <!-- Custom Language Selector for Google Translate -->
+                            <div id="google_translate_element"></div>
+                         
                         </div>
                         <!-- Language Selector End -->
                     </div>
@@ -460,93 +479,29 @@
 	<!-- Footer End -->
 
     <!-- Jquery Library File -->
-    <script>
-        function changeLanguage() {
-            var lang = document.getElementById('languageSelector').value;
-            var elements = document.querySelectorAll('[id]');
-
-            // Example translations
-            var translations = {
-                'en': {
-                    'home': 'Home',
-                    'aboutUs': 'About Us',
-                    'chairmansMessage': 'CHAIRMAN\'S MESSAGE',
-                    'hsePolicy': 'HSE & QC POLICY',
-                    'managementStaff': 'MANAGEMENT & STAFF',
-                    'vehiclesEquipment': 'VEHICLES & EQUIPMENTS',
-                    'mep': 'MEP',
-                    'carpentryDivision': 'CARPENTRY DIVISION',
-                    'certificate': 'Certificate',
-                    'projects': 'Projects',
-                    'ongoingProjects': 'Ongoing Projects',
-                    'completedProjects': 'Completed Projects',
-                    'career': 'Career',
-                    'contact': 'Contact',
-                    'pageTitle': 'Commercial & Residential Development',
-                    'projectDescription': 'Landscaping, Car parking and External Services Works for Bonyan Al Doha Real Estate Company, in co-operated with Qatar Armed Force (QAF), Ooredoo, Qatar National Broadband Network (QNBH) & Ashghal Authority.',
-                    'galleryTitle': 'Project Gallery',
-                    'locationLabel': 'Location',
-                    'location': 'Al Gharafa',
-                    'totalBuiltUpArea': '22217㎡',
-                    'totalBuiltUpAreaTitle': 'Total Built-Up Area',
-                    'profileStatus': 'Completed',
-                    'profileStatusTitle': 'Profile Status',
-                    'callSupportLabel': 'Call support center 24/7',
-                    'callSupportNumber': '+1 809 120 6705',
-                    'writeToUsLabel': 'Write to us',
-                    'contactEmail': 'info@domain.com',
-                    'contactUsLabel': 'Contact Us',
-                    'getInTouchLabel': 'Get in touch with us',
-                    'submitButton': 'Submit'
-                },
-                'ar': {
-                    'home': 'الرئيسية',
-                    'aboutUs': 'من نحن',
-                    'chairmansMessage': 'رسالة الرئيس',
-                    'hsePolicy': 'سياسة الصحة والسلامة والبيئة',
-                    'managementStaff': 'الإدارة والموظفين',
-                    'vehiclesEquipment': 'المركبات والمعدات',
-                    'mep': 'MEP',
-                    'carpentryDivision': 'قسم النجارة',
-                    'certificate': 'الشهادات',
-                    'projects': 'المشاريع',
-                    'ongoingProjects': 'المشاريع الجارية',
-                    'completedProjects': 'المشاريع المكتملة',
-                    'career': 'الوظائف',
-                    'contact': 'اتصل بنا',
-                    'pageTitle': 'التطوير التجاري والسكني',
-                    'projectDescription': 'أعمال المناظر الطبيعية، مواقف السيارات والخدمات الخارجية لشركة بونيان الدوحة العقارية، بالتعاون مع القوات المسلحة القطرية (QAF)، أوريدو، الشبكة الوطنية للبنية التحتية للاتصالات (QNBH) وهيئة الأشغال العامة.',
-                    'galleryTitle': 'معرض المشروع',
-                    'locationLabel': 'الموقع',
-                    'location': 'الغرافة',
-                    'totalBuiltUpArea': '22217㎡',
-                    'totalBuiltUpAreaTitle': 'المساحة المبنية الإجمالية',
-                    'profileStatus': 'مكتمل',
-                    'profileStatusTitle': 'حالة الملف',
-                    'callSupportLabel': 'اتصل بمركز الدعم على مدار الساعة',
-                    'callSupportNumber': '+1 809 120 6705',
-                    'writeToUsLabel': 'اكتب لنا',
-                    'contactEmail': 'info@domain.com',
-                    'contactUsLabel': 'اتصل بنا',
-                    'getInTouchLabel': 'تواصل معنا',
-                    'submitButton': 'إرسال'
-                }
-            };
-
-            // Apply translations
-            elements.forEach(function(element) {
-                var id = element.id;
-                if (translations[lang][id]) {
-                    element.textContent = translations[lang][id];
-                }
-            });
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',  // Default language (English)
+            includedLanguages: 'en,ar',  // Only allow English and Arabic
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
         }
-
-        // Set default language
-        document.addEventListener('DOMContentLoaded', function() {
-            changeLanguage();
-        });
-    </script>
+      
+        function changeLanguage() {
+          var selectedLanguage = document.getElementById("languageSelector").value;
+          var translateElement = document.querySelector(".goog-te-combo");
+      
+          if (translateElement) {
+            translateElement.value = selectedLanguage;  // Set the language value
+            translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
+          }
+        }
+      </script>
+      
+      <!-- Google Translate API -->
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>

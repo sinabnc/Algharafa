@@ -65,7 +65,27 @@
     display: flex;
     justify-content: center; /* Center the menu items */
 }
-
+.goog-te-gadget img {
+    vertical-align: middle;
+    border: none;
+    display: none !important;
+}
+.goog-te-gadget-simple {
+background-color: #FFF;
+border-left: 1px solid #D5D5D5;
+border-top: 1px solid #9B9B9B;
+border-bottom: 1px solid #ffffff;
+border-right: 1px solid #D5D5D5;
+border-radius: 10px !important;
+font-size: 10pt;
+display: inline-block;
+padding-top: 1px;
+padding-bottom: 2px;
+cursor: pointer;}
+.VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+font-family: emoji;
+text-decoration: underline;
+}
 
 
 
@@ -119,10 +139,9 @@
                         </div>
                         <!-- Language Selector Start -->
                         <div class="header-btn d-inline-flex">
-                            <select class="form-select" id="languageSelector" onchange="changeLanguage()">
-                                <option value="en">🇬🇧 English</option>
-                                <option value="ar">🇸🇦 Arabic</option>
-                            </select>
+                            <!-- Custom Language Selector for Google Translate -->
+                            <div id="google_translate_element"></div>
+                         
                         </div>
                         <!-- Language Selector End -->
                     </div>
@@ -416,85 +435,29 @@
 	<!-- Footer End -->
 
     <!-- Jquery Library File -->
-    <script>
-        function changeLanguage() {
-            const lang = document.getElementById('languageSelector').value;
-
-            const texts = {
-                en: {
-                    home: "Home",
-                    aboutUs: "About Us",
-                    chairmansMessage: "CHAIRMAN'S MESSAGE",
-                    hsePolicy: "HSE & QC POLICY",
-                    managementStaff: "MANAGEMENT & STAFF",
-                    vehiclesEquipment: "VEHICLES & EQUIPMENTS",
-                    mep: "MEP",
-                    carpentryDivision: "CARPENTRY DIVISION",
-                    certificate: "Certificate",
-                    projects: "Projects",
-                    ongoingProjects: "Ongoing Projects",
-                    completedProjects: "Completed Projects",
-                    career: "Career",
-                    contactUs: "Contact Us",
-                    pageTitle: "Doha Bonyan Markets–(G+2)Commercial",
-                    projectDescription: "A Residential and Commercial Building for our prestigious tenant “Iskan”. With a built-up area of 27,430.97 m² consist of 165 Apartments and 76 Retail shops will cater to the ever increasing need of housing services for government employees and boosting retail markets in the area.",
-                    galleryTitle: "Project Gallery",
-                    locationLabel: "Location",
-                    totalBuiltUpArea: "27,430.97㎡",
-                    profileStatusTitle: "Profile Status",
-                    profileStatus: "Completed"
-                },
-                ar: {
-                    home: "الصفحة الرئيسية",
-                    aboutUs: "معلومات عنا",
-                    chairmansMessage: "رسالة الرئيس",
-                    hsePolicy: "سياسة الصحة والسلامة والبيئة",
-                    managementStaff: "الإدارة والموظفين",
-                    vehiclesEquipment: "المركبات والمعدات",
-                    mep: "الأنظمة الميكانيكية والكهربائية والصحية",
-                    carpentryDivision: "قسم النجارة",
-                    certificate: "الشهادات",
-                    projects: "المشاريع",
-                    ongoingProjects: "المشاريع الجارية",
-                    completedProjects: "المشاريع المكتملة",
-                    career: "الوظائف",
-                    contactUs: "اتصل بنا",
-                    pageTitle: "قصر (ب+ج+1+PH) + مجلس خارجي + مسبح خارجي",
-                    projectDescription: "قصر خاص يحتوي على مجلس خارجي، مسبح خارجي وكتل خارجية (2 عدد) لعميلنا المتميز، بمساحة مبنية قدرها 4097م²",
-                    galleryTitle: "معرض المشروع",
-                    locationLabel: "الموقع",
-                    totalBuiltUpArea: "إجمالي المساحة المبنية",
-                    profileStatusTitle: "حالة الملف",
-                    profileStatus: "مكتمل"
-                }
-            };
-
-            document.getElementById('home').textContent = texts[lang].home;
-            document.getElementById('aboutUs').textContent = texts[lang].aboutUs;
-            document.getElementById('chairmansMessage').textContent = texts[lang].chairmansMessage;
-            document.getElementById('hsePolicy').textContent = texts[lang].hsePolicy;
-            document.getElementById('managementStaff').textContent = texts[lang].managementStaff;
-            document.getElementById('vehiclesEquipment').textContent = texts[lang].vehiclesEquipment;
-            document.getElementById('mep').textContent = texts[lang].mep;
-            document.getElementById('carpentryDivision').textContent = texts[lang].carpentryDivision;
-            document.getElementById('certificate').textContent = texts[lang].certificate;
-            document.getElementById('projects').textContent = texts[lang].projects;
-            document.getElementById('ongoingProjects').textContent = texts[lang].ongoingProjects;
-            document.getElementById('completedProjects').textContent = texts[lang].completedProjects;
-            document.getElementById('career').textContent = texts[lang].career;
-            document.getElementById('contactUs').textContent = texts[lang].contactUs;
-            document.getElementById('pageTitle').textContent = texts[lang].pageTitle;
-            document.getElementById('projectDescription').textContent = texts[lang].projectDescription;
-            document.getElementById('galleryTitle').textContent = texts[lang].galleryTitle;
-            document.getElementById('locationLabel').textContent = texts[lang].locationLabel;
-            document.getElementById('totalBuiltUpArea').textContent = texts[lang].totalBuiltUpArea;
-            document.getElementById('profileStatusTitle').textContent = texts[lang].profileStatusTitle;
-            document.getElementById('profileStatus').textContent = texts[lang].profileStatus;
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',  // Default language (English)
+            includedLanguages: 'en,ar',  // Only allow English and Arabic
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
         }
-
-        // Initial call to set language based on the default or previously selected language
-        changeLanguage();
-    </script>
+      
+        function changeLanguage() {
+          var selectedLanguage = document.getElementById("languageSelector").value;
+          var translateElement = document.querySelector(".goog-te-combo");
+      
+          if (translateElement) {
+            translateElement.value = selectedLanguage;  // Set the language value
+            translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
+          }
+        }
+      </script>
+      
+      <!-- Google Translate API -->
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>

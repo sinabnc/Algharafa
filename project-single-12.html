@@ -66,7 +66,27 @@
     justify-content: center; /* Center the menu items */
 }
 
-
+.goog-te-gadget img {
+        vertical-align: middle;
+        border: none;
+        display: none !important;
+    }
+    .goog-te-gadget-simple {
+    background-color: #FFF;
+    border-left: 1px solid #D5D5D5;
+    border-top: 1px solid #9B9B9B;
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #D5D5D5;
+    border-radius: 10px !important;
+    font-size: 10pt;
+    display: inline-block;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    cursor: pointer;}
+    .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+    font-family: emoji;
+    text-decoration: underline;
+}
 
 
 
@@ -118,10 +138,9 @@
                         </div>
                         <!-- Let’s Start Button Start -->
                         <div class="header-btn d-inline-flex">
-                            <select class="form-select" id="languageSelector" onchange="changeLanguage()">
-                                <option value="en">🇬🇧 English</option>
-                                <option value="ar">🇸🇦 Arabic</option>
-                            </select>
+                            <!-- Custom Language Selector for Google Translate -->
+                            <div id="google_translate_element"></div>
+                         
                         </div>
                         <!-- Let’s Start Button End -->
                     </div>
@@ -413,85 +432,29 @@
 	<!-- Footer End -->
 
     <!-- Jquery Library File -->
-    <script>
-        const translations = {
-            en: {
-                homeLink: "Home",
-                aboutUsLink: "About Us",
-                chairmansMessageLink: "CHAIRMAN'S MESSAGE",
-                hsePolicyLink: "HSE & QC POLICY",
-                managementStaffLink: "MANAGEMENT & STAFF",
-                vehiclesEquipmentsLink: "VEHICLES & EQUIPMENTS",
-                mepLink: "MEP",
-                carpentryDivisionLink: "CARPENTRY DIVISION",
-                certificateLink: "certificate",
-                projectsLink: "Projects",
-                ongoingProjectsLink: "ongoing projects",
-                completedProjectsLink: "completed projects",
-                careerLink: "career",
-                contactLink: "Contact",
-                projectTitle: "10 Villas (G+F+PH)",
-                projectDescription: "A Compound Villa comprising of 10 Villas, with a built-up area of 8,000.00 m² will cater to the ever-increasing need of housing services at Izghawa.",
-                buildingDevelopmentTitle: "Building better development",
-                projectDescription2: "Aenean sed adipiscing diam donec adipiscing tristique risus. Nunc pulvinar sapien et ligula ullamcorper malesuada. Venenatis urna cursus eget nunc scelerisque viverra mauris in. A cras semper auctor neque vitae tempus.",
-                buildingFutureIdeas: "Building the future with ideas",
-                engineeringBetterWay: "Engineering the better way",
-                designFutureExcellence: "Designing future with excellence",
-                discoveringPossibility: "Discovering possibility in concrete",
-                galleryTitle: "project gallery",
-                locationLabel: "location",
-                location: "Izghawa",
-                areaLabel: "8000㎡",
-                totalBuiltUpArea: "Total Built-Up Area",
-                statusLabel: "Completed",
-                profileStatus: "Profile status"
-            },
-            ar: {
-                homeLink: "الرئيسية",
-                aboutUsLink: "معلومات عنا",
-                chairmansMessageLink: "رسالة الرئيس",
-                hsePolicyLink: "سياسة HSE & QC",
-                managementStaffLink: "الإدارة والموظفين",
-                vehiclesEquipmentsLink: "المركبات والمعدات",
-                mepLink: "MEP",
-                carpentryDivisionLink: "قسم النجارة",
-                certificateLink: "شهادة",
-                projectsLink: "المشاريع",
-                ongoingProjectsLink: "المشاريع الجارية",
-                completedProjectsLink: "المشاريع المنجزة",
-                careerLink: "المسيرة المهنية",
-                contactLink: "اتصال",
-                projectTitle: "10 فيلات (G+F+PH)",
-                projectDescription: "فيلا مجمع تتكون من 10 فيلات، بمساحة مبنية تبلغ 8000.00 م² ستلبي الحاجة المتزايدة لخدمات الإسكان في إزغاوة.",
-                buildingDevelopmentTitle: "بناء تطوير أفضل",
-                projectDescription2: "Aenean sed adipiscing diam donec adipiscing tristique risus. Nunc pulvinar sapien et ligula ullamcorper malesuada. Venenatis urna cursus eget nunc scelerisque viverra mauris in. A cras semper auctor neque vitae tempus.",
-                buildingFutureIdeas: "بناء المستقبل بالأفكار",
-                engineeringBetterWay: "هندسة الطريقة الأفضل",
-                designFutureExcellence: "تصميم المستقبل بالتميز",
-                discoveringPossibility: "اكتشاف الإمكانيات في الخرسانة",
-                galleryTitle: "معرض المشروع",
-                locationLabel: "الموقع",
-                location: "إزغاوة",
-                areaLabel: "8000㎡",
-                totalBuiltUpArea: "إجمالي المساحة المبنية",
-                statusLabel: "مكتمل",
-                profileStatus: "حالة الملف"
-            }
-        };
-        
-        function changeLanguage() {
-            const selectedLanguage = document.getElementById("languageSelector").value;
-            const elementsToTranslate = document.querySelectorAll("[id]");
-        
-            elementsToTranslate.forEach(element => {
-                const translationKey = element.id;
-                if (translations[selectedLanguage][translationKey]) {
-                    element.textContent = translations[selectedLanguage][translationKey];
-                }
-            });
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',  // Default language (English)
+            includedLanguages: 'en,ar',  // Only allow English and Arabic
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
         }
-        
-    </script>
+      
+        function changeLanguage() {
+          var selectedLanguage = document.getElementById("languageSelector").value;
+          var translateElement = document.querySelector(".goog-te-combo");
+      
+          if (translateElement) {
+            translateElement.value = selectedLanguage;  // Set the language value
+            translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
+          }
+        }
+      </script>
+      
+      <!-- Google Translate API -->
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>

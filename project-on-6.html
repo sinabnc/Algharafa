@@ -67,7 +67,27 @@
 }
 
 
-
+.goog-te-gadget img {
+    vertical-align: middle;
+    border: none;
+    display: none !important;
+}
+.goog-te-gadget-simple {
+background-color: #FFF;
+border-left: 1px solid #D5D5D5;
+border-top: 1px solid #9B9B9B;
+border-bottom: 1px solid #ffffff;
+border-right: 1px solid #D5D5D5;
+border-radius: 10px !important;
+font-size: 10pt;
+display: inline-block;
+padding-top: 1px;
+padding-bottom: 2px;
+cursor: pointer;}
+.VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+font-family: emoji;
+text-decoration: underline;
+}
 
 
 </style>
@@ -103,10 +123,9 @@
 
                         <!-- Language Selector -->
                         <div class="header-btn d-inline-flex">
-                            <select class="form-select" id="languageSelector" onchange="changeLanguage()">
-                                <option value="en">🇬🇧 English</option>
-                                <option value="ar">🇸🇦 Arabic</option>
-                            </select>
+                            <!-- Custom Language Selector for Google Translate -->
+                            <div id="google_translate_element"></div>
+                         
                         </div>
                     </div>
                 </div>
@@ -293,49 +312,29 @@
 
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script>
-        <script>
-            // Define the translations for English and Arabic
-            const translations = {
-                en: {
-                    "page-title": "6 Villa (G+1+PH) & Ancillary",
-                    "project-description": "A Compound Villa comprising of 6 Villas, With a built-up area of 4,780 m² will cater to the ever-increasing need of housing services at Izghawa.",
-                    "location-title": "Location",
-                    "location-content": "Izghawa",
-                    "area-title": "Total Built-Up Area",
-                    "area-content": "29363.50㎡",
-                    "status-title": "Profile status",
-                    "status-content": "Ongoing",
-                    "menu-home": "Home",
-                    "menu-about": "About Us",
-                    "menu-certificate": "Certificate",
-                    "menu-contact": "Contact Us"
-                },
-                ar: {
-                    "page-title": "6 فيلا (G+1+PH) ومرافق إضافية",
-                    "project-description": "مجمع فيلا يتكون من 6 فيلات، بمساحة بناء تبلغ 4,780 م² لتلبية الحاجة المتزايدة للخدمات السكنية في إزغوى.",
-                    "location-title": "الموقع",
-                    "location-content": "إزغوى",
-                    "area-title": "إجمالي المساحة المبنية",
-                    "area-content": "29363.50㎡",
-                    "status-title": "حالة الملف الشخصي",
-                    "status-content": "قيد التنفيذ",
-                    "menu-home": "الرئيسية",
-                    "menu-about": "معلومات عنا",
-                    "menu-certificate": "الشهادة",
-                    "menu-contact": "اتصل بنا"
-                }
-            };
-    
-            // Function to change the language
-            function changeLanguage() {
-                const selectedLang = document.getElementById('languageSelector').value;
-                for (let id in translations[selectedLang]) {
-                    document.getElementById(id).innerText = translations[selectedLang][id];
-                }
-            }
-        </script>
-    </script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',  // Default language (English)
+            includedLanguages: 'en,ar',  // Only allow English and Arabic
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
+        }
+      
+        function changeLanguage() {
+          var selectedLanguage = document.getElementById("languageSelector").value;
+          var translateElement = document.querySelector(".goog-te-combo");
+      
+          if (translateElement) {
+            translateElement.value = selectedLanguage;  // Set the language value
+            translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
+          }
+        }
+      </script>
+      
+      <!-- Google Translate API -->
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>
     <!-- Validator js file -->

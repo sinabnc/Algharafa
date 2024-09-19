@@ -67,7 +67,27 @@
 }
 
 
-
+.goog-te-gadget img {
+        vertical-align: middle;
+        border: none;
+        display: none !important;
+    }
+    .goog-te-gadget-simple {
+    background-color: #FFF;
+    border-left: 1px solid #D5D5D5;
+    border-top: 1px solid #9B9B9B;
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #D5D5D5;
+    border-radius: 10px !important;
+    font-size: 10pt;
+    display: inline-block;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    cursor: pointer;}
+    .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+    font-family: emoji;
+    text-decoration: underline;
+}
 
 
 </style>
@@ -121,10 +141,9 @@
                         </div>
                         <!-- Let’s Start Button Start -->
                         <div class="header-btn d-inline-flex">
-                            <select class="form-select" id="languageSelector" onchange="changeLanguage()">
-                                <option value="en">🇬🇧 English</option>
-                                <option value="ar">🇸🇦 Arabic</option>
-                            </select>
+                            <!-- Custom Language Selector for Google Translate -->
+                            <div id="google_translate_element"></div>
+                         
                         </div>
                         <!-- Let’s Start Button End -->
                     </div>
@@ -460,86 +479,29 @@
 
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script>
-        const translations = {
-            en: {
-                "home-link": "Home",
-        "about-us-link": "About Us",
-        "chairman-message-link": "CHAIRMAN'S MESSAGE",
-        "hse-policy-link": "HSE & QC POLICY",
-        "management-staff-link": "MANAGEMENT & STAFF",
-        "vehicles-link": "VEHICLES & EQUIPMENTS",
-        "mep-link": "MEP",
-        "carpentry-link": "CARPENTRY DIVISION",
-        "certificate-link": "certificate",
-        "projects-link": "Projects",
-        "ongoing-projects-link": "ongoing projects",
-        "completed-projects-link": "completed projects",
-        "career-link": "career",
-        "contact-link": "Contact Us",
-        "page-header-title": "Our Ongoing Projects",
-        "project-title-1": "VILLA (B+G+1+P), MAJLIS",
-        "project-description-1": "A Private Villa comprising of Out Majlis, Outdoor Swimming Pool, Driver Room and Ancillary Building for our prestigious client, with a built-up area of 2,822.26 m².",
-        "view-more-1": "view more",
-        "project-title-2": "Villa (G+1+PH), Service Building",
-        "project-description-2": "A Private Villa and Compound Villa comprising of Out Majlis, Driver Room and Out block (2 Nos.) for our prestigious client, with a built-up area of 7,680.82 m².",
-        "view-more-2": "view more",
-        "project-title-3": "Mixed Use Buildings",
-        "project-description-3": "A Mixed-Use Building for our prestigious Client, with a built-up area of 82,502.87 m² consisting of School, Residential Buildings, Showroom and Offices, Restaurants.",
-        "view-more-3": "view more",
-        "project-title-4": "Masjid (G)",
-        "project-description-4": "A Masjid for our prestigious client, with a built-up area of 519.64 m².",
-        "view-more-4": "view more",
-        "project-title-5": "COMPOUND VILLAS",
-        "project-description-5": "A Compound Villas & Clubhouse for our prestigious Client, with a built-up area of 29,363.50 m² consisting of Residential Building, Clubhouse, Kinder Garden, Guard room.",
-        "view-more-5": "view more",
-            },
-            ar: {
-                "home-link": "الصفحة الرئيسية",
-        "about-us-link": "من نحن",
-        "chairman-message-link": "رسالة رئيس مجلس الإدارة",
-        "hse-policy-link": "سياسة الصحة والسلامة والبيئة",
-        "management-staff-link": "الإدارة والموظفين",
-        "vehicles-link": "المركبات والمعدات",
-        "mep-link": "الميكانيكا والكهرباء والسباكة",
-        "carpentry-link": "قسم النجارة",
-        "certificate-link": "الشهادات",
-        "projects-link": "المشاريع",
-        "ongoing-projects-link": "المشاريع الجارية",
-        "completed-projects-link": "المشاريع المنجزة",
-        "career-link": "الوظائف",
-        "contact-link": "اتصل بنا",
-        "page-header-title": "مشاريعنا الجارية",
-        "project-title-1": "فيلا (ب+ج+1+س), مجلس",
-        "project-description-1": "فيلا خاصة تتضمن مجلس خارجي، مسبح خارجي، غرفة سائق ومبنى ملحق لعميلنا المتميز، بمساحة بناء قدرها 2,822.26 م².",
-        "view-more-1": "عرض المزيد",
-        "project-title-2": "فيلا (ج+1+س)، مبنى خدمات",
-        "project-description-2": "فيلا خاصة وفيلا مجمعة تتضمن مجلس خارجي، غرفة سائق ومبنى خارجي (2 عدد) لعميلنا المتميز، بمساحة بناء قدرها 7,680.82 م².",
-        "view-more-2": "عرض المزيد",
-        "project-title-3": "بناء متعدد الاستخدامات",
-        "project-description-3": "مبنى متعدد الاستخدامات لعميلنا المتميز، بمساحة بناء قدرها 82,502.87 م² يتكون من مدرسة، مباني سكنية، صالة عرض ومكاتب، مطاعم.",
-        "view-more-3": "عرض المزيد",
-        "project-title-4": "مسجد (ج)",
-        "project-description-4": "مسجد لعميلنا المتميز، بمساحة بناء قدرها 519.64 م².",
-        "view-more-4": "عرض المزيد",
-        "project-title-5": "فلل مجمعة",
-        "project-description-5": "فلل مجمعة ونادي لعميلنا المتميز، بمساحة بناء قدرها 29,363.50 م² يتكون من مبنى سكني، نادي، روضة أطفال، غرفة حارس.",
-        "view-more-5": "عرض المزيد",
-            }
-        };
-
-        function changeLanguage() {
-            const lang = document.getElementById('languageSelector').value;
-            const elements = document.querySelectorAll('[id]');
-
-            elements.forEach(element => {
-                const key = element.getAttribute('id');
-                if (translations[lang][key]) {
-                    element.textContent = translations[lang][key];
-                }
-            });
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',  // Default language (English)
+            includedLanguages: 'en,ar',  // Only allow English and Arabic
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
         }
-    </script>
+      
+        function changeLanguage() {
+          var selectedLanguage = document.getElementById("languageSelector").value;
+          var translateElement = document.querySelector(".goog-te-combo");
+      
+          if (translateElement) {
+            translateElement.value = selectedLanguage;  // Set the language value
+            translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
+          }
+        }
+      </script>
+      
+      <!-- Google Translate API -->
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>
     <!-- Validator js file -->

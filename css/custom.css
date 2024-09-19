@@ -812,7 +812,7 @@ header.main-header .header-sticky.active{
 
 .hero-slider-layout .swiper-pagination{
 	z-index: 2;
-    bottom: 175px;
+    bottom: 100px;
 }
 
 .hero-slider-layout .swiper-pagination .swiper-pagination-bullet{
@@ -4691,4 +4691,13 @@ header.main-header .header-sticky.active{
 	.error-page-content-heading h2{
 		font-size: 36px;
 	}
+}
+/* .hero-content{
+	position: relative;
+	bottom: 150px !important;
+} */
+
+.hero-slider-layout .hero-slide{
+	position: relative !important;
+	padding: 180px 0 180px !important;
 }

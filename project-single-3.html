@@ -66,7 +66,27 @@
     justify-content: center; /* Center the menu items */
 }
 
-
+.goog-te-gadget img {
+    vertical-align: middle;
+    border: none;
+    display: none !important;
+}
+.goog-te-gadget-simple {
+background-color: #FFF;
+border-left: 1px solid #D5D5D5;
+border-top: 1px solid #9B9B9B;
+border-bottom: 1px solid #ffffff;
+border-right: 1px solid #D5D5D5;
+border-radius: 10px !important;
+font-size: 10pt;
+display: inline-block;
+padding-top: 1px;
+padding-bottom: 2px;
+cursor: pointer;}
+.VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+font-family: emoji;
+text-decoration: underline;
+}
 
 
 
@@ -119,10 +139,9 @@
                         </div>
                         <!-- Language Selector Start -->
                         <div class="header-btn d-inline-flex">
-                            <select class="form-select" id="languageSelector" onchange="changeLanguage()">
-                                <option value="en">🇬🇧 English</option>
-                                <option value="ar">🇸🇦 Arabic</option>
-                            </select>
+                            <!-- Custom Language Selector for Google Translate -->
+                            <div id="google_translate_element"></div>
+                         
                         </div>
                         <!-- Language Selector End -->
                     </div>
@@ -370,92 +389,29 @@
 	<!-- Footer End -->
 
     <!-- Jquery Library File -->
-    <script>
-        <script>
-            function changeLanguage() {
-                const language = document.getElementById('languageSelector').value;
-    
-                const translations = {
-                    en: {
-                        home: 'Home',
-                        aboutUs: 'About Us',
-                        chairmanMessage: "CHAIRMAN'S MESSAGE",
-                        hsePolicy: 'HSE & QC POLICY',
-                        managementStaff: 'MANAGEMENT & STAFF',
-                        vehicles: 'VEHICLES & EQUIPMENTS',
-                        mep: 'MEP',
-                        carpentry: 'CARPENTRY DIVISION',
-                        certificate: 'Certificate',
-                        projects: 'Projects',
-                        ongoingProjects: 'Ongoing Projects',
-                        completedProjects: 'Completed Projects',
-                        career: 'Career',
-                        contactUs: 'Contact Us',
-                        pageHeaderTitle: 'COMPOUND VILLAS & CLUBHOUSE',
-                        projectDescription: 'A Compound Villas & Clubhouse for our prestigious Client, with a built-up area of 29,363.50 m² consist of Residential Building, Clubhouse, Kinder Garden, Guard room, Substation & Electric Rooms will cater to the ever-increasing need of housing services in the area.',
-                        galleryTitle: 'Project Gallery',
-                        locationLabel: 'Location',
-                        location: 'Izghawa',
-                        areaLabel: '4780㎡',
-                        areaTitle: 'Total Built-Up Area',
-                        status: 'Completed',
-                        statusTitle: 'Profile Status'
-                    },
-                    ar: {
-                        home: 'الرئيسية',
-                        aboutUs: 'معلومات عنا',
-                        chairmanMessage: 'رسالة الرئيس',
-                        hsePolicy: 'سياسة الصحة والسلامة والبيئة',
-                        managementStaff: 'الإدارة والموظفون',
-                        vehicles: 'المركبات والمعدات',
-                        mep: 'MEP',
-                        carpentry: 'قسم النجارة',
-                        certificate: 'شهادة',
-                        projects: 'مشاريع',
-                        ongoingProjects: 'المشاريع الجارية',
-                        completedProjects: 'المشاريع المنجزة',
-                        career: 'الوظائف',
-                        contactUs: 'اتصل بنا',
-                        pageHeaderTitle: 'فلل مجمع ونادٍ',
-                        projectDescription: 'مجمع فلل ونادٍ لعميلنا المرموق، بمساحة مبنية قدرها 29,363.50 متر مربع يتكون من مبنى سكني، نادي، روضة أطفال، غرفة حارس، محطة فرعية وغرف كهرباء لتلبية الحاجة المتزايدة لخدمات الإسكان في المنطقة.',
-                        galleryTitle: 'معرض المشروع',
-                        locationLabel: 'الموقع',
-                        location: 'إزغوى',
-                        areaLabel: '4780㎡',
-                        areaTitle: 'إجمالي المساحة المبنية',
-                        status: 'مكتمل',
-                        statusTitle: 'حالة الملف'
-                    }
-                };
-    
-                const text = translations[language];
-    
-                document.getElementById('home').textContent = text.home;
-                document.getElementById('about-us').textContent = text.aboutUs;
-                document.getElementById('chairman-message').textContent = text.chairmanMessage;
-                document.getElementById('hse-policy').textContent = text.hsePolicy;
-                document.getElementById('management-staff').textContent = text.managementStaff;
-                document.getElementById('vehicles').textContent = text.vehicles;
-                document.getElementById('mep').textContent = text.mep;
-                document.getElementById('carpentry').textContent = text.carpentry;
-                document.getElementById('certificate').textContent = text.certificate;
-                document.getElementById('projects').textContent = text.projects;
-                document.getElementById('ongoing-projects').textContent = text.ongoingProjects;
-                document.getElementById('completed-projects').textContent = text.completedProjects;
-                document.getElementById('career').textContent = text.career;
-                document.getElementById('contact-us').textContent = text.contactUs;
-                document.getElementById('page-header-title').textContent = text.pageHeaderTitle;
-                document.getElementById('project-description').textContent = text.projectDescription;
-                document.getElementById('gallery-title').textContent = text.galleryTitle;
-                document.getElementById('location-label').textContent = text.locationLabel;
-                document.getElementById('location').textContent = text.location;
-                document.getElementById('area-label').textContent = text.areaLabel;
-                document.getElementById('area-title').textContent = text.areaTitle;
-                document.getElementById('status').textContent = text.status;
-                document.getElementById('status-title').textContent = text.statusTitle;
-            }
-        </script>
-    </script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',  // Default language (English)
+            includedLanguages: 'en,ar',  // Only allow English and Arabic
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
+        }
+      
+        function changeLanguage() {
+          var selectedLanguage = document.getElementById("languageSelector").value;
+          var translateElement = document.querySelector(".goog-te-combo");
+      
+          if (translateElement) {
+            translateElement.value = selectedLanguage;  // Set the language value
+            translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
+          }
+        }
+      </script>
+      
+      <!-- Google Translate API -->
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>

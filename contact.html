@@ -67,7 +67,27 @@
 }
 
 
-
+.goog-te-gadget img {
+        vertical-align: middle;
+        border: none;
+        display: none !important;
+    }
+    .goog-te-gadget-simple {
+    background-color: #FFF;
+    border-left: 1px solid #D5D5D5;
+    border-top: 1px solid #9B9B9B;
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #D5D5D5;
+    border-radius: 10px !important;
+    font-size: 10pt;
+    display: inline-block;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    cursor: pointer;}
+    .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+    font-family: emoji;
+    text-decoration: underline;
+}
 
 
 </style>
@@ -120,10 +140,9 @@
                     </div>
                     <!-- Language Switcher -->
                     <div class="header-btn d-inline-flex">
-                        <select class="form-select" id="languageSelector" onchange="changeLanguage()">
-                            <option value="en">🇬🇧 English</option>
-                            <option value="ar">🇸🇦 Arabic</option>
-                        </select>
+                        <!-- Custom Language Selector for Google Translate -->
+                        <div id="google_translate_element"></div>
+
                     </div>
                 </div>
                 <!-- Main Menu End -->
@@ -423,102 +442,31 @@
 
     });
 
-    const translations = {
-        en: {
-            "nav-home": "Home",
-            "nav-about": "About Us",
-            "nav-message": "CHAIRMAN'S MESSAGE",
-            "nav-hse": "HSE & QC POLICY",
-            "nav-staff": "MANAGEMENT & STAFF",
-            "nav-vehicle": "VEHICLES & EQUIPMENTS",
-            "nav-mep": "MEP",
-            "nav-carpentry": "CARPENTRY DIVISION",
-            "nav-certificates": "certificate",
-            "nav-projects": "Projects",
-            "nav-ongoing-projects": "ongoing projects",
-            "nav-completed-projects": "completed projects",
-            "nav-career": "career",
-            "nav-contact": "Contact Us",
-            "page-title": "Contact Us",
-            "call-support-title": "call support center 24/7",
-            "phone-numbers": "(+974) 66554433<br>(+974) 66554429<br>(+974) 33529395",
-            "write-to-us-title": "write to us",
-            "email-address": "info@algharafacontracting.com",
-            "visit-us-title": "visit us",
-            "address": "Palm Tower B, 1606, Street No. 810 Zone No.60, P.O. Box: 6488, Doha - Qatar",
-            "ready-to-start": "Ready to get started? Let's chat.",
-            "fill-form": "Please fill out the form below, and a member of our team will get back to you as soon as possible.",
-            "submit-btn": "Submit",
-            "footer-description": "Transforming Visions into Reality: Your Trusted Partner in Construction Excellence.",
-            "footer-contact-title": "Contact Info",
-            "footer-address": "Palm Tower B, 1606, Street No. 810 Zone No.60, P.O. Box: 6488, Doha - Qatar",
-            "footer-phone": "Mobile: (+974) 66554433",
-            "footer-email": "Email: info@algharafacontracting.com",
-            "footer-quick-links-title": "Quick Links",
-            "footer-home": "Home",
-            "footer-about": "About Us",
-            "footer-certificates": "Certificates",
-            "footer-contact": "Contact",
-            "footer-newsletter-title": "Newsletter",
-            "newsletter-email": "Email Address",
-            "newsletter-btn": "Subscribe",
-            "footer-copyright": "© 2024 Al Gharafa Trading & Contracting. All Rights Reserved"
-        },
-        ar: {
-            "nav-home": "الصفحة الرئيسية",
-            "nav-about": "معلومات عنا",
-            "nav-message": "رسالة الرئيس",
-            "nav-hse": "سياسة الصحة والسلامة والجودة",
-            "nav-staff": "الإدارة والموظفين",
-            "nav-vehicle": "المركبات والمعدات",
-            "nav-mep": "ميكانيكا وكهرباء وسباكة",
-            "nav-carpentry": "قسم النجارة",
-            "nav-certificates": "الشهادات",
-            "nav-projects": "المشاريع",
-            "nav-ongoing-projects": "المشاريع الجارية",
-            "nav-completed-projects": "المشاريع المكتملة",
-            "nav-career": "الوظائف",
-            "nav-contact": "اتصل بنا",
-            "page-title": "اتصل بنا",
-            "call-support-title": "اتصل بمركز الدعم على مدار الساعة",
-            "phone-numbers": "(+974) 66554433<br>(+974) 66554429<br>(+974) 33529395",
-            "write-to-us-title": "اكتب لنا",
-            "email-address": "info@algharafacontracting.com",
-            "visit-us-title": "زورنا",
-            "address": "برج بالم بي، 1606، شارع رقم 810، المنطقة رقم 60، صندوق بريد: 6488، الدوحة - قطر",
-            "ready-to-start": "مستعد للبدء؟ دعنا نتحدث.",
-            "fill-form": "يرجى ملء النموذج أدناه، وسيتواصل معك عضو من فريقنا في أقرب وقت ممكن.",
-            "submit-btn": "إرسال",
-            "footer-description": "تحويل الرؤى إلى حقيقة: شريكك الموثوق في التميز في البناء.",
-            "footer-contact-title": "معلومات الاتصال",
-            "footer-address": "برج بالم بي، 1606، شارع رقم 810، المنطقة رقم 60، صندوق بريد: 6488، الدوحة - قطر",
-            "footer-phone": "موبايل: (+974) 66554433",
-            "footer-email": "البريد الإلكتروني: info@algharafacontracting.com",
-            "footer-quick-links-title": "روابط سريعة",
-            "footer-home": "الصفحة الرئيسية",
-            "footer-about": "معلومات عنا",
-            "footer-certificates": "الشهادات",
-            "footer-contact": "اتصل",
-            "footer-newsletter-title": "النشرة الإخبارية",
-            "newsletter-email": "عنوان البريد الإلكتروني",
-            "newsletter-btn": "اشترك",
-            "footer-copyright": "© 2024 شركة الغرافة للتجارة والمقاولات. جميع الحقوق محفوظة"
-        }
-    };
-
-    function changeLanguage() {
-        const selectedLanguage = document.getElementById('languageSelector').value;
-
-        // Loop through all translation elements
-        Object.keys(translations[selectedLanguage]).forEach(id => {
-            const element = document.getElementById(id);
-            if (element) {
-                element.innerHTML = translations[selectedLanguage][id];
-            }
-        });
-    }
+    
 </script>
-
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',  // Default language (English)
+        includedLanguages: 'en,ar',  // Only allow English and Arabic
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  
+    function changeLanguage() {
+      var selectedLanguage = document.getElementById("languageSelector").value;
+      var translateElement = document.querySelector(".goog-te-combo");
+  
+      if (translateElement) {
+        translateElement.value = selectedLanguage;  // Set the language value
+        translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
+      }
+    }
+  </script>
+  
+  <!-- Google Translate API -->
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
     
 </body>
 

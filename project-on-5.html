@@ -66,7 +66,27 @@
     justify-content: center; /* Center the menu items */
 }
 
-
+.goog-te-gadget img {
+        vertical-align: middle;
+        border: none;
+        display: none !important;
+    }
+    .goog-te-gadget-simple {
+    background-color: #FFF;
+    border-left: 1px solid #D5D5D5;
+    border-top: 1px solid #9B9B9B;
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #D5D5D5;
+    border-radius: 10px !important;
+    font-size: 10pt;
+    display: inline-block;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    cursor: pointer;}
+    .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+    font-family: emoji;
+    text-decoration: underline;
+}
 
 
 
@@ -121,10 +141,9 @@
 
                         <!-- Language Selector -->
                         <div class="header-btn d-inline-flex">
-                            <select class="form-select" id="languageSelector" onchange="changeLanguage()">
-                                <option value="en">🇬🇧 English</option>
-                                <option value="ar">🇸🇦 Arabic</option>
-                            </select>
+                            <!-- Custom Language Selector for Google Translate -->
+                            <div id="google_translate_element"></div>
+                         
                         </div>
                     </div>
                     <div class="navbar-toggle"></div>
@@ -339,60 +358,29 @@
 	<!-- Footer End -->
 
     <!-- Jquery Library File -->
-    <script>
-        const translations = {
-    en: {
-        home: "Home",
-        about_us: "About Us",
-        chairman_message: "CHAIRMAN'S MESSAGE",
-        hse_policy: "HSE & QC POLICY",
-        management_staff: "MANAGEMENT & STAFF",
-        vehicles_equipment: "VEHICLES & EQUIPMENTS",
-        mep: "MEP",
-        carpentry_division: "CARPENTRY DIVISION",
-        certificate: "certificate",
-        projects: "Projects",
-        ongoing_projects: "ongoing projects",
-        completed_projects: "completed projects",
-        career: "career",
-        contact_us: "Contact Us",
-        page_header: "Masjid (G)",
-        project_description: "A Masjid for our prestigious client, with a built-up area of 519.64 m².",
-        gallery_title: "project gallery",
-        location_label: "location",
-        location: "Izghawa",
-        total_area_label: "Total Built-Up Area",
-        total_area: "519.64㎡",
-        status_label: "Profile status",
-        status: "ongoing"
-    },
-    ar: {
-        home: "الصفحة الرئيسية",
-        about_us: "من نحن",
-        chairman_message: "رسالة الرئيس",
-        hse_policy: "سياسة السلامة والصحة المهنية والجودة",
-        management_staff: "الإدارة والموظفون",
-        vehicles_equipment: "المركبات والمعدات",
-        mep: "الأنظمة الميكانيكية والكهربائية والصحية",
-        carpentry_division: "قسم النجارة",
-        certificate: "الشهادات",
-        projects: "المشاريع",
-        ongoing_projects: "المشاريع الجارية",
-        completed_projects: "المشاريع المنجزة",
-        career: "الوظائف",
-        contact_us: "اتصل بنا",
-        page_header: "مسجد (ج)",
-        project_description: "مسجد لعميلنا المرموق، بمساحة بنائية تبلغ 519.64 م².",
-        gallery_title: "معرض المشروع",
-        location_label: "الموقع",
-        location: "إزغوى",
-        total_area_label: "إجمالي المساحة المبنية",
-        total_area: "519.64㎡",
-        status_label: "حالة الملف الشخصي",
-        status: "جارٍ"
-    }
-};
-    </script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',  // Default language (English)
+            includedLanguages: 'en,ar',  // Only allow English and Arabic
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
+        }
+      
+        function changeLanguage() {
+          var selectedLanguage = document.getElementById("languageSelector").value;
+          var translateElement = document.querySelector(".goog-te-combo");
+      
+          if (translateElement) {
+            translateElement.value = selectedLanguage;  // Set the language value
+            translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
+          }
+        }
+      </script>
+      
+      <!-- Google Translate API -->
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>

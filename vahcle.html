@@ -133,6 +133,28 @@
             padding: 5px;
         }
     }
+
+    .goog-te-gadget img {
+        vertical-align: middle;
+        border: none;
+        display: none !important;
+    }
+    .goog-te-gadget-simple {
+    background-color: #FFF;
+    border-left: 1px solid #D5D5D5;
+    border-top: 1px solid #9B9B9B;
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #D5D5D5;
+    border-radius: 10px !important;
+    font-size: 10pt;
+    display: inline-block;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    cursor: pointer;}
+    .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+    font-family: emoji;
+    text-decoration: underline;
+}
     </style>
 
 
@@ -190,10 +212,9 @@
                         </div>
                         <!-- Let’s Start Button Start -->
                         <div class="header-btn d-inline-flex">
-                            <select class="form-select" id="languageSelector" onchange="changeLanguage()">
-                                <option value="en">🇬🇧 English</option>
-                                <option value="ar">🇸🇦 Arabic</option>
-                            </select>
+                            <!-- Custom Language Selector for Google Translate -->
+                            <div id="google_translate_element"></div>
+
                         </div>
                         <!-- Let’s Start Button End -->
                     </div>
@@ -440,95 +461,29 @@
         </div>
 	</footer>
 	<!-- Footer End -->
-    <script>
-        const translations = {
-            en: {
-                navHome: "Home",
-                navAbout: "About Us",
-                navChairmanMessage: "CHAIRMAN'S MESSAGE",
-                navHsePolicy: "HSE & QC POLICY",
-                navManagementStaff: "MANAGEMENT & STAFF",
-                navVehiclesEquipments: "VEHICLES & EQUIPMENTS",
-                navMep: "MEP",
-                navCarpentry: "CARPENTRY DIVISION",
-                navCertificate: "Certificate",
-                navProjects: "Projects",
-                navOngoingProjects: "Ongoing Projects",
-                navCompletedProjects: "Completed Projects",
-                navCareer: "Career",
-                navContact: "Contact Us",
-                pageHeaderTitle: "VEHICLES & EQUIPMENTS",
-                sectionTitle: "Vehicle Details",
-                thSlNo: "Sl No",
-                thPlateNo: "Plate No",
-                thVehicleType: "Vehicle Type",
-                thBrand: "Brand",
-                thColour: "Colour",
-                totalVehicles: "Total Vehicles: 11"
-            },
-            ar: {
-                navHome: "الصفحة الرئيسية",
-                navAbout: "معلومات عنا",
-                navChairmanMessage: "رسالة الرئيس",
-                navHsePolicy: "سياسة الصحة والسلامة والبيئة",
-                navManagementStaff: "الإدارة والموظفون",
-                navVehiclesEquipments: "المركبات والمعدات",
-                navMep: "الميكانيكا والكهرباء",
-                navCarpentry: "قسم النجارة",
-                navCertificate: "شهادة",
-                navProjects: "المشاريع",
-                navOngoingProjects: "المشاريع الجارية",
-                navCompletedProjects: "المشاريع المنجزة",
-                navCareer: "فرص العمل",
-                navContact: "اتصل بنا",
-                pageHeaderTitle: "المركبات والمعدات",
-                sectionTitle: "تفاصيل المركبات",
-                thSlNo: "رقم التسلسل",
-                thPlateNo: "رقم اللوحة",
-                thVehicleType: "نوع المركبة",
-                thBrand: "العلامة التجارية",
-                thColour: "اللون",
-                totalVehicles: "إجمالي المركبات: 11"
-            }
-        };
-
-        function changeLanguage() {
-            const lang = document.getElementById('languageSelector').value;
-            const t = translations[lang];
-
-            // Update navigation links
-            document.getElementById('nav-home').innerText = t.navHome;
-            document.getElementById('nav-about').innerText = t.navAbout;
-            document.getElementById('nav-chairman-message').innerText = t.navChairmanMessage;
-            document.getElementById('nav-hse-policy').innerText = t.navHsePolicy;
-            document.getElementById('nav-management-staff').innerText = t.navManagementStaff;
-            document.getElementById('nav-vehicles-equipments').innerText = t.navVehiclesEquipments;
-            document.getElementById('nav-mep').innerText = t.navMep;
-            document.getElementById('nav-carpentry').innerText = t.navCarpentry;
-            document.getElementById('nav-certificate').innerText = t.navCertificate;
-            document.getElementById('nav-projects').innerText = t.navProjects;
-            document.getElementById('nav-ongoing-projects').innerText = t.navOngoingProjects;
-            document.getElementById('nav-completed-projects').innerText = t.navCompletedProjects;
-            document.getElementById('nav-career').innerText = t.navCareer;
-            document.getElementById('nav-contact').innerText = t.navContact;
-
-            // Update page header
-            document.getElementById('page-header-title').innerText = t.pageHeaderTitle;
-
-            // Update section title
-            document.getElementById('section-title').innerText = t.sectionTitle;
-
-            // Update table headers
-            document.getElementById('th-sl-no').innerText = t.thSlNo;
-            document.getElementById('th-plate-no').innerText = t.thPlateNo;
-            document.getElementById('th-vehicle-type').innerText = t.thVehicleType;
-            document.getElementById('th-brand').innerText = t.thBrand;
-            document.getElementById('th-colour').innerText = t.thColour;
-
-            // Update total vehicles
-            document.getElementById('total-vehicles').innerText = t.totalVehicles;
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',  // Default language (English)
+            includedLanguages: 'en,ar',  // Only allow English and Arabic
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
         }
-    </script>
+      
+        function changeLanguage() {
+          var selectedLanguage = document.getElementById("languageSelector").value;
+          var translateElement = document.querySelector(".goog-te-combo");
+      
+          if (translateElement) {
+            translateElement.value = selectedLanguage;  // Set the language value
+            translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
+          }
+        }
+      </script>
+      
+      <!-- Google Translate API -->
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap js file -->

@@ -67,7 +67,27 @@
 }
 
 
-
+.goog-te-gadget img {
+        vertical-align: middle;
+        border: none;
+        display: none !important;
+    }
+    .goog-te-gadget-simple {
+    background-color: #FFF;
+    border-left: 1px solid #D5D5D5;
+    border-top: 1px solid #9B9B9B;
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #D5D5D5;
+    border-radius: 10px !important;
+    font-size: 10pt;
+    display: inline-block;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    cursor: pointer;}
+    .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+    font-family: emoji;
+    text-decoration: underline;
+}
 
 
 </style>
@@ -145,10 +165,9 @@
                     </div>
                     <!-- Let’s Start Button Start -->
                     <div class="header-btn d-inline-flex">
-                        <select class="form-select" id="languageSelector" onchange="changeLanguage()">
-                            <option value="en">🇬🇧 English</option>
-                            <option value="ar">🇸🇦 Arabic</option>
-                        </select>
+                        <!-- Custom Language Selector for Google Translate -->
+                        <div id="google_translate_element"></div>
+                     
                     </div>
                     <!-- Let’s Start Button End -->
                 </div>
@@ -751,42 +770,29 @@
 
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script>
-        function changeLanguage() {
-            const lang = document.getElementById('languageSelector').value;
-        
-            // List of ids for elements that need translation
-            const ids = [
-                'homeLink',
-                'aboutLink',
-                'chairmansMessage',
-                'hsePolicy',
-                'managementStaff',
-                'vehiclesEquipments',
-                'mep',
-                'carpentryDivision',
-                'certificateLink',
-                'projectsLink',
-                'ongoingProjects',
-                'completedProjects',
-                'careerLink',
-                'contactLink',
-                'pageHeader'
-            ];
-        
-            ids.forEach(id => {
-                const el = document.getElementById(id);
-                if (el) {
-                    el.textContent = lang === 'ar' ? el.getAttribute('data-ar') : el.getAttribute('data-en');
-                }
-            });
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',  // Default language (English)
+            includedLanguages: 'en,ar',  // Only allow English and Arabic
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
         }
-        
-        // Initialize language on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            changeLanguage(); // Set default language
-        });
-        </script>
+      
+        function changeLanguage() {
+          var selectedLanguage = document.getElementById("languageSelector").value;
+          var translateElement = document.querySelector(".goog-te-combo");
+      
+          if (translateElement) {
+            translateElement.value = selectedLanguage;  // Set the language value
+            translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
+          }
+        }
+      </script>
+      
+      <!-- Google Translate API -->
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>
     <!-- Validator js file -->

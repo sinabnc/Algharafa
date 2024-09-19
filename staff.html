@@ -88,6 +88,27 @@ table th, table td {
 tfoot td {
     font-weight: bold;
 }
+.goog-te-gadget img {
+        vertical-align: middle;
+        border: none;
+        display: none !important;
+    }
+    .goog-te-gadget-simple {
+    background-color: #FFF;
+    border-left: 1px solid #D5D5D5;
+    border-top: 1px solid #9B9B9B;
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #D5D5D5;
+    border-radius: 10px !important;
+    font-size: 10pt;
+    display: inline-block;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    cursor: pointer;}
+    .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+    font-family: emoji;
+    text-decoration: underline;
+}
 
 </style>
 
@@ -140,10 +161,9 @@ tfoot td {
                         </div>
                         <!-- Let’s Start Button Start -->
                         <div class="header-btn d-inline-flex">
-                            <select class="form-select" id="languageSelector" onchange="changeLanguage()">
-                                <option value="en">🇬🇧 English</option>
-                                <option value="ar">🇸🇦 Arabic</option>
-                            </select>
+                            <!-- Custom Language Selector for Google Translate -->
+                            <div id="google_translate_element"></div>
+                         
                         </div>
                         <!-- Let’s Start Button End -->
                     </div>
@@ -581,132 +601,29 @@ tfoot td {
 	<!-- Footer End -->
 
     <!-- Jquery Library File -->
-    <script>
-        const translations = {
-    en: {
-        "nav-home": "Home",
-        "nav-about": "About Us",
-        "nav-chairmans-message": "CHAIRMAN'S MESSAGE",
-        "nav-hse-policy": "HSE & QC POLICY",
-        "nav-management-staff": "MANAGEMENT & STAFF",
-        "nav-vehicles": "VEHICLES & EQUIPMENTS",
-        "nav-mep": "MEP",
-        "nav-carpentry": "CARPENTRY DIVISION",
-        "nav-certificate": "Certificate",
-        "nav-projects": "Projects",
-        "nav-ongoing-projects": "Ongoing Projects",
-        "nav-completed-projects": "Completed Projects",
-        "nav-career": "Career",
-        "nav-contact": "Contact Us",
-        "page-header": "MANAGEMENT & STAFF",
-        "manpower-title": "List of Manpower & Camps",
-        "civil-title": "CIVIL",
-        "civil-sl-no": "Sl No",
-        "civil-position": "Position",
-        "civil-count": "Count",
-        "mep-title": "MEP",
-        "mep-sl-no": "Sl No",
-        "mep-position": "Position",
-        "mep-count": "Count",
-        "logistics-title": "LOGISTICS",
-        "logistics-sl-no": "Sl No",
-        "logistics-position": "Position",
-        "logistics-count": "Count",
-        "general-title": "GENERAL",
-        "general-sl-no": "Sl No",
-        "general-position": "Position",
-        "general-count": "Count",
-        "management-title": "List of Management & Staffs",
-        "management-heading": "MANAGEMENT",
-        "management-sl-no": "Sl No",
-        "management-position": "Position",
-        "management-count": "Count",
-        "project-management-heading": "PROJECT MANAGEMENT & TECHNICAL",
-        "project-management-sl-no": "Sl No",
-        "project-management-position": "Position",
-        "project-management-count": "Count",
-        "administration-heading": "ADMINISTRATION",
-        "administration-sl-no": "Sl No",
-        "administration-position": "Position",
-        "administration-count": "Count",
-        "site-heading": "SITE",
-        "site-sl-no": "Sl No",
-        "site-position": "Position",
-        "site-count": "Count"
-    },
-    ar: {
-        "nav-home": "الرئيسية",
-        "nav-about": "من نحن",
-        "nav-chairmans-message": "رسالة الرئيس",
-        "nav-hse-policy": "سياسة الصحة والسلامة والبيئة",
-        "nav-management-staff": "الإدارة والموظفين",
-        "nav-vehicles": "المركبات والمعدات",
-        "nav-mep": "ميكانيكا وكهرباء وصرف",
-        "nav-carpentry": "قسم النجارة",
-        "nav-certificate": "الشهادات",
-        "nav-projects": "المشاريع",
-        "nav-ongoing-projects": "المشاريع الجارية",
-        "nav-completed-projects": "المشاريع المنجزة",
-        "nav-career": "وظائف",
-        "nav-contact": "اتصل بنا",
-        "page-header": "الإدارة والموظفين",
-        "manpower-title": "قائمة القوى العاملة والمعسكرات",
-        "civil-title": "مدني",
-        "civil-sl-no": "رقم تسلسلي",
-        "civil-position": "المنصب",
-        "civil-count": "العدد",
-        "mep-title": "ميكانيكا وكهرباء وصرف",
-        "mep-sl-no": "رقم تسلسلي",
-        "mep-position": "المنصب",
-        "mep-count": "العدد",
-        "logistics-title": "اللوجستيات",
-        "logistics-sl-no": "رقم تسلسلي",
-        "logistics-position": "المنصب",
-        "logistics-count": "العدد",
-        "general-title": "عام",
-        "general-sl-no": "رقم تسلسلي",
-        "general-position": "المنصب",
-        "general-count": "العدد",
-        "management-title": "قائمة الإدارة والموظفين",
-        "management-heading": "الإدارة",
-        "management-sl-no": "رقم تسلسلي",
-        "management-position": "المنصب",
-        "management-count": "العدد",
-        "project-management-heading": "إدارة المشاريع والتقنية",
-        "project-management-sl-no": "رقم تسلسلي",
-        "project-management-position": "المنصب",
-        "project-management-count": "العدد",
-        "administration-heading": "الإدارة",
-        "administration-sl-no": "رقم تسلسلي",
-        "administration-position": "المنصب",
-        "administration-count": "العدد",
-        "site-heading": "الموقع",
-        "site-sl-no": "رقم تسلسلي",
-        "site-position": "المنصب",
-        "site-count": "العدد"
-    }
-};
-
-// Function to change the language
-function changeLanguage() {
-    const selectedLanguage = document.getElementById('languageSelector').value;
-    const texts = translations[selectedLanguage];
-
-    // Update text content based on the selected language
-    for (const id in texts) {
-        const element = document.getElementById(id);
-        if (element) {
-            element.textContent = texts[id];
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',  // Default language (English)
+            includedLanguages: 'en,ar',  // Only allow English and Arabic
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
         }
-    }
-}
-
-// Add event listener to the language selector
-document.getElementById('languageSelector').addEventListener('change', changeLanguage);
-
-// Initialize page with default language (English)
-changeLanguage();
-    </script>
+      
+        function changeLanguage() {
+          var selectedLanguage = document.getElementById("languageSelector").value;
+          var translateElement = document.querySelector(".goog-te-combo");
+      
+          if (translateElement) {
+            translateElement.value = selectedLanguage;  // Set the language value
+            translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
+          }
+        }
+      </script>
+      
+      <!-- Google Translate API -->
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>

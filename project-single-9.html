@@ -66,7 +66,27 @@
     justify-content: center; /* Center the menu items */
 }
 
-
+.goog-te-gadget img {
+    vertical-align: middle;
+    border: none;
+    display: none !important;
+}
+.goog-te-gadget-simple {
+background-color: #FFF;
+border-left: 1px solid #D5D5D5;
+border-top: 1px solid #9B9B9B;
+border-bottom: 1px solid #ffffff;
+border-right: 1px solid #D5D5D5;
+border-radius: 10px !important;
+font-size: 10pt;
+display: inline-block;
+padding-top: 1px;
+padding-bottom: 2px;
+cursor: pointer;}
+.VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+font-family: emoji;
+text-decoration: underline;
+}
 
 
 
@@ -122,12 +142,10 @@
                         </div>
                         <!-- Let’s Start Button Start -->
                         <div class="header-btn d-inline-flex">
-                            <select class="form-select" id="languageSelector" onchange="changeLanguage()">
-                                <option value="en">🇬🇧 English</option>
-                                <option value="ar">🇸🇦 Arabic</option>
-                            </select>
-                        </div>
-                        <!-- Let’s Start Button End -->
+                            <!-- Custom Language Selector for Google Translate -->
+                            <div id="google_translate_element"></div>
+                         
+                        </div>t’s Start Button End -->
                     </div>
                     <!-- Main Menu End -->
                     <div class="navbar-toggle"></div>
@@ -405,85 +423,29 @@
 	<!-- Footer End -->
 
     <!-- Jquery Library File -->
-    <script>
-        function changeLanguage() {
-            const lang = document.getElementById('languageSelector').value;
-
-            const texts = {
-                en: {
-                    home: "Home",
-                    aboutUs: "About Us",
-                    chairmansMessage: "CHAIRMAN'S MESSAGE",
-                    hsePolicy: "HSE & QC POLICY",
-                    managementStaff: "MANAGEMENT & STAFF",
-                    vehiclesEquipment: "VEHICLES & EQUIPMENTS",
-                    mep: "MEP",
-                    carpentryDivision: "CARPENTRY DIVISION",
-                    certificate: "Certificate",
-                    projects: "Projects",
-                    ongoingProjects: "Ongoing Projects",
-                    completedProjects: "Completed Projects",
-                    career: "Career",
-                    contact: "Contact",
-                    pageTitle: "Doha Bonyan Office",
-                    projectDescription: "ID / Fitout Works of an Office Space for Bonyan Al Doha Real Estate Company, with a Built-Up area of 530 m² including furniture’s.",
-                    galleryTitle: "Project Gallery",
-                    locationLabel: "Location",
-                    totalBuiltUpAreaTitle: "Total Built-Up Area",
-                    profileStatusTitle: "Profile Status",
-                    profileStatus: "Completed"
-                },
-                ar: {
-                    home: "الصفحة الرئيسية",
-                    aboutUs: "معلومات عنا",
-                    chairmansMessage: "رسالة الرئيس",
-                    hsePolicy: "سياسة الصحة والسلامة والبيئة",
-                    managementStaff: "الإدارة والموظفين",
-                    vehiclesEquipment: "المركبات والمعدات",
-                    mep: "الأنظمة الميكانيكية والكهربائية والصحية",
-                    carpentryDivision: "قسم النجارة",
-                    certificate: "الشهادات",
-                    projects: "المشاريع",
-                    ongoingProjects: "المشاريع الجارية",
-                    completedProjects: "المشاريع المكتملة",
-                    career: "الوظائف",
-                    contact: "اتصل بنا",
-                    pageTitle: "مكتب الدوحة بنيان",
-                    projectDescription: "أعمال تجهيز مكتب لشركة بنيان الدوحة العقارية، بمساحة مبنية قدرها 530 م² بما في ذلك الأثاث.",
-                    galleryTitle: "معرض المشروع",
-                    locationLabel: "الموقع",
-                    totalBuiltUpAreaTitle: "مساحة البناء الإجمالية",
-                    profileStatusTitle: "حالة الملف",
-                    profileStatus: "مكتمل"
-                }
-            };
-
-            document.getElementById('home').textContent = texts[lang].home;
-            document.getElementById('aboutUs').textContent = texts[lang].aboutUs;
-            document.getElementById('chairmansMessage').textContent = texts[lang].chairmansMessage;
-            document.getElementById('hsePolicy').textContent = texts[lang].hsePolicy;
-            document.getElementById('managementStaff').textContent = texts[lang].managementStaff;
-            document.getElementById('vehiclesEquipment').textContent = texts[lang].vehiclesEquipment;
-            document.getElementById('mep').textContent = texts[lang].mep;
-            document.getElementById('carpentryDivision').textContent = texts[lang].carpentryDivision;
-            document.getElementById('certificate').textContent = texts[lang].certificate;
-            document.getElementById('projects').textContent = texts[lang].projects;
-            document.getElementById('ongoingProjects').textContent = texts[lang].ongoingProjects;
-            document.getElementById('completedProjects').textContent = texts[lang].completedProjects;
-            document.getElementById('career').textContent = texts[lang].career;
-            document.getElementById('contact').textContent = texts[lang].contact;
-            document.getElementById('pageTitle').textContent = texts[lang].pageTitle;
-            document.getElementById('projectDescription').textContent = texts[lang].projectDescription;
-            document.getElementById('galleryTitle').textContent = texts[lang].galleryTitle;
-            document.getElementById('locationLabel').textContent = texts[lang].locationLabel;
-            document.getElementById('totalBuiltUpAreaTitle').textContent = texts[lang].totalBuiltUpAreaTitle;
-            document.getElementById('profileStatusTitle').textContent = texts[lang].profileStatusTitle;
-            document.getElementById('profileStatus').textContent = texts[lang].profileStatus;
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',  // Default language (English)
+            includedLanguages: 'en,ar',  // Only allow English and Arabic
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
         }
-
-        // Initial call to set language based on the default or previously selected language
-        changeLanguage();
-    </script>
+      
+        function changeLanguage() {
+          var selectedLanguage = document.getElementById("languageSelector").value;
+          var translateElement = document.querySelector(".goog-te-combo");
+      
+          if (translateElement) {
+            translateElement.value = selectedLanguage;  // Set the language value
+            translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
+          }
+        }
+      </script>
+      
+      <!-- Google Translate API -->
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>

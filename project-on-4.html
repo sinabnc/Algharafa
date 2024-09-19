@@ -67,7 +67,27 @@
 }
 
 
-
+.goog-te-gadget img {
+        vertical-align: middle;
+        border: none;
+        display: none !important;
+    }
+    .goog-te-gadget-simple {
+    background-color: #FFF;
+    border-left: 1px solid #D5D5D5;
+    border-top: 1px solid #9B9B9B;
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #D5D5D5;
+    border-radius: 10px !important;
+    font-size: 10pt;
+    display: inline-block;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    cursor: pointer;}
+    .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+    font-family: emoji;
+    text-decoration: underline;
+}
 
 
 </style>
@@ -119,10 +139,9 @@
                         </div>
                         <!-- Language Selector Start -->
                         <div class="header-btn d-inline-flex">
-                            <select class="form-select" id="languageSelector" onchange="changeLanguage()">
-                                <option value="en">🇬🇧 English</option>
-                                <option value="ar">🇸🇦 Arabic</option>
-                            </select>
+                            <!-- Custom Language Selector for Google Translate -->
+                            <div id="google_translate_element"></div>
+                         
                         </div>
                         <!-- Language Selector End -->
                     </div>
@@ -400,87 +419,29 @@
 
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script>
-        const translations = {
-            en: {
-                home: "Home",
-                about_us: "About Us",
-                chairman_message: "CHAIRMAN'S MESSAGE",
-                hse_policy: "HSE & QC POLICY",
-                management_staff: "MANAGEMENT & STAFF",
-                vehicles_equipment: "VEHICLES & EQUIPMENTS",
-                mep: "MEP",
-                carpentry_division: "CARPENTRY DIVISION",
-                certificate: "certificate",
-                projects: "Projects",
-                ongoing_projects: "ongoing projects",
-                completed_projects: "completed projects",
-                career: "career",
-                contact_us: "Contact Us",
-                page_header: "Mixed Use Buildings",
-                project_description: "A Mixed-Use Building for our prestigious Client, with a built-up area of 82,502.87 m² consist of School, Residential Buildings, Showroom and Offices, Restaurants, Hypermarket, Coffee Shop, Bank and Mosque will cater to the ever-increasing need of housing services, commercial, education, and boosting financial activities in the area.",
-                gallery_title: "project gallery",
-                location_label: "location",
-                location: "Izghawa",
-                total_area_label: "Total Built-Up Area",
-                total_area: "82502.87㎡",
-                status_label: "Profile Status",
-                status: "ongoing"
-            },
-            ar: {
-                home: "الصفحة الرئيسية",
-                about_us: "من نحن",
-                chairman_message: "رسالة الرئيس",
-                hse_policy: "سياسة السلامة والصحة المهنية والجودة",
-                management_staff: "الإدارة والموظفون",
-                vehicles_equipment: "المركبات والمعدات",
-                mep: "الأنظمة الميكانيكية والكهربائية والصحية",
-                carpentry_division: "قسم النجارة",
-                certificate: "الشهادات",
-                projects: "المشاريع",
-                ongoing_projects: "المشاريع الجارية",
-                completed_projects: "المشاريع المنجزة",
-                career: "الوظائف",
-                contact_us: "اتصل بنا",
-                page_header: "المباني متعددة الاستخدامات",
-                project_description: "مبنى متعدد الاستخدامات لعميلنا المميز، بمساحة مبنية قدرها 82,502.87 م² يتضمن مدارس، مباني سكنية، صالة عرض ومكاتب، مطاعم، هايبر ماركت، مقهى، بنك ومسجد لتلبية الحاجة المتزايدة لخدمات السكن، التجارة، التعليم، وتعزيز الأنشطة المالية في المنطقة.",
-                gallery_title: "معرض المشروع",
-                location_label: "الموقع",
-                location: "إزغوى",
-                total_area_label: "إجمالي المساحة المبنية",
-                total_area: "82502.87㎡",
-                status_label: "حالة الملف الشخصي",
-                status: "قيد التنفيذ"
-            }
-        };
-
-        function changeLanguage() {
-            const selectedLanguage = document.getElementById('languageSelector').value;
-            document.getElementById('home').textContent = translations[selectedLanguage].home;
-            document.getElementById('about_us').textContent = translations[selectedLanguage].about_us;
-            document.getElementById('chairman_message').textContent = translations[selectedLanguage].chairman_message;
-            document.getElementById('hse_policy').textContent = translations[selectedLanguage].hse_policy;
-            document.getElementById('management_staff').textContent = translations[selectedLanguage].management_staff;
-            document.getElementById('vehicles_equipment').textContent = translations[selectedLanguage].vehicles_equipment;
-            document.getElementById('mep').textContent = translations[selectedLanguage].mep;
-            document.getElementById('carpentry_division').textContent = translations[selectedLanguage].carpentry_division;
-            document.getElementById('certificate').textContent = translations[selectedLanguage].certificate;
-            document.getElementById('projects').textContent = translations[selectedLanguage].projects;
-            document.getElementById('ongoing_projects').textContent = translations[selectedLanguage].ongoing_projects;
-            document.getElementById('completed_projects').textContent = translations[selectedLanguage].completed_projects;
-            document.getElementById('career').textContent = translations[selectedLanguage].career;
-            document.getElementById('contact_us').textContent = translations[selectedLanguage].contact_us;
-            document.getElementById('page_header').textContent = translations[selectedLanguage].page_header;
-            document.getElementById('project_description').textContent = translations[selectedLanguage].project_description;
-            document.getElementById('gallery_title').textContent = translations[selectedLanguage].gallery_title;
-            document.getElementById('location_label').textContent = translations[selectedLanguage].location_label;
-            document.getElementById('location').textContent = translations[selectedLanguage].location;
-            document.getElementById('total_area_label').textContent = translations[selectedLanguage].total_area_label;
-            document.getElementById('total_area').textContent = translations[selectedLanguage].total_area;
-            document.getElementById('status_label').textContent = translations[selectedLanguage].status_label;
-            document.getElementById('status').textContent = translations[selectedLanguage].status;
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',  // Default language (English)
+            includedLanguages: 'en,ar',  // Only allow English and Arabic
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
         }
-    </script>
+      
+        function changeLanguage() {
+          var selectedLanguage = document.getElementById("languageSelector").value;
+          var translateElement = document.querySelector(".goog-te-combo");
+      
+          if (translateElement) {
+            translateElement.value = selectedLanguage;  // Set the language value
+            translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
+          }
+        }
+      </script>
+      
+      <!-- Google Translate API -->
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>
     <!-- Validator js file -->

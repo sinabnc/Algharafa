@@ -261,6 +261,27 @@
         text-align: center;
         vertical-align: middle;
     }
+    .goog-te-gadget img {
+        vertical-align: middle;
+        border: none;
+        display: none !important;
+    }
+    .goog-te-gadget-simple {
+    background-color: #FFF;
+    border-left: 1px solid #D5D5D5;
+    border-top: 1px solid #9B9B9B;
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #D5D5D5;
+    border-radius: 10px !important;
+    font-size: 10pt;
+    display: inline-block;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    cursor: pointer;}
+    .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+    font-family: emoji;
+    text-decoration: underline;
+}
 </style>
 
 <body>
@@ -310,13 +331,12 @@
                             </ul>
                         </div>
                         <!-- Language Selector Start -->
+
                         <div class="header-btn d-inline-flex">
-                            <select class="form-select" id="languageSelector" onchange="changeLanguage()">
-                                <option value="en">🇬🇧 English</option>
-                                <option value="ar">🇸🇦 Arabic</option>
-                            </select>
+                            <!-- Custom Language Selector for Google Translate -->
+                            <div id="google_translate_element"></div>
+
                         </div>
-                        <!-- Language Selector End -->
                     </div>
                     <!-- Main Menu End -->
                     <div class="navbar-toggle"></div>
@@ -713,100 +733,29 @@
     <!-- Footer End -->
 
     <!-- Jquery Library File -->
-    <script>
-        const translations = {
-            en: {
-                "page-header-title": "CARPENTRY DIVISION",
-                "services-title": "Our Services",
-                "services-description": "At Al Gharafa Carpentry Division, we pride ourselves on our extensive range of high-quality wooden products, crafted with precision and care. Explore our diverse offerings below:",
-                "service-wooden-chairs": "Wooden Chairs",
-                "service-kitchen-cabinet": "Kitchen Cabinet",
-                "service-spindle-moulder": "Spindle Moulder",
-                "service-flush-door": "Flush Door",
-                "service-panel-door": "Panel Door",
-                "service-decor-door": "Décor Door",
-                "service-toilet-cubicles": "Toilet Cubicles",
-                "plant-machineries-title": "Plant and Machineries",
-                "wood-machinery-list-title": "Wood Machinery List",
-                "wood-machinery-panel-saw": "Panel Saw",
-                "wood-machinery-surface-planer": "Wood Surface Planer",
-                "wood-machinery-spindle-moulder": "Spindle Moulder",
-                "wood-machinery-thickness-planer": "Thickness Planer",
-                "wood-machinery-radial-arm-saw": "Radial Arm Saw",
-                "wood-machinery-band-saw": "Band Saw",
-                "wood-machinery-edge-bander-pvc": "Edge Bander-PVC",
-                "wood-machinery-edge-bander-wood": "Edge Bander-Wood",
-                "wood-machinery-bench-grinder": "Bench Grinder",
-                "wood-machinery-paint-booth": "Paint Booth",
-                "wood-machinery-hot-press": "Hot & Cold Pressing Machine",
-                "wood-machinery-sanding-machine": "Sanding Machine",
-                "wood-machinery-veneer-laser-cutting": "Veneer Laser Cutting Machine",
-                "wood-machinery-veneer-stitching": "Veneer Stitching Machine",
-                "wood-machinery-circular-saw": "Circular Saw",
-                "wood-machinery-felder": "Felder",
-                "wood-machinery-compact": "Compact",
-                "wood-machinery-makita": "Makita",
-                "wood-machinery-centuara": "Centuara",
-                "wood-machinery-tempora": "Tempora",
-                "wood-machinery-fravol": "Fravol",
-                "wood-machinery-firat": "Firat",
-                "wood-machinery-steton": "Steton",
-                "wood-machinery-scm": "SCM"
-            },
-            ar: {
-                "page-header-title": "قسم النجارة",
-                "services-title": "خدماتنا",
-                "services-description": "في قسم النجارة في الغرافة، نفخر بمجموعة واسعة من المنتجات الخشبية عالية الجودة، التي تم تصنيعها بدقة وعناية. استكشف عروضنا المتنوعة أدناه:",
-                "service-wooden-chairs": "كراسي خشبية",
-                "service-kitchen-cabinet": "خزانة مطبخ",
-                "service-spindle-moulder": "آلة تشكيل عمود",
-                "service-flush-door": "باب فلاش",
-                "service-panel-door": "باب لوحي",
-                "service-decor-door": "باب مزخرف",
-                "service-toilet-cubicles": "حاويات المرحاض",
-                "plant-machineries-title": "المعدات والآلات",
-                "wood-machinery-list-title": "قائمة المعدات الخشبية",
-                "wood-machinery-panel-saw": "منشار اللوح",
-                "wood-machinery-surface-planer": "آلة تسوية الخشب",
-                "wood-machinery-spindle-moulder": "آلة تشكيل عمود",
-                "wood-machinery-thickness-planer": "آلة تسوية السماكة",
-                "wood-machinery-radial-arm-saw": "منشار الذراع الشعاعي",
-                "wood-machinery-band-saw": "منشار الشريط",
-                "wood-machinery-edge-bander-pvc": "آلة شريط الحافة - PVC",
-                "wood-machinery-edge-bander-wood": "آلة شريط الحافة - خشب",
-                "wood-machinery-bench-grinder": "طاحونة السطح",
-                "wood-machinery-paint-booth": "كابينة الطلاء",
-                "wood-machinery-hot-press": "آلة الضغط الساخن والبارد",
-                "wood-machinery-sanding-machine": "آلة الصنفرة",
-                "wood-machinery-veneer-laser-cutting": "آلة قطع الفينير بالليزر",
-                "wood-machinery-veneer-stitching": "آلة خياطة الفينير",
-                "wood-machinery-circular-saw": "منشار دائري",
-                "wood-machinery-felder": "فيلدر",
-                "wood-machinery-compact": "كومباكت",
-                "wood-machinery-makita": "ماكيتا",
-                "wood-machinery-centuara": "سنتورا",
-                "wood-machinery-tempora": "تمبورا",
-                "wood-machinery-fravol": "فرافول",
-                "wood-machinery-firat": "فيرات",
-                "wood-machinery-steton": "ستيتون",
-                "wood-machinery-scm": "SCM"
-            }
-        };
-
-        function changeLanguage() {
-            const lang = document.getElementById('languageSelector').value;
-            const translation = translations[lang];
-
-            Object.keys(translation).forEach(id => {
-                const element = document.getElementById(id);
-                if (element) {
-                    element.textContent = translation[id];
-                }
-            });
-
-           
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',  // Default language (English)
+            includedLanguages: 'en,ar',  // Only allow English and Arabic
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
         }
-    </script>
+      
+        function changeLanguage() {
+          var selectedLanguage = document.getElementById("languageSelector").value;
+          var translateElement = document.querySelector(".goog-te-combo");
+      
+          if (translateElement) {
+            translateElement.value = selectedLanguage;  // Set the language value
+            translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
+          }
+        }
+      </script>
+      
+      <!-- Google Translate API -->
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap js file -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
