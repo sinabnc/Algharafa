@@ -774,7 +774,7 @@ header.main-header .header-sticky.active{
 .hero-slider-layout .hero-slide::before{
 	content: '';
 	position: absolute;
-	background: linear-gradient(180deg, rgba(14, 13, 27, 0) 0%, rgba(14, 13, 27, 0.55) 40.5%);
+	/* background: linear-gradient(180deg, rgba(14, 13, 27, 0) 0%, rgba(14, 13, 27, 0.55) 40.5%); */
 	background-repeat: no-repeat;
 	background-position: center center;
 	margin-top: 400px;
@@ -1325,9 +1325,8 @@ header.main-header .header-sticky.active{
 }
 #image-logo{
     width: 250px;
-    padding-right: 15px;
-	margin-left: 23px;
-    
+    padding-right:15px;
+	margin-left: 45px;
 }
 
 

@@ -65,36 +65,33 @@
     display: flex;
     justify-content: center; /* Center the menu items */
 }
-.goog-te-gadget img {
-    vertical-align: middle;
-    border: none;
+.goog-te-gadget-simple {
+    background-color: #bf1e2e !important;  /* Red background */
+    border: 2px solid #bf1e2e !important;  /* Navy blue border */
+    border-radius: 50px;  /* Makes the button round */
+    color: #fff !important;  /* White text */
+    font-size: 10pt !important;  /* Slightly larger font */
+    font-weight: bold !important;  /* Bold text */
+    display: inline-block;
+    padding: 5px 10px !important;  /* Padding for button feel */
+    cursor: pointer;
+    transition: background-color 0.3s ease;  /* Smooth hover transition */
+}
+
+/* Remove Google Translate icon */
+.goog-te-gadget-icon {
     display: none !important;
 }
 
-.goog-te-gadget-simple {
-    height: 37px;
-    background-color: #ca3030 !important;
-    border-left: 1px solid #C63C51;
-    border-top: 1px solid #C63C51;
-    border-bottom: 1px solid #ffffff;
-    border-right: 1px solid #D5D5D5;
-    border-radius: 5px !important;
-    font-size: 10pt;
-    display: inline-block;
-    padding-top: 1px;
-    padding-bottom: 2px;
-    cursor: pointer;
-}
-.goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span{
-    font-family: emoji;
-    color: #fff;
-   
+/* Style the text inside the button */
+.goog-te-gadget-simple span {
+    color: #fff !important;  /* Ensure text inside the button is white */
 }
 
-
-.VIpgJd-ZVi9od-xl07Ob-lTBxed span {
-    font-family: emoji;
-    text-decoration: underline;
+/* Add a hover effect to the button */
+.goog-te-gadget-simple:hover {
+    background-color: #12223b !important;  /* Dark blue on hover */
+    color: #bf1e2e !important;  /* Red text on hover */
 }
 
 
