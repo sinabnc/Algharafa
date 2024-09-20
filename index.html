@@ -85,37 +85,27 @@
         color: #12223B;
     }
 
-    .goog-te-gadget img {
-        vertical-align: middle;
-        border: none;
-        display: none !important;
-    }
+    .goog-te-gadget-icon {
+  display:none;
+}
 
-    .goog-te-gadget-simple {
-        height: 37px;
-        background-color: #ca3030 !important;
-        border-left: 1px solid #C63C51;
-        border-top: 1px solid #C63C51;
-        border-bottom: 1px solid #ffffff;
-        border-right: 1px solid #D5D5D5;
-        border-radius: 5px !important;
-        font-size: 10pt;
-        display: inline-block;
-        padding-top: 1px;
-        padding-bottom: 2px;
-        cursor: pointer;
-    }
-    .goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span{
-        font-family: emoji;
-        color: #fff;
-       
-    }
+
+.goog-te-gadget-simple {
+    background-color: #ecebf0 !important;
+    border:0 !important;
+    font-size: 10pt;
+   font-weight:800;
+    display: inline-block;
+    padding:10px 10px !important;
+    cursor: pointer;
+    zoom: 1;
+}
+
+.goog-te-gadget-simple  span {
+   color:#3e3065 !important;
+
+}
  
-
-    .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
-        font-family: emoji;
-        text-decoration: underline;
-    }
 </style>
 
 
@@ -179,7 +169,11 @@
                         </div>
 
                         <!-- Let’s Start Button Start -->
-
+                        <script type="text/javascript">
+                            function googleTranslateElementInit() {
+                              new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: "en,fr,ar,es", layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                            }
+                            </script>
                         <div class="header-btn d-inline-flex">
                             <!-- Custom Language Selector for Google Translate -->
                         <div id="google_translate_element"></div>
@@ -1065,25 +1059,38 @@
 
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script type="text/javascript">
+    <script>
+
+  $(document).ready(function(){
+    $('#google_translate_element').bind('DOMNodeInserted', function(event) {
+      $('.goog-te-menu-value span:first').html('LANGUAGE');
+      $('.goog-te-menu-frame.skiptranslate').load(function(){
+        setTimeout(function(){
+          $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');    
+        }, 100);
+      });
+    });
+  });
+    </script>
+    <!-- <script type="text/javascript">
         function googleTranslateElementInit() {
-          new google.translate.TranslateElement({
-            pageLanguage: 'en',  // Default language (English)
-            includedLanguages: 'en,ar',  // Only allow English and Arabic
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-          }, 'google_translate_element');
+          new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: "en,fr,ar,es", layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
         }
-      
-        function changeLanguage() {
-          var selectedLanguage = document.getElementById("languageSelector").value;
-          var translateElement = document.querySelector(".goog-te-combo");
-      
-          if (translateElement) {
-            translateElement.value = selectedLanguage;  // Set the language value
-            translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
-          }
-        }
-      </script>
+
+
+  $(document).ready(function(){
+    $('#google_translate_element').bind('DOMNodeInserted', function(event) {
+      $('.goog-te-menu-value span:first').html('LANGUAGE');
+      $('.goog-te-menu-frame.skiptranslate').load(function(){
+        setTimeout(function(){
+          $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE');    
+        }, 100);
+      });
+    });
+  });
+        </script> -->
+        
+
       
       <!-- Google Translate API -->
       <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
