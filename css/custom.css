@@ -1325,9 +1325,11 @@ header.main-header .header-sticky.active{
 	color: var(--white-color);
 }
 #image-logo{
-    width: 250px;
+    width: 100px;
     padding-right:15px;
 	margin-left: 45px;
+	margin-right: 100px;
+	margin-bottom: 7px;
 }
 
 
@@ -1715,7 +1717,7 @@ header.main-header .header-sticky.active{
 /************************************/
 
 .main-footer{
-	background:#000000;
+	background:#C7253E;
 	padding: 100px 0;
 }
 
@@ -1754,7 +1756,7 @@ header.main-header .header-sticky.active{
     position: absolute;
     top: 3px;
     left: 0;
-    background-image: url("../images/next\ \(1\).png");
+    background-image: url("../images/arrow.svg");
     background-repeat: no-repeat;
     background-position: center center;
     width: 20px;
