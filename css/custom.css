@@ -1318,18 +1318,18 @@ header.main-header .header-sticky.active{
 	background: #12223B url("../images/cta-box-bg.png") no-repeat;
 	background-position: right bottom;
 	background-size: auto;
-	padding: 100px 0;
+	padding: 100px 0px
+	
 }
 
 .cta-box .section-title h2{
 	color: var(--white-color);
 }
 #image-logo{
-    width: 100px;
+    width: 200px;
     padding-right:15px;
 	margin-left: 45px;
-	margin-right: 100px;
-	margin-bottom: 7px;
+	
 }
 
 
@@ -1717,8 +1717,8 @@ header.main-header .header-sticky.active{
 /************************************/
 
 .main-footer{
-	background:#b46875;
-	padding: 100px 0;
+	background:#9fcaeb;
+	padding: 50px 0;
 }
 
 .footer-logo{
