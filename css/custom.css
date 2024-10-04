@@ -175,8 +175,8 @@ body{
 }
 
 .row > *{
-	padding-right: 15px;
-	padding-left: 15px;
+	padding-right: 10px;
+	padding-left: 10px;
 }
 
 .row.no-gutters{
@@ -533,7 +533,7 @@ header.main-header .header-sticky.active{
 	font-size: 18px;
 	font-weight: 500;
 	padding: 15px 15px !important;
-	color: #D37676;
+	color: #E4003A;
 	text-transform: capitalize;
 	transition: all 0.3s ease-in-out;
 }
@@ -993,6 +993,7 @@ header.main-header .header-sticky.active{
 .service-image{
 	overflow: hidden;
 	border-radius: 40px;
+	height: 200px;
 }
 
 .service-image a{
@@ -1045,8 +1046,8 @@ header.main-header .header-sticky.active{
 }
 
 .service-body-title h3{
-	font-size: 24px;
-	font-weight: 700;
+	font-size: 20px;
+	font-weight: 300;
 	color: var(--white-color);
 	text-transform: capitalize;
 	margin-bottom: 20px;
