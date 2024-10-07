@@ -119,6 +119,18 @@
 .landscape-image {
     border-radius: 10px; /* Optional: Add rounded corners */
 }
+.image-container {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    height: 200px;            /* Set a height for the container */
+}
+
+.image-container img {
+    max-width: 100%;          /* Optional: Limits the image width */
+    height: 100px;   
+    padding-bottom: 30px;          /* Maintains the image aspect ratio */
+}
 </style>
 
 <body>
@@ -556,6 +568,9 @@
     <!-- Footer Start -->
 	<footer class="main-footer">
         <div class="container">
+             <div class="image-container">
+        <img src="images/certificate logos.png" alt="Centered Image">
+    </div>
             <div class="row">
                 <div class="col-lg-3 col-md-12">
                     <!-- About Footer Start -->
