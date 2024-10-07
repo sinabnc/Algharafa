@@ -164,7 +164,7 @@
                             <ul class="navbar-nav mr-auto" id="menu">
                                 <li class="nav-item"><a class="nav-link" href="index.html" id="navHome">Home</a></li>
                                 <li class="nav-item submenu">
-                                    <a class="nav-link" href="about.html" id="navAbout">About Us</a>
+                                    <a class="nav-link" href="about.html" id="navAbout">About</a>
                                     <ul>
                                         <li class="nav-item"><a class="nav-link" href="about.html"
                                                 id="navChairmansMessage">CHAIRMAN'S MESSAGE</a></li>
@@ -174,10 +174,7 @@
                                                 id="navManagementStaff">MANAGEMENT & STAFF</a></li>
                                         <li class="nav-item"><a class="nav-link" href="vahcle.html"
                                                 id="navVehiclesEquipments">VEHICLES & EQUIPMENTS</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="mep.html" id="navMep">MEP</a>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" href="carpentry.html"
-                                                id="navCarpentry">CARPENTRY DIVISION</a></li>
+                                        
                                     </ul>
                                 </li>
                                
@@ -192,6 +189,16 @@
                                 </li>
                                 <li class="nav-item"><a class="nav-link" href="certificate.html"
                                     id="navCertificate">certificate</a></li>
+                                    <li class="nav-item submenu">
+                                        <a class="nav-link" href="mep.html" id="navDiv">Divisions</a>
+                                        <ul>
+                                           
+                                            <li class="nav-item"><a class="nav-link" href="mep.html" id="navMep">MEP</a>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link" href="carpentry.html"
+                                                    id="navCarpentry">CARPENTRY DIVISION</a></li>
+                                        </ul>
+                                    </li>
                                 <li class="nav-item"><a class="nav-link" href="career.html" id="navCareer">career</a>
                                 </li>
                                 <li class="nav-item"><a class="nav-link" href="contact.html" id="navContact">Contact</a>
@@ -1088,7 +1095,8 @@
                     navCompletedProjects: "completed projects",
                     navCareer: "career",
                     navContact: "Contact",
-                    aboutUsTitle: "about us",
+                    aboutUsTitle: "about",
+                    navDiv: "Divitions",
                     aboutUsHeading: "Crafting structures that last a lifetime",
                     aboutUsDescription: "Al Gharafa Trading and Contracting Co. W.L.L (AGTC) is 100% Qatari national company owned by Mr. Sheikh Essa Bin Hamad Bin Jassim Bin Thani Al Thani and registered in Doha. The establishment of AGTC since 2007 is a natural progression of the Essa Bin Hamad Company (EBH Co.) policy of controlled growth and diversification.",
                     aboutUsService1: "Comprehensive Services",
@@ -1161,6 +1169,7 @@
                     navCareer: "الوظائف",
                     navContact: "اتصل بنا",
                     aboutUsTitle: "معلومات عنا",
+                    navDiv: "الانقسامات",
                     aboutUsHeading: "بناء هياكل تدوم مدى الحياة",
                     aboutUsDescription: "شركة الغرافة للتجارة والمقاولات ذ.م.م (AGTC) هي شركة قطرية 100٪ مملوكة من قبل السيد الشيخ عيسى بن حمد بن جاسم بن ثاني آل ثاني ومسجلة في الدوحة. تأسيس AGTC منذ عام 2007 هو تطور طبيعي لسياسة شركة عيسى بن حمد (EBH Co.) في النمو المسيطر والتنويع.",
                     aboutUsService1: "خدمات شاملة",
@@ -1236,6 +1245,7 @@
             document.getElementById('navCareer').innerText = translations[language].navCareer;
             document.getElementById('navContact').innerText = translations[language].navContact;
             document.getElementById('aboutUsTitle').innerText = translations[language].aboutUsTitle;
+            document.getElementById('navDiv').innerText = translations[language].navDiv;
             document.getElementById('aboutUsHeading').innerText = translations[language].aboutUsHeading;
             document.getElementById('aboutUsDescription').innerText = translations[language].aboutUsDescription;
             document.getElementById('aboutUsService1').innerText = translations[language].aboutUsService1;
