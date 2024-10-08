@@ -884,6 +884,7 @@ header.main-header .header-sticky.active{
 
 .about-us{
 	padding: 100px 0;
+	
 }
 
 .about-content{
@@ -1046,6 +1047,7 @@ header.main-header .header-sticky.active{
 }
 
 .service-body-title h3{
+	padding-top:33px;
 	font-size: 20px;
 	font-weight: 300;
 	color: var(--white-color);
@@ -4745,3 +4747,7 @@ header.main-header .header-sticky.active{
 	position: relative !important;
 	padding: 180px 0 180px !important;
 }
+
+
+
+
