@@ -531,9 +531,9 @@ header.main-header .header-sticky.active{
 .main-menu ul li a{
 	font-family: var(--accent-font);
 	font-size: 18px;
-	font-weight: 500;
+	font-weight: 1000;
 	padding: 15px 15px !important;
-	color: #E4003A;
+	color: #B8001F;
 	text-transform: capitalize;
 	transition: all 0.3s ease-in-out;
 }
@@ -1333,12 +1333,27 @@ header.main-header .header-sticky.active{
 	
 }
 
-#image-logos{
+/* #image-logos{
     width: 200px;
     padding-right:15px;
 	margin-left: -15px;
 	margin-bottom: 17px;
 	
+} */
+#image-logo {
+    width: 250px; /* Increased size */
+    height: auto; /* Keep the aspect ratio */
+    padding-right: 15px;
+    margin-left: 0; /* Aligns the logo to the start (left) */
+    margin-bottom: 10px;
+}
+
+.navbar {
+    padding-left: 0; /* Removes extra padding from the navbar */
+}
+
+.container-fluid {
+    padding-left: 0; /* Ensures container aligns the content properly */
 }
 
 .cta-box .section-title p{
@@ -1732,7 +1747,26 @@ header.main-header .header-sticky.active{
 .footer-logo{
 	margin-bottom: 40px;
 }
+.about-footer {
+    margin-top: -20px; /* Adjust the value as needed */
+    text-align: center;
+}
 
+.footer-logo {
+    margin-bottom: 20px; /* Space between the logo and paragraph */
+}
+
+.footer-logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    font-size: 16px;
+    line-height: 1.5;
+}
 .footer-content p{
 	color: var(--white-color);
 	margin: 0;
@@ -1923,7 +1957,7 @@ header.main-header .header-sticky.active{
 	margin: 0 40px;
 	overflow: hidden;
 	border-radius: 40px;
-	background: url('https://media.istockphoto.com/id/1194832499/photo/vineyard-vines-sunset-in-spain-in-autumn.webp?a=1&b=1&s=612x612&w=0&k=20&c=voISsi6JazdFpyedGjOXBUiOz2V7a4XwaErgavRSbPs=') no-repeat center center;
+	background: url('/images/IMG_4234-min.JPG') no-repeat center center;
 	background-size: cover;
 	padding: 220px 0 120px;
 	position: relative;
