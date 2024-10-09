@@ -1328,21 +1328,22 @@ header.main-header .header-sticky.active{
 .cta-box .section-title h2{
 	color: var(--white-color);
 }
-#image-logo{
+/* #image-logo{
     width: 200px;
     padding-right:15px;
 	margin-left: -30px;
-	margin-bottom: 17px;
-	
-}
-
-/* #image-logos{
-    width: 200px;
-    padding-right:15px;
-	margin-left: -15px;
-	margin-bottom: 17px;
+	margin-bottom: 40px;
 	
 } */
+
+#image-logos{
+    width: 250px; /* Increased size */
+    height: auto; /* Keep the aspect ratio */
+    padding-right: 15px;
+    margin-left: 0; /* Aligns the logo to the start (left) */
+    margin-bottom: 40px;
+	
+}
 #image-logo {
     width: 250px; /* Increased size */
     height: auto; /* Keep the aspect ratio */
