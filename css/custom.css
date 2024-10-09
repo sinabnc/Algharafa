@@ -503,7 +503,8 @@ header.main-header .header-sticky.active{
 }
 
 .navbar{
-	padding: 20px 80px;
+	padding: 2px 80px;
+	margin-bottom: 15px;
 	align-items: center;
 	
 }
@@ -729,14 +730,14 @@ header.main-header .header-sticky.active{
 /************************************/
 
 .hero.bg-section{
-	margin: 0 40px;
+	/* margin: 0 40px; */
 	overflow: hidden;
-	border-radius: 40px;
+	/* border-radius: 40px; */
 	background: url("../images/hero-bg.jpg") no-repeat center center;
 	background-size: cover;
 	padding: 300px 0 200px;
 	position: relative;
-	margin-top: -103px;
+	margin-top: -175px;
 }
 
 .hero.bg-section:before{
@@ -1661,7 +1662,7 @@ header.main-header .header-sticky.active{
 /************************************/
 
 .conatact-us{
-	background: var(--secondary-color) url("https://img.freepik.com/free-photo/particle-lines-futuristic-network-background_53876-129729.jpg?ga=GA1.1.1762933581.1717666058&semt=ais_hybridg") no-repeat;
+	background: var(--secondary-color) url("/images/contact-us-s\ \(2\).jpg") no-repeat;
 	background-position: center center;
 	background-size: cover;
 	padding: 100px 0;

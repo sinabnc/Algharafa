@@ -396,7 +396,7 @@
             </div>
         </div>
     </div>
-
+</div>
     <!-- About Section End -->
 
     <!-- Our Service Section Start -->
@@ -1064,10 +1064,18 @@
         });
 
         function changeLanguage() {
-            const language = document.getElementById('languageSelector').value;
+    const language = document.getElementById('languageSelector').value;
+
+    // Save the selected language to localStorage
+    localStorage.setItem('selectedLanguage', language);
+
+    // Call the function to update the text content based on the selected language
+    updateContentLanguage(language);
+}
 
             // Define translations for the entire page
-            const translations = {
+            function updateContentLanguage(language) {
+    const translations = {
                 en: {
                     // Hero Slider
                     heroTitle1: "Welcome to AGTC",
@@ -1293,6 +1301,11 @@
             // Adjust the page direction for RTL languages
 
         }
+        window.onload = function() {
+    const storedLanguage = localStorage.getItem('selectedLanguage') || 'en'; // Default to 'en' if none is stored
+    document.getElementById('languageSelector').value = storedLanguage;
+    updateContentLanguage(storedLanguage);
+};
     </script>
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>
