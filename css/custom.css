@@ -475,7 +475,7 @@ header.main-header{
 	border-bottom: 1px solid var(--dark-divider-color);
 	position: relative;
 	z-index: 100;
-	margin: 40px 40px 0px 40px;
+	margin: 10px 0px 0px 0px;
 }
 
 header.main-header .header-sticky{
@@ -1346,7 +1346,7 @@ header.main-header .header-sticky.active{
     width: 250px; /* Increased size */
     height: auto; /* Keep the aspect ratio */
     padding-right: 15px;
-    margin-left: 0; /* Aligns the logo to the start (left) */
+    margin-right: 90px; /* Aligns the logo to the start (left) */
     margin-bottom: 40px;
 	
 }
