@@ -53,7 +53,13 @@
         /* Optional: Make the text bold */
         margin-bottom: 200px;
     }
+ 
 
+#secondary-logo {
+    /* margin-top: 10px; */
+     width: 200px;
+     /* margin-right: 10px; */
+}
     .navbar {
         display: flex;
         justify-content: center;
@@ -88,24 +94,19 @@
     }
 
     .language-selector {
-        background-color: #bf1e2e !important;
-        /* Red background */
-        border: 2px solid #bf1e2e !important;
-        /* Navy blue border */
-        border-radius: 50px;
-        /* Makes the button round */
-        color: #fff !important;
-        /* White text */
-        font-size: 10pt !important;
-        /* Slightly larger font */
-        font-weight: bold !important;
-        /* Bold text */
-        padding: 10px 18px !important;
-        /* Padding for button feel */
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        /* Smooth hover transition */
-    }
+  background-color: #c00; /* Red background */
+  color: white; /* White text */
+  border: none;
+  padding: 12px 20px;
+  border-radius: 20px; /* Rounded corners */
+  font-size: 16px;
+  appearance: none; /* Remove default dropdown arrow */
+  -webkit-appearance: none; /* Remove default dropdown arrow in Safari */
+  -moz-appearance: none; /* Remove default dropdown arrow in Firefox */
+  cursor: pointer;
+  position: relative;
+  width: auto;
+}
 
     /* Add a hover effect to the select element */
     .language-selector:hover {
@@ -148,7 +149,7 @@
 
 
 <body>
-    
+
     <!-- Preloader Start -->
     <div class="preloader">
         <img src="images/726.gif" alt="">
@@ -161,11 +162,16 @@
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <!-- Logo Start -->
-                    <a class="navbar-brand" href="index.html">
-                        <img id="image-logos" src="images/Untitled-1.png" alt="Logo">
+                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                        <!-- First Logo -->
+                        
+                        <!-- Second Logo -->
+                        <img id="second-logo" src="images/AGTC-LOGO.png" alt="Second Logo" style="max-height: 60px;max-width: 200px;">
+                        <img id="image-logos" src="images/Untitled-1.png" alt="Logo" style="max-height: 60px; margin-right: 90px !important;">
+
                     </a>
                     <!-- Logo End -->
-
+    
                     <!-- Main Menu Start -->
                     <div class="collapse navbar-collapse main-menu">
                         <div class="nav-menu-wrapper">
@@ -174,53 +180,40 @@
                                 <li class="nav-item submenu">
                                     <a class="nav-link" href="about.html" id="navAbout">About</a>
                                     <ul>
-                                        <li class="nav-item"><a class="nav-link" href="about.html"
-                                                id="navChairmansMessage">CHAIRMAN'S MESSAGE</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="about-hse.html"
-                                                id="navHsePolicy">HSE & QC POLICY</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="staff.html"
-                                                id="navManagementStaff">MANAGEMENT & STAFF</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="vahcle.html"
-                                                id="navVehiclesEquipments">VEHICLES & EQUIPMENTS</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="about.html" id="navChairmansMessage">CHAIRMAN'S MESSAGE</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="about-hse.html" id="navHsePolicy">HSE & QC POLICY</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="staff.html" id="navManagementStaff">MANAGEMENT & STAFF</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="vahcle.html" id="navVehiclesEquipments">VEHICLES & EQUIPMENTS</a></li>
                                     </ul>
                                 </li>
-
                                 <li class="nav-item submenu">
                                     <a class="nav-link" href="#" id="navProjects">Projects</a>
                                     <ul>
-                                        <li class="nav-item"><a class="nav-link" href="project-on.html"
-                                                id="navOngoingProjects">ongoing projects</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="project.html"
-                                                id="navCompletedProjects">completed projects</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="project-on.html" id="navOngoingProjects">ongoing projects</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="project.html" id="navCompletedProjects">completed projects</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="certificate.html"
-                                        id="navCertificate">certificate</a></li>
+                                <li class="nav-item"><a class="nav-link" href="certificate.html" id="navCertificate">certificate</a></li>
                                 <li class="nav-item submenu">
                                     <a class="nav-link" href="mep.html" id="navDiv">Divisions</a>
                                     <ul>
-                                        <li class="nav-item"><a class="nav-link" href="mep.html" id="navMep">MEP</a>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" href="carpentry.html"
-                                                id="navCarpentry">CARPENTRY </a></li>
+                                        <li class="nav-item"><a class="nav-link" href="mep.html" id="navMep">MEP</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="carpentry.html" id="navCarpentry">CARPENTRY </a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="career.html" id="navCareer">career</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html" id="navContact">Contact</a>
-                                </li>
+                                <li class="nav-item"><a class="nav-link" href="career.html" id="navCareer">career</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html" id="navContact">Contact</a></li>
                             </ul>
                         </div>
-                        <!-- Language Selector -->
-                        <div class="header-btn d-inline-flex align-items-center">
-                            <select class="form-select language-selector me-2" id="languageSelector"
-                                onchange="changeLanguage()">
-                                <option value="">select language</option>
+    
+                        <!-- Language Selector (Moved to end of navbar) -->
+                        <div class="ms-auto d-inline-flex align-items-center">
+                            <select class="form-select language-selector me-2" id="languageSelector" onchange="changeLanguage()">
+                                <option value="en">select</option>   
                                 <option value="en">English</option>
                                 <option value="ar">Arabic</option>
                             </select>
                         </div>
-                        <!-- End Language Selector -->
                     </div>
                     <!-- Main Menu End -->
                     <div class="navbar-toggle"></div>
@@ -229,6 +222,10 @@
             <div class="responsive-menu"></div>
         </div>
     </header>
+    
+    
+    
+    
     <!-- Header End -->
 
     <!-- Header End -->
@@ -276,22 +273,18 @@
                             <!-- Slider Content End -->
                         </div>
                     </div>
-                    <!-- Hero Slide End -->
-
-                    <!-- Hero Slide Start -->
+                    
                     <div class="swiper-slide">
                         <div class="hero-slide">
-                            <!-- Slider Image Start -->
+                            
                             <div class="hero-slider-image">
                                 <img src="images/HOMMEEE 22-min.jpeg" alt="">
                             </div>
-                            <!-- Slider Image End -->
-
-                            <!-- Slider Content Start -->
+                           
                             <div class="container">
                                 <div class="row align-items-center">
                                     <div class="col-lg-12">
-                                        <!-- Hero Content Start -->
+                                      
                                         <div class="hero-content">
                                             <div class="section-title">
                                                 <h3 id="heroTitle2" class="wow fadeInUp">Welcome to AGTC</h3>
@@ -310,11 +303,11 @@
                                                     Projects</a>
                                             </div>
                                         </div>
-                                        <!-- Hero Content End -->
+                                      
                                     </div>
                                 </div>
                             </div>
-                            <!-- Slider Content End -->
+                          
                         </div>
                     </div>
                     <!-- Hero Slide End -->
@@ -331,7 +324,7 @@
 
     <!-- About Section Start -->
 
-    
+
     <div class="about-us">
         <div class="container">
             <div class="row align-items-center">
@@ -346,7 +339,7 @@
                     </div>
                     <!-- About Us Image End  -->
                 </div>
-               
+
                 <div class="col-lg-7">
                     <!-- About Content Start -->
                     <div class="about-content">
@@ -396,7 +389,7 @@
             </div>
         </div>
     </div>
-</div>
+    </div>
     <!-- About Section End -->
 
     <!-- Our Service Section Start -->
@@ -807,7 +800,8 @@
                                     <h3 id="project1Title">Villa (G+1+PH) & Out Block</h3>
                                 </div>
                                 <div class="project-content">
-                                    <p id="project1Description">A Villa comprising of Out Kitchen and Guard Rooms for our prestigious client, with a built-up area of 468.00 m²</p>
+                                    <p id="project1Description">A Villa comprising of Out Kitchen and Guard Rooms for
+                                        our prestigious client, with a built-up area of 468.00 m²</p>
                                 </div>
                             </div>
                         </div>
@@ -829,7 +823,8 @@
                                     <h3 id="project2Title">Doha Bonyan Office</h3>
                                 </div>
                                 <div class="project-content">
-                                    <p id="project2Description">ID / Fitout Works of an Office Space for Bonyan Al Doha Real Estate Company, with a Built-Up area of 530 m² including furniture’s.</p>
+                                    <p id="project2Description">ID / Fitout Works of an Office Space for Bonyan Al Doha
+                                        Real Estate Company, with a Built-Up area of 530 m² including furniture’s.</p>
                                 </div>
                             </div>
                         </div>
@@ -952,7 +947,7 @@
                             </figure>
                         </div>
                         <!-- Footer Logo End -->
-            
+
                         <!-- Footer Content Start -->
                         <div class="footer-content">
                             <p>Transforming Visions into Reality: Your Trusted Partner in Construction Excellence.</p>
@@ -961,7 +956,7 @@
                     </div>
                     <!-- About Footer End -->
                 </div>
-            
+
                 <div class="col-lg-4 col-md-6 col-12 mb-4">
                     <!-- Footer Links Start -->
                     <div class="footer-links">
@@ -975,7 +970,7 @@
                     </div>
                     <!-- Footer Links End -->
                 </div>
-            
+
                 <div class="col-lg-4 col-md-6 col-12 mb-4">
                     <!-- Footer Contact Info Box Start -->
                     <div class="footer-links footer-contact-box">
@@ -990,7 +985,7 @@
                             <p>(+974) 66554433</p>
                         </div>
                         <!-- Info Box End -->
-            
+
                         <!-- Info Box Start -->
                         <div class="footer-info-box">
                             <!-- Icon Box Start -->
@@ -1001,7 +996,7 @@
                             <p>info@algharafacontracting.com</p>
                         </div>
                         <!-- Info Box End -->
-            
+
                         <!-- Info Box Start -->
                         <div class="footer-info-box">
                             <!-- Icon Box Start -->
@@ -1050,6 +1045,7 @@
 
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
+
     <script>
         // Initialize Swiper
         const swiper = new Swiper('.swiper', {
@@ -1064,18 +1060,18 @@
         });
 
         function changeLanguage() {
-    const language = document.getElementById('languageSelector').value;
+            const language = document.getElementById('languageSelector').value;
 
-    // Save the selected language to localStorage
-    localStorage.setItem('selectedLanguage', language);
+            // Save the selected language to localStorage
+            localStorage.setItem('selectedLanguage', language);
 
-    // Call the function to update the text content based on the selected language
-    updateContentLanguage(language);
-}
+            // Call the function to update the text content based on the selected language
+            updateContentLanguage(language);
+        }
 
-            // Define translations for the entire page
-            function updateContentLanguage(language) {
-    const translations = {
+        // Define translations for the entire page
+        function updateContentLanguage(language) {
+            const translations = {
                 en: {
                     // Hero Slider
                     heroTitle1: "Welcome to AGTC",
@@ -1091,7 +1087,7 @@
 
                     // Main Menu
                     navHome: "Home",
-                    navAbout: "About Us",
+                    navAbout: "About",
                     navChairmansMessage: "CHAIRMAN'S MESSAGE",
                     navHsePolicy: "HSE & QC POLICY",
                     navManagementStaff: "MANAGEMENT & STAFF",
@@ -1164,7 +1160,7 @@
                     heroButton4: "عرض المشاريع",
                     // Main Menu
                     navHome: "الرئيسية",
-                    navAbout: "معلومات عنا",
+                    navAbout: "معلومانا",
                     navChairmansMessage: "رسالة رئيس مجلس الإدارة",
                     navHsePolicy: "سياسة الصحة والسلامة والبيئة",
                     navManagementStaff: "الإدارة والموظفين",
@@ -1176,7 +1172,7 @@
                     navOngoingProjects: "المشاريع الجارية",
                     navCompletedProjects: "المشاريع المكتملة",
                     navCareer: "الوظائف",
-                    navContact: "اتصل بنا",
+                    navContact: "اتصلنا",
                     aboutUsTitle: "معلومات عنا",
                     navDiv: "الانقسامات",
                     aboutUsHeading: "بناء هياكل تدوم مدى الحياة",
@@ -1301,11 +1297,11 @@
             // Adjust the page direction for RTL languages
 
         }
-        window.onload = function() {
-    const storedLanguage = localStorage.getItem('selectedLanguage') || 'en'; // Default to 'en' if none is stored
-    document.getElementById('languageSelector').value = storedLanguage;
-    updateContentLanguage(storedLanguage);
-};
+        window.onload = function () {
+            const storedLanguage = localStorage.getItem('selectedLanguage') || 'en'; // Default to 'en' if none is stored
+            document.getElementById('languageSelector').value = storedLanguage;
+            updateContentLanguage(storedLanguage);
+        };
     </script>
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>

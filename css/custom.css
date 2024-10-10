@@ -504,7 +504,7 @@ header.main-header .header-sticky.active{
 
 .navbar{
 	padding: 2px 80px;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 	align-items: center;
 	
 }
@@ -654,7 +654,12 @@ header.main-header .header-sticky.active{
 .navbar-toggle a.slicknav_btn.slicknav_open .slicknav_icon span.slicknav_icon-bar:nth-child(1){
     transform: rotate(-45deg) translate(-5px, 5px);
 }
-
+#heroButton1{
+	margin-top: 60px;
+}
+#heroButton3{
+	margin-top: 60px;
+}
 .navbar-toggle a.slicknav_btn.slicknav_open .slicknav_icon span.slicknav_icon-bar:nth-child(2){
     opacity: 0;
 }
@@ -813,7 +818,7 @@ header.main-header .header-sticky.active{
 
 .hero-slider-layout .swiper-pagination{
 	z-index: 2;
-    bottom: 100px;
+    bottom: 60px;
 }
 
 .hero-slider-layout .swiper-pagination .swiper-pagination-bullet{
@@ -877,6 +882,7 @@ header.main-header .header-sticky.active{
 
 .hero-content-body .btn-default.btn-highlighted{
 	margin-left: 30px;
+	
 }
 
 /************************************/
@@ -4318,6 +4324,7 @@ header.main-header .header-sticky.active{
         font-size: 16px;
         padding: 18px 50px 18px 20px;
     }
+	
 
 	.hero.bg-section{
         padding: 160px 0 60px;
@@ -4329,11 +4336,13 @@ header.main-header .header-sticky.active{
 
 	.hero-content .section-title p{
         font-size: 18px;
+		margin-top: 30px;
     }
 
 	.hero-content-body .btn-default.btn-highlighted{
 		margin-left: 0px;
 		margin-top: 10px;
+		
 	}
 
 	.about-content-body ul{
