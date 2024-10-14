@@ -12,7 +12,11 @@
 	<meta name="author" content="Awaiken">
 	<!-- Page Title -->
 	<title>AGTc</title>
-	<!-- Favicon Icon -->
+	<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 	<link rel="shortcut icon" type="image/x-icon" href="favicon/android-chrome-192x192.png">
 
 
@@ -214,53 +218,54 @@
                             <p id="project-description">A Compound Villa comprising of 6 Villas, With a built-up area of 4,780 m² will cater to the ever-increasing need of housing services at Izghawa.</p>
                         </div>
                     </div>
-                    <!-- Project Details Gallery Start -->
-                    <div class="project-details-gallery">
-                        <div class="row project-gallery-items">
-                            <div class="col-lg-12">
-                                <div class="project-gallery-title wow fadeInUp">
-                                    <h2 id="gallery_title">project gallery</h2>
-                                </div>
+                    <!-- Project Details Gallery with Swiper -->
+                    <div class="project-details-gallery swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="images/6-BUILDING-150x150.jpg">
+                                    <figure class="image-anime">
+                                        <img src="images/6-BUILDING-150x150.jpg" alt="Image 1">
+                                    </figure>
+                                </a>
                             </div>
-                            <!-- Gallery Items -->
-                            <div class="col-md-3 col-6">
-                                <!-- Project Gallery Item Start -->
-                                <div class="project-gallery-item wow fadeInUp">
-                                    <a href="images/6-BUILDING-150x150.jpg">
-                                        <figure class="image-anime">
-                                            <img src="images/6-BUILDING-150x150.jpg" alt="">
-                                        </figure>
-                                    </a>
-                                </div>
-                                <!-- Project Gallery Item End -->
+                            <div class="swiper-slide">
+                                <a href="images/3-ROW-HOUSE-150x150.jpg">
+                                    <figure class="image-anime">
+                                        <img src="images/3-ROW-HOUSE-150x150.jpg" alt="Image 2">
+                                    </figure>
+                                </a>
                             </div>
-                            <div class="col-md-3 col-6">
-                                <!-- Project Gallery Item Start -->
-                                <div class="project-gallery-item wow fadeInUp" data-wow-delay="0.25s">
-                                    <a href="images/3-ROW-HOUSE-150x150.jpg">
-                                        <figure class="image-anime">
-                                            <img src="images/3-ROW-HOUSE-150x150.jpg" alt="">
-                                        </figure>
-                                    </a>
-                                </div>
-                                <!-- Project Gallery Item End -->
+                            <div class="swiper-slide">
+                                <a href="images/gal1-5-150x150.jpg">
+                                    <figure class="image-anime">
+                                        <img src="images/gal1-5-150x150.jpg" alt="Image 3">
+                                    </figure>
+                                </a>
                             </div>
-                            <div class="col-md-3 col-6">
-                                <!-- Project Gallery Item Start -->
-                                <div class="project-gallery-item wow fadeInUp" data-wow-delay="0.5s">
-                                    <a href="images/gal1-5-150x150.jpg">
-                                        <figure class="image-anime">
-                                            <img src="images/gal1-5-150x150.jpg" alt="">
-                                        </figure>
-                                    </a>
-                                </div>
-                                <!-- Project Gallery Item End -->
+                            <div class="swiper-slide">
+                                <a href="images/DSCF1290-150x150jpg">
+                                    <figure class="image-anime">
+                                        <img src="images/DSCF1290-150x150.jpg" alt="Image 3">
+                                    </figure>
+                                </a>
                             </div>
-                            
+                            <div class="swiper-slide">
+                                <a href="images/DSCF1291-150x150 copy.jpg">
+                                    <figure class="image-anime">
+                                        <img src="images/DSCF1291-150x150 copy.jpg" alt="Image 3">
+                                    </figure>
+                                </a>
+                            </div>
                         </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Navigation Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
+                    <!-- Project Details Gallery End -->
                 </div>
-
+    
                 <div class="col-lg-4">
                     <div class="project-sidebar">
                         <div class="project-info-box">
@@ -288,6 +293,7 @@
             </div>
         </div>
     </div>
+    
 
     
 
@@ -426,7 +432,40 @@
           }
         }
       </script>
-      
+      <script>
+        var swiper = new Swiper('.swiper', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+    }
+});
+
+      </script>
       <!-- Google Translate API -->
       <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
       

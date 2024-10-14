@@ -28,6 +28,11 @@
     <!-- Bootstrap Css -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
     <!-- SlickNav Css -->
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <link href="css/slicknav.min.css" rel="stylesheet" />
     <!-- Swiper Css -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
@@ -274,110 +279,146 @@
     <!-- Page Project Details Start -->
     <div class="page-project-single">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-8">
-            <!-- Project Single Content Start -->
-            <div class="project-single-content">
-              <!-- Project Featured Image Start -->
-              <div class="project-featured-image">
-                <figure class="image-anime reveal">
-                  <img src="images/main-P007-1.jpg" alt="" />
-                </figure>
-              </div>
-              <!-- Project Featured Image End -->
-
-              <!-- Project Details Content Start -->
-              <div class="project-details-content">
-                <p
-                  id="project_description"
-                  class="wow fadeInUp"
-                  data-wow-delay="0.25s"
-                >
-                  A Private Villa and Compound Villa comprising of Out Majlis,
-                  Driver Room and Out block (2 Nos.) for our prestigious client,
-                  with a built-up area of 7,680.82 m²
-                </p>
-
-                <!-- Content that could be dynamically added in the future -->
-              </div>
-              <!-- Project Details Content End -->
-
-              <!-- Project Details Gallery Start -->
-              <div class="project-details-gallery">
-                <div class="row project-gallery-items">
-                  <div class="col-lg-12">
-                    <div class="project-gallery-title wow fadeInUp">
-                      <h2 id="gallery_title">project gallery</h2>
-                    </div>
+          <div class="row">
+              <div class="col-lg-8">
+                  <!-- Project Single Content Start -->
+                  <div class="project-single-content">
+                      <!-- Project Featured Image Start -->
+                      <div class="project-featured-image">
+                          <figure class="image-anime reveal">
+                              <img src="images/main-P007-1.jpg" alt="" />
+                          </figure>
+                      </div>
+                      <!-- Project Featured Image End -->
+  
+                      <!-- Project Details Content Start -->
+                      <div class="project-details-content">
+                          <p
+                              id="project_description"
+                              class="wow fadeInUp"
+                              data-wow-delay="0.25s"
+                          >
+                              A Private Villa and Compound Villa comprising of Out Majlis,
+                              Driver Room and Out block (2 Nos.) for our prestigious client,
+                              with a built-up area of 7,680.82 m²
+                          </p>
+                      </div>
+                      <!-- Project Details Content End -->
+  
+                      <!-- Project Details Gallery Start (with Swiper) -->
+                      <div class="project-details-gallery swiper">
+                          <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                  <a href="images/01-GF-MAJLIS-003-01-150x150.jpg">
+                                      <figure class="image-anime">
+                                          <img
+                                              src="images/01-GF-MAJLIS-003-01-150x150.jpg"
+                                              alt=""
+                                          />
+                                      </figure>
+                                  </a>
+                              </div>
+                              <div class="swiper-slide">
+                                  <a href="images/gal2-150x150.jpg">
+                                      <figure class="image-anime">
+                                          <img
+                                              src="images/gal2-150x150.jpg"
+                                              alt=""
+                                          />
+                                      </figure>
+                                  </a>
+                              </div>
+                              <div class="swiper-slide">
+                                  <a href="images/gal3-150x150.jpg">
+                                      <figure class="image-anime">
+                                          <img
+                                              src="images/gal3-150x150.jpg"
+                                              alt=""
+                                          />
+                                      </figure>
+                                  </a>
+                              </div>
+                              <div class="swiper-slide">
+                                <a href="images/01-GF-MAJLIS-003-01-150x150.jpg">
+                                    <figure class="image-anime">
+                                        <img
+                                            src="images/01-GF-MAJLIS-003-01-150x150.jpg"
+                                            alt=""
+                                        />
+                                    </figure>
+                                </a>
+                            </div>
+                              <div class="swiper-slide">
+                                  <a href="images/IMG-20240328-WA0006-150x150.jpg">
+                                      <figure class="image-anime">
+                                          <img
+                                              src="images/IMG-20240328-WA0006-150x150.jpg"
+                                              alt=""
+                                          />
+                                      </figure>
+                                  </a>
+                              </div>
+                             
+                              <!-- Add more swiper-slide divs for additional images -->
+                          </div>
+  
+                          <!-- Add Pagination -->
+                          <div class="swiper-pagination"></div>
+                          <!-- Add Navigation Arrows -->
+                          <div class="swiper-button-next"></div>
+                          <div class="swiper-button-prev"></div>
+                      </div>
+                      <!-- Project Details Gallery End -->
                   </div>
-                  <div class="col-md-3 col-6">
-                    <!-- Project Gallery Item Start -->
-                    <div class="project-gallery-item wow fadeInUp">
-                      <a href="images/01-GF-MAJLIS-003-01-150x150.jpg">
-                        <figure class="image-anime">
-                          <img
-                            src="images/01-GF-MAJLIS-003-01-150x150.jpg"
-                            alt=""
-                          />
-                        </figure>
-                      </a>
-                    </div>
-                    <!-- Project Gallery Item End -->
-                  </div>
-                  <!-- Additional gallery items -->
-                </div>
+                  <!-- Project Single Content End -->
               </div>
-              <!-- Project Details Gallery End -->
-            </div>
-            <!-- Project Single Content End -->
+  
+              <div class="col-lg-4">
+                  <!-- Project Sidebar Start -->
+                  <div class="project-sidebar">
+                      <div class="project-info-box wow fadeInUp">
+                          <!-- Portfolio Info Item Start -->
+                          <div class="project-info-item">
+                              <div class="icon-box">
+                                  <img src="images/location.png" alt="" />
+                              </div>
+                              <div class="project-info-content">
+                                  <p id="location_label">Location</p>
+                                  <h3 id="location">Izghawa</h3>
+                              </div>
+                          </div>
+                          <!-- Portfolio Info Item End -->
+  
+                          <!-- Portfolio Info Item Start -->
+                          <div class="project-info-item">
+                              <div class="icon-box">
+                                  <img src="images/maximize.png" alt="" />
+                              </div>
+                              <div class="project-info-content">
+                                  <p id="total_area_label">Total Built-Up Area</p>
+                                  <h3 id="total_area">7680.82㎡</h3>
+                              </div>
+                          </div>
+                          <!-- Portfolio Info Item End -->
+  
+                          <!-- Portfolio Info Item Start -->
+                          <div class="project-info-item">
+                              <div class="icon-box">
+                                  <img src="images/check-mark.png" alt="" />
+                              </div>
+                              <div class="project-info-content">
+                                  <p id="status">Ongoing</p>
+                                  <h3 id="status_label">Profile Status</h3>
+                              </div>
+                          </div>
+                          <!-- Portfolio Info Item End -->
+                      </div>
+                  </div>
+                  <!-- Project Sidebar End -->
+              </div>
           </div>
-
-          <div class="col-lg-4">
-            <!-- Project Sidebar Start -->
-            <div class="project-sidebar">
-              <div class="project-info-box wow fadeInUp">
-                <!-- Portfolio Info Item Start -->
-                <div class="project-info-item">
-                  <div class="icon-box">
-                    <img src="images/location.png" alt="" />
-                  </div>
-                  <div class="project-info-content">
-                    <p id="location_label">location</p>
-                    <h3 id="location">Izghawa</h3>
-                  </div>
-                </div>
-                <!-- Portfolio Info Item End -->
-
-                <!-- Portfolio Info Item Start -->
-                <div class="project-info-item">
-                  <div class="icon-box">
-                    <img src="images/maximize.png" alt="" />
-                  </div>
-                  <div class="project-info-content">
-                    <p id="total_area_label">Total Built-Up Area</p>
-                    <h3 id="total_area">7680.82㎡</h3>
-                  </div>
-                </div>
-                <!-- Portfolio Info Item End -->
-
-                <!-- Portfolio Info Item Start -->
-                <div class="project-info-item">
-                  <div class="icon-box">
-                    <img src="images/check-mark.png" alt="" />
-                  </div>
-                  <div class="project-info-content">
-                    <p id="status">ongoing</p>
-                    <h3 id="status_label">Profile status</h3>
-                  </div>
-                </div>
-                <!-- Portfolio Info Item End -->
-              </div>
-            </div>
-            <!-- Project Sidebar End -->
-          </div>
-        </div>
       </div>
-    </div>
+  </div>
     <!-- Page Project Details End -->
 
     <footer class="main-footer">
@@ -516,6 +557,40 @@
           translateElement.dispatchEvent(new Event("change")); // Trigger the change event
         }
       }
+    </script>
+    <script>
+      var swiper = new Swiper('.swiper', {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 5,
+        },
+    }
+});
+
     </script>
 
     <!-- Google Translate API -->

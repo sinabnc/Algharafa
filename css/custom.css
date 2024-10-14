@@ -63,6 +63,8 @@ body{
 	line-height: 1.6em;
 	color: var(--text-color);
 	background-color: var(--white-color);
+	overflow-x: hidden; 
+	
 }
 
 p{
@@ -4760,5 +4762,31 @@ header.main-header .header-sticky.active{
 }
 
 
+.ads_sponsors div img{
+	width:200px;
+	height:150px;
+}
+.ads_sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.ads_sponsors div {
+    flex: 1 1 150px; /* Flexible with minimum width of 150px */
+}
+
+.ads_sponsors img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
 
+canvas {
+	width: 100%;
+	height: 100%;
+	display: block;
+  }
+  

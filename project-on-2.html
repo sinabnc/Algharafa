@@ -13,6 +13,11 @@
 	<!-- Page Title -->
 	<title>AGTc</title>
 	<!-- Favicon Icon -->
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 	<link rel="shortcut icon" type="image/x-icon" href="favicon/android-chrome-192x192.png">
 
 
@@ -107,7 +112,9 @@
     max-width: 100%;          /* Optional: Limits the image width */
     height: 100px;   
     padding-bottom: 30px;          /* Maintains the image aspect ratio */
+
 }
+
 </style>
 
 <body>
@@ -213,71 +220,80 @@
                             </figure>
                         </div>
                         <!-- Project Featured Image End -->
-
+    
                         <!-- Project Details Content Start -->
                         <div class="project-details-content">
-                            <p id="project_description" class="wow fadeInUp" data-wow-delay="0.25s">A Private Villa comprising of Out Majlis, Outdoor Swimming Pool, Driver Room and Ancillary Building for our prestigious client, with a built-up area of 2,822.26 m².</p>
+                            <p id="project_description" class="wow fadeInUp" data-wow-delay="0.25s">
+                                A Private Villa comprising of Out Majlis, Outdoor Swimming Pool, Driver Room and Ancillary Building for our prestigious client, with a built-up area of 2,822.26 m².
+                            </p>
                         </div>
                         <!-- Project Details Content End -->
-
-                        <!-- Project Details Gallery Start -->
-                        <div class="project-details-gallery">
-                            <div class="row project-gallery-items">
-                                <div class="col-lg-12">
-                                    <div class="project-gallery-title wow fadeInUp">
-                                        <h2 id="gallery_title">Project Gallery</h2>
-                                    </div>
+    
+                        <!-- Project Details Gallery Start (with Swiper) -->
+                        <div class="project-details-gallery swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="images/DSCF1225-150x150.jpg" style="width: 500px;">
+                                        <figure class="image-anime">
+                                            <img src="images/DSCF1225-150x150.jpg" alt="Gallery Image 1">
+                                        </figure>
+                                    </a>
                                 </div>
-                                <div class="col-md-3 col-6">
-                                    <!-- Project Gallery Item Start -->
-                                    <div class="project-gallery-item wow fadeInUp">
-                                        <a href="images/DSCF1225-150x150.jpg">
-                                            <figure class="image-anime">
-                                                <img src="images/DSCF1225-150x150.jpg" alt="">
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <!-- Project Gallery Item End -->
+                                <div class="swiper-slide">
+                                    <a href="images/DSCF1223-150x150.jpg" style="width: 500px;">
+                                        <figure class="image-anime">
+                                            <img src="images/DSCF1223-150x150.jpg" alt="Gallery Image 2">
+                                        </figure>
+                                    </a>
                                 </div>
-                                <div class="col-md-3 col-6">
-                                    <!-- Project Gallery Item Start -->
-                                    <div class="project-gallery-item wow fadeInUp" data-wow-delay="0.25s">
-                                        <a href="images/DSCF1223-150x150.jpg">
-                                            <figure class="image-anime">
-                                                <img src="images/DSCF1223-150x150.jpg" alt="">
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <!-- Project Gallery Item End -->
+                                <div class="swiper-slide">
+                                    <a href="images/DSCF1222-150x150.jpg" style="width: 500px;">
+                                        <figure class="image-anime">
+                                            <img src="images/DSCF1222-150x150.jpg" alt="Gallery Image 3">
+                                        </figure>
+                                    </a>
                                 </div>
-                                <div class="col-md-3 col-6">
-                                    <!-- Project Gallery Item Start -->
-                                    <div class="project-gallery-item wow fadeInUp" data-wow-delay="0.5s">
-                                        <a href="images/DSCF1222-150x150.jpg">
-                                            <figure class="image-anime">
-                                                <img src="images/DSCF1222-150x150.jpg" alt="">
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <!-- Project Gallery Item End -->
+                                <div class="swiper-slide">
+                                    <a href="images/DSCF1216-150x150.jpg" style="width: 500px;">
+                                        <figure class="image-anime">
+                                            <img src="images/DSCF1216-150x150.jpg" alt="Gallery Image 4">
+                                        </figure>
+                                    </a>
                                 </div>
-                                <div class="col-md-3 col-6">
-                                    <!-- Project Gallery Item Start -->
-                                    <div class="project-gallery-item wow fadeInUp" data-wow-delay="0.75s">
-                                        <a href="images/DSCF1216-150x150.jpg">
-                                            <figure class="image-anime">
-                                                <img src="images/DSCF1216-150x150.jpg" alt="">
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <!-- Project Gallery Item End -->
+                                <div class="swiper-slide">
+                                    <a href="images/DSCF1171-150x150.jpg">
+                                        <figure class="image-anime">
+                                            <img src="images/DSCF1171-150x150.jpg" alt="Gallery Image 4">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="images/DSCF1169-150x150.jpg">
+                                        <figure class="image-anime">
+                                            <img src="images/DSCF1169-150x150.jpg" alt="Gallery Image 4">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="images/DSCF1169-150x150.jpg">
+                                        <figure class="image-anime">
+                                            <img src="images/DSCF1169-150x150.jpg" alt="Gallery Image 4">
+                                        </figure>
+                                    </a>
                                 </div>
                             </div>
+    
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!-- Add Navigation Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
                         <!-- Project Details Gallery End -->
                     </div>
                     <!-- Project Single Content End -->
                 </div>
+    
                 <div class="col-lg-4">
                     <!-- Project Sidebar Start -->
                     <div class="project-sidebar">
@@ -293,7 +309,7 @@
                                 </div>
                             </div>
                             <!-- Portfolio Info Item End -->
-
+    
                             <!-- Portfolio Info Item Start -->
                             <div class="project-info-item">
                                 <div class="icon-box">
@@ -305,7 +321,7 @@
                                 </div>
                             </div>
                             <!-- Portfolio Info Item End -->
-
+    
                             <!-- Portfolio Info Item Start -->
                             <div class="project-info-item">
                                 <div class="icon-box">
@@ -467,6 +483,40 @@
       
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper', {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 5,
+        },
+    }
+});
+
+    </script>
     <!-- Validator js file -->
     <script src="js/validator.min.js"></script>
     <!-- SlickNav js file -->

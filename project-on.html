@@ -12,7 +12,11 @@
 	<meta name="author" content="Awaiken">
 	<!-- Page Title -->
 	<title>AGTc</title>
-	<!-- Favicon Icon -->
+	<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 	<link rel="shortcut icon" type="image/x-icon" href="favicon/android-chrome-192x192.png">
 
 
@@ -554,7 +558,40 @@
     <script src="js/ScrollTrigger.min.js"></script>
     <!-- Wow js file -->
     <script src="js/wow.js"></script>
-    <!-- Main Custom js file -->
+    <script>
+        var swiper = new Swiper('.swiper', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+    }
+});
+
+      </script>
     <script src="js/function.js"></script>
 	<script src="../../assets/js/theme-panel.js"></script>
 </body>

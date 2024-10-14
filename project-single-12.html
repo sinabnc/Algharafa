@@ -12,7 +12,11 @@
 	<meta name="author" content="Awaiken">
 	<!-- Page Title -->
 	<title>AGTc</title>
-	<!-- Favicon Icon -->
+	<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 	<link rel="shortcut icon" type="image/x-icon" href="favicon/android-chrome-192x192.png">
 
 
@@ -212,87 +216,77 @@
                             </figure>
                         </div>
                         <!-- Project Featured Image End -->
-
+    
                         <!-- Project Details Content Start -->
                         <div class="project-details-content">
-                            <p id="projectDescription" class="wow fadeInUp" data-wow-delay="0.25s">A Compound Villa comprising of 10 Villas, with a built-up area of 8,000.00 m² will cater to the ever-increasing need of housing services at Izghawa.</p>
-
-                            <!-- <p class="wow fadeInUp" data-wow-delay="0.5s">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga harum quidem rerum facilis est et expedita distinctio.</p>
-                            
+                            <p id="projectDescription" class="wow fadeInUp" data-wow-delay="0.25s">
+                                A Compound Villa comprising of 10 Villas, with a built-up area of 8,000.00 m² will cater to the ever-increasing need of housing services at Izghawa.
+                            </p>
+    
                             <div class="project-details-title wow fadeInUp">
                                 <h3 id="buildingDevelopmentTitle">Building better development</h3>
                             </div>
-
-                            <p id="projectDescription2" class="wow fadeInUp" data-wow-delay="0.25s">Aenean sed adipiscing diam donec adipiscing tristique risus. Nunc pulvinar sapien et ligula ullamcorper malesuada. Venenatis urna cursus eget nunc scelerisque viverra mauris in. A cras semper auctor neque vitae tempus.</p>
-
-                            <ul class="wow fadeInUp" data-wow-delay="0.5s">
-                                <li id="buildingFutureIdeas">Building the future with ideas</li>
-                                <li id="engineeringBetterWay">Engineering the better way</li>
-                                <li id="designFutureExcellence">Designing future with excellence</li>
-                                <li id="discoveringPossibility">Discovering possibility in concrete</li>
-                            </ul> -->
                         </div>
                         <!-- Project Details Content End -->
-
-                        <!-- Project Details Gallery Start -->
-                        <div class="project-details-gallery">
-                            <div class="row project-gallery-items">
-                                <div class="col-lg-12">
-                                    <div class="project-gallery-title wow fadeInUp">
-                                        <h2 id="galleryTitle">project gallery</h2>
-                                    </div>
+    
+                        <!-- Project Details Gallery Start (with Swiper) -->
+                        <div class="project-details-gallery swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="images/IMG_4141-150x150.jpg">
+                                        <figure class="image-anime">
+                                            <img src="images/IMG_4141-150x150.jpg" alt="">
+                                        </figure>
+                                    </a>
                                 </div>
-                                <div class="col-md-3 col-6">
-                                    <!-- Project Gallery Item Start -->
-                                    <div class="project-gallery-item wow fadeInUp">
-                                        <a href="images/IMG_4141-150x150.jpg">
-                                            <figure class="image-anime">
-                                                <img src="images/IMG_4141-150x150.jpg" alt="">
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <!-- Project Gallery Item End -->
+                                <div class="swiper-slide">
+                                    <a href="images/IMG_4138-150x150.jpg">
+                                        <figure class="image-anime">
+                                            <img src="images/IMG_4138-150x150.jpg" alt="">
+                                        </figure>
+                                    </a>
                                 </div>
-                                <div class="col-md-3 col-6">
-                                    <!-- Project Gallery Item Start -->
-                                    <div class="project-gallery-item wow fadeInUp" data-wow-delay="0.25s">
-                                        <a href="images/IMG_4138-150x150.jpg">
-                                            <figure class="image-anime">
-                                                <img src="images/IMG_4138-150x150.jpg" alt="">
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <!-- Project Gallery Item End -->
+                                <div class="swiper-slide">
+                                    <a href="images/IMG_4140-150x150.jpg">
+                                        <figure class="image-anime">
+                                            <img src="images/IMG_4140-150x150.jpg" alt="">
+                                        </figure>
+                                    </a>
                                 </div>
-                                <div class="col-md-3 col-6">
-                                    <!-- Project Gallery Item Start -->
-                                    <div class="project-gallery-item wow fadeInUp" data-wow-delay="0.5s">
-                                        <a href="images/IMG_4140-150x150.jpg">
-                                            <figure class="image-anime">
-                                                <img src="images/IMG_4140-150x150.jpg" alt="">
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <!-- Project Gallery Item End -->
+                                <div class="swiper-slide">
+                                    <a href="images/IMG_4137-150x150.jpg">
+                                        <figure class="image-anime">
+                                            <img src="images/IMG_4137-150x150.jpg" alt="">
+                                        </figure>
+                                    </a>
                                 </div>
-                                <div class="col-md-3 col-6">
-                                    <!-- Project Gallery Item Start -->
-                                    <div class="project-gallery-item wow fadeInUp" data-wow-delay="0.75s">
-                                        <a href="images/IMG_4137-150x150.jpg">
-                                            <figure class="image-anime">
-                                                <img src="images/IMG_4137-150x150.jpg" alt="">
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <!-- Project Gallery Item End -->
+                                <div class="swiper-slide">
+                                    <a href="images/IMG_4149-150x150.jpg">
+                                        <figure class="image-anime">
+                                            <img src="images/IMG_4149-150x150.jpg" alt="">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="images/IMG_4150-150x150.jpg">
+                                        <figure class="image-anime">
+                                            <img src="images/IMG_4150-150x150.jpg" alt="">
+                                        </figure>
+                                    </a>
                                 </div>
                             </div>
+    
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!-- Add Navigation Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
                         <!-- Project Details Gallery End -->
                     </div>
                     <!-- Project Single Content End -->
                 </div>
-
+    
                 <div class="col-lg-4">
                     <!-- Project Sidebar Start -->
                     <div class="project-sidebar">
@@ -308,7 +302,7 @@
                                 </div>
                             </div>
                             <!-- Portfolio Info Item End -->
-
+    
                             <!-- Portfolio Info Item Start -->
                             <div class="project-info-item">
                                 <div class="icon-box">
@@ -320,7 +314,7 @@
                                 </div>
                             </div>
                             <!-- Portfolio Info Item End -->
-
+    
                             <!-- Portfolio Info Item Start -->
                             <div class="project-info-item">
                                 <div class="icon-box">
@@ -507,7 +501,40 @@
     <script src="js/ScrollTrigger.min.js"></script>
     <!-- Wow js file -->
     <script src="js/wow.js"></script>
-    <!-- Main Custom js file -->
+    <script>
+        var swiper = new Swiper('.swiper', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+    }
+});
+
+      </script>
     <script src="js/function.js"></script>
 	<script src="../../assets/js/theme-panel.js"></script>
 </body>
