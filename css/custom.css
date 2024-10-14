@@ -1141,6 +1141,17 @@ header.main-header .header-sticky.active{
 	padding: 30px;
 }
 
+.footer-certificate {
+    display: flex; /* Use flexbox to align children side by side */
+    justify-content: center; /* Center align the images horizontally */
+    gap: 10px; /* Optional: Add space between the images */
+}
+
+.iso-logo {
+    max-width: 200px; /* Ensure each logo has a max width */
+    height: auto; /* Maintain aspect ratio */
+}
+
 .why-choose-item .icon-box{
 	margin-bottom: 30px;
 }
