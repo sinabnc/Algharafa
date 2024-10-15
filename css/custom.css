@@ -1208,8 +1208,8 @@ header.main-header .header-sticky.active{
 .modal-content {
     margin: auto;
     display: block;
-    max-width: 500px;
-    max-height: 50%;
+    max-width: 400px;
+    max-height: 400px;
     transition: transform 0.3s ease; /* Smooth zoom effect */
 }
 
@@ -1272,6 +1272,33 @@ header.main-header .header-sticky.active{
 	height: calc(100% - 30px);
 	margin-bottom: 30px;
 	transition: all 0.4s ease-in-out;
+}
+
+.prev-modal, .next-modal {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.next-modal {
+    right: 10px;
+}
+
+.prev-modal {
+    left: 10px;
+}
+
+/* Add a hover effect for buttons */
+.prev-modal:hover, .next-modal:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .project-image{

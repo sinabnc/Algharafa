@@ -1,551 +1,691 @@
 <!DOCTYPE html>
 <html lang="zxx">
-
-<!-- Mirrored from demo.awaikenthemes.com/html-preview/ATGC/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Aug 2024 07:33:57 GMT -->
-<head>
-	<!-- Meta -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<meta name="author" content="Awaiken">
-	<!-- Page Title -->
-	<title>AGTc</title>
-	<!-- Favicon Icon -->
+  <!-- Mirrored from demo.awaikenthemes.com/html-preview/ATGC/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Aug 2024 07:33:57 GMT -->
+  <head>
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Awaiken" />
+    <!-- Page Title -->
+    <title>AGTc</title>
+    <!-- Favicon Icon -->
     <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-	<link rel="shortcut icon" type="image/x-icon" href="favicon/android-chrome-192x192.png">
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="favicon/android-chrome-192x192.png"
+    />
 
-
-	<!-- Google Fonts Css-->
-	<link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
-	<!-- Bootstrap Css -->
-	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-	<!-- SlickNav Css -->
-	<link href="css/slicknav.min.css" rel="stylesheet">
-	<!-- Swiper Css -->
-	<link rel="stylesheet" href="css/swiper-bundle.min.css">
-	<!-- Font Awesome Icon Css-->
-	<link href="css/all.css" rel="stylesheet" media="screen">
-	<!-- Animated Css -->
-	<link href="css/animate.css" rel="stylesheet">
-	<!-- Magnific Popup Core Css File -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<!-- Mouse Cursor Css File -->
-	<link rel="stylesheet" href="css/mousecursor.css">
-	<!-- Main Custom Css -->
-	<link href="css/custom.css" rel="stylesheet" media="screen">
-</head>
-<style>
+    <!-- Google Fonts Css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Manrope:wght@200..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <!-- SlickNav Css -->
+    <link href="css/slicknav.min.css" rel="stylesheet" />
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <!-- Font Awesome Icon Css-->
+    <link href="css/all.css" rel="stylesheet" media="screen" />
+    <!-- Animated Css -->
+    <link href="css/animate.css" rel="stylesheet" />
+    <!-- Magnific Popup Core Css File -->
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <!-- Mouse Cursor Css File -->
+    <link rel="stylesheet" href="css/mousecursor.css" />
+    <!-- Main Custom Css -->
+    <link href="css/custom.css" rel="stylesheet" media="screen" />
+  </head>
+  <style>
     .service-body-title h3 {
-    text-align: center; /* Center the text horizontally */
-    margin: 0 auto; /* Ensure there’s no margin that might affect alignment */
-    display: block; /* Ensure the element is block-level for proper centering */
-    font-weight: bold; /* Optional: Make the text bold */
-    margin-bottom: 200px;
-}
-.navbar {
-    display: flex;
-    justify-content: center; /* Center the brand in the navbar */
-    align-items: center; /* Align items vertically in the center */
-    position: relative; /* Ensure correct positioning */
-}
+      text-align: center; /* Center the text horizontally */
+      margin: 0 auto; /* Ensure there’s no margin that might affect alignment */
+      display: block; /* Ensure the element is block-level for proper centering */
+      font-weight: bold; /* Optional: Make the text bold */
+      margin-bottom: 200px;
+    }
+    .navbar {
+      display: flex;
+      justify-content: center; /* Center the brand in the navbar */
+      align-items: center; /* Align items vertically in the center */
+      position: relative; /* Ensure correct positioning */
+    }
 
-/* Make sure the navbar brand (logo) is centered */
-.navbar-brand {
-    position: relative;
-    left: 14%;
-    transform: translateX(-50%);
-}
+    /* Make sure the navbar brand (logo) is centered */
+    .navbar-brand {
+      position: relative;
+      left: 14%;
+      transform: translateX(-50%);
+    }
 
-/* Center the navigation menu as well */
-.main-menu {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center; /* Center the menu items */
-}
+    /* Center the navigation menu as well */
+    .main-menu {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center; /* Center the menu items */
+    }
 
+    .goog-te-gadget-simple {
+      background-color: #bf1e2e !important; /* Red background */
+      border: 2px solid #bf1e2e !important; /* Navy blue border */
+      border-radius: 50px; /* Makes the button round */
+      color: #fff !important; /* White text */
+      font-size: 10pt !important; /* Slightly larger font */
+      font-weight: bold !important; /* Bold text */
+      display: inline-block;
+      padding: 5px 10px !important; /* Padding for button feel */
+      cursor: pointer;
+      transition: background-color 0.3s ease; /* Smooth hover transition */
+    }
 
+    /* Remove Google Translate icon */
+    .goog-te-gadget-icon {
+      display: none !important;
+    }
 
-.goog-te-gadget-simple {
-    background-color: #bf1e2e !important;  /* Red background */
-    border: 2px solid #bf1e2e !important;  /* Navy blue border */
-    border-radius: 50px;  /* Makes the button round */
-    color: #fff !important;  /* White text */
-    font-size: 10pt !important;  /* Slightly larger font */
-    font-weight: bold !important;  /* Bold text */
-    display: inline-block;
-    padding: 5px 10px !important;  /* Padding for button feel */
-    cursor: pointer;
-    transition: background-color 0.3s ease;  /* Smooth hover transition */
-}
+    /* Style the text inside the button */
+    .goog-te-gadget-simple span {
+      color: #fff !important; /* Ensure text inside the button is white */
+    }
 
-/* Remove Google Translate icon */
-.goog-te-gadget-icon {
-    display: none !important;
-}
+    /* Add a hover effect to the button */
+    .goog-te-gadget-simple:hover {
+      background-color: #12223b !important; /* Dark blue on hover */
+      color: #bf1e2e !important; /* Red text on hover */
+    }
 
-/* Style the text inside the button */
-.goog-te-gadget-simple span {
-    color: #fff !important;  /* Ensure text inside the button is white */
-}
+    .image-container {
+      display: flex;
+      justify-content: center; /* Centers horizontally */
+      align-items: center; /* Centers vertically */
+      height: 75px; /* Set a height for the container */
+    }
 
-/* Add a hover effect to the button */
-.goog-te-gadget-simple:hover {
-    background-color: #12223b !important;  /* Dark blue on hover */
-    color: #bf1e2e !important;  /* Red text on hover */
-}
+    .image-container img {
+      max-width: 100%; /* Optional: Limits the image width */
+      height: 100px;
+      padding-bottom: 30px; /* Maintains the image aspect ratio */
+    }
+  </style>
 
-   .image-container {
-    display: flex;
-    justify-content: center;  /* Centers horizontally */
-    align-items: center;      /* Centers vertically */
-    height: 75px;            /* Set a height for the container */
-}
-
-.image-container img {
-    max-width: 100%;          /* Optional: Limits the image width */
-    height: 100px;   
-    padding-bottom: 30px;          /* Maintains the image aspect ratio */
-
-}
-
-</style>
-
-<body>
-
+  <body>
     <!-- Preloader Start -->
     <div class="preloader">
-        <img src="images/726.gif" alt="" srcset="">
+      <img src="images/726.gif" alt="" srcset="" />
     </div>
     <!-- Preloader End -->
 
     <!-- Header Start -->
     <header class="main-header">
-        <div class="header-sticky">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <!-- Logo Start -->
-                    <a class="navbar-brand" href="index.html">
-                        <img id="image-logo" src="images/Untitled-1.png" alt="Logo">
-                    </a>
-                    <!-- Logo End -->
+      <div class="header-sticky">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <!-- Logo Start -->
+            <a class="navbar-brand" href="index.html">
+              <img id="image-logo" src="images/Untitled-1.png" alt="Logo" />
+            </a>
+            <!-- Logo End -->
 
-                    <!-- Main Menu Start -->
-                    <div class="collapse navbar-collapse main-menu">
-                        <div class="nav-menu-wrapper">
-                            <ul class="navbar-nav mr-auto" id="menu">
-                                <li class="nav-item"><a class="nav-link" id="home" href="index.html">Home</a></li>
-                                <li class="nav-item submenu"><a class="nav-link" id="about_us" href="about.html"> about</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" id="chairman_message" href="about.html">CHAIRMAN'S MESSAGE</a></li>
-                                        <li class="nav-item"><a class="nav-link" id="hse_policy" href="about-hse.html">HSE & QC POLICY</a></li>
-                                        <li class="nav-item"><a class="nav-link" id="management_staff" href="staff.html">MANAGEMENT & STAFF</a></li>
-                                        <li class="nav-item"><a class="nav-link" id="vehicles_equipment" href="vahcle.html">VEHICLES & EQUIPMENTS</a></li>
-                                        
-                                    </ul>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" id="certificate" href="certificate.html">certificate</a></li>
-                                <li class="nav-item submenu">
-                                    <a class="nav-link" href="mep.html" id="navAbout">Divisions</a>
-                                    <ul>
-                                       
-                                        <li class="nav-item"><a class="nav-link" href="mep.html" id="navMep">MEP</a>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" href="carpentry.html"
-                                                id="navCarpentry">CARPENTRY </a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item submenu"><a class="nav-link" id="projects" href="#">Projects</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" id="ongoing_projects" href="project-on.html">ongoing projects</a></li>
-                                        <li class="nav-item"><a class="nav-link" id="completed_projects" href="project.html">completed projects</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" id="career" href="career.html">career</a></li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-
-                            </ul>
-                        </div>
-                        <!-- Language Selector Start -->
-                        <div class="header-btn d-inline-flex">
-                            <!-- Custom Language Selector for Google Translate -->
-                            <div id="google_translate_element"></div>
-
-                        </div>
-                        <!-- Language Selector End -->
-                    </div>
-                    <!-- Main Menu End -->
-                    <div class="navbar-toggle"></div>
-                </div>
-            </nav>
-            <div class="responsive-menu"></div>
-        </div>
+            <!-- Main Menu Start -->
+            <div class="collapse navbar-collapse main-menu">
+              <div class="nav-menu-wrapper">
+                <ul class="navbar-nav mr-auto" id="menu">
+                  <li class="nav-item">
+                    <a class="nav-link" id="home" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item submenu">
+                    <a class="nav-link" id="about_us" href="about.html">
+                      about</a
+                    >
+                    <ul>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          id="chairman_message"
+                          href="about.html"
+                          >CHAIRMAN'S MESSAGE</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          id="hse_policy"
+                          href="about-hse.html"
+                          >HSE & QC POLICY</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          id="management_staff"
+                          href="staff.html"
+                          >MANAGEMENT & STAFF</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          id="vehicles_equipment"
+                          href="vahcle.html"
+                          >VEHICLES & EQUIPMENTS</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="certificate" href="certificate.html"
+                      >certificate</a
+                    >
+                  </li>
+                  <li class="nav-item submenu">
+                    <a class="nav-link" href="mep.html" id="navAbout"
+                      >Divisions</a
+                    >
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link" href="mep.html" id="navMep">MEP</a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          href="carpentry.html"
+                          id="navCarpentry"
+                          >CARPENTRY
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item submenu">
+                    <a class="nav-link" id="projects" href="#">Projects</a>
+                    <ul>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          id="ongoing_projects"
+                          href="project-on.html"
+                          >ongoing projects</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          id="completed_projects"
+                          href="project.html"
+                          >completed projects</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="career" href="career.html"
+                      >career</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- Language Selector Start -->
+              <div class="header-btn d-inline-flex">
+                <!-- Custom Language Selector for Google Translate -->
+                <div id="google_translate_element"></div>
+              </div>
+              <!-- Language Selector End -->
+            </div>
+            <!-- Main Menu End -->
+            <div class="navbar-toggle"></div>
+          </div>
+        </nav>
+        <div class="responsive-menu"></div>
+      </div>
     </header>
     <!-- Header End -->
 
     <!-- Page Header Start -->
     <div class="page-header parallaxie project">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Page Header Box Start -->
-                    <div class="page-header-box">
-                        <h1 id="villa_description" class="text-anime-style-3" data-cursor="-opaque">VILLA (B+G+1+P), MAJLIS, SWIMMING POOL, DRIVER ROOM AND ANCILLARY BUILDING</h1>
-                        <nav class="wow fadeInUp"></nav>
-                    </div>
-                    <!-- Page Header Box End -->
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- Page Header Box Start -->
+            <div class="page-header-box">
+              <h1
+                id="villa_description"
+                class="text-anime-style-3"
+                data-cursor="-opaque"
+              >
+                VILLA (B+G+1+P), MAJLIS, SWIMMING POOL, DRIVER ROOM AND
+                ANCILLARY BUILDING
+              </h1>
+              <nav class="wow fadeInUp"></nav>
             </div>
+            <!-- Page Header Box End -->
+          </div>
         </div>
+      </div>
     </div>
     <!-- Page Header End -->
 
     <!-- Page Project Details Start -->
     <div class="page-project-single">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <!-- Project Single Content Start -->
-                    <div class="project-single-content">
-                        <!-- Project Featured Image Start -->
-                        <div class="project-featured-image">
-                            <figure class="image-anime reveal">
-                                <img src="images/main-p005.jpg" alt="">
-                            </figure>
-                        </div>
-                        <!-- Project Featured Image End -->
-    
-                        <!-- Project Details Content Start -->
-                        <div class="project-details-content">
-                            <p id="project_description" class="wow fadeInUp" data-wow-delay="0.25s">
-                                A Private Villa comprising of Out Majlis, Outdoor Swimming Pool, Driver Room and Ancillary Building for our prestigious client, with a built-up area of 2,822.26 m².
-                            </p>
-                        </div>
-                        <!-- Project Details Content End -->
-    
-                        <!-- Project Details Gallery Start (with Swiper) -->
-                        <div class="project-details-gallery swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="images/DSCF1225-150x150.jpg" class="open-modal" >
-                                        <figure class="image-anime">
-                                            <img src="images/DSCF1225-150x150.jpg" alt="Gallery Image 1">
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="images/DSCF1169-150x150.jpg" class="open-modal">
-                                        <figure class="image-anime">
-                                            <img src="images/DSCF1169-150x150.jpg" alt="">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <!-- Project Single Content Start -->
+            <div class="project-single-content">
+              <!-- Project Featured Image Start -->
+              <div class="project-featured-image">
+                <figure class="image-anime reveal">
+                  <img src="images/main-p005.jpg" alt="" />
+                </figure>
+              </div>
+              <!-- Project Featured Image End -->
 
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="images/DSCF1222-150x150.jpg" class="open-modal">
-                                        <figure class="image-anime">
-                                            <img src="images/DSCF1222-150x150.jpg" alt="Gallery Image 3">
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="images/DSCF1216-150x150.jpg" class="open-modal">
-                                        <figure class="image-anime">
-                                            <img src="images/DSCF1216-150x150.jpg" alt="Gallery Image 4">
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="images/DSCF1171-150x150.jpg"class="open-modal">
-                                        <figure class="image-anime">
-                                            <img src="images/DSCF1171-150x150.jpg" alt="Gallery Image 4">
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="images/DSCF1169-150x150.jpg"class="open-modal">
-                                        <figure class="image-anime">
-                                            <img src="images/DSCF1169-150x150.jpg" alt="Gallery Image 4">
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="images/DSCF1169-150x150.jpg" class="open-modal">
-                                        <figure class="image-anime">
-                                            <img src="images/DSCF1169-150x150.jpg" alt="Gallery Image 4">
-                                        </figure>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <!-- Add Pagination -->
-                            <div class="swiper-pagination"></div>
-                            <!-- Add Navigation Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+              <!-- Project Details Content Start -->
+              <div class="project-details-content">
+                <p
+                  id="project_description"
+                  class="wow fadeInUp"
+                  data-wow-delay="0.25s"
+                >
+                  A Private Villa comprising of Out Majlis, Outdoor Swimming
+                  Pool, Driver Room and Ancillary Building for our prestigious
+                  client, with a built-up area of 2,822.26 m².
+                </p>
+              </div>
+              <!-- Project Details Content End -->
 
-                            <div id="imageModal" class="modal">
-                                <span class="close">&times;</span>
-                                <img class="modal-content" id="modalImage">
-                            </div>
-                        </div>
-                        <!-- Project Details Gallery End -->
-                    </div>
-                    <!-- Project Single Content End -->
+              <!-- Project Details Gallery Start (with Swiper) -->
+              <div class="project-details-gallery swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="images/DSCF1225-150x150.jpg" class="open-modal">
+                      <figure class="image-anime">
+                        <img
+                          src="images/DSCF1225-150x150.jpg"
+                          alt="Gallery Image 1"
+                        />
+                      </figure>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="images/DSCF1169-150x150.jpg" class="open-modal">
+                      <figure class="image-anime">
+                        <img src="images/DSCF1169-150x150.jpg" alt="" />
+                      </figure>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="images/DSCF1222-150x150.jpg" class="open-modal">
+                      <figure class="image-anime">
+                        <img
+                          src="images/DSCF1222-150x150.jpg"
+                          alt="Gallery Image 3"
+                        />
+                      </figure>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="images/DSCF1216-150x150.jpg" class="open-modal">
+                      <figure class="image-anime">
+                        <img
+                          src="images/DSCF1216-150x150.jpg"
+                          alt="Gallery Image 4"
+                        />
+                      </figure>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="images/DSCF1171-150x150.jpg" class="open-modal">
+                      <figure class="image-anime">
+                        <img
+                          src="images/DSCF1171-150x150.jpg"
+                          alt="Gallery Image 4"
+                        />
+                      </figure>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="images/DSCF1169-150x150.jpg" class="open-modal">
+                      <figure class="image-anime">
+                        <img
+                          src="images/DSCF1169-150x150.jpg"
+                          alt="Gallery Image 4"
+                        />
+                      </figure>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="images/DSCF1169-150x150.jpg" class="open-modal">
+                      <figure class="image-anime">
+                        <img
+                          src="images/DSCF1169-150x150.jpg"
+                          alt="Gallery Image 4"
+                        />
+                      </figure>
+                    </a>
+                  </div>
                 </div>
-    
-                <div class="col-lg-4">
-                    <!-- Project Sidebar Start -->
-                    <div class="project-sidebar">
-                        <div class="project-info-box wow fadeInUp">
-                            <!-- Portfolio Info Item Start -->
-                            <div class="project-info-item">
-                                <div class="icon-box">
-                                    <img src="images/location.png" alt="">
-                                </div>
-                                <div class="project-info-content">                                    
-                                    <p id="location_label">Location</p>
-                                    <h3 id="location">Bani Hajer, Al-Rayyan</h3>
-                                </div>
-                            </div>
-                            <!-- Portfolio Info Item End -->
-    
-                            <!-- Portfolio Info Item Start -->
-                            <div class="project-info-item">
-                                <div class="icon-box">
-                                    <img src="images/maximize.png" alt="">
-                                </div>
-                                <div class="project-info-content">                                    
-                                    <p id="total_area_label">Total Built-Up Area</p>
-                                    <h3 id="total_area">2822.26㎡</h3>
-                                </div>
-                            </div>
-                            <!-- Portfolio Info Item End -->
-    
-                            <!-- Portfolio Info Item Start -->
-                            <div class="project-info-item">
-                                <div class="icon-box">
-                                    <img src="images/check-mark.png" alt="">
-                                </div>
-                                <div class="project-info-content">                                    
-                                    <p id="status_label">Profile Status</p>
-                                    <h3 id="status">Ongoing</h3>
-                                </div>
-                            </div>
-                            <!-- Portfolio Info Item End -->
-                        </div>
-                    </div>
-                    <!-- Project Sidebar End -->
+
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                <div id="imageModal" class="modal">
+                  <span class="close">&times;</span>
+                  <img class="modal-content" id="modalImage" />
+                  <a class="prev-modal">&#10094;</a>
+                  <a class="next-modal">&#10095;</a>
                 </div>
+              </div>
+              <!-- Project Details Gallery End -->
             </div>
+            <!-- Project Single Content End -->
+          </div>
+
+          <div class="col-lg-4">
+            <!-- Project Sidebar Start -->
+            <div class="project-sidebar">
+              <div class="project-info-box wow fadeInUp">
+                <!-- Portfolio Info Item Start -->
+                <div class="project-info-item">
+                  <div class="icon-box">
+                    <img src="images/location.png" alt="" />
+                  </div>
+                  <div class="project-info-content">
+                    <p id="location_label">Location</p>
+                    <h3 id="location">Bani Hajer, Al-Rayyan</h3>
+                  </div>
+                </div>
+                <!-- Portfolio Info Item End -->
+
+                <!-- Portfolio Info Item Start -->
+                <div class="project-info-item">
+                  <div class="icon-box">
+                    <img src="images/maximize.png" alt="" />
+                  </div>
+                  <div class="project-info-content">
+                    <p id="total_area_label">Total Built-Up Area</p>
+                    <h3 id="total_area">2822.26㎡</h3>
+                  </div>
+                </div>
+                <!-- Portfolio Info Item End -->
+
+                <!-- Portfolio Info Item Start -->
+                <div class="project-info-item">
+                  <div class="icon-box">
+                    <img src="images/check-mark.png" alt="" />
+                  </div>
+                  <div class="project-info-content">
+                    <p id="status_label">Profile Status</p>
+                    <h3 id="status">Ongoing</h3>
+                  </div>
+                </div>
+                <!-- Portfolio Info Item End -->
+              </div>
+            </div>
+            <!-- Project Sidebar End -->
+          </div>
         </div>
-        <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
-            <a href="project-on-4.html">
-            <button style="padding: 10px 20px; font-size: 16px; background-color: #d4434f; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;" 
-                    onmouseover="this.style.backgroundColor='#0056b3'" 
-                    onmouseout="this.style.backgroundColor='#007bff'" 
-                    onmousedown="this.style.backgroundColor='#003d7a'"
-                    onmouseup="this.style.backgroundColor='#0056b3'">
-                Previous
-            </button>
+      </div>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          margin-top: 20px;
+        "
+      >
+        <a href="project-on-4.html">
+          <button
+            style="
+              padding: 10px 20px;
+              font-size: 16px;
+              background-color: #d4434f;
+              color: white;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+            "
+            onmouseover="this.style.backgroundColor='#0056b3'"
+            onmouseout="this.style.backgroundColor='#007bff'"
+            onmousedown="this.style.backgroundColor='#003d7a'"
+            onmouseup="this.style.backgroundColor='#0056b3'"
+          >
+            Previous
+          </button>
         </a>
         <a href="project-on-3.html">
-            <button style="padding: 10px 20px; font-size: 16px; background-color: #d4434f; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;" 
-                    onmouseover="this.style.backgroundColor='#0056b3'" 
-                    onmouseout="this.style.backgroundColor='#007bff'" 
-                    onmousedown="this.style.backgroundColor='#003d7a'"
-                    onmouseup="this.style.backgroundColor='#0056b3'">
-                Next
-            </button>
+          <button
+            style="
+              padding: 10px 20px;
+              font-size: 16px;
+              background-color: #d4434f;
+              color: white;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+            "
+            onmouseover="this.style.backgroundColor='#0056b3'"
+            onmouseout="this.style.backgroundColor='#007bff'"
+            onmousedown="this.style.backgroundColor='#003d7a'"
+            onmouseup="this.style.backgroundColor='#0056b3'"
+          >
+            Next
+          </button>
         </a>
-        </div>
+      </div>
     </div>
-    
-    
-   
 
     <footer class="main-footer">
-        <div class="container">
-            <div class="image-container">
-                <img src="images/certificate logos.png" alt="Centered Image">
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-12 mb-4">
-                    <!-- About Footer Start -->
-                    <div class="about-footer">
-                        <!-- Footer Logo Start -->
-                        <div class="footer-logo">
-                            <figure>
-                                <img src="images/AGTC-Logo_Red-White.png" alt="">
-                            </figure>
-                        </div>
-                        <!-- Footer Logo End -->
-            
-                        <!-- Footer Content Start -->
-                        <div class="footer-content">
-                            <p>Transforming Visions into Reality: Your Trusted Partner in Construction Excellence.</p>
-                        </div>
-                        <!-- Footer Content End -->
-                    </div>
-                    <!-- About Footer End -->
-                </div>
-            
-                <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <!-- Footer Links Start -->
-                    <div class="footer-links">
-                        <h3>company</h3>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="project.html">Projects</a></li>
-                            <li><a href="contact.html">Contact us</a></li>
-                        </ul>
-                    </div>
-                    <!-- Footer Links End -->
-                </div>
-            
-                <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <!-- Footer Contact Info Box Start -->
-                    <div class="footer-links footer-contact-box">
-                        <h3>contact us</h3>
-                        <!-- Info Box Start -->
-                        <div class="footer-info-box">
-                            <!-- Icon Box Start -->
-                            <div class="icon-box">
-                                <img src="images/telephone.png" alt="">
-                            </div>
-                            <!-- Icon Box End -->
-                            <p>(+974) 66554433</p>
-                        </div>
-                        <!-- Info Box End -->
-            
-                        <!-- Info Box Start -->
-                        <div class="footer-info-box">
-                            <!-- Icon Box Start -->
-                            <div class="icon-box">
-                                <img src="images/mail.png" alt="">
-                            </div>
-                            <!-- Icon Box End -->
-                            <p>info@algharafacontracting.com</p>
-                        </div>
-                        <!-- Info Box End -->
-            
-                        <!-- Info Box Start -->
-                        <div class="footer-info-box">
-                            <!-- Icon Box Start -->
-                            <div class="icon-box">
-                                <img src="images/map.png" alt="">
-                            </div>
-                            <!-- Icon Box End -->
-                            <p>1606, Palm Tower B, St. No.. 810 Zone No. 60, Doha - Qatar</p>
-                        </div>
-                        <!-- Info Box End -->
-                    </div>
-                    <!-- Footer Contact Info Box End -->
-                </div>
-            </div>
-
-            <!-- Footer Copyright Section Start -->
-            <div class="footer-copyright">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-7">
-                        <!-- Footer Copyright Start -->
-                        <div class="footer-copyright-text">
-                            <p>Copyright © 2024 AGTC. All Rights Reserved.</p>
-                        </div>
-                        <!-- Footer Copyright End -->
-                    </div>
-
-                    <div class="col-lg-6 col-md-5">
-                        <!-- Footer Social Link Start -->
-                        <div class="footer-social-links">
-                            <ul>
-
-                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-
-                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <!-- Footer Social Link End -->
-                    </div>
-                </div>
-            </div>
-            <!-- Footer Copyright Section End -->
+      <div class="container">
+        <div class="image-container">
+          <img src="images/certificate logos.png" alt="Centered Image" />
         </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-12 mb-4">
+            <!-- About Footer Start -->
+            <div class="about-footer">
+              <!-- Footer Logo Start -->
+              <div class="footer-logo">
+                <figure>
+                  <img src="images/AGTC-Logo_Red-White.png" alt="" />
+                </figure>
+              </div>
+              <!-- Footer Logo End -->
+
+              <!-- Footer Content Start -->
+              <div class="footer-content">
+                <p>
+                  Transforming Visions into Reality: Your Trusted Partner in
+                  Construction Excellence.
+                </p>
+              </div>
+              <!-- Footer Content End -->
+            </div>
+            <!-- About Footer End -->
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 mb-4">
+            <!-- Footer Links Start -->
+            <div class="footer-links">
+              <h3>company</h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+              </ul>
+            </div>
+            <!-- Footer Links End -->
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 mb-4">
+            <!-- Footer Contact Info Box Start -->
+            <div class="footer-links footer-contact-box">
+              <h3>contact us</h3>
+              <!-- Info Box Start -->
+              <div class="footer-info-box">
+                <!-- Icon Box Start -->
+                <div class="icon-box">
+                  <img src="images/telephone.png" alt="" />
+                </div>
+                <!-- Icon Box End -->
+                <p>(+974) 66554433</p>
+              </div>
+              <!-- Info Box End -->
+
+              <!-- Info Box Start -->
+              <div class="footer-info-box">
+                <!-- Icon Box Start -->
+                <div class="icon-box">
+                  <img src="images/mail.png" alt="" />
+                </div>
+                <!-- Icon Box End -->
+                <p>info@algharafacontracting.com</p>
+              </div>
+              <!-- Info Box End -->
+
+              <!-- Info Box Start -->
+              <div class="footer-info-box">
+                <!-- Icon Box Start -->
+                <div class="icon-box">
+                  <img src="images/map.png" alt="" />
+                </div>
+                <!-- Icon Box End -->
+                <p>
+                  1606, Palm Tower B, St. No.. 810 Zone No. 60, Doha - Qatar
+                </p>
+              </div>
+              <!-- Info Box End -->
+            </div>
+            <!-- Footer Contact Info Box End -->
+          </div>
+        </div>
+
+        <!-- Footer Copyright Section Start -->
+        <div class="footer-copyright">
+          <div class="row align-items-center">
+            <div class="col-lg-6 col-md-7">
+              <!-- Footer Copyright Start -->
+              <div class="footer-copyright-text">
+                <p>Copyright © 2024 AGTC. All Rights Reserved.</p>
+              </div>
+              <!-- Footer Copyright End -->
+            </div>
+
+            <div class="col-lg-6 col-md-5">
+              <!-- Footer Social Link Start -->
+              <div class="footer-social-links">
+                <ul>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                  </li>
+
+                  <li>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <!-- Footer Social Link End -->
+            </div>
+          </div>
+        </div>
+        <!-- Footer Copyright Section End -->
+      </div>
     </footer>
     <!-- Footer End -->
-	<!-- Footer End -->
+    <!-- Footer End -->
 
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <script type="text/javascript">
-        function googleTranslateElementInit() {
-          new google.translate.TranslateElement({
-            pageLanguage: 'en',  // Default language (English)
-            includedLanguages: 'en,ar',  // Only allow English and Arabic
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-          }, 'google_translate_element');
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en", // Default language (English)
+            includedLanguages: "en,ar", // Only allow English and Arabic
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+          "google_translate_element"
+        );
+      }
+
+      function changeLanguage() {
+        var selectedLanguage =
+          document.getElementById("languageSelector").value;
+        var translateElement = document.querySelector(".goog-te-combo");
+
+        if (translateElement) {
+          translateElement.value = selectedLanguage; // Set the language value
+          translateElement.dispatchEvent(new Event("change")); // Trigger the change event
         }
-      
-        function changeLanguage() {
-          var selectedLanguage = document.getElementById("languageSelector").value;
-          var translateElement = document.querySelector(".goog-te-combo");
-      
-          if (translateElement) {
-            translateElement.value = selectedLanguage;  // Set the language value
-            translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
-          }
-        }
-      </script>
-      
-      <!-- Google Translate API -->
-      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-      
+      }
+    </script>
+
+    <!-- Google Translate API -->
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>
     <script>
-        var swiper = new Swiper('.swiper', {
-    slidesPerView: 3,
-    spaceBetween: 10,
-    loop: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
-    breakpoints: {
-        1024: {
+      var swiper = new Swiper(".swiper", {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          1024: {
             slidesPerView: 3,
             spaceBetween: 10,
-        },
-        768: {
+          },
+          768: {
             slidesPerView: 2,
             spaceBetween: 10,
-        },
-        640: {
+          },
+          640: {
             slidesPerView: 1,
             spaceBetween: 5,
+          },
         },
-    }
-});
-
+      });
     </script>
-        <script src="js/app.js"></script>
+    <script src="js/app.js"></script>
 
     <script src="js/validator.min.js"></script>
     <!-- SlickNav js file -->
@@ -571,8 +711,8 @@
     <script src="js/wow.js"></script>
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
-	<script src="../../assets/js/theme-panel.js"></script>
-</body>
+    <script src="../../assets/js/theme-panel.js"></script>
+  </body>
 
-<!-- Mirrored from demo.awaikenthemes.com/html-preview/ATGC/project-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Aug 2024 07:34:28 GMT -->
+  <!-- Mirrored from demo.awaikenthemes.com/html-preview/ATGC/project-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Aug 2024 07:34:28 GMT -->
 </html>
