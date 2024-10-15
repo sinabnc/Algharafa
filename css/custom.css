@@ -1205,8 +1205,10 @@ header.main-header .header-sticky.active{
 }
 
 /* Modal image */
+
 .modal-content {
     margin: auto;
+	top: 25%;
     display: block;
     max-width: 400px;
     max-height: 400px;
