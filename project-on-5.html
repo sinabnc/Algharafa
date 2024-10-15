@@ -223,55 +223,59 @@
                             <div class="swiper-wrapper">
                                 <!-- Gallery Items -->
                                 <div class="swiper-slide">
-                                    <a href="images/1-150x150.jpg">
+                                    <a href="images/1-150x150.jpg" class="open-modal">
                                         <figure class="image-anime">
                                             <img src="images/1-150x150.jpg" alt="Image 1">
                                         </figure>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="images/IMG_9510-150x150.jpg">
+                                    <a href="images/IMG_9510-150x150.jpg" class="open-modal">
                                         <figure class="image-anime">
                                             <img src="images/IMG_9510-150x150.jpg" alt="Image 2">
                                         </figure>
                                     </a>
                                 </div>
-                                
                                 <div class="swiper-slide">
-                                    <a href="images/IMG-20240316-WA0083-150x150.jpg">
+                                    <a href="images/IMG-20240316-WA0083-150x150.jpg" class="open-modal">
                                         <figure class="image-anime">
                                             <img src="images/IMG-20240316-WA0083-150x150.jpg" alt="Image 4">
                                         </figure>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="images/IMG-20240316-WA0081-150x150.jpg">
+                                    <a href="images/IMG-20240316-WA0081-150x150.jpg" class="open-modal">
                                         <figure class="image-anime">
                                             <img src="images/IMG-20240316-WA0081-150x150.jpg" alt="Image 3">
                                         </figure>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="images/IMG_9516-150x150.jpg">
+                                    <a href="images/IMG_9516-150x150.jpg" class="open-modal">
                                         <figure class="image-anime">
                                             <img src="images/IMG_9516-150x150.jpg" alt="Image 1">
                                         </figure>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="images/IMG_9522-1-150x150.jpg">
+                                    <a href="images/IMG_9522-1-150x150.jpg" class="open-modal">
                                         <figure class="image-anime">
                                             <img src="images/IMG_9522-1-150x150.jpg" alt="Image 1">
                                         </figure>
                                     </a>
                                 </div>
                             </div>
+                            
                             <!-- Add Pagination -->
                             <div class="swiper-pagination"></div>
     
                             <!-- Add Navigation Arrows -->
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
+                            <div id="imageModal" class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-content" id="modalImage">
+                            </div>
                         </div>
                         <!-- Project Details Gallery End -->
                     </div>
@@ -496,7 +500,8 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- Validator js file -->
+        <script src="js/app.js"></script>
+
     <script src="js/validator.min.js"></script>
     <!-- SlickNav js file -->
     <script src="js/jquery.slicknav.js"></script>

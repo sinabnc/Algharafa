@@ -222,46 +222,51 @@
                     <div class="project-details-gallery swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <a href="images/6-BUILDING-150x150.jpg">
+                                <a href="images/6-BUILDING-150x150.jpg" class="open-modal">
                                     <figure class="image-anime">
                                         <img src="images/6-BUILDING-150x150.jpg" alt="Image 1">
                                     </figure>
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="images/3-ROW-HOUSE-150x150.jpg">
+                                <a href="images/3-ROW-HOUSE-150x150.jpg" class="open-modal">
                                     <figure class="image-anime">
                                         <img src="images/3-ROW-HOUSE-150x150.jpg" alt="Image 2">
                                     </figure>
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="images/gal1-5-150x150.jpg">
+                                <a href="images/gal1-5-150x150.jpg" class="open-modal">
                                     <figure class="image-anime">
                                         <img src="images/gal1-5-150x150.jpg" alt="Image 3">
                                     </figure>
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="images/DSCF1290-150x150jpg">
+                                <a href="images/DSCF1290-150x150.jpg" class="open-modal">
                                     <figure class="image-anime">
                                         <img src="images/DSCF1290-150x150.jpg" alt="Image 3">
                                     </figure>
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="images/DSCF1291-150x150 copy.jpg">
+                                <a href="images/DSCF1291-150x150 copy.jpg" class="open-modal">
                                     <figure class="image-anime">
                                         <img src="images/DSCF1291-150x150 copy.jpg" alt="Image 3">
                                     </figure>
                                 </a>
                             </div>
                         </div>
+                        
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
                         <!-- Add Navigation Arrows -->
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
+                        <div id="imageModal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="modalImage">
+                        </div>
                     </div>
                     <!-- Project Details Gallery End -->
                 </div>
@@ -491,7 +496,8 @@
       
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- Validator js file -->
+        <script src="js/app.js"></script>
+
     <script src="js/validator.min.js"></script>
     <!-- SlickNav js file -->
     <script src="js/jquery.slicknav.js"></script>

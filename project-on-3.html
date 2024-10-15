@@ -309,7 +309,7 @@
                       <div class="project-details-gallery swiper">
                           <div class="swiper-wrapper">
                               <div class="swiper-slide">
-                                  <a href="images/01-GF-MAJLIS-003-01-150x150.jpg">
+                                  <a href="images/01-GF-MAJLIS-003-01-150x150.jpg" class="open-modal">
                                       <figure class="image-anime">
                                           <img
                                               src="images/01-GF-MAJLIS-003-01-150x150.jpg"
@@ -319,7 +319,7 @@
                                   </a>
                               </div>
                               <div class="swiper-slide">
-                                  <a href="images/gal2-150x150.jpg">
+                                  <a href="images/gal2-150x150.jpg" class="open-modal">
                                       <figure class="image-anime">
                                           <img
                                               src="images/gal2-150x150.jpg"
@@ -329,7 +329,7 @@
                                   </a>
                               </div>
                               <div class="swiper-slide">
-                                  <a href="images/gal3-150x150.jpg">
+                                  <a href="images/gal3-150x150.jpg" class="open-modal">
                                       <figure class="image-anime">
                                           <img
                                               src="images/gal3-150x150.jpg"
@@ -339,7 +339,7 @@
                                   </a>
                               </div>
                               <div class="swiper-slide">
-                                <a href="images/01-GF-MAJLIS-003-01-150x150.jpg">
+                                <a href="images/01-GF-MAJLIS-003-01-150x150.jpg" class="open-modal">
                                     <figure class="image-anime">
                                         <img
                                             src="images/01-GF-MAJLIS-003-01-150x150.jpg"
@@ -349,7 +349,7 @@
                                 </a>
                             </div>
                               <div class="swiper-slide">
-                                  <a href="images/IMG-20240328-WA0006-150x150.jpg">
+                                  <a href="images/IMG-20240328-WA0006-150x150.jpg" class="open-modal">
                                       <figure class="image-anime">
                                           <img
                                               src="images/IMG-20240328-WA0006-150x150.jpg"
@@ -367,6 +367,11 @@
                           <!-- Add Navigation Arrows -->
                           <div class="swiper-button-next"></div>
                           <div class="swiper-button-prev"></div>
+                          
+                          <div id="imageModal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="modalImage">
+                        </div>
                       </div>
                       <!-- Project Details Gallery End -->
                   </div>
@@ -621,7 +626,8 @@
 
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- Validator js file -->
+        <script src="js/app.js"></script>
+
     <script src="js/validator.min.js"></script>
     <!-- SlickNav js file -->
     <script src="js/jquery.slicknav.js"></script>

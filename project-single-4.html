@@ -229,35 +229,35 @@
                             <div class="project-details-gallery swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <a href="images/gal7-2-150x150.jpg">
+                                        <a href="images/gal7-2-150x150.jpg" class="open-modal">
                                             <figure class="image-anime">
                                                 <img src="images/gal7-2-150x150.jpg" alt="">
                                             </figure>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="images/gal3-2-150x150.jpg">
+                                        <a href="images/gal3-2-150x150.jpg" class="open-modal">
                                             <figure class="image-anime">
                                                 <img src="images/gal3-2-150x150.jpg" alt="">
                                             </figure>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="images/gal8-2-150x150.jpg">
+                                        <a href="images/gal8-2-150x150.jpg" class="open-modal">
                                             <figure class="image-anime">
                                                 <img src="images/gal8-2-150x150.jpg" alt="">
                                             </figure>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="images/DSCF1121-150x150.jpg">
+                                        <a href="images/DSCF1121-150x150.jpg" class="open-modal">
                                             <figure class="image-anime">
                                                 <img src="images/DSCF1121-150x150.jpg" alt="">
                                             </figure>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="images/DSCF1126-150x150.jpg">
+                                        <a href="images/DSCF1126-150x150.jpg" class="open-modal">
                                             <figure class="image-anime">
                                                 <img src="images/DSCF1126-150x150.jpg" alt="">
                                             </figure>
@@ -265,12 +265,17 @@
                                     </div>
                                     <!-- Add more swiper-slide divs for additional images as needed -->
                                 </div>
+                                
     
                                 <!-- Add Pagination -->
                                 <div class="swiper-pagination"></div>
                                 <!-- Add Navigation Arrows -->
                                 <div class="swiper-button-next"></div>
                                 <div class="swiper-button-prev"></div>
+                                <div id="imageModal" class="modal">
+                                    <span class="close">&times;</span>
+                                    <img class="modal-content" id="modalImage">
+                                </div>
                             </div>
                             <!-- Project Details Gallery End -->
                         </div>
@@ -491,7 +496,8 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- Validator js file -->
+        <script src="js/app.js"></script>
+
     <script src="js/validator.min.js"></script>
     <!-- SlickNav js file -->
     <script src="js/jquery.slicknav.js"></script>

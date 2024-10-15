@@ -1,58 +1,26 @@
-const canvas = document.querySelector("canvas");
-const ctx = canvas.getContext("2d");
-const branding = `rgba(20, 117, 188, ${Math.random() * 0.3 + 0.3})`;
-const particles = [];
-const particleCount = 100;
+// Get modal elements
+var modal = document.getElementById("imageModal");
+var modalImg = document.getElementById("modalImage");
+var closeBtn = document.getElementsByClassName("close")[0];
 
-let w = (canvas.width = innerWidth);
-let h = (canvas.height = innerHeight);
+// Attach click event to all images with class 'open-modal'
+var images = document.querySelectorAll('.open-modal');
+images.forEach(function(image) {
+    image.onclick = function(event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        modal.style.display = "block";
+        modalImg.src = this.href; // Set image source for the modal
+    };
+});
 
-function resize() {
-  w = canvas.width = innerWidth;
-  h = canvas.height = innerHeight;
+// Close the modal when the user clicks the close button
+closeBtn.onclick = function() {
+    modal.style.display = "none";
 }
 
-window.addEventListener("resize", resize);
-
-class Particle {
-  constructor() {
-    this.x = Math.random() * w;
-    this.y = Math.random() * h;
-    this.size = Math.random() * 5 + 1;
-    this.speedX = Math.random() * 3 - 1.5;
-    this.speedY = Math.random() * 3 - 1.5;
-    this.color = branding;
-  }
-
-  update() {
-    this.x += this.speedX;
-    this.y += this.speedY;
-    if (this.x > w || this.x < 0) this.speedX *= -1;
-    if (this.y > h || this.y < 0) this.speedY *= -1;
-  }
-
-  draw() {
-    ctx.fillStyle = this.color;
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fill();
-  }
+// Close the modal when the user clicks anywhere outside of the image
+modal.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
-
-function init() {
-  for (let i = 0; i < particleCount; i++) {
-    particles.push(new Particle());
-  }
-}
-
-function animate() {
-  ctx.clearRect(0, 0, w, h);
-  particles.forEach((particle) => {
-    particle.update();
-    particle.draw();
-  });
-  requestAnimationFrame(animate);
-}
-
-init();
-animate();

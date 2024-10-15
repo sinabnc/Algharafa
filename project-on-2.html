@@ -72,6 +72,7 @@
 }
 
 
+
 .goog-te-gadget-simple {
     background-color: #bf1e2e !important;  /* Red background */
     border: 2px solid #bf1e2e !important;  /* Navy blue border */
@@ -233,49 +234,50 @@
                         <div class="project-details-gallery swiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <a href="images/DSCF1225-150x150.jpg" style="width: 500px;">
+                                    <a href="images/DSCF1225-150x150.jpg" class="open-modal" >
                                         <figure class="image-anime">
                                             <img src="images/DSCF1225-150x150.jpg" alt="Gallery Image 1">
                                         </figure>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="images/DSCF1223-150x150.jpg" style="width: 500px;">
+                                    <a href="images/DSCF1169-150x150.jpg" class="open-modal">
                                         <figure class="image-anime">
-                                            <img src="images/DSCF1223-150x150.jpg" alt="Gallery Image 2">
+                                            <img src="images/DSCF1169-150x150.jpg" alt="">
+
                                         </figure>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="images/DSCF1222-150x150.jpg" style="width: 500px;">
+                                    <a href="images/DSCF1222-150x150.jpg" class="open-modal">
                                         <figure class="image-anime">
                                             <img src="images/DSCF1222-150x150.jpg" alt="Gallery Image 3">
                                         </figure>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="images/DSCF1216-150x150.jpg" style="width: 500px;">
+                                    <a href="images/DSCF1216-150x150.jpg" class="open-modal">
                                         <figure class="image-anime">
                                             <img src="images/DSCF1216-150x150.jpg" alt="Gallery Image 4">
                                         </figure>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="images/DSCF1171-150x150.jpg">
+                                    <a href="images/DSCF1171-150x150.jpg"class="open-modal">
                                         <figure class="image-anime">
                                             <img src="images/DSCF1171-150x150.jpg" alt="Gallery Image 4">
                                         </figure>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="images/DSCF1169-150x150.jpg">
+                                    <a href="images/DSCF1169-150x150.jpg"class="open-modal">
                                         <figure class="image-anime">
                                             <img src="images/DSCF1169-150x150.jpg" alt="Gallery Image 4">
                                         </figure>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="images/DSCF1169-150x150.jpg">
+                                    <a href="images/DSCF1169-150x150.jpg" class="open-modal">
                                         <figure class="image-anime">
                                             <img src="images/DSCF1169-150x150.jpg" alt="Gallery Image 4">
                                         </figure>
@@ -288,6 +290,11 @@
                             <!-- Add Navigation Arrows -->
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
+
+                            <div id="imageModal" class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-content" id="modalImage">
+                            </div>
                         </div>
                         <!-- Project Details Gallery End -->
                     </div>
@@ -538,7 +545,8 @@
 });
 
     </script>
-    <!-- Validator js file -->
+        <script src="js/app.js"></script>
+
     <script src="js/validator.min.js"></script>
     <!-- SlickNav js file -->
     <script src="js/jquery.slicknav.js"></script>

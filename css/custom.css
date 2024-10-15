@@ -1189,6 +1189,56 @@ header.main-header .header-sticky.active{
 	margin: 0;
 }
 
+
+
+
+/* Modal container */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* On top of other elements */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+}
+
+/* Modal image */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 500px;
+    max-height: 50%;
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+/* Pop effect for modal image */
+.modal-content:hover {
+    transform: scale(1.05); /* Slightly enlarge the image */
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
 .why-choose-image{
 	height: calc(100% - 30px);
 	margin-bottom: 30px;
