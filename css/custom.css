@@ -893,7 +893,7 @@ header.main-header .header-sticky.active{
 
 .about-us{
 	padding: 100px 0;
-	background-image: url("/images/our-service-bg.png");
+	/* background-image: url("/images/our-service-bg.png"); */
 	
 }
 
