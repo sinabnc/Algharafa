@@ -1899,7 +1899,8 @@ header.main-header .header-sticky.active{
 .footer-links ul li{
 	position: relative;
 	text-transform: capitalize;
-    padding-left: 30px;
+    /* padding-left: 10px; */
+	padding-right: 40px;
     margin-bottom: 20px;
 }
 
