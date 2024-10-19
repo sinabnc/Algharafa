@@ -1450,12 +1450,12 @@ header.main-header .header-sticky.active{
     margin-bottom: 40px;
 	
 }
-#image-logo {
-    width: 250px; /* Increased size */
-    height: auto; /* Keep the aspect ratio */
-    padding-right: 15px;
-    margin-left: 0; /* Aligns the logo to the start (left) */
-    margin-bottom: 10px;
+@media (max-width: 768px) {
+    #image-logo {
+        width: 150px; /* Adjust width for mobile screens */
+        padding-right: 10px; /* Adjust padding for mobile */
+        margin-bottom: 8px; /* Adjust margin for better spacing */
+    }
 }
 
 .navbar {
