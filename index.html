@@ -22,6 +22,7 @@
     <!-- Google Fonts Css-->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Manrope:wght@200..800&amp;display=swap"
         rel="stylesheet">
@@ -151,36 +152,44 @@
         padding-bottom: 30px;
         /* Maintains the image aspect ratio */
     }
-    @media (max-width: 992px) {
-    #second-logo {
-        position: static; /* Adjust logo positioning for mobile */
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        
-        
+    @media (max-width: 768px) {
+    /* Ensure both logos resize on mobile */
+    .first-logo {
+        max-height: 40px;
     }
 
-    
-    .navbar-brand {
-        flex-grow: 1;
-        justify-content: center;
+    .second-logo {
+        max-height: 30px;
+        max-width: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #image-logos{
+        display: none;
     }
 
-    .main-menu {
-        justify-content: center;
+    /* Adjust navbar padding for mobile */
+    .navbar {
+        padding: 10px 15px;
     }
 
-    .navbar-toggler {
-        margin-left: auto;
+    /* Adjust submenu items for mobile */
+    .navbar-nav .dropdown-menu {
+        width: 100%; /* Full width on mobile */
+        padding: 10px;
     }
 
+    /* Align the language selector for mobile */
     .language-selector {
         margin-top: 10px;
+        width: 100%;
     }
-    #image-logos {
-                display: none; /* Hide on mobile view */
-            }
+
+    /* Adjust spacing for mobile view */
+    .nav-item {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }
 
 /* Additional adjustments for very small screens */
@@ -226,36 +235,51 @@
                     <div class="collapse navbar-collapse main-menu" id="navbarMenu">
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menu">
-                                <li class="nav-item"><a class="nav-link" href="index.html" id="navHome">Home</a></li>
-                                <li class="nav-item submenu">
-                                    <a class="nav-link" href="about.html" id="navAbout">About</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" href="about.html" id="navChairmansMessage">CHAIRMAN'S MESSAGE</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="about-hse.html" id="navHsePolicy">HSE & QC POLICY</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="staff.html" id="navManagementStaff">MANAGEMENT & STAFF</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="vahcle.html" id="navVehiclesEquipments">VEHICLES & EQUIPMENTS</a></li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html" id="navHome">Home</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="about.html" id="navAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        About
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navAbout">
+                                        <li><a class="dropdown-item" href="about.html" id="navChairmansMessage">CHAIRMAN'S MESSAGE</a></li>
+                                        <li><a class="dropdown-item" href="about-hse.html" id="navHsePolicy">HSE & QC POLICY</a></li>
+                                        <li><a class="dropdown-item" href="staff.html" id="navManagementStaff">MANAGEMENT & STAFF</a></li>
+                                        <li><a class="dropdown-item" href="vahcle.html" id="navVehiclesEquipments">VEHICLES & EQUIPMENTS</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item submenu">
-                                    <a class="nav-link" href="#" id="navProjects">Projects</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" href="project-on.html" id="navOngoingProjects">ongoing projects</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="project.html" id="navCompletedProjects">completed projects</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navProjects" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Projects
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navProjects">
+                                        <li><a class="dropdown-item" href="project-on.html" id="navOngoingProjects">Ongoing Projects</a></li>
+                                        <li><a class="dropdown-item" href="project.html" id="navCompletedProjects">Completed Projects</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="certificate.html" id="navCertificate">Certificate</a></li>
-                                <li class="nav-item submenu">
-                                    <a class="nav-link" href="mep.html" id="navDiv">Divisions</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" href="mep.html" id="navMep">MEP</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="carpentry.html" id="navCarpentry">Carpentry</a></li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="certificate.html" id="navCertificate">Certificate</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="mep.html" id="navDiv" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Divisions
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navDiv">
+                                        <li><a class="dropdown-item" href="mep.html" id="navMep">MEP</a></li>
+                                        <li><a class="dropdown-item" href="carpentry.html" id="navCarpentry">Carpentry</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="career.html" id="navCareer">Career</a></li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html" id="navContact">Contact</a></li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="career.html" id="navCareer">Career</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html" id="navContact">Contact</a>
+                                </li>
                             </ul>
                         </div>
-                        <!-- Language Selector (Moved to end of navbar) -->
+                        
+                        <!-- Language Selector (Aligned to the right) -->
                         <div class="ms-auto d-inline-flex align-items-center">
                             <select class="form-select language-selector me-2" id="languageSelector" onchange="changeLanguage()">
                                 <option value="en">Select</option>
@@ -264,6 +288,7 @@
                             </select>
                         </div>
                     </div>
+                    
                 </div>
             </nav>
             <div class="responsive-menu"></div>
