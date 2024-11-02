@@ -1515,6 +1515,9 @@ header.main-header .header-sticky.active{
 @media (max-width: 768px) {
     #image-logo {
         width: 150px; /* Adjust width for mobile screens */
+		position: relative;
+		left: 15% !important;
+		margin-top: 5% !important;
         padding-right: 0px; /* Adjust padding for mobile */
         margin-bottom: 8px; /* Adjust margin for better spacing */
     }
