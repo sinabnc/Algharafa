@@ -236,9 +236,7 @@
             /* left: 50%;
             transform: translateX(-50%); */
         }
-        .overlay{
-            display: none;
-        }
+       
 
         #image-logos {
             display: none;
@@ -360,8 +358,8 @@
 
                         <!-- Language Selector (Aligned to the right) -->
                         <div class="ms-auto d-inline-flex align-items-center">
-                            <select class="form-select language-selector me-2" id="languageSelector"
-                                onchange="changeLanguage()">
+                            <select class="form-select language-selector me-2" id="languageSelectorDesktop"
+                                onchange="changeLanguage('desktop')">
                                 <option value="en">Select</option>
                                 <option value="en">English</option>
                                 <option value="ar">Arabic</option>
@@ -391,15 +389,17 @@
                         </div>
                         <a href="career.html" id="navCareer">Career</a>
                         <a href="contact.html" id="navContact">Contact</a>
-
+                    
                         <!-- Language Selector -->
                         <div style="padding: 10px 15px;">
-                            <select class="form-select custom-select" id="languageSelector" onchange="changeLanguage()">
-                                <option value="en">Select</option>
-                                <option value="en">English</option>
-                                <option value="ar">Arabic</option>
+                            <select class="form-select custom-select" id="languageSelectorMobile" onchange="changeLanguage('mobile')">
+                                <option value="en" id="navSelect">Select</option>
+                                <option value="en" id="navEnglish">English</option>
+                                <option value="ar" id="navArabic">Arabic</option>
                             </select>
                         </div>
+                    </div>
+                    
                     </div>
                 </div>
             </nav>
@@ -1248,16 +1248,25 @@
         //     },
         // });
 
-        function changeLanguage() {
-            const language = document.getElementById('languageSelector').value;
+        function changeLanguage(source) {
+    // Determine the selected language based on the source (desktop or mobile)
+    const language = source === 'desktop' 
+        ? document.getElementById('languageSelectorDesktop').value 
+        : document.getElementById('languageSelectorMobile').value;
 
-            // Save the selected language to localStorage
-            localStorage.setItem('selectedLanguage', language);
+    // Save the selected language to localStorage
+    localStorage.setItem('selectedLanguage', language);
 
-            // Call the function to update the text content based on the selected language
-            updateContentLanguage(language);
-        }
+    // Update the text content based on the selected language
+    updateContentLanguage(language);
 
+    // Synchronize the other selector with the chosen language
+    if (source === 'desktop') {
+        document.getElementById('languageSelectorMobile').value = language;
+    } else {
+        document.getElementById('languageSelectorDesktop').value = language;
+    }
+}
         // Define translations for the entire page
         function updateContentLanguage(language) {
             const translations = {
