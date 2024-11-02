@@ -132,58 +132,56 @@
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <!-- Logo Start -->
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="index.html" id="navLogo">
                         <img id="image-logo" src="images/Untitled-1.png" alt="Logo">
                     </a>
                     <!-- Logo End -->
-
+    
                     <!-- Main Menu Start -->
-                    <div class="collapse navbar-collapse main-menu">
+                    <div class="collapse navbar-collapse main-menu" id="navbarMenu">
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav mr-auto" id="menu">
-                                <li class="nav-item"><a class="nav-link" href="index.html" id="home">Home</a></li>
-                                <li class="nav-item submenu"><a class="nav-link" href="about.html" id="aboutUs"> about</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" href="about.html" id="chairmansMessage">CHAIRMAN'S MESSAGE</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="about-hse.html" id="hsePolicy">HSE & QC POLICY</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="staff.html" id="managementStaff">MANAGEMENT & STAFF</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="vahcle.html" id="vehiclesEquipment">VEHICLES & EQUIPMENTS</a></li>
-                                        
-                                    </ul>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="certificate.html" id="certificate">certificate</a></li>
+                                <li class="nav-item"><a class="nav-link" href="index.html" id="navHome">Home</a></li>
                                 <li class="nav-item submenu">
-                                    <a class="nav-link" href="mep.html" id="navAbout">Divisions</a>
+                                    <a class="nav-link" href="about.html" id="navAbout">About</a>
                                     <ul>
-                                       
-                                        <li class="nav-item"><a class="nav-link" href="mep.html" id="navMep">MEP</a>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" href="carpentry.html"
-                                                id="navCarpentry">CARPENTRY </a></li>
+                                        <li class="nav-item"><a class="nav-link" href="about.html" id="navChairmansMessage">CHAIRMAN'S MESSAGE</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="about-hse.html" id="navHsePolicy">HSE & QC POLICY</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="staff.html" id="navManagementStaff">MANAGEMENT & STAFF</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="vahcle.html" id="navVehiclesEquipments">VEHICLES & EQUIPMENTS</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item submenu"><a class="nav-link" href="#" id="projects">Projects</a>
+                                <li class="nav-item"><a class="nav-link" href="certificate.html" id="navCertificate">Certificate</a></li>
+                                <li class="nav-item submenu">
+                                    <a class="nav-link" href="mep.html" id="navDivisions">Divisions</a>
                                     <ul>
-                                        <li class="nav-item"><a class="nav-link" href="project-on.html" id="ongoingProjects">ongoing projects</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="project.html" id="completedProjects">completed projects</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="mep.html" id="navMep">MEP</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="carpentry.html" id="navCarpentry">CARPENTRY</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="career.html" id="career">career</a></li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html" id="contactUs">Contact Us</a></li>
+                                <li class="nav-item submenu">
+                                    <a class="nav-link" href="#" id="navProjects">Projects</a>
+                                    <ul>
+                                        <li class="nav-item"><a class="nav-link" href="project-on.html" id="navOngoingProjects">Ongoing Projects</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="project.html" id="navCompletedProjects">Completed Projects</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="career.html" id="navCareer">Career</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html" id="navContact">Contact</a></li>
                             </ul>
                         </div>
-                        <!-- Let’s Start Button Start -->
+                        <!-- Language Selector -->
                         <div style="padding: 10px 15px;">
                             <select class="form-select custom-select" id="languageSelector" onchange="changeLanguage()">
-                                <option value="en">Select</option>
-                                <option value="en">English</option>
-                                <option value="ar">Arabic</option>
+                                <option value="en" id="navSelect">Select</option>
+                                <option value="en" id="navEnglish">English</option>
+                                <option value="ar" id="navArabic">Arabic</option>
                             </select>
                         </div>
-                        <!-- Let’s Start Button End -->
+                        <!-- Language Selector End -->
                     </div>
                     <!-- Main Menu End -->
-                    <div class="navbar-toggle"></div>
+                    <div class="navbar-toggle" id="navbarToggle"></div>
                 </div>
             </nav>
             <div class="responsive-menu"></div>
@@ -476,25 +474,88 @@
     <!-- Footer End -->
 
     <!-- Jquery Library File -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-          new google.translate.TranslateElement({
-            pageLanguage: 'en',  // Default language (English)
-            includedLanguages: 'en,ar',  // Only allow English and Arabic
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-          }, 'google_translate_element');
-        }
-      
-        function changeLanguage() {
-          var selectedLanguage = document.getElementById("languageSelector").value;
-          var translateElement = document.querySelector(".goog-te-combo");
-      
-          if (translateElement) {
-            translateElement.value = selectedLanguage;  // Set the language value
-            translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
-          }
-        }
-      </script>
+    <script>
+        const translations = {
+     en: {
+         logo: "Your Logo",
+         navHome: "Home",
+         navAbout: "About",
+         navChairmansMessage: "CHAIRMAN'S MESSAGE",
+         navHsePolicy: "HSE & QC POLICY",
+         navManagementStaff: "MANAGEMENT & STAFF",
+         navVehiclesEquipments: "VEHICLES & EQUIPMENTS",
+         navCertificate: "Certificate",
+         navDivisions: "Divisions",
+         navMep: "MEP",
+         navCarpentry: "CARPENTRY",
+         navProjects: "Projects",
+         navOngoingProjects: "Ongoing Projects",
+         navCompletedProjects: "Completed Projects",
+         navCareer: "Career",
+         navContact: "Contact",
+         navSelect: "Select",
+         navEnglish: "English",
+         navArabic: "Arabic"
+     },
+     ar: {
+         logo: "شعارك",
+         navHome: "الرئيسية",
+         navAbout: "حول",
+         navChairmansMessage: "رسالة الرئيس",
+         navHsePolicy: "سياسة الصحة والسلامة",
+         navManagementStaff: "الإدارة والموظفين",
+         navVehiclesEquipments: "المركبات والمعدات",
+         navCertificate: "الشهادات",
+         navDivisions: "الأقسام",
+         navMep: "MEP",
+         navCarpentry: "النجارة",
+         navProjects: "المشاريع",
+         navOngoingProjects: "المشاريع الجارية",
+         navCompletedProjects: "المشاريع المنتهية",
+         navCareer: "وظائف",
+         navContact: "تواصل",
+         navSelect: "اختر",
+         navEnglish: "إنجليزي",
+         navArabic: "عربي"
+     }
+ };
+ 
+ function translate(language) {
+     // Update menu items based on the selected language
+     document.getElementById("navHome").innerText = translations[language].navHome;
+     document.getElementById("navAbout").innerText = translations[language].navAbout;
+     document.getElementById("navChairmansMessage").innerText = translations[language].navChairmansMessage;
+     document.getElementById("navHsePolicy").innerText = translations[language].navHsePolicy;
+     document.getElementById("navManagementStaff").innerText = translations[language].navManagementStaff;
+     document.getElementById("navVehiclesEquipments").innerText = translations[language].navVehiclesEquipments;
+     document.getElementById("navCertificate").innerText = translations[language].navCertificate;
+     document.getElementById("navDivisions").innerText = translations[language].navDivisions;
+     document.getElementById("navMep").innerText = translations[language].navMep;
+     document.getElementById("navCarpentry").innerText = translations[language].navCarpentry;
+     document.getElementById("navProjects").innerText = translations[language].navProjects;
+     document.getElementById("navOngoingProjects").innerText = translations[language].navOngoingProjects;
+     document.getElementById("navCompletedProjects").innerText = translations[language].navCompletedProjects;
+     document.getElementById("navCareer").innerText = translations[language].navCareer;
+     document.getElementById("navContact").innerText = translations[language].navContact;
+     document.getElementById("navSelect").innerText = translations[language].navSelect;
+     document.getElementById("navEnglish").innerText = translations[language].navEnglish;
+     document.getElementById("navArabic").innerText = translations[language].navArabic;
+ }
+ 
+ function changeLanguage() {
+     const selectedLanguage = document.getElementById("languageSelector").value;
+     translate(selectedLanguage);
+     localStorage.setItem("selectedLanguage", selectedLanguage); // Save selected language to local storage
+ }
+ 
+ // Load the selected language from local storage on page load
+ window.onload = () => {
+     const savedLanguage = localStorage.getItem("selectedLanguage") || 'en'; // Default to English
+     document.getElementById("languageSelector").value = savedLanguage; // Set dropdown to saved language
+     translate(savedLanguage); // Translate content
+ };
+ 
+     </script>
       
       <!-- Google Translate API -->
       <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

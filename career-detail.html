@@ -153,71 +153,61 @@
     <!-- Preloader End -->
 
     <!-- Header Start -->
-    <header class="main-header">
+     <header class="main-header">
         <div class="header-sticky">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <!-- Logo Start -->
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="index.html" id="navLogo">
                         <img id="image-logo" src="images/Untitled-1.png" alt="Logo">
                     </a>
                     <!-- Logo End -->
-
+    
                     <!-- Main Menu Start -->
-                    <div class="collapse navbar-collapse main-menu">
+                    <div class="collapse navbar-collapse main-menu" id="navbarMenu">
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav mr-auto" id="menu">
-                                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                                <li class="nav-item submenu"><a class="nav-link" href="about.html">About</a>
-                                    <ul>
-                                        <li class="nav-item "><a class="nav-link" href="about.html">CHAIRMAN'S
-                                                MESSAGE</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="about-hse.html">HSE & QC
-                                                POLICY</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="staff.html">MANAGEMENT &
-                                                STAFF</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="vahcle.html">VEHICLES &
-                                                EQUIPMENTS</a></li>
-
-
-
-                                    </ul>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="certificate.html">certificate</a></li>
+                                <li class="nav-item"><a class="nav-link" href="index.html" id="navHome">Home</a></li>
                                 <li class="nav-item submenu">
-                                    <a class="nav-link" href="mep.html" id="navAbout">Divisions</a>
+                                    <a class="nav-link" href="about.html" id="navAbout">About</a>
                                     <ul>
-
-                                        <li class="nav-item"><a class="nav-link" href="mep.html" id="navMep">MEP</a>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" href="carpentry.html"
-                                                id="navCarpentry">CARPENTRY </a></li>
+                                        <li class="nav-item"><a class="nav-link" href="about.html" id="navChairmansMessage">CHAIRMAN'S MESSAGE</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="about-hse.html" id="navHsePolicy">HSE & QC POLICY</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="staff.html" id="navManagementStaff">MANAGEMENT & STAFF</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="vahcle.html" id="navVehiclesEquipments">VEHICLES & EQUIPMENTS</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item submenu"><a class="nav-link" href="#">Projects</a>
+                                <li class="nav-item"><a class="nav-link" href="certificate.html" id="navCertificate">Certificate</a></li>
+                                <li class="nav-item submenu">
+                                    <a class="nav-link" href="mep.html" id="navDivisions">Divisions</a>
                                     <ul>
-                                        <li class="nav-item "><a class="nav-link" href="project-on.html">ongoing
-                                                projects</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="project.html">completed
-                                                projects</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="mep.html" id="navMep">MEP</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="carpentry.html" id="navCarpentry">CARPENTRY</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="career.html">career</a></li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-
+                                <li class="nav-item submenu">
+                                    <a class="nav-link" href="#" id="navProjects">Projects</a>
+                                    <ul>
+                                        <li class="nav-item"><a class="nav-link" href="project-on.html" id="navOngoingProjects">Ongoing Projects</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="project.html" id="navCompletedProjects">Completed Projects</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="career.html" id="navCareer">Career</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html" id="navContact">Contact</a></li>
                             </ul>
                         </div>
-                       <div style="padding: 10px 15px;">
+                        <!-- Language Selector -->
+                        <div style="padding: 10px 15px;">
                             <select class="form-select custom-select" id="languageSelector" onchange="changeLanguage()">
-                                <option value="en">Select</option>
-                                <option value="en">English</option>
-                                <option value="ar">Arabic</option>
+                                <option value="en" id="navSelect">Select</option>
+                                <option value="en" id="navEnglish">English</option>
+                                <option value="ar" id="navArabic">Arabic</option>
                             </select>
                         </div>
-                        <!-- Let’s Start Button End -->
+                        <!-- Language Selector End -->
                     </div>
                     <!-- Main Menu End -->
-                    <div class="navbar-toggle"></div>
+                    <div class="navbar-toggle" id="navbarToggle"></div>
                 </div>
             </nav>
             <div class="responsive-menu"></div>
