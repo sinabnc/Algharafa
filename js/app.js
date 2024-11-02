@@ -47,3 +47,6 @@ images.forEach(function(image, index) {
         openModal(index); // Open the modal at the clicked image's index
     };
 });
+
+
+

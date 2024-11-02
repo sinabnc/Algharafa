@@ -1205,8 +1205,45 @@ header.main-header .header-sticky.active{
 }
 
 
+.navbar-nav .nav-link {
+    color: #ffffff; /* Sets text color to white */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #bf1e2e; /* Optional: Set a different color on hover */
+}
 
 
+/* language */
+.language-selector {
+	background-color: #c00;
+	/* Red background */
+	color: white;
+	/* White text */
+	border: none;
+	padding: 14px 25px;
+	left: 50px;
+	border-radius: 20px;
+	/* Rounded corners */
+	font-size: 16px;
+	appearance: none;
+	/* Remove default dropdown arrow */
+	-webkit-appearance: none;
+	/* Remove default dropdown arrow in Safari */
+	-moz-appearance: none;
+	/* Remove default dropdown arrow in Firefox */
+	cursor: pointer;
+	position: relative;
+	width: auto;
+}
+
+/* Add a hover effect to the select element */
+.language-selector:hover {
+	background-color: #12223b !important;
+	/* Dark blue on hover */
+	color: #bf1e2e !important;
+	/* Red text on hover */
+}
 /* Modal container */
 .modal {
     display: none; /* Hidden by default */
@@ -1218,6 +1255,9 @@ header.main-header .header-sticky.active{
     height: 100%; /* Full height */
     background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
 }
+
+
+
 
 /* Modal image */
 

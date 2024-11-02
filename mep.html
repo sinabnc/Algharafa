@@ -17,15 +17,21 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon/android-chrome-192x192.png">
 
 
-    <!-- Google Fonts Css-->
+  
+<!-- Bootstrap Css -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Manrope:wght@200..800&amp;display=swap"
         rel="stylesheet">
-    <!-- Bootstrap Css -->
+    
+<!-- Bootstrap Css -->
+
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <!-- SlickNav Css -->
+
+<!-- Bootstrap Css -->
+    <link rel="stylesheet" href="css/language.css">
+
     <link href="css/slicknav.min.css" rel="stylesheet">
     <!-- Swiper Css -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
@@ -91,32 +97,8 @@
     }
 
     /* Style the Google Translate container to look like a button */
-    .goog-te-gadget-simple {
-        background-color: #bf1e2e !important;
-        /* Red background */
-        border: 2px solid #bf1e2e !important;
-        /* Navy blue border */
-        border-radius: 50px;
-        /* Makes the button round */
-        color: #fff !important;
-        /* White text */
-        font-size: 10pt !important;
-        /* Slightly larger font */
-        font-weight: bold !important;
-        /* Bold text */
-        display: inline-block;
-        padding: 5px 10px !important;
-        /* Padding for button feel */
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        /* Smooth hover transition */
-    }
-
-    /* Remove Google Translate icon */
-    .goog-te-gadget-icon {
-        display: none !important;
-    }
-
+    /* Red text on hover */
+  
     /* Style the text inside the button */
     .goog-te-gadget-simple span {
         color: #fff !important;
@@ -171,7 +153,7 @@
                     <!-- Main Menu Start -->
                     <div class="collapse navbar-collapse main-menu">
                         <div class="nav-menu-wrapper">
-                            <ul class="navbar-nav mr-auto" id="menu">
+                            <ul class="navbar-nav mr-auto" id="menu" > 
                                 <li class="nav-item"><a class="nav-link" href="index.html" id="navHome">Home</a></li>
                                 <li class="nav-item submenu">
                                     <a class="nav-link" href="about.html" id="navAbout">About</a>
@@ -220,11 +202,14 @@
 
 
 
-                        <div class="header-btn d-inline-flex">
-                            <!-- Custom Language Selector for Google Translate -->
-                            <div id="google_translate_element"></div>
-
+                        <div style="padding: 10px 15px;">
+                            <select class="form-select custom-select" id="languageSelector" onchange="changeLanguage()">
+                                <option value="en">Select</option>
+                                <option value="en">English</option>
+                                <option value="ar">Arabic</option>
+                            </select>
                         </div>
+                        
                         <!-- Let’s Start Button End -->
                     </div>
                     <!-- Main Menu End -->

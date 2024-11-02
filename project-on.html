@@ -20,13 +20,16 @@
 	<link rel="shortcut icon" type="image/x-icon" href="favicon/android-chrome-192x192.png">
 
 
-	<!-- Google Fonts Css-->
+	  <link rel="stylesheet" href="css/language.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
-	<!-- Bootstrap Css -->
+	
+<!-- Bootstrap Css -->
+
 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-	<!-- SlickNav Css -->
+	<link rel="stylesheet" href="css/language.css">
+
 	<link href="css/slicknav.min.css" rel="stylesheet">
 	<!-- Swiper Css -->
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
@@ -171,10 +174,12 @@
                             </ul>
                         </div>
                         <!-- Let’s Start Button Start -->
-                        <div class="header-btn d-inline-flex">
-                            <!-- Custom Language Selector for Google Translate -->
-                            <div id="google_translate_element"></div>
-                         
+                        <div style="padding: 10px 15px;">
+                            <select class="form-select custom-select" id="languageSelector" onchange="changeLanguage()">
+                                <option value="en">Select</option>
+                                <option value="en">English</option>
+                                <option value="ar">Arabic</option>
+                            </select>
                         </div>
                         <!-- Let’s Start Button End -->
                     </div>
