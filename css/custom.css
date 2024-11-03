@@ -1549,6 +1549,49 @@ header.main-header .header-sticky.active{
 	border: 2px solid var(--white-color);
 }
 
+@media (max-width: 768px) {
+    /* Align all footer content to the left on mobile */
+    .footer-links,
+    .about-footer,
+    .footer-contact-box,
+    .footer-info-box,
+    .footer-logo,
+    .footer-content p,
+    .footer-links h3,
+    .footer-contact-box h3 {
+        text-align: left !important;
+    }
+
+    /* Adjust padding for a more compact look */
+    .footer-links ul {
+        padding-left: 10px !important;
+    }
+
+    .footer-info-box p,
+    .footer-links ul li {
+        margin: 0;
+        text-align: left !important;
+    }
+
+    /* Align icons and text in contact info to the left */
+    .footer-info-box .icon-box {
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+    
+    /* Adjust image and figure alignment for logo */
+    .footer-logo figure {
+        display: inline-block;
+        text-align: left;
+    }
+	.footer-links ul li:before{
+		display: none;
+	}
+}
+
+
+
 /************************************/
 /***   10. Our Testiminial css    ***/
 /************************************/
