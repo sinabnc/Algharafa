@@ -1498,6 +1498,12 @@
             // Adjust the page direction for RTL languages
 
         }
+        document.addEventListener('DOMContentLoaded', () => {
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+    document.getElementById('languageSelectorDesktop').value = savedLanguage;
+    document.getElementById('languageSelectorMobile').value = savedLanguage;
+    updateContentLanguage(savedLanguage);
+});
         window.onload = function () {
             const storedLanguage = localStorage.getItem('selectedLanguage') || 'en'; // Default to 'en' if none is stored
             document.getElementById('languageSelector').value = storedLanguage;
