@@ -497,7 +497,15 @@
          navContact: "Contact",
          navSelect: "Select",
          navEnglish: "English",
-         navArabic: "Arabic"
+         navArabic: "Arabic",
+         pageTitle: "Compound Villas & Clubhouse",
+        projectDescription: "A Compound Villas & Clubhouse for our prestigious Client, with a built-up area of 29,363.50 m² consist of Residential Building, Clubhouse, Kinder Garden, Guard room, Substation & Electric Rooms will cater to the ever-increasing need of housing services in the area.",
+        locationLabel: "Location",
+        location: "Izghawa",
+        totalBuiltUpAreaTitle: "Total Built-Up Area",
+        totalBuiltUpArea: "29,363.50 m²",
+        profileStatusTitle: "Profile Status",
+        profileStatus: "Completed"
      },
      ar: {
          logo: "شعارك",
@@ -518,7 +526,15 @@
          navContact: "تواصل",
          navSelect: "اختر",
          navEnglish: "إنجليزي",
-         navArabic: "عربي"
+         navArabic: "عربي",
+         pageTitle: "فيلا ومركز النادي",
+         projectDescription: "مجموعة من الفيلات ومركز النادي لعميلنا الموقر، بمساحة إجمالية 29,363.50 م² تتكون من مبنى سكني ومركز النادي وحديقة للأطفال وغرفة حراسة وغرفة كهرباء.",
+         locationLabel: "الموقع",
+         location: "إزغوة",
+         totalBuiltUpAreaTitle: "إجمالي المساحة المبنية",
+         totalBuiltUpArea: "29,363.50 م²",
+         profileStatusTitle: "حالة الملف",
+         profileStatus: "مكتمل"
      }
  };
  
@@ -542,6 +558,24 @@
      document.getElementById("navSelect").innerText = translations[language].navSelect;
      document.getElementById("navEnglish").innerText = translations[language].navEnglish;
      document.getElementById("navArabic").innerText = translations[language].navArabic;
+     // Update the page title
+    document.getElementById("page-header-title").innerText = translations[language].pageTitle;
+
+    // Update project description
+    document.getElementById("project-description").innerText = translations[language].projectDescription;
+    
+    // Update location
+    // Update location
+    document.getElementById("location-label").innerText = translations[language].locationLabel;
+    document.getElementById("location").innerText = translations[language].location;
+
+    // Update total built-up area
+    document.getElementById("total-built-up-area-title").innerText = translations[language].totalBuiltUpAreaTitle;
+    document.getElementById("total-built-up-area").innerText = translations[language].totalBuiltUpArea;
+
+    // Update profile status
+    document.getElementById("status-title").innerText = translations[language].profileStatusTitle;
+    document.getElementById("status").innerText = translations[language].profileStatus;
  }
  
  function changeLanguage() {

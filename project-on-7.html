@@ -207,9 +207,9 @@
                         <!-- Language Selector -->
                         <div style="padding: 10px 15px;">
                             <select class="form-select custom-select" id="languageSelector" onchange="changeLanguage()">
-                                <option value="en">Select</option>
-                                <option value="en">English</option>
-                                <option value="ar">Arabic</option>
+                                <option value="en" id="navSelect">Select</option>
+                                <option value="en" id="navEnglish">English</option>
+                                <option value="ar" id="navArabic">Arabic</option>
                             </select>
                         </div>
                     </div>
@@ -497,7 +497,7 @@
     </footer>
       <!-- Footer End -->
 
-    <script>
+      <script>
         const translations = {
      en: {
          logo: "Your Logo",
@@ -580,25 +580,7 @@
  
      </script>
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',  // Default language (English)
-                includedLanguages: 'en,ar',  // Only allow English and Arabic
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
-
-        function changeLanguage() {
-            var selectedLanguage = document.getElementById("languageSelector").value;
-            var translateElement = document.querySelector(".goog-te-combo");
-
-            if (translateElement) {
-                translateElement.value = selectedLanguage;  // Set the language value
-                translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
-            }
-        }
-    </script>
+   
 <script>
     var swiper = new Swiper('.swiper', {
     slidesPerView: 4,
@@ -633,9 +615,7 @@
 });
 
 </script>
-    <!-- Google Translate API -->
-    <script type="text/javascript"
-        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+   
 
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>
@@ -668,6 +648,6 @@
     <script src="../../assets/js/theme-panel.js"></script>
 </body>
 
-<!-- Mirrored from demo.awaikenthemes.com/html-preview/ATGC/project-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Aug 2024 07:34:28 GMT -->
+
 
 </html>

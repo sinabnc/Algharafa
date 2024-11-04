@@ -488,7 +488,18 @@
          navContact: "Contact",
          navSelect: "Select",
          navEnglish: "English",
-         navArabic: "Arabic"
+         navArabic: "Arabic",
+         pageTitle: "50 Villas (G+1+PH) Compound",
+         pageHeaderTitle: "50 Villas (G+1+PH) Compound",
+        projectDescription: "A Compound villas comprising of 50 Villas, Clubhouse, Swimming Pool, Substation and Guard Rooms for our prestigious tenant 'Iskan'. With a built-up area of 13,439.90 m² will cater to the ever-increasing need of housing services for government employees.",
+        locationLabel: "Location",
+        location: "Izghawa",
+        areaTitle: "Total Built-Up Area",
+        area: "13439.90㎡",
+        statusTitle: "Profile Status",
+        status: "Completed",
+        previousButton: "Previous",
+        nextButton: "Next"
      },
      ar: {
          logo: "شعارك",
@@ -509,7 +520,19 @@
          navContact: "تواصل",
          navSelect: "اختر",
          navEnglish: "إنجليزي",
-         navArabic: "عربي"
+         navArabic: "عربي",
+         pageTitle: "مجموعة من 50 فيلا (G+1+PH)",
+         pageHeaderTitle: "50 فيلا (G+1+PH) مجمع",
+        projectDescription: "مجموعة من الفيلات تضم 50 فيلا، نادي، مسبح، محطة فرعية وغرف حراسة لمستأجرينا المتميزين 'إسكان'. بمساحة مبنية تبلغ 13,439.90 م² لتلبية الحاجة المتزايدة لخدمات السكن للموظفين الحكوميين.",
+        locationLabel: "الموقع",
+        locationLabel: "الموقع",
+        location: "إزغاوة",
+        areaTitle: "إجمالي المساحة المبنية",
+        area: "13439.90 م²",
+        statusTitle: "حالة الملف",
+        status: "مكتمل",
+        previousButton: "السابق",
+        nextButton: "التالي",
      }
  };
  
@@ -533,6 +556,17 @@
      document.getElementById("navSelect").innerText = translations[language].navSelect;
      document.getElementById("navEnglish").innerText = translations[language].navEnglish;
      document.getElementById("navArabic").innerText = translations[language].navArabic;
+     document.getElementById("page-header-title").innerText = translations[language].pageTitle;
+
+    // Update project description
+    document.getElementById("project-description").innerText = translations[language].projectDescription;
+
+    document.getElementById('location-label').innerText = translations.ar.locationLabel;
+    document.getElementById('location').innerText = translations.ar.location;
+    document.getElementById('area-title').innerText = translations.ar.areaTitle;
+    document.getElementById('area').innerText = translations.ar.area;
+    document.getElementById('status-title').innerText = translations.ar.statusTitle;
+    document.getElementById('status').innerText = translations.ar.status;
  }
  
  function changeLanguage() {

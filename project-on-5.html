@@ -474,7 +474,23 @@
          navContact: "Contact",
          navSelect: "Select",
          navEnglish: "English",
-         navArabic: "Arabic"
+         navArabic: "Arabic",
+          // Header
+        page_header: "Masjid (G)",
+        project_description: "A Masjid for our prestigious client, with a built-up area of 519.64 m².",
+        
+        // Project Info Sidebar
+        location_label: "Location",
+        location: "Izghawa",
+        total_area_label: "Total Built-Up Area",
+        total_area: "519.64㎡",
+        status_label: "Project Status",
+        status: "Ongoing",
+        
+        // Buttons
+        prevButton: "Previous",
+        nextButton: "Next"
+         
      },
      ar: {
          logo: "شعارك",
@@ -495,7 +511,21 @@
          navContact: "تواصل",
          navSelect: "اختر",
          navEnglish: "إنجليزي",
-         navArabic: "عربي"
+         navArabic: "عربي",
+         page_header: "المسجد (G)",
+        project_description: "مسجد لعميلنا المرموق، بمساحة بناء 519.64 متر مربع.",
+        
+        // Project Info Sidebar
+        location_label: "الموقع",
+        location: "إزغاوة",
+        total_area_label: "إجمالي المساحة المبنية",
+        total_area: "519.64㎡",
+        status_label: "حالة المشروع",
+        status: "قيد التنفيذ",
+        
+        // Buttons
+        prevButton: "السابق",
+        nextButton: "التالي"
      }
  };
  
@@ -519,6 +549,21 @@
      document.getElementById("navSelect").innerText = translations[language].navSelect;
      document.getElementById("navEnglish").innerText = translations[language].navEnglish;
      document.getElementById("navArabic").innerText = translations[language].navArabic;
+      // Header and Description
+    document.getElementById("page_header").innerText = translations[language].page_header;
+    document.getElementById("project_description").innerText = translations[language].project_description;
+    
+    // Project Info Sidebar
+    document.getElementById("location_label").innerText = translations[language].location_label;
+    document.getElementById("location").innerText = translations[language].location;
+    document.getElementById("total_area_label").innerText = translations[language].total_area_label;
+    document.getElementById("total_area").innerText = translations[language].total_area;
+    document.getElementById("status_label").innerText = translations[language].status_label;
+    document.getElementById("status").innerText = translations[language].status;
+
+    // Update button text
+    document.querySelector("a[href='project-on-6.html'] button").innerText = translations[language].prevButton;
+    document.querySelector("a[href='project-on-4.html'] button").innerText = translations[language].nextButton;
  }
  
  function changeLanguage() {
@@ -536,25 +581,7 @@
  
      </script>
     
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-          new google.translate.TranslateElement({
-            pageLanguage: 'en',  // Default language (English)
-            includedLanguages: 'en,ar',  // Only allow English and Arabic
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-          }, 'google_translate_element');
-        }
-      
-        function changeLanguage() {
-          var selectedLanguage = document.getElementById("languageSelector").value;
-          var translateElement = document.querySelector(".goog-te-combo");
-      
-          if (translateElement) {
-            translateElement.value = selectedLanguage;  // Set the language value
-            translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
-          }
-        }
-      </script>
+    
       <script>
         var swiper = new Swiper('.swiper', {
     slidesPerView: 4,

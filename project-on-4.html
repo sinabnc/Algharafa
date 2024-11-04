@@ -519,7 +519,17 @@
          navContact: "Contact",
          navSelect: "Select",
          navEnglish: "English",
-         navArabic: "Arabic"
+         navArabic: "Arabic",
+         page_header: "Mixed Use Buildings",
+        project_description: "A Mixed-Use Building for our prestigious Client, with a built-up area of 82,502.87 m² consist of School, Residential Buildings, Showroom and Offices, Restaurants, Hypermarket, Coffee Shop, Bank and Mosque will cater to the ever-increasing need of housing services, commercial, education, and boosting financial activities in the area.",
+        location_label: "Location",
+        location: "Izghawa",
+        total_area_label: "Total Built-Up Area",
+        total_area: "82502.87㎡",
+        status_label: "Profile Status",
+        status: "Ongoing",
+        prev_button: "Previous",
+        next_button: "Next",
      },
      ar: {
          logo: "شعارك",
@@ -540,7 +550,17 @@
          navContact: "تواصل",
          navSelect: "اختر",
          navEnglish: "إنجليزي",
-         navArabic: "عربي"
+         navArabic: "عربي",
+         page_header: "مباني متعددة الاستخدامات",
+        project_description: "مبنى متعدد الاستخدامات لعميلنا المرموق، بمساحة بناء قدرها 82,502.87 متر مربع، يتكون من مدرسة، مبانٍ سكنية، صالة عرض ومكاتب، مطاعم، هايبر ماركت، مقهى، بنك ومسجد لتلبية الحاجة المتزايدة للإسكان والخدمات التجارية والتعليمية وتعزيز الأنشطة المالية في المنطقة.",
+        location_label: "الموقع",
+        location: "ازغوى",
+        total_area_label: "إجمالي مساحة البناء",
+        total_area: "82502.87 متر²",
+        status_label: "حالة المشروع",
+        status: "قيد التنفيذ",
+        prev_button: "السابق",
+        next_button: "التالي"
      }
  };
  
@@ -564,6 +584,14 @@
      document.getElementById("navSelect").innerText = translations[language].navSelect;
      document.getElementById("navEnglish").innerText = translations[language].navEnglish;
      document.getElementById("navArabic").innerText = translations[language].navArabic;
+     document.getElementById("page_header").textContent = translations[language].page_header;
+    document.getElementById("project_description").textContent = translations[language].project_description;
+    document.getElementById("location_label").textContent = translations[language].location_label;
+    document.getElementById("location").textContent = translations[language].location;
+    document.getElementById("total_area_label").textContent = translations[language].total_area_label;
+    document.getElementById("total_area").textContent = translations[language].total_area;
+    document.getElementById("status_label").textContent = translations[language].status_label;
+    document.getElementById("status").textContent = translations[language].status;
  }
  
  function changeLanguage() {

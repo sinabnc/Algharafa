@@ -1127,7 +1127,7 @@ header.main-header .header-sticky.active{
 	/* background-image: url("/images/our-service-bg.png"); */
 }
 .hse{
-	background-image: url("/images/our-service-bg.png");
+	
 }
 .cherman{
 	background-image: url("/images/our-service-bg.png");
@@ -1417,7 +1417,7 @@ header.main-header .header-sticky.active{
 	font-weight: 700;
 	color: var(--white-color);
 	text-transform: capitalize;
-	margin-bottom: 20px;
+	margin-bottom: 80px;
 }
 
 .project-content{

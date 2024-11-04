@@ -515,7 +515,17 @@
          navContact: "Contact",
          navSelect: "Select",
          navEnglish: "English",
-         navArabic: "Arabic"
+         navArabic: "Arabic",
+         page_header: "Villa(G+1+P+H), Service Building & Swimming Pool, Driver Room & Substation",
+        project_description: "A Private Villa and Compound Villa comprising of Out Majlis, Driver Room and Out block (2 Nos.) for our prestigious client, with a built-up area of 7,680.82 m².",
+        location_label: "Location",
+        location: "Izghawa",
+        total_area: "7,680.82㎡",
+        total_area_label: "Total Built-Up Area",
+        status: "Ongoing",
+        status_label: "Profile Status",
+        previous: "Previous",
+        next: "Next"
      },
      ar: {
          logo: "شعارك",
@@ -536,7 +546,17 @@
          navContact: "تواصل",
          navSelect: "اختر",
          navEnglish: "إنجليزي",
-         navArabic: "عربي"
+         navArabic: "عربي",
+         page_header: "فيلا (G+1+P+H) ، مبنى الخدمات وحمام السباحة ، غرفة السائق ومحطة الطاقة",
+        project_description: "فيلا خاصة وقرية تضم مجالس خارجية وغرفة سائق وكتلة خارجية (2 قطعة) لعميلنا المتميز ، بمساحة بناء إجمالية تبلغ 7,680.82 م².",
+        location_label: "الموقع",
+        location: "ازغوة",
+        total_area: "7,680.82㎡",
+        total_area_label: "إجمالي مساحة البناء",
+        status: "جارٍ التنفيذ",
+        status_label: "حالة الملف",
+        previous: "السابق",
+        next: "التالي"
      }
  };
  
@@ -560,6 +580,18 @@
      document.getElementById("navSelect").innerText = translations[language].navSelect;
      document.getElementById("navEnglish").innerText = translations[language].navEnglish;
      document.getElementById("navArabic").innerText = translations[language].navArabic;
+     document.getElementById("villa_description").innerText = translations[language].page_header;
+    document.getElementById("project_description").innerText = translations[language].project_description;
+    document.getElementById("location_label").innerText = translations[language].location_label;
+    document.getElementById("location").innerText = translations[language].location;
+    document.getElementById("total_area_label").innerText = translations[language].total_area_label;
+    document.getElementById("total_area").innerText = translations[language].total_area;
+    document.getElementById("status").innerText = translations[language].status;
+    document.getElementById("status_label").innerText = translations[language].status_label;
+    
+    // Update navigation buttons
+    document.getElementById("previousButton").innerText = translations[language].previous;
+    document.getElementById("nextButton").innerText = translations[language].next;
  }
  
  function changeLanguage() {
@@ -579,17 +611,7 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     
 
-      function changeLanguage() {
-        var selectedLanguage =
-          document.getElementById("languageSelector").value;
-        var translateElement = document.querySelector(".goog-te-combo");
-
-        if (translateElement) {
-          translateElement.value = selectedLanguage; // Set the language value
-          translateElement.dispatchEvent(new Event("change")); // Trigger the change event
-        }
-      }
-    </script>
+    
     <script>
       var swiper = new Swiper('.swiper', {
     slidesPerView: 3,

@@ -501,7 +501,14 @@
          navContact: "Contact",
          navSelect: "Select",
          navEnglish: "English",
-         navArabic: "Arabic"
+         navArabic: "Arabic",
+         pageTitle: "Doha Bonyan Markets–(G+2)Commercial",
+        projectDescription: "A Residential and Commercial Building for our prestigious tenant “Iskan”. With a built-up area of 27,430.97 m² consist of 165 Apartments and 76 Retail shops will cater to the ever-increasing need of housing services for government employees and boosting retail markets in the area.",
+        locationLabel: "Location",
+        location: "Izghawa",
+        totalBuiltUpArea: "27,430.97㎡",
+        profileStatus: "Completed",
+        profileStatusTitle: "Profile Status",
      },
      ar: {
          logo: "شعارك",
@@ -522,7 +529,14 @@
          navContact: "تواصل",
          navSelect: "اختر",
          navEnglish: "إنجليزي",
-         navArabic: "عربي"
+         navArabic: "عربي",
+         pageTitle: "أسواق الدوحة بنيان - (G+2) تجاري",
+        projectDescription: "مبنى سكني وتجاري لمستأجرنا المرموق “إسكان”. بمساحة بناء تبلغ 27,430.97 م² تتكون من 165 شقة و76 محل تجاري لتلبية الحاجة المتزايدة لخدمات الإسكان للموظفين الحكوميين وتعزيز الأسواق التجارية في المنطقة.",
+        locationLabel: "الموقع",
+        location: "إزغاوة",
+        totalBuiltUpArea: "27,430.97㎡",
+        profileStatus: "مكتمل",
+        profileStatusTitle: "حالة الملف",
      }
  };
  
@@ -546,6 +560,13 @@
      document.getElementById("navSelect").innerText = translations[language].navSelect;
      document.getElementById("navEnglish").innerText = translations[language].navEnglish;
      document.getElementById("navArabic").innerText = translations[language].navArabic;
+     document.getElementById('pageTitle').innerText = translations[language].pageTitle;
+    document.getElementById('projectDescription').innerText = translations[language].projectDescription;
+    document.getElementById('locationLabel').innerText = translations[language].locationLabel;
+    document.getElementById('location').innerText = translations[language].location;
+    document.getElementById('totalBuiltUpArea').innerText = translations[language].totalBuiltUpArea;
+    document.getElementById('profileStatus').innerText = translations[language].profileStatus;
+    document.getElementById('profileStatusTitle').innerText = translations[language].profileStatusTitle;
  }
  
  function changeLanguage() {

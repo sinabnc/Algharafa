@@ -464,7 +464,18 @@
          navContact: "Contact",
          navSelect: "Select",
          navEnglish: "English",
-         navArabic: "Arabic"
+         navArabic: "Arabic",
+         pageTitle: "6 Villa (G+1+PH) & Ancillary",
+        projectDescription: "A Compound Villa comprising of 6 Villas, with a built-up area of 4,780 m² will cater to the ever-increasing need of housing services at Izghawa.",
+        locationTitle: "Location",
+        locationContent: "Izghawa",
+        areaTitle: "Total Built-Up Area",
+        areaContent: "29363.50㎡",
+        statusTitle: "Profile status",
+        statusContent: "Ongoing",
+        prevButton: "Previous",
+        nextButton: "Next"
+         
      },
      ar: {
          logo: "شعارك",
@@ -485,7 +496,17 @@
          navContact: "تواصل",
          navSelect: "اختر",
          navEnglish: "إنجليزي",
-         navArabic: "عربي"
+         navArabic: "عربي",
+         pageTitle: "6 فيلا (G+1+PH) والمرافق",
+        projectDescription: "مجمع فيلات يضم 6 فيلات، بمساحة بناء 4,780 م² لتلبية الحاجة المتزايدة لخدمات السكن في إزغاوة.",
+        locationTitle: "الموقع",
+        locationContent: "إزغاوة",
+        areaTitle: "إجمالي المساحة المبنية",
+        areaContent: "29363.50㎡",
+        statusTitle: "حالة الملف",
+        statusContent: "قيد التنفيذ",
+        prevButton: "السابق",
+        nextButton: "التالي",
      }
  };
  
@@ -509,6 +530,18 @@
      document.getElementById("navSelect").innerText = translations[language].navSelect;
      document.getElementById("navEnglish").innerText = translations[language].navEnglish;
      document.getElementById("navArabic").innerText = translations[language].navArabic;
+     document.getElementById("page-title").innerText = translations[language].pageTitle;
+    document.getElementById("project-description").innerText = translations[language].projectDescription;
+    document.getElementById("location-title").innerText = translations[language].locationTitle;
+    document.getElementById("location-content").innerText = translations[language].locationContent;
+    document.getElementById("area-title").innerText = translations[language].areaTitle;
+    document.getElementById("area-content").innerText = translations[language].areaContent;
+    document.getElementById("status-title").innerText = translations[language].statusTitle;
+    document.getElementById("status-content").innerText = translations[language].statusContent;
+    
+    // Update button text
+    document.querySelector("a[href='project-on-3.html'] button").innerText = translations[language].prevButton;
+    document.querySelector("a[href='project-on-5.html'] button").innerText = translations[language].nextButton;
  }
  
  function changeLanguage() {

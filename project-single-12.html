@@ -478,85 +478,121 @@
 
     <!-- Jquery Library File -->
     <script>
-        const translations = {
-     en: {
-         logo: "Your Logo",
-         navHome: "Home",
-         navAbout: "About",
-         navChairmansMessage: "CHAIRMAN'S MESSAGE",
-         navHsePolicy: "HSE & QC POLICY",
-         navManagementStaff: "MANAGEMENT & STAFF",
-         navVehiclesEquipments: "VEHICLES & EQUIPMENTS",
-         navCertificate: "Certificate",
-         navDivisions: "Divisions",
-         navMep: "MEP",
-         navCarpentry: "CARPENTRY",
-         navProjects: "Projects",
-         navOngoingProjects: "Ongoing Projects",
-         navCompletedProjects: "Completed Projects",
-         navCareer: "Career",
-         navContact: "Contact",
-         navSelect: "Select",
-         navEnglish: "English",
-         navArabic: "Arabic"
-     },
-     ar: {
-         logo: "شعارك",
-         navHome: "الرئيسية",
-         navAbout: "حول",
-         navChairmansMessage: "رسالة الرئيس",
-         navHsePolicy: "سياسة الصحة والسلامة",
-         navManagementStaff: "الإدارة والموظفين",
-         navVehiclesEquipments: "المركبات والمعدات",
-         navCertificate: "الشهادات",
-         navDivisions: "الأقسام",
-         navMep: "MEP",
-         navCarpentry: "النجارة",
-         navProjects: "المشاريع",
-         navOngoingProjects: "المشاريع الجارية",
-         navCompletedProjects: "المشاريع المنتهية",
-         navCareer: "وظائف",
-         navContact: "تواصل",
-         navSelect: "اختر",
-         navEnglish: "إنجليزي",
-         navArabic: "عربي"
-     }
- };
- 
- function translate(language) {
-     // Update menu items based on the selected language
-     document.getElementById("navHome").innerText = translations[language].navHome;
-     document.getElementById("navAbout").innerText = translations[language].navAbout;
-     document.getElementById("navChairmansMessage").innerText = translations[language].navChairmansMessage;
-     document.getElementById("navHsePolicy").innerText = translations[language].navHsePolicy;
-     document.getElementById("navManagementStaff").innerText = translations[language].navManagementStaff;
-     document.getElementById("navVehiclesEquipments").innerText = translations[language].navVehiclesEquipments;
-     document.getElementById("navCertificate").innerText = translations[language].navCertificate;
-     document.getElementById("navDivisions").innerText = translations[language].navDivisions;
-     document.getElementById("navMep").innerText = translations[language].navMep;
-     document.getElementById("navCarpentry").innerText = translations[language].navCarpentry;
-     document.getElementById("navProjects").innerText = translations[language].navProjects;
-     document.getElementById("navOngoingProjects").innerText = translations[language].navOngoingProjects;
-     document.getElementById("navCompletedProjects").innerText = translations[language].navCompletedProjects;
-     document.getElementById("navCareer").innerText = translations[language].navCareer;
-     document.getElementById("navContact").innerText = translations[language].navContact;
-     document.getElementById("navSelect").innerText = translations[language].navSelect;
-     document.getElementById("navEnglish").innerText = translations[language].navEnglish;
-     document.getElementById("navArabic").innerText = translations[language].navArabic;
- }
- 
- function changeLanguage() {
-     const selectedLanguage = document.getElementById("languageSelector").value;
-     translate(selectedLanguage);
-     localStorage.setItem("selectedLanguage", selectedLanguage); // Save selected language to local storage
- }
- 
- // Load the selected language from local storage on page load
- window.onload = () => {
-     const savedLanguage = localStorage.getItem("selectedLanguage") || 'en'; // Default to English
-     document.getElementById("languageSelector").value = savedLanguage; // Set dropdown to saved language
-     translate(savedLanguage); // Translate content
- };
+       const translations = {
+    en: {
+        logo: "Your Logo",
+        navHome: "Home",
+        navAbout: "About",
+        navChairmansMessage: "CHAIRMAN'S MESSAGE",
+        navHsePolicy: "HSE & QC POLICY",
+        navManagementStaff: "MANAGEMENT & STAFF",
+        navVehiclesEquipments: "VEHICLES & EQUIPMENTS",
+        navCertificate: "Certificate",
+        navDivisions: "Divisions",
+        navMep: "MEP",
+        navCarpentry: "CARPENTRY",
+        navProjects: "Projects",
+        navOngoingProjects: "Ongoing Projects",
+        navCompletedProjects: "Completed Projects",
+        navCareer: "Career",
+        navContact: "Contact",
+        navSelect: "Select",
+        navEnglish: "English",
+        navArabic: "Arabic",
+        projectTitle: "10 Villas (G+F+PH)",
+        projectDescription: "A Compound Villa comprising of 10 Villas, with a built-up area of 8,000.00 m² will cater to the ever-increasing need of housing services at Izghawa.",
+        buildingDevelopmentTitle: "Building better development",
+        locationLabel: "Location",
+        location: "Izghawa",
+        areaLabel: "8,000㎡",
+        totalBuiltUpArea: "Total Built-Up Area",
+        statusLabel: "Completed",
+        profileStatus: "Profile Status",
+        previousButton: "Previous",
+        nextButton: "Next"
+    },
+    ar: {
+        logo: "شعارك",
+        navHome: "الرئيسية",
+        navAbout: "حول",
+        navChairmansMessage: "رسالة الرئيس",
+        navHsePolicy: "سياسة الصحة والسلامة",
+        navManagementStaff: "الإدارة والموظفين",
+        navVehiclesEquipments: "المركبات والمعدات",
+        navCertificate: "الشهادات",
+        navDivisions: "الأقسام",
+        navMep: "MEP",
+        navCarpentry: "النجارة",
+        navProjects: "المشاريع",
+        navOngoingProjects: "المشاريع الجارية",
+        navCompletedProjects: "المشاريع المنتهية",
+        navCareer: "وظائف",
+        navContact: "تواصل",
+        navSelect: "اختر",
+        navEnglish: "إنجليزي",
+        navArabic: "عربي",
+        projectTitle: "10 فلل (G+F+PH)",
+        projectDescription: "تتكون الفيلات المركبة من 10 فلل، بمساحة مبنية تبلغ 8000.00 م²، لتلبية الحاجة المتزايدة لخدمات الإسكان في إزغاوة.",
+        buildingDevelopmentTitle: "بناء تطوير أفضل",
+        locationLabel: "الموقع",
+        location: "إزغاوة",
+        areaLabel: "8000㎡",
+        totalBuiltUpArea: "إجمالي المساحة المبنية",
+        statusLabel: "مكتمل",
+        profileStatus: "حالة الملف",
+        previousButton: "السابق",
+        nextButton: "التالي"
+    }
+};
+
+function translate(language) {
+    // Update menu items based on the selected language
+    document.getElementById("navHome").innerText = translations[language].navHome;
+    document.getElementById("navAbout").innerText = translations[language].navAbout;
+    document.getElementById("navChairmansMessage").innerText = translations[language].navChairmansMessage;
+    document.getElementById("navHsePolicy").innerText = translations[language].navHsePolicy;
+    document.getElementById("navManagementStaff").innerText = translations[language].navManagementStaff;
+    document.getElementById("navVehiclesEquipments").innerText = translations[language].navVehiclesEquipments;
+    document.getElementById("navCertificate").innerText = translations[language].navCertificate;
+    document.getElementById("navDivisions").innerText = translations[language].navDivisions;
+    document.getElementById("navMep").innerText = translations[language].navMep;
+    document.getElementById("navCarpentry").innerText = translations[language].navCarpentry;
+    document.getElementById("navProjects").innerText = translations[language].navProjects;
+    document.getElementById("navOngoingProjects").innerText = translations[language].navOngoingProjects;
+    document.getElementById("navCompletedProjects").innerText = translations[language].navCompletedProjects;
+    document.getElementById("navCareer").innerText = translations[language].navCareer;
+    document.getElementById("navContact").innerText = translations[language].navContact;
+    document.getElementById("navSelect").innerText = translations[language].navSelect;
+    document.getElementById("navEnglish").innerText = translations[language].navEnglish;
+    document.getElementById("navArabic").innerText = translations[language].navArabic;
+
+    // Use the correct variable 'language'
+    document.getElementById("projectTitle").innerText = translations[language].projectTitle;
+    document.getElementById("projectDescription").innerText = translations[language].projectDescription;
+    document.getElementById("buildingDevelopmentTitle").innerText = translations[language].buildingDevelopmentTitle;
+    document.getElementById("locationLabel").innerText = translations[language].locationLabel;
+    document.getElementById("location").innerText = translations[language].location;
+    document.getElementById("areaLabel").innerText = translations[language].areaLabel;
+    document.getElementById("totalBuiltUpArea").innerText = translations[language].totalBuiltUpArea;
+    document.getElementById("statusLabel").innerText = translations[language].statusLabel;
+    document.getElementById("profileStatus").innerText = translations[language].profileStatus;
+    document.getElementById("previousButton").innerText = translations[language].previousButton;
+    document.getElementById("nextButton").innerText = translations[language].nextButton;
+}
+
+function changeLanguage() {
+    const selectedLanguage = document.getElementById("languageSelector").value;
+    translate(selectedLanguage);
+    localStorage.setItem("selectedLanguage", selectedLanguage); // Save selected language to local storage
+}
+
+// Load the selected language from local storage on page load
+window.onload = () => {
+    const savedLanguage = localStorage.getItem("selectedLanguage") || 'en'; // Default to English
+    document.getElementById("languageSelector").value = savedLanguage; // Set dropdown to saved language
+    translate(savedLanguage); // Translate content
+};
+
  
      </script>
       

@@ -495,7 +495,16 @@
          navContact: "Contact",
          navSelect: "Select",
          navEnglish: "English",
-         navArabic: "Arabic"
+         navArabic: "Arabic",
+         pageTitle: "Villa (G+1+PH)+Majlis",
+        projectDescription: "A Villa comprising of Majlis and Driver Rooms for our prestigious client, with a built-up area of 607.70 m².",
+        locationLabel: "Location",
+        location: "Izghawa",
+        totalBuiltUpArea: "607.70㎡",
+        totalBuiltUpAreaTitle: "Total Built-Up Area",
+        profileStatus: "Completed",
+        profileStatusTitle: "Profile Status",
+         
      },
      ar: {
          logo: "شعارك",
@@ -516,7 +525,15 @@
          navContact: "تواصل",
          navSelect: "اختر",
          navEnglish: "إنجليزي",
-         navArabic: "عربي"
+         navArabic: "عربي",
+         pageTitle: "فيلا (G+1+PH)+مجلس",
+        projectDescription: "فيلا تضم مجلس وغرف سائق لعميلنا المرموق، بمساحة إجمالية تبلغ 607.70 م².",
+        locationLabel: "الموقع",
+        location: "إزغوى",
+        totalBuiltUpArea: "607.70م²",
+        totalBuiltUpAreaTitle: "إجمالي المساحة المبنية",
+        profileStatus: "مكتمل",
+        profileStatusTitle: "حالة الملف",
      }
  };
  
@@ -540,6 +557,14 @@
      document.getElementById("navSelect").innerText = translations[language].navSelect;
      document.getElementById("navEnglish").innerText = translations[language].navEnglish;
      document.getElementById("navArabic").innerText = translations[language].navArabic;
+     document.getElementById('pageTitle').innerText = translations[language].pageTitle;
+    document.getElementById('projectDescription').innerText = translations[language].projectDescription;
+    document.getElementById('locationLabel').innerText = translations[language].locationLabel;
+    document.getElementById('location').innerText = translations[language].location;
+    document.getElementById('totalBuiltUpArea').innerText = translations[language].totalBuiltUpArea;
+    document.getElementById('totalBuiltUpAreaTitle').innerText = translations[language].totalBuiltUpAreaTitle;
+    document.getElementById('profileStatus').innerText = translations[language].profileStatus;
+    document.getElementById('profileStatusTitle').innerText = translations[language].profileStatusTitle;
  }
  
  function changeLanguage() {

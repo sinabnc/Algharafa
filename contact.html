@@ -466,84 +466,115 @@
     
 </script>
 <script>
-    const translations = {
- en: {
-     logo: "Your Logo",
-     navHome: "Home",
-     navAbout: "About",
-     navChairmansMessage: "CHAIRMAN'S MESSAGE",
-     navHsePolicy: "HSE & QC POLICY",
-     navManagementStaff: "MANAGEMENT & STAFF",
-     navVehiclesEquipments: "VEHICLES & EQUIPMENTS",
-     navCertificate: "Certificate",
-     navDivisions: "Divisions",
-     navMep: "MEP",
-     navCarpentry: "CARPENTRY",
-     navProjects: "Projects",
-     navOngoingProjects: "Ongoing Projects",
-     navCompletedProjects: "Completed Projects",
-     navCareer: "Career",
-     navContact: "Contact",
-     navSelect: "Select",
-     navEnglish: "English",
-     navArabic: "Arabic"
- },
- ar: {
-     logo: "شعارك",
-     navHome: "الرئيسية",
-     navAbout: "حول",
-     navChairmansMessage: "رسالة الرئيس",
-     navHsePolicy: "سياسة الصحة والسلامة",
-     navManagementStaff: "الإدارة والموظفين",
-     navVehiclesEquipments: "المركبات والمعدات",
-     navCertificate: "الشهادات",
-     navDivisions: "الأقسام",
-     navMep: "MEP",
-     navCarpentry: "النجارة",
-     navProjects: "المشاريع",
-     navOngoingProjects: "المشاريع الجارية",
-     navCompletedProjects: "المشاريع المنتهية",
-     navCareer: "وظائف",
-     navContact: "تواصل",
-     navSelect: "اختر",
-     navEnglish: "إنجليزي",
-     navArabic: "عربي"
- }
+   const translations = {
+    en: {
+        logo: "Your Logo",
+        navHome: "Home",
+        navAbout: "About",
+        navChairmansMessage: "CHAIRMAN'S MESSAGE",
+        navHsePolicy: "HSE & QC POLICY",
+        navManagementStaff: "MANAGEMENT & STAFF",
+        navVehiclesEquipments: "VEHICLES & EQUIPMENTS",
+        navCertificate: "Certificate",
+        navDivisions: "Divisions",
+        navMep: "MEP",
+        navCarpentry: "CARPENTRY",
+        navProjects: "Projects",
+        navOngoingProjects: "Ongoing Projects",
+        navCompletedProjects: "Completed Projects",
+        navCareer: "Career",
+        navContact: "Contact",
+        navSelect: "Select",
+        navEnglish: "English",
+        navArabic: "Arabic",
+        pageTitle: "Contact Us",
+        callSupportTitle: "Call support center 24/7",
+        phoneNumbers: "(+974) 66554433<br>(+974) 66554429<br>(+974) 33529395",
+        writeToUsTitle: "Write to us",
+        emailAddress: "info@algharafacontracting.com",
+        visitUsTitle: "Visit us",
+        address: "Palm Tower B, 1606, Street No. 810 Zone No.60, P.O. Box: 6488, Doha - Qatar",
+        readyToStart: "Ready to get started? Let's chat.",
+        fillForm: "Please fill out the form below, and a member of our team will get back to you as soon as possible.",
+        submitButton: "Submit"
+    },
+    ar: {
+        logo: "شعارك",
+        navHome: "الرئيسية",
+        navAbout: "حول",
+        navChairmansMessage: "رسالة الرئيس",
+        navHsePolicy: "سياسة الصحة والسلامة",
+        navManagementStaff: "الإدارة والموظفين",
+        navVehiclesEquipments: "المركبات والمعدات",
+        navCertificate: "الشهادات",
+        navDivisions: "الأقسام",
+        navMep: "MEP",
+        navCarpentry: "النجارة",
+        navProjects: "المشاريع",
+        navOngoingProjects: "المشاريع الجارية",
+        navCompletedProjects: "المشاريع المنتهية",
+        navCareer: "وظائف",
+        navContact: "تواصل",
+        navSelect: "اختر",
+        navEnglish: "إنجليزي",
+        navArabic: "عربي",
+        pageTitle: "اتصل بنا",
+        callSupportTitle: "اتصل بمركز الدعم على مدار الساعة",
+        phoneNumbers: "(+974) 66554433<br>(+974) 66554429<br>(+974) 33529395",
+        writeToUsTitle: "اكتب لنا",
+        emailAddress: "info@algharafacontracting.com",
+        visitUsTitle: "زورونا",
+        address: "برج النخيل ب، 1606، الشارع رقم 810، المنطقة رقم 60، صندوق البريد: 6488، الدوحة - قطر",
+        readyToStart: "هل أنتم مستعدون للبدء؟ دعونا نتحدث.",
+        fillForm: "يرجى ملء النموذج أدناه، وسيتواصل معك أحد أعضاء فريقنا في أقرب وقت ممكن.",
+        submitButton: "إرسال"
+    }
 };
 
 function translate(language) {
- // Update menu items based on the selected language
- document.getElementById("navHome").innerText = translations[language].navHome;
- document.getElementById("navAbout").innerText = translations[language].navAbout;
- document.getElementById("navChairmansMessage").innerText = translations[language].navChairmansMessage;
- document.getElementById("navHsePolicy").innerText = translations[language].navHsePolicy;
- document.getElementById("navManagementStaff").innerText = translations[language].navManagementStaff;
- document.getElementById("navVehiclesEquipments").innerText = translations[language].navVehiclesEquipments;
- document.getElementById("navCertificate").innerText = translations[language].navCertificate;
- document.getElementById("navDivisions").innerText = translations[language].navDivisions;
- document.getElementById("navMep").innerText = translations[language].navMep;
- document.getElementById("navCarpentry").innerText = translations[language].navCarpentry;
- document.getElementById("navProjects").innerText = translations[language].navProjects;
- document.getElementById("navOngoingProjects").innerText = translations[language].navOngoingProjects;
- document.getElementById("navCompletedProjects").innerText = translations[language].navCompletedProjects;
- document.getElementById("navCareer").innerText = translations[language].navCareer;
- document.getElementById("navContact").innerText = translations[language].navContact;
- document.getElementById("navSelect").innerText = translations[language].navSelect;
- document.getElementById("navEnglish").innerText = translations[language].navEnglish;
- document.getElementById("navArabic").innerText = translations[language].navArabic;
+    // Update menu items based on the selected language
+    document.getElementById("navHome").innerText = translations[language].navHome;
+    document.getElementById("navAbout").innerText = translations[language].navAbout;
+    document.getElementById("navChairmansMessage").innerText = translations[language].navChairmansMessage;
+    document.getElementById("navHsePolicy").innerText = translations[language].navHsePolicy;
+    document.getElementById("navManagementStaff").innerText = translations[language].navManagementStaff;
+    document.getElementById("navVehiclesEquipments").innerText = translations[language].navVehiclesEquipments;
+    document.getElementById("navCertificate").innerText = translations[language].navCertificate;
+    document.getElementById("navDivisions").innerText = translations[language].navDivisions;
+    document.getElementById("navMep").innerText = translations[language].navMep;
+    document.getElementById("navCarpentry").innerText = translations[language].navCarpentry;
+    document.getElementById("navProjects").innerText = translations[language].navProjects;
+    document.getElementById("navOngoingProjects").innerText = translations[language].navOngoingProjects;
+    document.getElementById("navCompletedProjects").innerText = translations[language].navCompletedProjects;
+    document.getElementById("navCareer").innerText = translations[language].navCareer;
+    document.getElementById("navContact").innerText = translations[language].navContact;
+    document.getElementById("navSelect").innerText = translations[language].navSelect;
+    document.getElementById("navEnglish").innerText = translations[language].navEnglish;
+    document.getElementById("navArabic").innerText = translations[language].navArabic;
+
+    document.getElementById("page-title").innerHTML = translations[language].pageTitle;
+    document.getElementById("call-support-title").innerHTML = translations[language].callSupportTitle;
+    document.getElementById("phone-numbers").innerHTML = translations[language].phoneNumbers;
+    document.getElementById("write-to-us-title").innerHTML = translations[language].writeToUsTitle;
+    document.getElementById("email-address").innerHTML = translations[language].emailAddress;
+    document.getElementById("visit-us-title").innerHTML = translations[language].visitUsTitle;
+    document.getElementById("address").innerHTML = translations[language].address;
+    document.getElementById("ready-to-start").innerHTML = translations[language].readyToStart;
+    document.getElementById("fill-form").innerHTML = translations[language].fillForm;
+    document.getElementById("submit-btn").innerHTML = translations[language].submitButton;
 }
 
 function changeLanguage() {
- const selectedLanguage = document.getElementById("languageSelector").value;
- translate(selectedLanguage);
- localStorage.setItem("selectedLanguage", selectedLanguage); // Save selected language to local storage
+    const selectedLanguage = document.getElementById("languageSelector").value;
+    translate(selectedLanguage);
+    localStorage.setItem("selectedLanguage", selectedLanguage); // Save selected language to local storage
 }
 
 // Load the selected language from local storage on page load
 window.onload = () => {
- const savedLanguage = localStorage.getItem("selectedLanguage") || 'en'; // Default to English
- document.getElementById("languageSelector").value = savedLanguage; // Set dropdown to saved language
- translate(savedLanguage); // Translate content
+    const savedLanguage = localStorage.getItem("selectedLanguage") || 'en'; // Default to English
+    document.getElementById("languageSelector").value = savedLanguage; // Set dropdown to saved language
+    translate(savedLanguage); // Translate content
 };
 
  </script>
