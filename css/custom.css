@@ -1510,7 +1510,7 @@ header.main-header .header-sticky.active{
     height: auto; /* Keep the aspect ratio */
     padding-right: 15px;
     margin-left: 0; /* Aligns the logo to the start (left) */
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 @media (max-width: 768px) {
     #image-logo {
