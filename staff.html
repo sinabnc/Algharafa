@@ -644,7 +644,8 @@ tfoot td {
          navContact: "Contact",
          navSelect: "Select",
          navEnglish: "English",
-         navArabic: "Arabic"
+         navArabic: "Arabic",
+         pageHeaderTitle: "MANAGEMENT & STAFF",
      },
      ar: {
          logo: "شعارك",
@@ -665,7 +666,8 @@ tfoot td {
          navContact: "تواصل",
          navSelect: "اختر",
          navEnglish: "إنجليزي",
-         navArabic: "عربي"
+         navArabic: "عربي",
+         pageHeaderTitle: "الإدارة والموظفين",
      }
  };
  
@@ -689,6 +691,7 @@ tfoot td {
      document.getElementById("navSelect").innerText = translations[language].navSelect;
      document.getElementById("navEnglish").innerText = translations[language].navEnglish;
      document.getElementById("navArabic").innerText = translations[language].navArabic;
+     document.getElementById("pageHeaderTitle").innerText = translations[language].pageHeaderTitle;
  }
  
  function changeLanguage() {

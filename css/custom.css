@@ -551,7 +551,7 @@ header.main-header .header-sticky.active{
 
 .main-menu ul li a:hover,
 .main-menu ul li a:focus{
-	color: #bf1e2e;
+	color: #B8001F;
 }
 
 .main-menu ul ul{
@@ -1210,7 +1210,7 @@ header.main-header .header-sticky.active{
 }
 
 .navbar-nav .nav-link:hover {
-    color: #bf1e2e; /* Optional: Set a different color on hover */
+    color: #090808; /* Optional: Set a different color on hover */
 }
 
 
