@@ -21,8 +21,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oswald:wght@200..700&display=swap"
         rel="stylesheet">
-  
-<!-- Bootstrap Css -->
+
+    <!-- Bootstrap Css -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 
@@ -32,8 +32,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-    
-<!-- Bootstrap Css -->
+
+    <!-- Bootstrap Css -->
 
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="css/language.css">
@@ -66,89 +66,96 @@
         margin-bottom: 200px;
     }
 
-.sidebar,
-.sidebar-toggler {
-    display: none;
-}
-
-/* Show sidebar and toggle button on mobile devices */
-@media (max-width: 768px) {
-
     .sidebar,
     .sidebar-toggler {
-        display: block;
-    }
-
-    /* Sidebar styling */
-    .sidebar {
-        height: 100vh;
-        width: 0; /* Initially hidden */
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: red; /* Change background to red */
-        overflow-x: hidden;
-        transition: 0.3s;
-        padding-top: 60px;
-        color: #ffffff; /* Text color remains white */
-        z-index: 1;
-    }
-
-    .sidebar a,
-    .sidebar .dropdown-btn {
-        padding: 10px 15px;
-        text-decoration: none;
-        font-size: 18px;
-        color: #ffffff; /* Text color remains white */
-        display: block;
-        transition: 0.3s;
-        cursor: pointer;
-        text-align: left; /* Ensure text is aligned properly */
-    }
-
-    .sidebar a:hover,
-    .sidebar .dropdown-btn:hover {
-        color: #ebdc9f;
-    }
-
-    .sidebar .closebtn {
-        position: absolute;
-        top: 10px;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-        color: #ffffff;
-    }
-
-    .sidebar .dropdown-container {
         display: none;
-        background-color:red; /* This can be changed to red as well if needed */
-        padding-left: 8px;
     }
 
-    .sidebar .dropdown-container a {
-        font-size: 16px;
-    }
+    /* Show sidebar and toggle button on mobile devices */
+    @media (max-width: 768px) {
 
-    .sidebar-toggler {
-        font-size: 50px;
-        color: #ffffff;
-        top: 5% !important;
-        position: sticky;
-        right: 15px; /* Move to the right side */
-        cursor: pointer;
-        z-index: 2;
-    }
+        .sidebar,
+        .sidebar-toggler {
+            display: block;
+        }
 
-    .dropdown-btn::after {
-        content: '+';
-        float: right;
-    }
+        /* Sidebar styling */
+        .sidebar {
+            height: 100vh;
+            width: 0;
+            /* Initially hidden */
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: red;
+            /* Change background to red */
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+            color: #ffffff;
+            /* Text color remains white */
+            z-index: 1;
+        }
 
-    .dropdown-btn.active::after {
-        content: '-';
+        .sidebar a,
+        .sidebar .dropdown-btn {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #ffffff;
+            /* Text color remains white */
+            display: block;
+            transition: 0.3s;
+            cursor: pointer;
+            text-align: left;
+            /* Ensure text is aligned properly */
+        }
+
+        .sidebar a:hover,
+        .sidebar .dropdown-btn:hover {
+            color: #ebdc9f;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            color: #ffffff;
+        }
+
+        .sidebar .dropdown-container {
+            display: none;
+            background-color: red;
+            /* This can be changed to red as well if needed */
+            padding-left: 8px;
+        }
+
+        .sidebar .dropdown-container a {
+            font-size: 16px;
+        }
+
+        .sidebar-toggler {
+            font-size: 50px;
+            color: #ffffff;
+            top: 5% !important;
+            position: sticky;
+            right: 15px;
+            /* Move to the right side */
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .dropdown-btn::after {
+            content: '+';
+            float: right;
+        }
+
+        .dropdown-btn.active::after {
+            content: '-';
+        }
     }
-}
 
 
     #secondary-logo {
@@ -190,7 +197,7 @@
         color: #12223B;
     }
 
-    
+
 
     /* Remove Google Translate icon */
     .goog-te-gadget-icon {
@@ -237,7 +244,7 @@
             left: 35% !important;
             transform: translateX(-35%) !important;
         }
-       
+
 
         #image-logos {
             display: none;
@@ -280,7 +287,6 @@
             /* Center-align menu items for better readability */
         }
     }
-    
 </style>
 
 
@@ -390,21 +396,22 @@
                         </div>
                         <a href="career.html" id="navCareer">Career</a>
                         <a href="contact.html" id="navContact">Contact</a>
-                    
+
                         <!-- Language Selector -->
                         <div style="padding: 10px 15px;">
-                            <select class="form-select custom-select" id="languageSelectorMobile" onchange="changeLanguage('mobile')">
+                            <select class="form-select custom-select" id="languageSelectorMobile"
+                                onchange="changeLanguage('mobile')">
                                 <option value="en" id="navSelect">Select</option>
                                 <option value="en" id="navEnglish">English</option>
                                 <option value="ar" id="navArabic">Arabic</option>
                             </select>
                         </div>
                     </div>
-                    
-                    </div>
+
                 </div>
-            </nav>
-            <div class="responsive-menu"></div>
+        </div>
+        </nav>
+        <div class="responsive-menu"></div>
         </div>
     </header>
 
@@ -1250,24 +1257,24 @@
         // });
 
         function changeLanguage(source) {
-    // Determine the selected language based on the source (desktop or mobile)
-    const language = source === 'desktop' 
-        ? document.getElementById('languageSelectorDesktop').value 
-        : document.getElementById('languageSelectorMobile').value;
+            // Determine the selected language based on the source (desktop or mobile)
+            const language = source === 'desktop'
+                ? document.getElementById('languageSelectorDesktop').value
+                : document.getElementById('languageSelectorMobile').value;
 
-    // Save the selected language to localStorage
-    localStorage.setItem('selectedLanguage', language);
+            // Save the selected language to localStorage
+            localStorage.setItem('selectedLanguage', language);
 
-    // Update the text content based on the selected language
-    updateContentLanguage(language);
+            // Update the text content based on the selected language
+            updateContentLanguage(language);
 
-    // Synchronize the other selector with the chosen language
-    if (source === 'desktop') {
-        document.getElementById('languageSelectorMobile').value = language;
-    } else {
-        document.getElementById('languageSelectorDesktop').value = language;
-    }
-}
+            // Synchronize the other selector with the chosen language
+            if (source === 'desktop') {
+                document.getElementById('languageSelectorMobile').value = language;
+            } else {
+                document.getElementById('languageSelectorDesktop').value = language;
+            }
+        }
         // Define translations for the entire page
         function updateContentLanguage(language) {
             const translations = {
@@ -1293,7 +1300,7 @@
                     navVehiclesEquipments: "VEHICLES & EQUIPMENTS",
                     navMep: "MEP",
                     navCarpentry: "CARPENTRY DIVISION",
-                    navDiv:"Divisions",
+                    navDiv: "Divisions",
                     navCertificate: "certificate",
                     navProjects: "Projects",
                     navOngoingProjects: "ongoing projects",
@@ -1362,7 +1369,7 @@
                     navHome: "الرئيسية",
                     navAbout: "معلومانا",
                     navChairmansMessage: "رسالة رئيس مجلس الإدارة",
-                    navDiv:"الانقسامات",
+                    navDiv: "الانقسامات",
                     navHsePolicy: "سياسة الصحة والسلامة والبيئة",
                     navManagementStaff: "الإدارة والموظفين",
                     navVehiclesEquipments: "المركبات والمعدات",
@@ -1495,15 +1502,15 @@
             document.getElementById('ctaBoxTitle').innerText = translations[language].ctaBoxTitle;
             document.getElementById('ctaBoxDescription').innerText = translations[language].ctaBoxDescription;
             document.getElementById('ctaBoxBtn').innerText = translations[language].ctaBoxBtn;
-           
+
 
         }
         document.addEventListener('DOMContentLoaded', () => {
-    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
-    document.getElementById('languageSelectorDesktop').value = savedLanguage;
-    document.getElementById('languageSelectorMobile').value = savedLanguage;
-    updateContentLanguage(savedLanguage);
-});
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+            document.getElementById('languageSelectorDesktop').value = savedLanguage;
+            document.getElementById('languageSelectorMobile').value = savedLanguage;
+            updateContentLanguage(savedLanguage);
+        });
         window.onload = function () {
             const storedLanguage = localStorage.getItem('selectedLanguage') || 'en'; // Default to 'en' if none is stored
             document.getElementById('languageSelector').value = storedLanguage;
