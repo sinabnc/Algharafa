@@ -1498,11 +1498,12 @@ header.main-header .header-sticky.active{
 } */
 
 #image-logos{
-    width: 250px; /* Increased size */
+    width: 260px; /* Increased size */
+	height: auto;
     height: auto; /* Keep the aspect ratio */
     padding-right: 15px;
     margin-right: 90px; /* Aligns the logo to the start (left) */
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 	
 }
 #image-logo {
