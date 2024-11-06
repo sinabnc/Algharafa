@@ -197,12 +197,14 @@
                             </ul>
                         </div>
                         <!-- Language Selector -->
-                        <div style="padding: 10px 15px;">
-                            <select class="form-select custom-select" id="languageSelector" onchange="changeLanguage()">
-                                <option value="en" id="navSelect">Select</option>
-                                <option value="en" id="navEnglish">English</option>
-                                <option value="ar" id="navArabic">Arabic</option>
-                            </select>
+                       <div class="language-toggle">
+                            <input type="checkbox" id="languageToggle" class="toggle-checkbox" onchange="changeLanguage()">
+                            <label for="languageToggle" class="toggle-label">
+                                <span class="toggle-icon">
+                                    <span class="sun-icon">🇺🇸</span>
+                                    <span class="cloud-icon">🇶🇦</span>
+                                </span>
+                            </label>
                         </div>
                         <!-- Language Selector End -->
                     </div>

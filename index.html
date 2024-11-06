@@ -23,6 +23,7 @@
         rel="stylesheet">
 
     <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="css/language.css">
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 
@@ -365,13 +366,14 @@
                         </div>
 
                         <!-- Language Selector (Aligned to the right) -->
-                        <div class="ms-auto d-inline-flex align-items-center">
-                            <select class="form-select language-selector me-2" id="languageSelectorDesktop"
-                                onchange="changeLanguage('desktop')">
-                                <option value="en">Select</option>
-                                <option value="en">English</option>
-                                <option value="ar">Arabic</option>
-                            </select>
+                        <div class="language-toggle">
+                            <input type="checkbox" id="languageToggle" class="toggle-checkbox" onchange="changeLanguage()">
+                            <label for="languageToggle" class="toggle-label">
+                                <span class="toggle-icon">
+                                    <span class="sun-icon">🇺🇸</span>
+                                    <span class="cloud-icon">🇶🇦</span>
+                                </span>
+                            </label>
                         </div>
                     </div>
                     <div id="mySidebar" class="sidebar">
@@ -1257,25 +1259,20 @@
         //     },
         // });
 
-        function changeLanguage(source) {
-            // Determine the selected language based on the source (desktop or mobile)
-            const language = source === 'desktop'
-                ? document.getElementById('languageSelectorDesktop').value
-                : document.getElementById('languageSelectorMobile').value;
+        function changeLanguage() {
+    // Get the checkbox element
+    const languageToggle = document.getElementById('languageToggle');
 
-            // Save the selected language to localStorage
-            localStorage.setItem('selectedLanguage', language);
+    // Determine the language based on the checkbox state
+    const language = languageToggle.checked ? 'ar' : 'en';
 
-            // Update the text content based on the selected language
-            updateContentLanguage(language);
+    // Save the selected language to localStorage
+    localStorage.setItem('selectedLanguage', language);
 
-            // Synchronize the other selector with the chosen language
-            if (source === 'desktop') {
-                document.getElementById('languageSelectorMobile').value = language;
-            } else {
-                document.getElementById('languageSelectorDesktop').value = language;
-            }
-        }
+    // Update the text content based on the selected language
+    updateContentLanguage(language);
+}
+
         // Define translations for the entire page
         function updateContentLanguage(language) {
             const translations = {
@@ -1507,11 +1504,15 @@
 
         }
         document.addEventListener('DOMContentLoaded', () => {
-            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
-            document.getElementById('languageSelectorDesktop').value = savedLanguage;
-            document.getElementById('languageSelectorMobile').value = savedLanguage;
-            updateContentLanguage(savedLanguage);
-        });
+    // Check for saved language preference in localStorage, default to 'en' if not found
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+    
+    // Set the checkbox state based on the saved language
+    document.getElementById('languageToggle').checked = savedLanguage === 'ar';
+
+    // Update the content language based on the saved language
+    updateContentLanguage(savedLanguage);
+});
         window.onload = function () {
             const storedLanguage = localStorage.getItem('selectedLanguage') || 'en'; // Default to 'en' if none is stored
             document.getElementById('languageSelector').value = storedLanguage;

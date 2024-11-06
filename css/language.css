@@ -29,3 +29,59 @@
 .custom-select:focus {
     outline: none;
 }
+
+
+.language-toggle {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: #87CEEB;
+    border-radius: 15px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.toggle-icon {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.sun-icon, .cloud-icon {
+    font-size: 18px;
+}
+
+.cloud-icon {
+    display: none;
+}
+
+.toggle-checkbox:checked + .toggle-label .toggle-icon {
+    transform: translateX(30px);
+}
+
+.toggle-checkbox:checked + .toggle-label .sun-icon {
+    display: none;
+}
+
+.toggle-checkbox:checked + .toggle-label .cloud-icon {
+    display: inline;
+}
