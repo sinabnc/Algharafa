@@ -693,6 +693,12 @@ tfoot td {
         row20ct: "17",
         row21ct: "41",
         pghdr: "MANAGEMENT & STAFF",
+        logts: "LOGISTICS",
+        cvtsl: "CIVIL",
+        pghd: "MANAGEMENT & STAFF",
+        mgtit: "MANAGEMENT",
+        pmtit: "PROJECT MANAGEMENT & TECHNICAL"
+        
       
     },
     ar: {
@@ -781,7 +787,13 @@ tfoot td {
         mgtrow2pos: "المدير العام",
         mgtrow3pos: "مدير المالية",
         mgtrow4pos: "مدير الإدارة / الموارد البشرية",
-        pghdr: "الإدارة والموظفون"
+        pghdr: "الإدارة والموظفون",
+        logts: "اللوجستيات",
+        cvtsl: "المدني",
+        pghdr: "الإدارة والموظفين",
+        mgtit: "الإدارة",
+        pmtit: "إدارة المشاريع والتقنية"
+        
 
        
     }
@@ -806,12 +818,6 @@ function translate(language) {
     document.getElementById("navContact").innerText = translations[language].navContact;
     document.getElementById("navSelect").innerText = translations[language].navSelect;
     document.getElementById("navEnglish").innerText = translations[language].navEnglish;
-    document.getElementById("navArabic").innerText = translations[language].navArabic;
-    document.getElementById("pmtrow5pos").innerText = translations[language].pmtrow5pos;
-    document.getElementById("pmtrow6pos").innerText = translations[language].pmtrow6pos;
-    document.getElementById("pmtrow7pos").innerText = translations[language].pmtrow7pos;
-    document.getElementById("pmtrow8pos").innerText = translations[language].pmtrow8pos;
-    document.getElementById("pmtrow9pos").innerText = translations[language].pmtrow9pos;
     document.getElementById("logrow1pos").innerText = translations[language].logrow1pos;
     document.getElementById("logrow2pos").innerText = translations[language].logrow2pos;
     document.getElementById("logrow3pos").innerText = translations[language].logrow3pos;
@@ -827,6 +833,11 @@ function translate(language) {
     document.getElementById("mgtrow2pos").innerText = translations[language].mgtrow2pos;
     document.getElementById("mgtrow3pos").innerText = translations[language].mgtrow3pos;
     document.getElementById("mgtrow4pos").innerText = translations[language].mgtrow4pos;
+    document.getElementById("logts").textContent = translations[language].logts;
+    document.getElementById("cvtsl").textContent = translations[language].cvtsl;
+    document.getElementById("pghdr").textContent = translations[language].pghdr;
+    document.getElementById("pmtit").textContent = translations[language].pmtit;
+    document.getElementById("mgtit").textContent = translations[language].mgtit;
   // Table Rows
   for (let i = 1; i <= 11; i++) {
         document.getElementById(`row${i}pos`).innerText = translations[language][`row${i}pos`];
