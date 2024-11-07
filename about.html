@@ -979,6 +979,8 @@
           accountsDepartment: "ACCOUNTS DEPARTMENT",
           hrDepartment: "HR DEPARTMENT",
           safetyDepartment: "SAFETY DEPARTMENT",
+          aboutUsTitle: "About Us",
+        ourHistoryTitle: "Our History"
         },
         ar: {
           logo: "شعارك",
@@ -1028,6 +1030,8 @@
           accountsDepartment: "الإدارة المالية",
           hrDepartment: " إدارة الموارد البشرية",
           safetyDepartment: " إدارة السلامة المهنية",
+          aboutUsTitle: "من نحن",
+        ourHistoryTitle: "تاريخنا",
         },
       };
 
@@ -1101,6 +1105,8 @@
           document.querySelectorAll('.team-content h3')[4].innerText = translations[language].accountsDepartment;
           document.querySelectorAll('.team-content h3')[5].innerText = translations[language].hrDepartment;
           document.querySelectorAll('.team-content h3')[6].innerText = translations[language].safetyDepartment;
+          document.getElementById("aboutUsTitle").textContent = translations[language].aboutUsTitle;
+    document.getElementById("ourHistoryTitle").textContent = translations[language].ourHistoryTitle;
 
 
           

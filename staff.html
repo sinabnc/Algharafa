@@ -697,7 +697,9 @@ tfoot td {
         cvtsl: "CIVIL",
         pghd: "MANAGEMENT & STAFF",
         mgtit: "MANAGEMENT",
-        pmtit: "PROJECT MANAGEMENT & TECHNICAL"
+        pmtit: "PROJECT MANAGEMENT & TECHNICAL",
+        mepts: "MEP",
+
         
       
     },
@@ -792,7 +794,8 @@ tfoot td {
         cvtsl: "المدني",
         pghdr: "الإدارة والموظفين",
         mgtit: "الإدارة",
-        pmtit: "إدارة المشاريع والتقنية"
+        pmtit: "إدارة المشاريع والتقنية",
+        mepts: "الميكانيكية والكهربائية والسباكة"
         
 
        
@@ -838,6 +841,7 @@ function translate(language) {
     document.getElementById("pghdr").textContent = translations[language].pghdr;
     document.getElementById("pmtit").textContent = translations[language].pmtit;
     document.getElementById("mgtit").textContent = translations[language].mgtit;
+    document.getElementById("mepts").textContent = translations[language].mepts;
   // Table Rows
   for (let i = 1; i <= 11; i++) {
         document.getElementById(`row${i}pos`).innerText = translations[language][`row${i}pos`];
