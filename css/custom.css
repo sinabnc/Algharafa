@@ -1129,10 +1129,10 @@ header.main-header .header-sticky.active{
 .hse{
 	
 }
-.cherman{
+/* .cherman{
 	background-image: url("/images/our-service-bg.png");
 
-}
+} */
 .why-choose-item{
 	border: 1px solid var(--divider-color);
 	border-radius: 40px;

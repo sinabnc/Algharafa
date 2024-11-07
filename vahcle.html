@@ -555,6 +555,7 @@
             brand: "Brand",
             colour: "Colour",
             totalVehicles: "Total Vehicles: 11",
+            phhdr: "VEHICLES & EQUIPMENTS",
             vehicles: [
             { slNo: "1", plateNo: "187917", vehicleType: "Pick-up - Double Cabin", brand: "Toyota", colour: "White" },
             { slNo: "2", plateNo: "91978", vehicleType: "Pick-up - Double Cabin", brand: "Toyota", colour: "White" },
@@ -597,6 +598,7 @@
             brand: "العلامة التجارية",
             colour: "اللون",
             totalVehicles: "إجمالي المركبات: 11",
+            phhdr: "المركبات والمعدات",
             vehicles: [
             { slNo: "1", plateNo: "187917", vehicleType: "بيك أب - كابين مزدوجة", brand: "تويوتا", colour: "أبيض" },
             { slNo: "2", plateNo: "91978", vehicleType: "بيك أب - كابين مزدوجة", brand: "تويوتا", colour: "أبيض" },
@@ -639,7 +641,7 @@
         document.getElementById("thbrnd").innerText = translations[language].brand;
         document.getElementById("thcolr").innerText = translations[language].colour;
         document.getElementById("ttlveh").innerText = translations[language].totalVehicles;
-
+        document.getElementById("phhdr").textContent = translations[language].phhdr;
          document.getElementById("scttl").innerText = translations[language].vehicleDetails;
     document.getElementById("thslno").innerText = translations[language].slNo;
     document.getElementById("thplno").innerText = translations[language].plateNo;

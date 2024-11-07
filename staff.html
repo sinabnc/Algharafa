@@ -211,7 +211,7 @@ tfoot td {
                 <div class="col-lg-12">
                     <!-- Page Header Box Start -->
                     <div class="page-header-box">
-                        <h1 id="pghdr" class="text-anime-style-3" data-cursor="-opaque">MANAGEMENT & STAFF</h1>
+                        <h1  class="text-anime-style-3" data-cursor="-opaque" id="pghdr" >MANAGEMENT & STAFF</h1>
                         <nav class="wow fadeInUp">
                         </nav>
                     </div>
@@ -646,6 +646,7 @@ tfoot td {
         mgtrow2pos: "General Manager",
         mgtrow3pos: "Finance Manager",
         mgtrow4pos: "Admin/HR Manager",
+       
         
         
         // Table Rows (English)
@@ -691,7 +692,7 @@ tfoot td {
         row19ct: "2",
         row20ct: "17",
         row21ct: "41",
-
+        pghdr: "MANAGEMENT & STAFF",
       
     },
     ar: {
@@ -779,7 +780,9 @@ tfoot td {
         mgtrow1pos: "رئيس مجلس الإدارة",
         mgtrow2pos: "المدير العام",
         mgtrow3pos: "مدير المالية",
-        mgtrow4pos: "مدير الإدارة / الموارد البشرية"
+        mgtrow4pos: "مدير الإدارة / الموارد البشرية",
+        pghdr: "الإدارة والموظفون"
+
        
     }
 };
@@ -833,6 +836,8 @@ function translate(language) {
         document.getElementById(`row${i}pos`).innerText = translations[language][`row${i}pos`];
         document.getElementById(`row${i}ct`).innerText = translations[language][`row${i}ct`];
     }
+    document.getElementById("pghdr").innerText = translations[language].pghdr;
+
     
 }
 
