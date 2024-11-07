@@ -210,6 +210,24 @@ body{
 	z-index: 1;
 }
 
+.ctaBoxBtn{
+	display: inline-block;
+	font-family: var(--accent-font);
+	font-size: 18px;
+	font-weight: 800;
+	line-height: 1.3em;
+	text-transform: capitalize;
+	color: var(--white-color);
+	background: #bf1e2e;
+	border-radius: 12px;
+	padding: 20px 60px 20px 30px;
+	margin-top: 10px;
+	border: none;
+	transition: 0.5s ease-in-out;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+}
 .btn-default:hover{
 	background: transparent;
 }
@@ -218,7 +236,7 @@ body{
 	content: '';
 	position: absolute;
 	top: 50%;
-	right: 0;
+	right:0;
 	bottom: 0;
 	background-image: url("../images/arrow.svg");
 	background-repeat: no-repeat;
@@ -228,7 +246,34 @@ body{
 	transform: translate(-30px, -50%);
 	transition: 0.4s ease-in-out;
 }
-
+.ctaBoxBtn::before{
+	content: '';
+	position: absolute;
+	top: 50%;
+	/* left: ; */
+	bottom: 0;
+	background-image: url("../images/arrow.svg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 24px;
+	height: 24px;
+	transform: translate(-30px, -50%);
+	transition: 0.4s ease-in-out;
+}
+.ctaBoxBtn::after{ 
+	content: '';
+    display: block;
+    position: absolute;
+	top: 0;
+    left: 0;
+    bottom: 0;
+	width: 0;
+	height: 106%;
+    background: var(--primary-color);
+	border-radius: 12px;
+    transition: 0.4s ease-in-out;
+	z-index: -1;
+}
 .btn-default::after{ 
 	content: '';
     display: block;
