@@ -462,16 +462,6 @@ body {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-svg {
-  position: absolute;
-  width: 240px;
-  height: 120px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-}
 
 svg #plug,
 svg #socket {

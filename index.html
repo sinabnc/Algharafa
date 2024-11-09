@@ -290,15 +290,24 @@
             <!-- Language Selector (Aligned to the right) -->
           </div>
           <div class="navbar-end">
-            <div class="language-select-dropdown">
-              <select
-                id="languageSelectorDesktop"
-                onchange="changeLanguage('desktop')"
+            <button
+              id="language-button "
+              onclick="changeLanguage()"
+              class="language-select-ghost-button desktop"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="#000000"
+                viewBox="0 0 256 256"
               >
-                <option value="en">English</option>
-                <option value="ar">Arabic</option>
-              </select>
-            </div>
+                <path
+                  d="M247.15,212.42l-56-112a8,8,0,0,0-14.31,0l-21.71,43.43A88,88,0,0,1,108,126.93,103.65,103.65,0,0,0,135.69,64H160a8,8,0,0,0,0-16H104V32a8,8,0,0,0-16,0V48H32a8,8,0,0,0,0,16h87.63A87.76,87.76,0,0,1,96,116.35a87.74,87.74,0,0,1-19-31,8,8,0,1,0-15.08,5.34A103.63,103.63,0,0,0,84,127a87.55,87.55,0,0,1-52,17,8,8,0,0,0,0,16,103.46,103.46,0,0,0,64-22.08,104.18,104.18,0,0,0,51.44,21.31l-26.6,53.19a8,8,0,0,0,14.31,7.16L148.94,192h70.11l13.79,27.58A8,8,0,0,0,240,224a8,8,0,0,0,7.15-11.58ZM156.94,176,184,121.89,211.05,176Z"
+                ></path>
+              </svg>
+              <span id="currentLanguage">English</span>
+            </button>
 
             <div class="sidebar-toggler" onclick="toggleSidebar()">☰</div>
           </div>
@@ -343,15 +352,24 @@
             <a href="contact.html" id="navContact">Contact</a>
 
             <!-- Language Selector -->
-            <div class="language-select-dropdown mobile">
-              <select
-                id="languageSelectorMobile"
-                onchange="changeLanguage('mobile')"
+            <button
+              id="language-button"
+              onclick="changeLanguage()"
+              class="language-select-ghost-button"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="#000000"
+                viewBox="0 0 256 256"
               >
-                <option value="en">English</option>
-                <option value="ar">Arabic</option>
-              </select>
-            </div>
+                <path
+                  d="M247.15,212.42l-56-112a8,8,0,0,0-14.31,0l-21.71,43.43A88,88,0,0,1,108,126.93,103.65,103.65,0,0,0,135.69,64H160a8,8,0,0,0,0-16H104V32a8,8,0,0,0-16,0V48H32a8,8,0,0,0,0,16h87.63A87.76,87.76,0,0,1,96,116.35a87.74,87.74,0,0,1-19-31,8,8,0,1,0-15.08,5.34A103.63,103.63,0,0,0,84,127a87.55,87.55,0,0,1-52,17,8,8,0,0,0,0,16,103.46,103.46,0,0,0,64-22.08,104.18,104.18,0,0,0,51.44,21.31l-26.6,53.19a8,8,0,0,0,14.31,7.16L148.94,192h70.11l13.79,27.58A8,8,0,0,0,240,224a8,8,0,0,0,7.15-11.58ZM156.94,176,184,121.89,211.05,176Z"
+                ></path>
+              </svg>
+              <span id="currentLanguage-mobile">English</span>
+            </button>
           </div>
         </nav>
         <div class="responsive-menu"></div>
@@ -1075,7 +1093,7 @@
                     <p id="project2Description">
                       ID / Fitout Works of an Office Space for Bonyan Al Doha
                       Real Estate Company, with a Built-Up area of 530 m²
-                      including furniture’s.
+                      including furniture's.
                     </p>
                   </div>
                 </div>
@@ -1439,7 +1457,7 @@
             whyChooseUsTitle: "why choose us?",
             whyChooseUsHeading: "Why we're your best choice",
             whyChooseUsDescription:
-              "By assembling the experienced construction management organization and utilizing the numerous construction equipment’s and fabrication resources companies across Qatar, AGTC will be able to provide a more efficient and cost-effective service to our clients, especially in residential, commercial, industrial, infrastructural, sports facilities and landscaping construction works.",
+              "By assembling the experienced construction management organization and utilizing the numerous construction equipment's and fabrication resources companies across Qatar, AGTC will be able to provide a more efficient and cost-effective service to our clients, especially in residential, commercial, industrial, infrastructural, sports facilities and landscaping construction works.",
             whyChooseObjectivesTitle: "Our Objectives",
             whyChooseObjectivesDescription:
               "The objectives of AGTC is to undertake all aspects of engineering and construction activities related to civil, mechanical, electrical, plus engineering procurements, testing and commissioning and startup services.",
@@ -1449,7 +1467,7 @@
 
             whyChooseStrengthsTitle: "Our Strengths",
             whyChooseStrengthsDescription:
-              "The strength of AGTC lies in its access to the vast reserves and resources of the companies across Qatar. Which owns a vast fleet of construction and earth moving equipment’s in the region. On the other hand, AGTC has a vast pool of skilled manpower and team of professional managers / engineers and experienced supervisory personnel.",
+              "The strength of AGTC lies in its access to the vast reserves and resources of the companies across Qatar. Which owns a vast fleet of construction and earth moving equipment's in the region. On the other hand, AGTC has a vast pool of skilled manpower and team of professional managers / engineers and experienced supervisory personnel.",
             whyChoosePhilosophyTitle: "the philosophy",
             whyChoosePhilosophyDescription:
               "The philosophy of AGTC is Quality, Reliability and Expertise in Services. The Management and Manpower team are committed to implement this philosophy on day to works.",
@@ -1477,23 +1495,23 @@
           },
           ar: {
             // Hero Slider
-            heroTitle1: "مرحبا بكم في AGTC",
+            heroTitle1: "مرحبا بكم في الغرافة للتجارة والمقاولات",
             heroHeading1: "تحويل الرؤى إلى واقع",
             heroDescription1:
-              "نحن متخصصون في تحويل الرؤى إلى واقع مع حرفية استثنائية واهتمام دقيق بالتفاصيل. مع سنوات من الخبرة واهتمام بالجودة",
+              "نحن متخصصون في تحويل الرؤى إلى واقع مع حرفية استثنائية واهتمام دقيق بالتفاصيل. وسنوات من الخبرة واهتمام بالجودة",
             heroButton1: "ابدأ الآن",
             heroButton2: "عرض المشاريع",
-            heroTitle2: "مرحبا بكم في AGTC",
+            heroTitle2: "مرحبا بكم في الغرافة للتجارة والمقاولات",
             heroHeading2: "تحويل الرؤى إلى واقع",
             heroDescription2:
-              "نحن متخصصون في تحويل الرؤى إلى واقع مع حرفية استثنائية واهتمام دقيق بالتفاصيل. مع سنوات من الخبرة واهتمام بالجودة",
+              "نحن متخصصون في تحويل الرؤى إلى واقع مع حرفية استثنائية واهتمام دقيق بالتفاصيل. وسنوات من الخبرة واهتمام بالجودة",
             heroButton3: "ابدأ الآن",
             heroButton4: "عرض المشاريع",
             // Main Menu
             navHome: "الرئيسية",
             navAbout: "من نحن ",
             navChairmansMessage: "رسالة رئيس مجلس الإدارة",
-            navDiv: "لاقسام",
+            navDiv: "الاقسام",
             navHsePolicy: "سياسة الصحة والسلامة والبيئة",
             navManagementStaff: "الإدارة والموظفين",
             navVehiclesEquipments: "المركبات والمعدات",
@@ -1504,9 +1522,9 @@
             navOngoingProjects: "المشاريع الجارية",
             navCompletedProjects: "المشاريع المكتملة",
             navCareer: "الوظائف",
-            navContact: "اتصلنا",
+            navContact: "اتصل بنا",
             aboutUsTitle: "من نحن",
-            navDiv: "لاقسام",
+            navDiv: "الاقسام",
             aboutUsHeading: "بناء هياكل تدوم مدى الحياة",
             aboutUsDescription:
               "شركة الغرافة للتجارة والمقاولات ذ.م.م. واحدة من الشركات القطرية الوطنية الرائدة، مملوكة بالكامل للشيخ عيسى بن حمد بن جاسم بن ثاني آل ثاني، وهي مسجلة في الدوحة. منذ تأسيسها في عام 2007، حققت الغرافة نموًا مستدامًا وتنوعًا ملحوظًا، مما يعكس التزامها بتقديم حلول مبتكرة في مجالات التجارة والمقاولات. نحن نؤمن بأن الجودة والمتانة هما أساس كل مشروع، ونسعى دائمًا لبناء مشاريع تدوم طويلاً وتلبي احتياجات عملائنا وتوقعاتهم",
@@ -1530,35 +1548,35 @@
             whyChooseUsHeading: "لماذا نحن خيارك الأفضل",
             whyChooseUsDescription:
               "قمنا بتجميع فريق عمل احترافي في ادارة والانشاءات والتعامل مع المعدات المختلفة ذو رؤية مستقبلية في استغلال الموارد التصنيعية المتنوعة المتاحة في دولة قطر، تتيح شركة الغرافة لعملاءها الكرام تقديم خدماتها الاحترافية باسعار تنافسية بكفاءة وجودة عالية، تشمل خبرتنا مجموعة متنوعة من القطاعات مثل بناء الوحدات السكنية والتجارية والمنشآت الصناعية ومرافق الرياضة وتنسيق الحدائي",
-            whyChooseObjectivesTitle: "اهدافنا",
+            whyChooseObjectivesTitle: "أهدافنا",
             whyChooseObjectivesDescription:
-              "ف شركة الغرافة للتجارة والمقاولات الى تنفيذ جميع جوانب الانشطة الهندسية والانشائية المتعلقة بالهندسة المدنية والميكانيكية والكهربائية والاختيار ومتابعة والاشراف على التشغيل الاولي للمشاريع التي تم انجازها",
+              "تتمثل أهداف شركة الغرافة للتجارة والمقاولات في تنفيذ جميع جوانب الأنشطة الهندسية والإنشائية المتعلقة بالهندسة المدنية والميكانيكية والكهربائية، بالإضافة إلى المشتريات الهندسية واختبارات التشغيل وبدء التشغيل.",
             whyChooseCompletedProjects: "المشاريع المكتملة",
             whyChooseCompletedProjects2: "المشاريع المكتملة",
             whyChooseCompletedProjects3: "المشاريع المكتملة",
 
             whyChooseStrengthsTitle: "مايميزنا",
             whyChooseStrengthsDescription:
-              "لوصول الى الاحتياطيات والموارد الواسعة التي تمتلكها الشركات التي لديها اسطولا كبيرا من معدات البناء ومعدات تحريك التربة في المنطقة واحدة من مميزات شركة الغرافة، من ناحية اخرى تمتلك الغرافة مجموعة كبيرة من العمالة الماهرة وفريقا من المدراء والمهندسين المحترفين وذوي الخبرة في الاشرافة",
+              "الوصول الى الاحتياطيات والموارد الواسعة التي تمتلكها الشركات التي لديها اسطولا كبيرا من معدات البناء ومعدات تحريك التربة في المنطقة واحدة من مميزات شركة الغرافة، من ناحية اخرى تمتلك الغرافة مجموعة كبيرة من العمالة الماهرة وفريقا من المدراء والمهندسين المحترفين وذوي الخبرة في الاشراف",
             whyChoosePhilosophyTitle: "فلسفتنا",
             whyChoosePhilosophyDescription:
-              "تتمثل فلسفة شركة الغرافة للتجارة والمقاولات في الجودة والموثوقية والخبرة في الخدمات. يلتزم فريق الادارة والعمالة بتنفيذ هذه الفلسفة في جميع اعمالهم اليومي",
+              "تتمثل فلسفة شركة الغرافة للتجارة والمقاولات في الجودة والموثوقية والخبرة في الخدمات. يلتزم فريق الادارة والعمالة بتنفيذ هذه الفلسفة في جميع اعمالهم اليومية",
             ourProjectsTitle: "مشاريعنا",
             ourProjectsHeading: "استكشف مجموعة مشاريعنا المتنوعة",
             ourProjectsDescription:
-              "نتخصص في مجموعة واسعة من خدمات البناء، بما في ذلك المشاريع السكنية والتجارية والصناعية.",
+              "نتخصص في مجموعة واسعة من خدمات البناء، بما في ذلك المشاريع السكنية والتجارية والصناعية",
             project1Title: "مجمع سكني B+G+7",
             project1Description:
-              "مجمع سكني يتكون من 35 شقة، بمساحة مبنية قدرها 4,531.10 متر مربع سيلبي الحاجة المتزايدة لخدمات الإسكان في أم غويلينة.",
+              "مجمع سكني يتكون من 35 شقة، بمساحة مبنية قدرها 4,531.10 متر مربع سيلبي الحاجة المتزايدة لخدمات الإسكان في أم غويلينة",
             project2Title: "4 فيلات (G+F+PH)",
             project2Description:
-              "مجمع فيلات يتكون من 4 فيلات، بمساحة مبنية قدرها 4,720 متر مربع سيلبي الحاجة المتزايدة لخدمات الإسكان في إزغاوة.",
+              "مجمع فيلات يتكون من 4 فيلات، بمساحة مبنية قدرها 4,720 متر مربع سيلبي الحاجة المتزايدة لخدمات الإسكان في ازغوى",
             project3Title: "6 فيلات (G+1+PH) وملحقاتها",
             project3Description:
-              "مجمع فيلات يتكون من 6 فيلات، بمساحة مبنية قدرها 4,780 متر مربع سيلبي الحاجة المتزايدة لخدمات الإسكان في إزغاوة.",
+              "مجمع فيلات يتكون من 6 فيلات، بمساحة مبنية قدرها 4,780 متر مربع سيلبي الحاجة المتزايدة لخدمات الإسكان في ازغوى",
             project4Title: "50 فيلا (G+1+PH)",
             project4Description:
-              'مجمع فيلات يتكون من 50 فيلا، وبيت النادي، وحمام سباحة، ومحطة تحويل، وغرف حارس لعملائنا المميزين "إسكان". بمساحة مبنية قدرها 13,439.90 متر مربع سيلبي الحاجة المتزايدة لخدمات الإسكان لموظفي الحكومة',
+              'مجمع فيلات يتكون من 50 ونادي عائلي النادي، وحمام سباحة، ومحطة تحويل، وغرف حارس لعملائنا المميزين "إسكان". بمساحة مبنية قدرها 13,439.90 متر مربع سيلبي الحاجة المتزايدة لخدمات الإسكان لموظفي الحكومة',
             viewAllProjectsBtn: "عرض جميع المشاريع",
             ctaBoxTitle: "لنقم ببناء شيء رائع معًا!",
             ctaBoxDescription:
