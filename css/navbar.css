@@ -317,9 +317,15 @@ header.main-header .header-sticky.active {
   color: var(--primary-color-nav);
 }
 
+.navbar-end {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 /* Navbar Menu Icon */
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .sidebar,
   .sidebar-toggler {
     display: block;
@@ -447,7 +453,7 @@ select:focus {
   outline: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .language-select-dropdown {
     display: none;
   }

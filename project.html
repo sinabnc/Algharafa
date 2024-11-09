@@ -116,7 +116,6 @@
           <!-- Logo End -->
 
           <!-- Toggle Button for Mobile -->
-          <div class="sidebar-toggler" onclick="toggleSidebar()">☰</div>
 
           <!-- Main Menu Start -->
           <div class="collapse navbar-collapse main-menu" id="navbarMenu">
@@ -224,15 +223,20 @@
 
             <!-- Language Selector (Aligned to the right) -->
           </div>
-          <div class="language-select-dropdown">
-            <select
-              id="languageSelectorDesktop"
-              onchange="changeLanguage('desktop')"
-            >
-              <option value="en">English</option>
-              <option value="ar">Arabic</option>
-            </select>
+          <div class="navbar-end">
+            <div class="language-select-dropdown">
+              <select
+                id="languageSelectorDesktop"
+                onchange="changeLanguage('desktop')"
+              >
+                <option value="en">English</option>
+                <option value="ar">Arabic</option>
+              </select>
+            </div>
+
+            <div class="sidebar-toggler" onclick="toggleSidebar()">☰</div>
           </div>
+
           <div id="mySidebar" class="sidebar">
             <a
               href="javascript:void(0)"
