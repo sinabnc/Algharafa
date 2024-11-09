@@ -4751,7 +4751,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:1200px) {
     .navbar-expand-lg {
         flex-wrap: nowrap;
         justify-content: flex-start
@@ -4777,6 +4777,7 @@ fieldset:disabled .btn {
     .navbar-expand-lg .navbar-collapse {
         display: flex !important;
         flex-basis: auto;
+
         /* padding-top: 50px; */
     }
 

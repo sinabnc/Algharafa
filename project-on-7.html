@@ -26,19 +26,18 @@
       href="favicon/android-chrome-192x192.png"
     />
 
-  
-<!-- Bootstrap Css -->
+    <!-- Bootstrap Css -->
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Manrope:wght@200..800&amp;display=swap"
       rel="stylesheet"
     />
-    
-<!-- Bootstrap Css -->
+
+    <!-- Bootstrap Css -->
 
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
-    <link rel="stylesheet" href="css/language.css">
+    <link rel="stylesheet" href="css/language.css" />
 
     <link href="css/slicknav.min.css" rel="stylesheet" />
     <!-- Swiper Css -->
@@ -53,6 +52,7 @@
     <link rel="stylesheet" href="css/mousecursor.css" />
     <!-- Main Custom Css -->
     <link href="css/custom.css" rel="stylesheet" media="screen" />
+    <link href="css/navbar.css" rel="stylesheet" media="screen" />
   </head>
   <style>
     .service-body-title h3 {
@@ -61,26 +61,6 @@
       display: block; /* Ensure the element is block-level for proper centering */
       font-weight: bold; /* Optional: Make the text bold */
       margin-bottom: 200px;
-    }
-    .navbar {
-      display: flex;
-      justify-content: center; /* Center the brand in the navbar */
-      align-items: center; /* Align items vertically in the center */
-      position: relative; /* Ensure correct positioning */
-    }
-
-    /* Make sure the navbar brand (logo) is centered */
-    .navbar-brand {
-      position: relative;
-      left: 14%;
-      transform: translateX(-50%);
-    }
-
-    /* Center the navigation menu as well */
-    .main-menu {
-      flex-grow: 1;
-      display: flex;
-      justify-content: center; /* Center the menu items */
     }
 
     .goog-te-gadget-simple {
@@ -134,65 +114,187 @@
     <!-- Preloader End -->
 
     <!-- Header Start -->
-     <header class="main-header">
-        <div class="header-sticky">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <!-- Logo Start -->
-                    <a class="navbar-brand" href="index.html" id="navLogo">
-                        <img id="image-logo" src="images/Untitled-1.png" alt="Logo">
-                    </a>
-                    <!-- Logo End -->
-    
-                    <!-- Main Menu Start -->
-                    <div class="collapse navbar-collapse main-menu" id="navbarMenu">
-                        <div class="nav-menu-wrapper">
-                            <ul class="navbar-nav mr-auto" id="menu">
-                                <li class="nav-item"><a class="nav-link" href="index.html" id="navHome">Home</a></li>
-                                <li class="nav-item submenu">
-                                    <a class="nav-link" href="about.html" id="navAbout">About</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" href="about.html" id="navChairmansMessage">CHAIRMAN'S MESSAGE</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="about-hse.html" id="navHsePolicy">HSE & QC POLICY</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="staff.html" id="navManagementStaff">MANAGEMENT & STAFF</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="vahcle.html" id="navVehiclesEquipments">VEHICLES & EQUIPMENTS</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="certificate.html" id="navCertificate">Certificate</a></li>
-                                <li class="nav-item submenu">
-                                    <a class="nav-link" href="mep.html" id="navDivisions">Divisions</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" href="mep.html" id="navMep">MEP</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="carpentry.html" id="navCarpentry">CARPENTRY</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item submenu">
-                                    <a class="nav-link" href="#" id="navProjects">Projects</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" href="project-on.html" id="navOngoingProjects">Ongoing Projects</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="project.html" id="navCompletedProjects">Completed Projects</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="career.html" id="navCareer">Career</a></li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html" id="navContact">Contact</a></li>
-                            </ul>
-                        </div>
-                        <!-- Language Selector -->
-                        <div style="padding: 10px 15px;">
-                            <select class="form-select custom-select" id="languageSelector" onchange="changeLanguage()">
-                                <option value="en" id="navSelect">Select</option>
-                                <option value="en" id="navEnglish">English</option>
-                                <option value="ar" id="navArabic">Arabic</option>
-                            </select>
-                        </div>
-                        <!-- Language Selector End -->
-                    </div>
-                    <!-- Main Menu End -->
-                    <div class="navbar-toggle" id="navbarToggle"></div>
-                </div>
-            </nav>
-            <div class="responsive-menu"></div>
-        </div>
+    <header class="main-header">
+      <div class="header-sticky">
+        <nav class="navbar-container navbar-expand-lg">
+          <!-- Logo Start -->
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <!-- First Logo -->
+            <img id="image-logos" src="images/logo-white.png" alt="Logo" />
+          </a>
+          <!-- Logo End -->
+
+          <!-- Toggle Button for Mobile -->
+          <div class="sidebar-toggler" onclick="toggleSidebar()">☰</div>
+
+          <!-- Main Menu Start -->
+          <div class="collapse navbar-collapse main-menu" id="navbarMenu">
+            <div class="nav-menu-wrapper">
+              <ul class="navbar-nav mr-auto" id="menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html" id="navHome">Home</a>
+                </li>
+                <li class="nav-item submenu">
+                  <a class="nav-link" href="about.html" id="navAbout">About</a>
+                  <ul>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="about.html"
+                        id="navChairmansMessage"
+                        >CHAIRMAN'S MESSAGE</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="about-hse.html"
+                        id="navHsePolicy"
+                        >HSE & QC POLICY</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="staff.html"
+                        id="navManagementStaff"
+                        >MANAGEMENT & STAFF</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="vahcle.html"
+                        id="navVehiclesEquipments"
+                        >VEHICLES & EQUIPMENTS</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="certificate.html"
+                    id="navCertificate"
+                    >certificate</a
+                  >
+                </li>
+                <li class="nav-item submenu">
+                  <a class="nav-link" href="mep.html" id="navDivisions"
+                    >Divisions</a
+                  >
+                  <ul>
+                    <li class="nav-item">
+                      <a class="nav-link" href="mep.html" id="navMep">MEP</a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="carpentry.html"
+                        id="navCarpentry"
+                        >CARPENTRY
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item submenu">
+                  <a class="nav-link" href="#" id="navProjects">Projects</a>
+                  <ul>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="project-on.html"
+                        id="navOngoingProjects"
+                        >ongoing projects</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="project.html"
+                        id="navCompletedProjects"
+                        >completed projects</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="career.html" id="navCareer"
+                    >career</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html" id="navContact"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Language Selector (Aligned to the right) -->
+          </div>
+          <div class="language-select-dropdown">
+            <select
+              id="languageSelectorDesktop"
+              onchange="changeLanguage('desktop')"
+            >
+              <option value="en">English</option>
+              <option value="ar">Arabic</option>
+            </select>
+          </div>
+          <div id="mySidebar" class="sidebar">
+            <a
+              href="javascript:void(0)"
+              class="closebtn"
+              onclick="closeSidebar()"
+              >×</a
+            >
+            <a href="index.html" id="navHome">Home</a>
+            <a class="dropdown-btn">About</a>
+            <div class="dropdown-container">
+              <a href="about.html" id="navChairmansMessage"
+                >CHAIRMAN'S MESSAGE</a
+              >
+              <a href="about-hse.html" id="navHsePolicy">HSE & QC POLICY</a>
+              <a href="staff.html" id="navManagementStaff"
+                >MANAGEMENT & STAFF</a
+              >
+              <a href="vahcle.html" id="navVehiclesEquipments"
+                >VEHICLES & EQUIPMENTS</a
+              >
+            </div>
+            <a class="dropdown-btn">Projects</a>
+            <div class="dropdown-container">
+              <a href="project-on.html" id="navOngoingProjects"
+                >Ongoing Projects</a
+              >
+              <a href="project.html" id="navCompletedProjects"
+                >Completed Projects</a
+              >
+            </div>
+            <a href="certificate.html" id="navCertificate">Certificate</a>
+            <a class="dropdown-btn">Divisions</a>
+            <div class="dropdown-container">
+              <a href="mep.html" id="navMep">MEP</a>
+              <a href="carpentry.html" id="navCarpentry">Carpentry</a>
+            </div>
+            <a href="career.html" id="navCareer">Career</a>
+            <a href="contact.html" id="navContact">Contact</a>
+
+            <!-- Language Selector -->
+            <div class="language-select-dropdown mobile">
+              <select
+                id="languageSelectorMobile"
+                onchange="changeLanguage('mobile')"
+              >
+                <option value="en">English</option>
+                <option value="ar">Arabic</option>
+              </select>
+            </div>
+          </div>
+        </nav>
+        <div class="responsive-menu"></div>
+      </div>
     </header>
     <!-- Header End -->
 
@@ -208,8 +310,7 @@
                 class="text-anime-style-3"
                 data-cursor="-opaque"
               >
-              Villa(G+1+P+H)a majils a kitchen block,and a
-              drivers's block
+                Villa(G+1+P+H)a majils a kitchen block,and a drivers's block
               </h1>
               <nav class="wow fadeInUp"></nav>
             </div>
@@ -230,7 +331,10 @@
               <!-- Project Featured Image Start -->
               <div class="project-featured-image">
                 <figure class="image-anime reveal">
-                  <img src="images/PsVilla (G+1+PH) + Majlis (G) & Kitchen Block (G) + Drivers Block (G)/WhatsApp Image 2024-10-16 at 16.40.50_017ba243_11zon.jpg" alt="" />
+                  <img
+                    src="images/PsVilla (G+1+PH) + Majlis (G) & Kitchen Block (G) + Drivers Block (G)/WhatsApp Image 2024-10-16 at 16.40.50_017ba243_11zon.jpg"
+                    alt=""
+                  />
                 </figure>
               </div>
               <!-- Project Featured Image End -->
@@ -242,7 +346,13 @@
                   class="wow fadeInUp"
                   data-wow-delay="0.25s"
                 >
-                The on-going project at Izghawa consists of a luxurious villa(G+1+P+H)a majils a kitchen block,and a drivers's block all throughtfully designed to provide both functionality and comfort with a total build-up area of 1344m²,this project exemplifies al Gharafa Trading & contractiong co W.L L's commitment to delivering high-quality constraction and attention to details in every aspect of development.
+                  The on-going project at Izghawa consists of a luxurious
+                  villa(G+1+P+H)a majils a kitchen block,and a drivers's block
+                  all throughtfully designed to provide both functionality and
+                  comfort with a total build-up area of 1344m²,this project
+                  exemplifies al Gharafa Trading & contractiong co W.L L's
+                  commitment to delivering high-quality constraction and
+                  attention to details in every aspect of development.
                 </p>
               </div>
               <!-- Project Details Content End -->
@@ -251,7 +361,10 @@
               <div class="project-details-gallery swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <a href="images/PsVilla (G+1+PH) + Majlis (G) & Kitchen Block (G) + Drivers Block (G)/a932cc8d-218b-4329-8df7-2f925e45d917_11zon.jpg" class="open-modal">
+                    <a
+                      href="images/PsVilla (G+1+PH) + Majlis (G) & Kitchen Block (G) + Drivers Block (G)/a932cc8d-218b-4329-8df7-2f925e45d917_11zon.jpg"
+                      class="open-modal"
+                    >
                       <figure class="image-anime">
                         <img
                           src="images/PsVilla (G+1+PH) + Majlis (G) & Kitchen Block (G) + Drivers Block (G)/a932cc8d-218b-4329-8df7-2f925e45d917_11zon.jpg"
@@ -261,14 +374,23 @@
                     </a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="images/PsVilla (G+1+PH) + Majlis (G) & Kitchen Block (G) + Drivers Block (G)/c82cd983-0c39-4707-976a-6313cb21fdc8_11zon.jpg" class="open-modal">
+                    <a
+                      href="images/PsVilla (G+1+PH) + Majlis (G) & Kitchen Block (G) + Drivers Block (G)/c82cd983-0c39-4707-976a-6313cb21fdc8_11zon.jpg"
+                      class="open-modal"
+                    >
                       <figure class="image-anime">
-                        <img src="images/PsVilla (G+1+PH) + Majlis (G) & Kitchen Block (G) + Drivers Block (G)/c82cd983-0c39-4707-976a-6313cb21fdc8_11zon.jpg" alt="" />
+                        <img
+                          src="images/PsVilla (G+1+PH) + Majlis (G) & Kitchen Block (G) + Drivers Block (G)/c82cd983-0c39-4707-976a-6313cb21fdc8_11zon.jpg"
+                          alt=""
+                        />
                       </figure>
                     </a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="images/PsVilla (G+1+PH) + Majlis (G) & Kitchen Block (G) + Drivers Block (G)/a932cc8d-218b-4329-8df7-2f925e45d917_11zon.jpg" class="open-modal">
+                    <a
+                      href="images/PsVilla (G+1+PH) + Majlis (G) & Kitchen Block (G) + Drivers Block (G)/a932cc8d-218b-4329-8df7-2f925e45d917_11zon.jpg"
+                      class="open-modal"
+                    >
                       <figure class="image-anime">
                         <img
                           src="images/PsVilla (G+1+PH) + Majlis (G) & Kitchen Block (G) + Drivers Block (G)/a932cc8d-218b-4329-8df7-2f925e45d917_11zon.jpg"
@@ -278,7 +400,10 @@
                     </a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="images/PsVilla (G+1+PH) + Majlis (G) & Kitchen Block (G) + Drivers Block (G)/a932cc8d-218b-4329-8df7-2f925e45d917_11zon.jpg" class="open-modal">
+                    <a
+                      href="images/PsVilla (G+1+PH) + Majlis (G) & Kitchen Block (G) + Drivers Block (G)/a932cc8d-218b-4329-8df7-2f925e45d917_11zon.jpg"
+                      class="open-modal"
+                    >
                       <figure class="image-anime">
                         <img
                           src="images/PsVilla (G+1+PH) + Majlis (G) & Kitchen Block (G) + Drivers Block (G)/a932cc8d-218b-4329-8df7-2f925e45d917_11zon.jpg"
@@ -287,9 +412,6 @@
                       </figure>
                     </a>
                   </div>
-                  
-                  
-                  
                 </div>
 
                 <!-- Add Pagination -->
@@ -406,233 +528,335 @@
       </div>
     </div>
 
-    <footer class="main-footer" style="padding: 60px 0;">
-        <div class="container">
-            <div class="row justify-content-center">
-                <!-- About Footer Start -->
-                <div class="col-lg-4 col-md-12 mb-4 text-center">
-                    <div class="about-footer">
-                        <div class="footer-logo">
-                            <figure>
-                                <img src="images/AGTC-Logo_Red-White.png" alt="">
-                            </figure>
-                        </div>
-                        <div class="footer-content">
-                            <p>Transforming Visions into Reality: Your Trusted Partner in Construction Excellence.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- About Footer End -->
-    
-                <!-- Footer Links Start -->
-                <div class="col-lg-4 col-md-6 col-12 mb-4 text-center">
-                    <div class="footer-links">
-                        <h3>Company</h3>
-                        <ul style="list-style: none; padding-left:30px;">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="project.html">Projects</a></li>
-                            <li><a href="contact.html">Contact us</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Footer Links End -->
-    
-                <!-- Footer Contact Info Box Start -->
-                <div class="col-lg-4 col-md-6 col-12 mb-4 text-center">
-                    <div class="footer-links footer-contact-box">
-                        <h3 style="padding-left:40px;">Contact Us</h3>
-                        <div class="footer-info-box">
-                            <div class="icon-box">
-                                <img src="images/telephone.png" alt="">
-                            </div>
-                            <p>(+974) 66554433</p>
-                        </div>
-                        <div class="footer-info-box">
-                            <div class="icon-box">
-                                <img src="images/mail.png" alt="">
-                            </div>
-                            <p>info@algharafacontracting.com</p>
-                        </div>
-                        <div class="footer-info-box">
-                            <div class="icon-box">
-                                <img src="images/map.png" alt="">
-                            </div>
-                            <p>1606, Palm Tower B, St. No. 810 Zone No. 60, Doha - Qatar</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Footer Contact Info Box End -->
+    <footer class="main-footer" style="padding: 60px 0">
+      <div class="container">
+        <div class="row justify-content-center">
+          <!-- About Footer Start -->
+          <div class="col-lg-4 col-md-12 mb-4 text-center">
+            <div class="about-footer">
+              <div class="footer-logo">
+                <figure>
+                  <img src="images/AGTC-Logo_Red-White.png" alt="" />
+                </figure>
+              </div>
+              <div class="footer-content">
+                <p>
+                  Transforming Visions into Reality: Your Trusted Partner in
+                  Construction Excellence.
+                </p>
+              </div>
             </div>
-    
-            <!-- ISO Certifications Row Start -->
-            <div class="row justify-content-center align-items-center" style="margin-top: 40px;">
-                <div class="col-lg-4 text-center">
-                    <h6 style="color: #c00;">ISO 14001 CERTIFIED COMPANY</h6>
-                    <img src="images/kvqa.jpg" alt="ISO Certification" style="width: 70px;">
-                    <img src="images/iso-logo-removebg-preview.png" alt="ISO Certification" style="width: 150px;">
-                    <img src="images/IAF-logo.png" alt="ISO Certification" style="width: 90px;">
-                    <p style="color: #000;">Environmental management<br>system</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <h6 style="color: #c00;">ISO 45001 CERTIFIED COMPANY</h6>
-                    <img src="images/kvqa.jpg" alt="ISO Certification" style="width: 70px;">
-                    <img src="images/iso-logo-removebg-preview.png" alt="ISO Certification" style="width: 150px;">
-                    <img src="images/IAF-logo.png" alt="ISO Certification" style="width: 90px;">
-                    <p style="color: #000;">Occupational Health and<br>safety management system</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <h6 style="color: #c00;">ISO 9001 CERTIFIED COMPANY</h6>
-                    <img src="images/kvqa.jpg" alt="ISO Certification" style="width: 70px;">
-                    <img src="images/iso-logo-removebg-preview.png" alt="ISO Certification" style="width: 150px;">
-                    <img src="images/IAF-logo.png" alt="ISO Certification" style="width: 90px;">
-                    <p style="color: #000;">Quality<br>management system</p>
-                </div>
+          </div>
+          <!-- About Footer End -->
+
+          <!-- Footer Links Start -->
+          <div class="col-lg-4 col-md-6 col-12 mb-4 text-center">
+            <div class="footer-links">
+              <h3>Company</h3>
+              <ul style="list-style: none; padding-left: 30px">
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+              </ul>
             </div>
-            <!-- ISO Certifications Row End -->
-    
-            <!-- Footer Copyright Section Start -->
-            <div class="footer-copyright" style="margin-top: 40px;">
-                <div class="row align-items-center text-center">
-                    <div class="col-lg-6 col-md-7 mb-3 mb-md-0">
-                        <p>Copyright © 2024 AGTC. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-lg-6 col-md-5">
-                        <div class="footer-social-links">
-                            <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 15px;">
-                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
+          </div>
+          <!-- Footer Links End -->
+
+          <!-- Footer Contact Info Box Start -->
+          <div class="col-lg-4 col-md-6 col-12 mb-4 text-center">
+            <div class="footer-links footer-contact-box">
+              <h3 style="padding-left: 40px">Contact Us</h3>
+              <div class="footer-info-box">
+                <div class="icon-box">
+                  <img src="images/telephone.png" alt="" />
                 </div>
+                <p>(+974) 66554433</p>
+              </div>
+              <div class="footer-info-box">
+                <div class="icon-box">
+                  <img src="images/mail.png" alt="" />
+                </div>
+                <p>info@algharafacontracting.com</p>
+              </div>
+              <div class="footer-info-box">
+                <div class="icon-box">
+                  <img src="images/map.png" alt="" />
+                </div>
+                <p>1606, Palm Tower B, St. No. 810 Zone No. 60, Doha - Qatar</p>
+              </div>
             </div>
-            <!-- Footer Copyright Section End -->
+          </div>
+          <!-- Footer Contact Info Box End -->
         </div>
+
+        <!-- ISO Certifications Row Start -->
+        <div
+          class="row justify-content-center align-items-center"
+          style="margin-top: 40px"
+        >
+          <div class="col-lg-4 text-center">
+            <h6 style="color: #c00">ISO 14001 CERTIFIED COMPANY</h6>
+            <img
+              src="images/kvqa.jpg"
+              alt="ISO Certification"
+              style="width: 70px"
+            />
+            <img
+              src="images/iso-logo-removebg-preview.png"
+              alt="ISO Certification"
+              style="width: 150px"
+            />
+            <img
+              src="images/IAF-logo.png"
+              alt="ISO Certification"
+              style="width: 90px"
+            />
+            <p style="color: #000">Environmental management<br />system</p>
+          </div>
+          <div class="col-lg-4 text-center">
+            <h6 style="color: #c00">ISO 45001 CERTIFIED COMPANY</h6>
+            <img
+              src="images/kvqa.jpg"
+              alt="ISO Certification"
+              style="width: 70px"
+            />
+            <img
+              src="images/iso-logo-removebg-preview.png"
+              alt="ISO Certification"
+              style="width: 150px"
+            />
+            <img
+              src="images/IAF-logo.png"
+              alt="ISO Certification"
+              style="width: 90px"
+            />
+            <p style="color: #000">
+              Occupational Health and<br />safety management system
+            </p>
+          </div>
+          <div class="col-lg-4 text-center">
+            <h6 style="color: #c00">ISO 9001 CERTIFIED COMPANY</h6>
+            <img
+              src="images/kvqa.jpg"
+              alt="ISO Certification"
+              style="width: 70px"
+            />
+            <img
+              src="images/iso-logo-removebg-preview.png"
+              alt="ISO Certification"
+              style="width: 150px"
+            />
+            <img
+              src="images/IAF-logo.png"
+              alt="ISO Certification"
+              style="width: 90px"
+            />
+            <p style="color: #000">Quality<br />management system</p>
+          </div>
+        </div>
+        <!-- ISO Certifications Row End -->
+
+        <!-- Footer Copyright Section Start -->
+        <div class="footer-copyright" style="margin-top: 40px">
+          <div class="row align-items-center text-center">
+            <div class="col-lg-6 col-md-7 mb-3 mb-md-0">
+              <p>Copyright © 2024 AGTC. All Rights Reserved.</p>
+            </div>
+            <div class="col-lg-6 col-md-5">
+              <div class="footer-social-links">
+                <ul
+                  style="
+                    list-style: none;
+                    padding: 0;
+                    display: flex;
+                    justify-content: center;
+                    gap: 15px;
+                  "
+                >
+                  <li>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Copyright Section End -->
+      </div>
     </footer>
     <!-- Footer End -->
 
     <script>
-        const translations = {
-     en: {
-         logo: "Your Logo",
-         navHome: "Home",
-         navAbout: "About",
-         navChairmansMessage: "CHAIRMAN'S MESSAGE",
-         navHsePolicy: "HSE & QC POLICY",
-         navManagementStaff: "MANAGEMENT & STAFF",
-         navVehiclesEquipments: "VEHICLES & EQUIPMENTS",
-         navCertificate: "Certificate",
-         navDivisions: "Divisions",
-         navMep: "MEP",
-         navCarpentry: "CARPENTRY",
-         navProjects: "Projects",
-         navOngoingProjects: "Ongoing Projects",
-         navCompletedProjects: "Completed Projects",
-         navCareer: "Career",
-         navContact: "Contact",
-         navSelect: "Select",
-         navEnglish: "English",
-         navArabic: "Arabic",
-         villa_description: "VILLA (B+G+1+P), MAJLIS, SWIMMING POOL, DRIVER ROOM AND ANCILLARY BUILDING",
-         project_description: "A Private Villa comprising of Out Majlis, Outdoor Swimming Pool, Driver Room and Ancillary Building for our prestigious client, with a built-up area of 2,822.26 m².",
-         location_label: "Location",
-         location: "Bani Hajer, Al-Rayyan",
-         total_area_label: "Total Built-Up Area",
-         total_area: "2822.26㎡",
-         status_label: "Profile Status",
-         status: "Ongoing",
-         previous_button: "Previous",
-         next_button: "Next",
-          villa_description: "Villa(G+1+P+H) a majils, a kitchen block, and a drivers' block",
-         project_description: "The ongoing project at Izghawa consists of a luxurious villa(G+1+P+H) a majils, a kitchen block, and a drivers' block. All thoughtfully designed to provide both functionality and comfort with a total built-up area of 1344m², this project exemplifies Al Gharafa Trading & Contracting Co. W.L.L's commitment to delivering high-quality construction and attention to detail in every aspect of development.",
-         location_label: "Location",
-         location: "Bani Hajer, Al-Rayyan",
-         total_area_label: "Total Built-Up Area",
-         total_area: "2822.26㎡",
-         status_label: "Profile Status",
-    status: "Ongoing",
-     },
-     ar: {
-         logo: "شعارك",
-         navHome: "الرئيسية",
-         navAbout: "من نحن",
-         navChairmansMessage: "رسالة الرئيس",
-         navHsePolicy: "سياسة الصحة والسلامة",
-         navManagementStaff: "الإدارة والموظفين",
-         navVehiclesEquipments: "المركبات والمعدات",
-         navCertificate: "الشهادات",
-         navDivisions: "الأقسام",
-         navMep: "MEP",
-         navCarpentry: "النجارة",
-         navProjects: "المشاريع",
-         navOngoingProjects: "المشاريع الجارية",
-         navCompletedProjects: "المشاريع المنتهية",
-         navCareer: "وظائف",
-         navContact: "تواصل",
-         navSelect: "اختر",
-         navEnglish: "إنجليزي",
-         navArabic: "عربي",
-         villa_description: "فيلا (G+1+P+H) مجلس، كتلة المطبخ، وكتلة السائقين",
-         project_description: "المشروع الجاري في إزغاوة يتكون من فيلا فاخرة (G+1+P+H)، مجلس، كتلة المطبخ، وكتلة السائقين. تم تصميم كل ذلك بعناية لتوفير الوظائف والراحة مع مساحة بناء إجمالية تبلغ 1344 متر مربع، يمثل هذا المشروع التزام شركة الغرافة للتجارة والمقاولات ذات المسؤولية المحدودة بتقديم بناء عالي الجودة والاهتمام بالتفاصيل في كل جانب من جوانب التطوير.",
-         location_label: "الموقع",
-         location: "بني هاجر، الريان",
-         total_area_label: "إجمالي المساحة المبنية",
-         total_area: "2822.26㎡",
-         status_label: "حالة الملف",
-         status: "قيد التنفيذ",
-     }
- };
- 
- function translate(language) {
-     // Update menu items based on the selected language
-     document.getElementById("navHome").innerText = translations[language].navHome;
-     document.getElementById("navAbout").innerText = translations[language].navAbout;
-     document.getElementById("navChairmansMessage").innerText = translations[language].navChairmansMessage;
-     document.getElementById("navHsePolicy").innerText = translations[language].navHsePolicy;
-     document.getElementById("navManagementStaff").innerText = translations[language].navManagementStaff;
-     document.getElementById("navVehiclesEquipments").innerText = translations[language].navVehiclesEquipments;
-     document.getElementById("navCertificate").innerText = translations[language].navCertificate;
-     document.getElementById("navDivisions").innerText = translations[language].navDivisions;
-     document.getElementById("navMep").innerText = translations[language].navMep;
-     document.getElementById("navCarpentry").innerText = translations[language].navCarpentry;
-     document.getElementById("navProjects").innerText = translations[language].navProjects;
-     document.getElementById("navOngoingProjects").innerText = translations[language].navOngoingProjects;
-     document.getElementById("navCompletedProjects").innerText = translations[language].navCompletedProjects;
-     document.getElementById("navCareer").innerText = translations[language].navCareer;
-     document.getElementById("navContact").innerText = translations[language].navContact;
-     document.getElementById("navSelect").innerText = translations[language].navSelect;
-     document.getElementById("navEnglish").innerText = translations[language].navEnglish;
-     document.getElementById("navArabic").innerText = translations[language].navArabic;
-     document.getElementById("villa_description").innerText = translations[language].villa_description;
-     document.getElementById("project_description").innerText = translations[language].project_description;
-     document.getElementById("location_label").innerText = translations[language].location_label;
-     document.getElementById("location").innerText = translations[language].location;
-     document.getElementById("total_area_label").innerText = translations[language].total_area_label;
-     document.getElementById("total_area").innerText = translations[language].total_area;
-     document.getElementById("status_label").innerText = translations[language].status_label;
-     document.getElementById("status").innerText = translations[language].status;
-     document.querySelector('a[href="project-on-4.html"] button').innerText = translations[language].previous_button;
-     document.querySelector('a[href="project-on-3.html"] button').innerText = translations[language].next_button; 
- }
- 
- function changeLanguage() {
-     const selectedLanguage = document.getElementById("languageSelector").value;
-     translate(selectedLanguage);
-     localStorage.setItem("selectedLanguage", selectedLanguage); // Save selected language to local storage
- }
- 
- // Load the selected language from local storage on page load
- window.onload = () => {
-     const savedLanguage = localStorage.getItem("selectedLanguage") || 'en'; // Default to English
-     document.getElementById("languageSelector").value = savedLanguage; // Set dropdown to saved language
-     translate(savedLanguage); // Translate content
- };
- 
-     </script>
+      const translations = {
+        en: {
+          logo: "Your Logo",
+          navHome: "Home",
+          navAbout: "About",
+          navChairmansMessage: "CHAIRMAN'S MESSAGE",
+          navHsePolicy: "HSE & QC POLICY",
+          navManagementStaff: "MANAGEMENT & STAFF",
+          navVehiclesEquipments: "VEHICLES & EQUIPMENTS",
+          navCertificate: "Certificate",
+          navDivisions: "Divisions",
+          navMep: "MEP",
+          navCarpentry: "CARPENTRY",
+          navProjects: "Projects",
+          navOngoingProjects: "Ongoing Projects",
+          navCompletedProjects: "Completed Projects",
+          navCareer: "Career",
+          navContact: "Contact",
+          navSelect: "Select",
+          navEnglish: "English",
+          navArabic: "Arabic",
+          villa_description:
+            "VILLA (B+G+1+P), MAJLIS, SWIMMING POOL, DRIVER ROOM AND ANCILLARY BUILDING",
+          project_description:
+            "A Private Villa comprising of Out Majlis, Outdoor Swimming Pool, Driver Room and Ancillary Building for our prestigious client, with a built-up area of 2,822.26 m².",
+          location_label: "Location",
+          location: "Bani Hajer, Al-Rayyan",
+          total_area_label: "Total Built-Up Area",
+          total_area: "2822.26㎡",
+          status_label: "Profile Status",
+          status: "Ongoing",
+          previous_button: "Previous",
+          next_button: "Next",
+          villa_description:
+            "Villa(G+1+P+H) a majils, a kitchen block, and a drivers' block",
+          project_description:
+            "The ongoing project at Izghawa consists of a luxurious villa(G+1+P+H) a majils, a kitchen block, and a drivers' block. All thoughtfully designed to provide both functionality and comfort with a total built-up area of 1344m², this project exemplifies Al Gharafa Trading & Contracting Co. W.L.L's commitment to delivering high-quality construction and attention to detail in every aspect of development.",
+          location_label: "Location",
+          location: "Bani Hajer, Al-Rayyan",
+          total_area_label: "Total Built-Up Area",
+          total_area: "2822.26㎡",
+          status_label: "Profile Status",
+          status: "Ongoing",
+        },
+        ar: {
+          logo: "شعارك",
+          navHome: "الرئيسية",
+          navAbout: "من نحن",
+          navChairmansMessage: "رسالة الرئيس",
+          navHsePolicy: "سياسة الصحة والسلامة",
+          navManagementStaff: "الإدارة والموظفين",
+          navVehiclesEquipments: "المركبات والمعدات",
+          navCertificate: "الشهادات",
+          navDivisions: "الأقسام",
+          navMep: "MEP",
+          navCarpentry: "النجارة",
+          navProjects: "المشاريع",
+          navOngoingProjects: "المشاريع الجارية",
+          navCompletedProjects: "المشاريع المنتهية",
+          navCareer: "وظائف",
+          navContact: "تواصل",
+          navSelect: "اختر",
+          navEnglish: "إنجليزي",
+          navArabic: "عربي",
+          villa_description: "فيلا (G+1+P+H) مجلس، كتلة المطبخ، وكتلة السائقين",
+          project_description:
+            "المشروع الجاري في إزغاوة يتكون من فيلا فاخرة (G+1+P+H)، مجلس، كتلة المطبخ، وكتلة السائقين. تم تصميم كل ذلك بعناية لتوفير الوظائف والراحة مع مساحة بناء إجمالية تبلغ 1344 متر مربع، يمثل هذا المشروع التزام شركة الغرافة للتجارة والمقاولات ذات المسؤولية المحدودة بتقديم بناء عالي الجودة والاهتمام بالتفاصيل في كل جانب من جوانب التطوير.",
+          location_label: "الموقع",
+          location: "بني هاجر، الريان",
+          total_area_label: "إجمالي المساحة المبنية",
+          total_area: "2822.26㎡",
+          status_label: "حالة الملف",
+          status: "قيد التنفيذ",
+        },
+      };
+
+      function translate(language) {
+        // Update menu items based on the selected language
+        document.getElementById("navHome").innerText =
+          translations[language].navHome;
+        document.getElementById("navAbout").innerText =
+          translations[language].navAbout;
+        document.getElementById("navChairmansMessage").innerText =
+          translations[language].navChairmansMessage;
+        document.getElementById("navHsePolicy").innerText =
+          translations[language].navHsePolicy;
+        document.getElementById("navManagementStaff").innerText =
+          translations[language].navManagementStaff;
+        document.getElementById("navVehiclesEquipments").innerText =
+          translations[language].navVehiclesEquipments;
+        document.getElementById("navCertificate").innerText =
+          translations[language].navCertificate;
+        document.getElementById("navDivisions").innerText =
+          translations[language].navDivisions;
+        document.getElementById("navMep").innerText =
+          translations[language].navMep;
+        document.getElementById("navCarpentry").innerText =
+          translations[language].navCarpentry;
+        document.getElementById("navProjects").innerText =
+          translations[language].navProjects;
+        document.getElementById("navOngoingProjects").innerText =
+          translations[language].navOngoingProjects;
+        document.getElementById("navCompletedProjects").innerText =
+          translations[language].navCompletedProjects;
+        document.getElementById("navCareer").innerText =
+          translations[language].navCareer;
+        document.getElementById("navContact").innerText =
+          translations[language].navContact;
+
+        document.getElementById("villa_description").innerText =
+          translations[language].villa_description;
+        document.getElementById("project_description").innerText =
+          translations[language].project_description;
+        document.getElementById("location_label").innerText =
+          translations[language].location_label;
+        document.getElementById("location").innerText =
+          translations[language].location;
+        document.getElementById("total_area_label").innerText =
+          translations[language].total_area_label;
+        document.getElementById("total_area").innerText =
+          translations[language].total_area;
+        document.getElementById("status_label").innerText =
+          translations[language].status_label;
+        document.getElementById("status").innerText =
+          translations[language].status;
+        document.querySelector('a[href="project-on-4.html"] button').innerText =
+          translations[language].previous_button;
+        document.querySelector('a[href="project-on-3.html"] button').innerText =
+          translations[language].next_button;
+      }
+
+      function changeLanguage(source) {
+        // Determine the selected language based on the source (desktop or mobile)
+        const language =
+          source === "desktop"
+            ? document.getElementById("languageSelectorDesktop").value
+            : document.getElementById("languageSelectorMobile").value;
+
+        // Save the selected language to localStorage
+        localStorage.setItem("selectedLanguage", language);
+
+        // Update the text content based on the selected language
+        translate(language);
+
+        // Synchronize the other selector with the chosen language
+        if (source === "desktop") {
+          document.getElementById("languageSelectorMobile").value = language;
+        } else {
+          document.getElementById("languageSelectorDesktop").value = language;
+        }
+      }
+
+      // Load the selected language from local storage on page load
+      window.onload = () => {
+        const savedLanguage = localStorage.getItem("selectedLanguage") || "en"; // Default to English
+        document.getElementById("languageSelectorMobile").value = savedLanguage; // Set dropdown to saved language
+        document.getElementById("languageSelectorDesktop").value =
+          savedLanguage; // Set dropdown to saved language
+
+        translate(savedLanguage); // Translate content
+      };
+    </script>
     <script src="js/jquery-3.7.1.min.js"></script>
-    
 
     <!-- Google Translate API -->
     <script
@@ -676,6 +900,7 @@
       });
     </script>
     <script src="js/app.js"></script>
+    <script src="js/navbar.js"></script>
 
     <script src="js/validator.min.js"></script>
     <!-- SlickNav js file -->

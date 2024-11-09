@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="css/mousecursor.css" />
     <!-- Main Custom Css -->
     <link href="css/custom.css" rel="stylesheet" media="screen" />
+    <link href="css/navbar.css" rel="stylesheet" media="screen" />
   </head>
   <style>
     .service-body-title h3 {
@@ -50,26 +51,6 @@
       display: block; /* Ensure the element is block-level for proper centering */
       font-weight: bold; /* Optional: Make the text bold */
       margin-bottom: 200px;
-    }
-    .navbar {
-      display: flex;
-      justify-content: center; /* Center the brand in the navbar */
-      align-items: center; /* Align items vertically in the center */
-      position: relative; /* Ensure correct positioning */
-    }
-
-    /* Make sure the navbar brand (logo) is centered */
-    .navbar-brand {
-      position: relative;
-      left: 14%;
-      transform: translateX(-50%);
-    }
-
-    /* Center the navigation menu as well */
-    .main-menu {
-      flex-grow: 1;
-      display: flex;
-      justify-content: center; /* Center the menu items */
     }
 
     /* .landscape-image {
@@ -149,135 +130,181 @@
     <!-- Header Start -->
     <header class="main-header">
       <div class="header-sticky">
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-            <!-- Logo Start -->
-            <a class="navbar-brand" href="index.html" id="navLogo">
-              <img id="image-logo" src="images/Untitled-1.png" alt="Logo" />
-            </a>
-            <!-- Logo End -->
+        <nav class="navbar-container navbar-expand-lg">
+          <!-- Logo Start -->
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <!-- First Logo -->
+            <img id="image-logos" src="images/logo-white.png" alt="Logo" />
+          </a>
+          <!-- Logo End -->
 
-            <!-- Main Menu Start -->
-            <div class="collapse navbar-collapse main-menu" id="navbarMenu">
-              <div class="nav-menu-wrapper">
-                <ul class="navbar-nav mr-auto" id="menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html" id="navHome">Home</a>
-                  </li>
-                  <li class="nav-item submenu">
-                    <a class="nav-link" href="about.html" id="navAbout"
-                      >About</a
-                    >
-                    <ul>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="about.html"
-                          id="navChairmansMessage"
-                          >CHAIRMAN'S MESSAGE</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="about-hse.html"
-                          id="navHsePolicy"
-                          >HSE & QC POLICY</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="staff.html"
-                          id="navManagementStaff"
-                          >MANAGEMENT & STAFF</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="vahcle.html"
-                          id="navVehiclesEquipments"
-                          >VEHICLES & EQUIPMENTS</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="certificate.html"
-                      id="navCertificate"
-                      >Certificate</a
-                    >
-                  </li>
-                  <li class="nav-item submenu">
-                    <a class="nav-link" href="mep.html" id="navDivisions"
-                      >Divisions</a
-                    >
-                    <ul>
-                      <li class="nav-item">
-                        <a class="nav-link" href="mep.html" id="navMep">MEP</a>
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="carpentry.html"
-                          id="navCarpentry"
-                          >CARPENTRY</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item submenu">
-                    <a class="nav-link" href="#" id="navProjects">Projects</a>
-                    <ul>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="project-on.html"
-                          id="navOngoingProjects"
-                          >Ongoing Projects</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href="project.html"
-                          id="navCompletedProjects"
-                          >Completed Projects</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="career.html" id="navCareer"
-                      >Career</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact.html" id="navContact"
-                      >Contact</a
-                    >
-                  </li>
-                </ul>
-              </div>
-              <!-- Language Selector -->
-              <div style="padding: 10px 15px">
-                <select
-                  class="form-select custom-select"
-                  id="languageSelector"
-                  onchange="changeLanguage()"
-                >
-                  <option value="en" id="navSelect">Select</option>
-                  <option value="en" id="navEnglish">English</option>
-                  <option value="ar" id="navArabic">Arabic</option>
-                </select>
-              </div>
-              <!-- Language Selector End -->
+          <!-- Toggle Button for Mobile -->
+          <div class="sidebar-toggler" onclick="toggleSidebar()">☰</div>
+
+          <!-- Main Menu Start -->
+          <div class="collapse navbar-collapse main-menu" id="navbarMenu">
+            <div class="nav-menu-wrapper">
+              <ul class="navbar-nav mr-auto" id="menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html" id="navHome">Home</a>
+                </li>
+                <li class="nav-item submenu">
+                  <a class="nav-link" href="about.html" id="navAbout">About</a>
+                  <ul>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="about.html"
+                        id="navChairmansMessage"
+                        >CHAIRMAN'S MESSAGE</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="about-hse.html"
+                        id="navHsePolicy"
+                        >HSE & QC POLICY</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="staff.html"
+                        id="navManagementStaff"
+                        >MANAGEMENT & STAFF</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="vahcle.html"
+                        id="navVehiclesEquipments"
+                        >VEHICLES & EQUIPMENTS</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="certificate.html"
+                    id="navCertificate"
+                    >certificate</a
+                  >
+                </li>
+                <li class="nav-item submenu">
+                  <a class="nav-link" href="mep.html" id="navDivisions"
+                    >Divisions</a
+                  >
+                  <ul>
+                    <li class="nav-item">
+                      <a class="nav-link" href="mep.html" id="navMep">MEP</a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="carpentry.html"
+                        id="navCarpentry"
+                        >CARPENTRY
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item submenu">
+                  <a class="nav-link" href="#" id="navProjects">Projects</a>
+                  <ul>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="project-on.html"
+                        id="navOngoingProjects"
+                        >ongoing projects</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="project.html"
+                        id="navCompletedProjects"
+                        >completed projects</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="career.html" id="navCareer"
+                    >career</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html" id="navContact"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
             </div>
-            <!-- Main Menu End -->
-            <div class="navbar-toggle" id="navbarToggle"></div>
+
+            <!-- Language Selector (Aligned to the right) -->
+          </div>
+          <div class="language-select-dropdown">
+            <select
+              id="languageSelectorDesktop"
+              onchange="changeLanguage('desktop')"
+            >
+              <option value="en">English</option>
+              <option value="ar">Arabic</option>
+            </select>
+          </div>
+          <div id="mySidebar" class="sidebar">
+            <a
+              href="javascript:void(0)"
+              class="closebtn"
+              onclick="closeSidebar()"
+              >×</a
+            >
+            <a href="index.html" id="navHome">Home</a>
+            <a class="dropdown-btn">About</a>
+            <div class="dropdown-container">
+              <a href="about.html" id="navChairmansMessage"
+                >CHAIRMAN'S MESSAGE</a
+              >
+              <a href="about-hse.html" id="navHsePolicy">HSE & QC POLICY</a>
+              <a href="staff.html" id="navManagementStaff"
+                >MANAGEMENT & STAFF</a
+              >
+              <a href="vahcle.html" id="navVehiclesEquipments"
+                >VEHICLES & EQUIPMENTS</a
+              >
+            </div>
+            <a class="dropdown-btn">Projects</a>
+            <div class="dropdown-container">
+              <a href="project-on.html" id="navOngoingProjects"
+                >Ongoing Projects</a
+              >
+              <a href="project.html" id="navCompletedProjects"
+                >Completed Projects</a
+              >
+            </div>
+            <a href="certificate.html" id="navCertificate">Certificate</a>
+            <a class="dropdown-btn">Divisions</a>
+            <div class="dropdown-container">
+              <a href="mep.html" id="navMep">MEP</a>
+              <a href="carpentry.html" id="navCarpentry">Carpentry</a>
+            </div>
+            <a href="career.html" id="navCareer">Career</a>
+            <a href="contact.html" id="navContact">Contact</a>
+
+            <!-- Language Selector -->
+            <div class="language-select-dropdown mobile">
+              <select
+                id="languageSelectorMobile"
+                onchange="changeLanguage('mobile')"
+              >
+                <option value="en">English</option>
+                <option value="ar">Arabic</option>
+              </select>
+            </div>
           </div>
         </nav>
         <div class="responsive-menu"></div>
@@ -458,17 +485,19 @@
                   data-wow-delay="0.25s"
                   id="historyContent1"
                 >
-                Al Gharafa Trading and Contracting Co. W.L.L (AGTC) is 100% Qatari national company owned by Mr. Sheikh Essa Bin Hamad Bin Jassim Bin Thani Al Thani and registered in Doha, The establishment of AGTC since 2007 is a natural progression of the Essa Bin Hamad Company (EBH Co.) policy of controlled growth and diversification.
-
+                  Al Gharafa Trading and Contracting Co. W.L.L (AGTC) is 100%
+                  Qatari national company owned by Mr. Sheikh Essa Bin Hamad Bin
+                  Jassim Bin Thani Al Thani and registered in Doha, The
+                  establishment of AGTC since 2007 is a natural progression of
+                  the Essa Bin Hamad Company (EBH Co.) policy of controlled
+                  growth and diversification.
                 </p>
 
                 <p
                   class="wow fadeInUp"
                   data-wow-delay="0.5s"
                   id="historyContent2"
-                >
-                 
-                </p>
+                ></p>
               </div>
               <!-- Company History Body End -->
             </div>
@@ -495,8 +524,11 @@
               <div class="mission-vision-content">
                 <h3 id="ourMission">Our Mission</h3>
                 <p id="missionContent">
-                    Al Gharafa Trading and Contracting Co. W.L.L is dedicated to providing value added general contracting services to its Client via successful partnership with them throughout the whole construction process, and consult technological and professional improvement of its team.
-                    .
+                  Al Gharafa Trading and Contracting Co. W.L.L is dedicated to
+                  providing value added general contracting services to its
+                  Client via successful partnership with them throughout the
+                  whole construction process, and consult technological and
+                  professional improvement of its team. .
                 </p>
               </div>
               <!-- Mission Vision Content End -->
@@ -952,8 +984,8 @@
           companyHistorySubtitle: "Crafting structures that last a lifetime",
           historyContent1:
             "Al Gharafa Trading and Contracting Co. W.L.L (AGTC) is 100% Qatari national company owned by Mr. Sheikh Essa Bin Hamad Bin Jassim Bin Thani Al Thani and registered in Doha, The establishment of AGTC since 2007 is a natural progression of the Essa Bin Hamad Company (EBH Co.) policy of controlled growth and diversification.",
-        //   historyContent2:
-        //     "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+          //   historyContent2:
+          //     "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
           chairmansMessageContent:
             " As we anticipate the future and draw inspiration from our ancestors’ vision for beloved Qatar, Al-Gharafa Trading and Contracting is dedicated to an exceptional plan that defines the Qatari identity. Our commitment reflects a passion for delivering superior services and solutions in contracting and construction. While client satisfaction is a common goal, we aim higher by positioning ourselves as partners striving for excellence and leadership. To achieve this, we have established quality, occupational safety, and speed of accomplishment as standards. These are realized through expert teams and meticulous plans, executed with full awareness and unwavering commitment at every stage. We eagerly anticipate strengthening relationships and forging partnerships with our clients to fulfill our vision and strategic objectives. Thank you for your trust. We are confident that your experience with us will be exceptional and unique.I would like to seize this opportunity to guarantee that our team will spare no efforts to contribute to the growth and development of Qatar.",
           chairmansMessageQuote:
@@ -962,16 +994,21 @@
           chairmansMessageTitle: "CHAIRMAN'S MESSAGE",
           chairmanName: "Sheikh Essa Bin Hamad Bin Jassim Bin Thani Al Thani",
           ourMission: "Our Mission",
-          ourVision:"Our Vision",
-          ourValues:"Our values",
-          missionContent:"Al Gharafa Trading and Contracting Co. W.L.L is dedicated to providing value added general contracting services to its Client via successful partnership with them throughout the whole construction process, and consult technological and professional improvement of its team.",
-          visionContent:"Our vision is to maintain our growth as one of the leading contracting companies in the State of Qatar by delivering unique projects for exceptional clients and this in line with Qatar 2030 vision. In that regard, AGTC is committed to delivering high quality.",
-          valuesContent:"Integrity – Quality – Customer Satisfaction – Health & Safety – Reliability – Teamwork – Innovation – Environmental Responsibility – Community Involvement – Financial Responsibility.",
-          ourTeamSubtitle:"Our Team",
-          ourTeamDescription:"We specialize in a wide range of construction services, including residential, commercial, and industrial projects.",
+          ourVision: "Our Vision",
+          ourValues: "Our values",
+          missionContent:
+            "Al Gharafa Trading and Contracting Co. W.L.L is dedicated to providing value added general contracting services to its Client via successful partnership with them throughout the whole construction process, and consult technological and professional improvement of its team.",
+          visionContent:
+            "Our vision is to maintain our growth as one of the leading contracting companies in the State of Qatar by delivering unique projects for exceptional clients and this in line with Qatar 2030 vision. In that regard, AGTC is committed to delivering high quality.",
+          valuesContent:
+            "Integrity – Quality – Customer Satisfaction – Health & Safety – Reliability – Teamwork – Innovation – Environmental Responsibility – Community Involvement – Financial Responsibility.",
+          ourTeamSubtitle: "Our Team",
+          ourTeamDescription:
+            "We specialize in a wide range of construction services, including residential, commercial, and industrial projects.",
           ourTeamTitle: "Team",
           ourTeamSubtitle: "Our Team",
-          ourTeamDescription: "We specialize in a wide range of construction services, including residential, commercial, and industrial projects.",
+          ourTeamDescription:
+            "We specialize in a wide range of construction services, including residential, commercial, and industrial projects.",
           civilDepartment: "CIVIL DEPARTMENT",
           technicalDepartment: "TECHNICAL & COMMERCIAL DEPARTMENT",
           surveyingDepartment: "SURVEYING DEPARTMENT",
@@ -980,7 +1017,7 @@
           hrDepartment: "HR DEPARTMENT",
           safetyDepartment: "SAFETY DEPARTMENT",
           aboutUsTitle: "About Us",
-        ourHistoryTitle: "Our History"
+          ourHistoryTitle: "Our History",
         },
         ar: {
           logo: "شعارك",
@@ -1004,25 +1041,32 @@
           navArabic: "عربي",
           chairmanPosition: "رئيس مجلس الإدارة",
           companyHistorySubtitle: "بني مفهوم الاستدامة ",
-          historyContent1:"شركة الغرافة للتجارة والمقاولات ذ.م.م. واحدة من الشركات القطرية الوطنية الرائدة، مملوكة بالكامل للشيخ عيسى بن حمد بن جاسم بن ثاني آل ثاني، وهي مسجلة في الدوحة. منذ تأسيسها في عام 2007، حققت الغرافة نموًا مستدامًا وتنوعًا ملحوظًا، مما يعكس التزامها بتقديم حلول مبتكرة في مجالات التجارة والمقاولات. نحن نؤمن بأن الجودة والمتانة هما أساس كل مشروع، ونسعى دائمًا لبناء مشاريع تدوم طويلاً وتلبي احتياجات عملائنا وتوقعاتهم.",
-        //   historyContent2: "هما أساس كل مشروع، ونسعى دائمًا لبناء مشاريع تدوم طويلاً وتلبي احتياجات عملائنا وتوقعاتهم.",
+          historyContent1:
+            "شركة الغرافة للتجارة والمقاولات ذ.م.م. واحدة من الشركات القطرية الوطنية الرائدة، مملوكة بالكامل للشيخ عيسى بن حمد بن جاسم بن ثاني آل ثاني، وهي مسجلة في الدوحة. منذ تأسيسها في عام 2007، حققت الغرافة نموًا مستدامًا وتنوعًا ملحوظًا، مما يعكس التزامها بتقديم حلول مبتكرة في مجالات التجارة والمقاولات. نحن نؤمن بأن الجودة والمتانة هما أساس كل مشروع، ونسعى دائمًا لبناء مشاريع تدوم طويلاً وتلبي احتياجات عملائنا وتوقعاتهم.",
+          //   historyContent2: "هما أساس كل مشروع، ونسعى دائمًا لبناء مشاريع تدوم طويلاً وتلبي احتياجات عملائنا وتوقعاتهم.",
           chairmansMessageContent:
             "بينما نتطلع إلى المستقبل ونستلهم رؤية أجدادنا لقطر الحبيبة، تظل شركة الغرافة للتجارة والمقاولات ملتزمة بمسار يجسد الهوية القطرية. إن التزامنا يتجاوز رضا العملاء؛ فهو يعكس شغفاً عميقاً بتقديم التميز في مجالات المقاولات والبناء. نحن نطمح لأن نكون أكثر من مجرد مزودي خدمات، نسعى لأن نكون شركاء في تحقيق التميز والريادة. لقد وضعنا معايير عالية تركز على الجودة، وسلامة الموظفين، وسرعة إنجاز المشاريع، والتي ننفذها من خلال فرق خبيرة وخطط دقيقة، ملتزمين بالوعي التام والمسؤولية في كل مرحلة. نتطلع بشغف إلى تعزيز العلاقات وتكوين شراكات مع عملائنا لتحقيق رؤيتنا وأهدافنا الاستراتيجية.",
-          chairmansMessageQuote:" شكراً لثقتكم ، نحن واثقون من أن تجربتكم معنا ستكون استثنائية وفريدة. وأغتنم هذه الفرصة لأؤكد أن فريقنا لن يدخر جهداً لتحقيق رؤاكم و المساهمة في نمو وتطور قط",
+          chairmansMessageQuote:
+            " شكراً لثقتكم ، نحن واثقون من أن تجربتكم معنا ستكون استثنائية وفريدة. وأغتنم هذه الفرصة لأؤكد أن فريقنا لن يدخر جهداً لتحقيق رؤاكم و المساهمة في نمو وتطور قط",
           chairmansMessageHeader: "رسالة رئيس مجلس الإدارة",
           chairmansMessageTitle: "رسالة رئيس مجلس الإدارة",
-          ourMission:"مهمتنا",
-          ourVision:"رؤيتنا",
-          ourValues:"قيمتنا",
-          missionContent:"تلتزم شركة الغرافة للتجارة والمقاولات ذ.م.م بتقديم خدمات مقاولات عامة ذات قيمة مضافة لعملائها من خلال شراكة ناجحة معهم طوال عملية البناء. كما تسعى الشركة إلى تطوير التحسينات التكنولوجية والمهنية لفريقها.",
-          visionContent:"تتمثل رؤيتنا في مواصلة نموّنا كواحدة من شركات المقاولات الرائدة في دولة قطر من خلال تنفيذ مشاريع فريدة لعملاء مميزين، وذلك بما يتماشى مع رؤية قطر 2030. وفي هذا الصدد، تلتزم شركة الغرافة للتجارة والمقاولات بتقديم جودة عالية.",
-          valuesContent:"النزاهة – الجودة – رضا العملاء – الصحة والسلامة – الموثوقية – العمل الجماعي – الابتكار – المسؤولية البيئية – مشاركة المجتمع – المسؤولية المالية.",
+          ourMission: "مهمتنا",
+          ourVision: "رؤيتنا",
+          ourValues: "قيمتنا",
+          missionContent:
+            "تلتزم شركة الغرافة للتجارة والمقاولات ذ.م.م بتقديم خدمات مقاولات عامة ذات قيمة مضافة لعملائها من خلال شراكة ناجحة معهم طوال عملية البناء. كما تسعى الشركة إلى تطوير التحسينات التكنولوجية والمهنية لفريقها.",
+          visionContent:
+            "تتمثل رؤيتنا في مواصلة نموّنا كواحدة من شركات المقاولات الرائدة في دولة قطر من خلال تنفيذ مشاريع فريدة لعملاء مميزين، وذلك بما يتماشى مع رؤية قطر 2030. وفي هذا الصدد، تلتزم شركة الغرافة للتجارة والمقاولات بتقديم جودة عالية.",
+          valuesContent:
+            "النزاهة – الجودة – رضا العملاء – الصحة والسلامة – الموثوقية – العمل الجماعي – الابتكار – المسؤولية البيئية – مشاركة المجتمع – المسؤولية المالية.",
           chairmanName: "الشيخ عيسى بن حمد بن جاسم بن ثاني آل ثاني",
-          ourTeamSubtitle:"فريقنا",
-          ourTeamDescription:"نحن متخصصون في مجموعة واسعة من خدمات البناء، بما في ذلك المشاريع السكنية والتجارية والصناعية.",
+          ourTeamSubtitle: "فريقنا",
+          ourTeamDescription:
+            "نحن متخصصون في مجموعة واسعة من خدمات البناء، بما في ذلك المشاريع السكنية والتجارية والصناعية.",
           ourTeamTitle: "فريق العمل",
           ourTeamSubtitle: "فريقنا",
-          ourTeamDescription: "نحن متخصصون في مجموعة واسعة من خدمات البناء، بما في ذلك المشاريع السكنية والتجارية والصناعية.",
+          ourTeamDescription:
+            "نحن متخصصون في مجموعة واسعة من خدمات البناء، بما في ذلك المشاريع السكنية والتجارية والصناعية.",
           civilDepartment: " إدارة   الهندسة المدنية",
           technicalDepartment: "الإدارة الفنية والتجارية ",
           surveyingDepartment: "قسم المساحة",
@@ -1031,7 +1075,7 @@
           hrDepartment: " إدارة الموارد البشرية",
           safetyDepartment: " إدارة السلامة المهنية",
           aboutUsTitle: "من نحن",
-        ourHistoryTitle: "تاريخنا",
+          ourHistoryTitle: "تاريخنا",
         },
       };
 
@@ -1067,12 +1111,7 @@
           translations[language].navCareer;
         document.getElementById("navContact").innerText =
           translations[language].navContact;
-        document.getElementById("navSelect").innerText =
-          translations[language].navSelect;
-        document.getElementById("navEnglish").innerText =
-          translations[language].navEnglish;
-        document.getElementById("navArabic").innerText =
-          translations[language].navArabic;
+
         document.getElementById("companyHistorySubtitle").innerText =
           translations[language].companyHistorySubtitle;
         document.getElementById("historyContent1").innerText =
@@ -1089,41 +1128,72 @@
           translations[language].chairmansMessageTitle;
         document.getElementById("chairmanName").innerText =
           translations[language].chairmanName;
-          document.getElementById("ourMission").innerText =translations[language].ourMission;
-          document.getElementById("ourValues").innerText =translations[language].ourValues;
-          document.getElementById("ourVision").innerText =translations[language].ourVision;
-          document.getElementById("missionContent").innerText =translations[language].missionContent;
-          document.getElementById("visionContent").innerText =translations[language].visionContent;
-          document.getElementById("valuesContent").innerText =translations[language].valuesContent;
-          document.getElementById("ourTeamSubtitle").innerText =translations[language].ourTeamSubtitle;
-          document.getElementById("ourTeamDescription").innerText =translations[language].ourTeamDescription;
-          document.getElementById("chairmanPosition").innerText = translations[language].chairmanPosition;
-          document.querySelectorAll('.team-content h3')[0].innerText = translations[language].civilDepartment;
-          document.querySelectorAll('.team-content h3')[1].innerText = translations[language].technicalDepartment;
-          document.querySelectorAll('.team-content h3')[2].innerText = translations[language].surveyingDepartment;
-          document.querySelectorAll('.team-content h3')[3].innerText = translations[language].mepDepartment;
-          document.querySelectorAll('.team-content h3')[4].innerText = translations[language].accountsDepartment;
-          document.querySelectorAll('.team-content h3')[5].innerText = translations[language].hrDepartment;
-          document.querySelectorAll('.team-content h3')[6].innerText = translations[language].safetyDepartment;
-          document.getElementById("aboutUsTitle").textContent = translations[language].aboutUsTitle;
-    document.getElementById("ourHistoryTitle").textContent = translations[language].ourHistoryTitle;
-
-
-          
-
+        document.getElementById("ourMission").innerText =
+          translations[language].ourMission;
+        document.getElementById("ourValues").innerText =
+          translations[language].ourValues;
+        document.getElementById("ourVision").innerText =
+          translations[language].ourVision;
+        document.getElementById("missionContent").innerText =
+          translations[language].missionContent;
+        document.getElementById("visionContent").innerText =
+          translations[language].visionContent;
+        document.getElementById("valuesContent").innerText =
+          translations[language].valuesContent;
+        document.getElementById("ourTeamSubtitle").innerText =
+          translations[language].ourTeamSubtitle;
+        document.getElementById("ourTeamDescription").innerText =
+          translations[language].ourTeamDescription;
+        document.getElementById("chairmanPosition").innerText =
+          translations[language].chairmanPosition;
+        document.querySelectorAll(".team-content h3")[0].innerText =
+          translations[language].civilDepartment;
+        document.querySelectorAll(".team-content h3")[1].innerText =
+          translations[language].technicalDepartment;
+        document.querySelectorAll(".team-content h3")[2].innerText =
+          translations[language].surveyingDepartment;
+        document.querySelectorAll(".team-content h3")[3].innerText =
+          translations[language].mepDepartment;
+        document.querySelectorAll(".team-content h3")[4].innerText =
+          translations[language].accountsDepartment;
+        document.querySelectorAll(".team-content h3")[5].innerText =
+          translations[language].hrDepartment;
+        document.querySelectorAll(".team-content h3")[6].innerText =
+          translations[language].safetyDepartment;
+        document.getElementById("aboutUsTitle").textContent =
+          translations[language].aboutUsTitle;
+        document.getElementById("ourHistoryTitle").textContent =
+          translations[language].ourHistoryTitle;
       }
 
-      function changeLanguage() {
-        const selectedLanguage =
-          document.getElementById("languageSelector").value;
-        translate(selectedLanguage);
-        localStorage.setItem("selectedLanguage", selectedLanguage); // Save selected language to local storage
+      function changeLanguage(source) {
+        // Determine the selected language based on the source (desktop or mobile)
+        const language =
+          source === "desktop"
+            ? document.getElementById("languageSelectorDesktop").value
+            : document.getElementById("languageSelectorMobile").value;
+
+        // Save the selected language to localStorage
+        localStorage.setItem("selectedLanguage", language);
+
+        // Update the text content based on the selected language
+        translate(language);
+
+        // Synchronize the other selector with the chosen language
+        if (source === "desktop") {
+          document.getElementById("languageSelectorMobile").value = language;
+        } else {
+          document.getElementById("languageSelectorDesktop").value = language;
+        }
       }
 
       // Load the selected language from local storage on page load
       window.onload = () => {
         const savedLanguage = localStorage.getItem("selectedLanguage") || "en"; // Default to English
-        document.getElementById("languageSelector").value = savedLanguage; // Set dropdown to saved language
+        document.getElementById("languageSelectorMobile").value = savedLanguage; // Set dropdown to saved language
+        document.getElementById("languageSelectorDesktop").value =
+          savedLanguage; // Set dropdown to saved language
+
         translate(savedLanguage); // Translate content
       };
     </script>
@@ -1160,6 +1230,7 @@
     <script src="js/ScrollTrigger.min.js"></script>
     <!-- Wow js file -->
     <script src="js/wow.js"></script>
+    <script src="js/navbar.js"></script>
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
     <script src="../../assets/js/theme-panel.js"></script>
