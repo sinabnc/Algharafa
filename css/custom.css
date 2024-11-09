@@ -131,6 +131,14 @@ body {
   height: 100vh;
 }
 
+
+
+@media (max-width: 768px) {
+  .h-100dvh {
+	height: auto;
+  }
+}
+
 .py-10 {
   padding: 40px 0;
 }
