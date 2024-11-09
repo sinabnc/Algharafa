@@ -323,32 +323,37 @@
 
 // Language Change function
 
-function changeLanguage(source) {
-  // Determine the selected language based on the source (desktop or mobile)
-  const language =
-    source === "desktop"
-      ? document.getElementById("languageSelectorDesktop").value
-      : document.getElementById("languageSelectorMobile").value;
+function changeLanguage() {
+  let currentLanguage = localStorage.getItem("currentLanguage");
+  const textSpan = document.getElementById("currentLanguage");
+  const textSpanMobile = document.getElementById("currentLanguage-mobile");
 
-  // Save the selected language to localStorage
-  localStorage.setItem("selectedLanguage", language);
-
-  // Update the text content based on the selected language
-  translate(language);
-
-  // Synchronize the other selector with the chosen language
-  if (source === "desktop") {
-    document.getElementById("languageSelectorMobile").value = language;
-  } else {
-    document.getElementById("languageSelectorDesktop").value = language;
+  if (!currentLanguage) {
+    currentLanguage = "en";
+    localStorage.setItem("currentLanguage", currentLanguage);
   }
+
+  const newLanguage = currentLanguage === "en" ? "ar" : "en";
+  localStorage.setItem("currentLanguage", newLanguage);
+
+  textSpan.innerText = newLanguage === "en" ? "عربي" : "English";
+  textSpanMobile.innerText = newLanguage === "en" ? "عربي" : "English";
+
+  translate(newLanguage);
 }
 
-// Load the selected language from local storage on page load
+// On page load
 window.onload = () => {
-  const savedLanguage = localStorage.getItem("selectedLanguage") || "en"; // Default to English
-  document.getElementById("languageSelectorMobile").value = savedLanguage; // Set dropdown to saved language
-  document.getElementById("languageSelectorDesktop").value = savedLanguage; // Set dropdown to saved language
+  const currentLanguage = localStorage.getItem("currentLanguage") || "en";
+  const textSpan = document.getElementById("currentLanguage");
+  const textSpanMobile = document.getElementById("currentLanguage-mobile");
 
-  translate(savedLanguage); // Translate content
+  if (!localStorage.getItem("currentLanguage")) {
+    localStorage.setItem("currentLanguage", "en");
+  }
+
+  textSpan.innerText = currentLanguage === "en" ? "عربي" : "English";
+  textSpanMobile.innerText = currentLanguage === "en" ? "عربي" : "English";
+
+  translate(currentLanguage);
 };

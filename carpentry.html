@@ -1330,37 +1330,6 @@
         document.getElementById("page-header-title").innerText =
           translations[language].page_header_title;
       }
-
-      function changeLanguage(source) {
-        // Determine the selected language based on the source (desktop or mobile)
-        const language =
-          source === "desktop"
-            ? document.getElementById("languageSelectorDesktop").value
-            : document.getElementById("languageSelectorMobile").value;
-
-        // Save the selected language to localStorage
-        localStorage.setItem("selectedLanguage", language);
-
-        // Update the text content based on the selected language
-        translate(language);
-
-        // Synchronize the other selector with the chosen language
-        if (source === "desktop") {
-          document.getElementById("languageSelectorMobile").value = language;
-        } else {
-          document.getElementById("languageSelectorDesktop").value = language;
-        }
-      }
-
-      // Load the selected language from local storage on page load
-      window.onload = () => {
-        const savedLanguage = localStorage.getItem("selectedLanguage") || "en"; // Default to English
-        document.getElementById("languageSelectorMobile").value = savedLanguage; // Set dropdown to saved language
-        document.getElementById("languageSelectorDesktop").value =
-          savedLanguage; // Set dropdown to saved language
-
-        translate(savedLanguage); // Translate content
-      };
     </script>
 
     <!-- Google Translate API -->
