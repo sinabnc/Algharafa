@@ -131,11 +131,9 @@ body {
   height: 100vh;
 }
 
-
-
 @media (max-width: 768px) {
   .h-100dvh {
-	height: auto;
+    height: auto;
   }
 }
 
@@ -548,6 +546,12 @@ svg #loop-offset {
   background: none;
   height: 100dvh;
   padding: 0;
+}
+
+@media (max-width: 768px) {
+  .hero.bg-section.hero-slider {
+    height: auto;
+  }
 }
 
 .hero-slider-layout .hero-slide {
