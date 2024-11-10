@@ -1,9 +1,3 @@
-/* ----------------------------------------------------------------------------------------
-* Author        : Awaiken
-* Template Name : Builtup - Construction HTML Template
-* File          : CSS File
-* Version       : 1.0
-* ---------------------------------------------------------------------------------------- */
 /* INDEX
 ----------------------------------------------------------------------------------------
 01. Global Variables
@@ -131,7 +125,7 @@ body {
   height: 100vh;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .h-100dvh {
     height: auto;
   }
@@ -538,7 +532,7 @@ svg #loop-offset {
   padding: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .hero.bg-section.hero-slider {
     height: auto;
   }
@@ -3160,6 +3154,12 @@ svg #loop-offset {
 
 .contact-info-body p {
   margin-bottom: 5px;
+}
+
+.contact-info-body p i {
+  margin-right: 8px;
+  color: #bf1e2e;
+  width: 16px;
 }
 
 .contact-info-body p:last-child {

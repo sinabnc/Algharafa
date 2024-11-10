@@ -340,6 +340,7 @@ function changeLanguage() {
   textSpanMobile.innerText = newLanguage === "en" ? "عربي" : "English";
 
   translate(newLanguage);
+  closeSidebar();
 }
 
 // On page load
