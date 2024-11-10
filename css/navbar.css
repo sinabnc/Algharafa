@@ -333,7 +333,7 @@ header.main-header .header-sticky.active {
 
   /* Sidebar styling */
   .sidebar {
-    height: 100vh;
+    height: 100dvh;
     width: 0;
     /* Initially hidden */
     position: fixed;
