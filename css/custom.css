@@ -3152,14 +3152,14 @@ svg #loop-offset {
   margin-bottom: 20px;
 }
 
-.contact-info-body p {
-  margin-bottom: 5px;
+.contact-info-body div span {
+  margin-bottom: 8px;
+  display: flex;
 }
 
-.contact-info-body p i {
+.contact-info-body div svg {
   margin-right: 8px;
-  color: #bf1e2e;
-  width: 16px;
+  width: 20px;
 }
 
 .contact-info-body p:last-child {

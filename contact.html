@@ -25,6 +25,14 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- Bootstrap Css -->
 
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
@@ -337,11 +345,68 @@
               </div>
               <div class="contact-info-body">
                 <h3 id="call-support-title">call support center 24/7</h3>
-                <p id="phone-numbers">
-                  <i class="fas fa-phone"></i> +974 4491 3133<br />
-                  <i class="fas fa-fax"></i> +974 4491 3129<br />
-                  <i class="fas fa-mobile-alt"></i> +974 33529395
-                </p>
+                <div id="phone-numbers">
+                  <span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#bf1e2e"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-headset"
+                    >
+                      <path
+                        d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"
+                      />
+                      <path d="M21 16v2a4 4 0 0 1-4 4h-5" />
+                    </svg>
+                    +974 4491 3133<br
+                  /></span>
+                  <span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#bf1e2e"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-printer"
+                    >
+                      <path
+                        d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"
+                      />
+                      <path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6" />
+                      <rect x="6" y="14" width="12" height="8" rx="1" />
+                    </svg>
+                    +974 4491 3129<br
+                  /></span>
+
+                  <span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#bf1e2e"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-smartphone"
+                    >
+                      <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+                      <path d="M12 18h.01" />
+                    </svg>
+                    +974 33529395</span
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -822,8 +887,7 @@
           translations[language].pageTitle;
         document.getElementById("call-support-title").innerHTML =
           translations[language].callSupportTitle;
-        document.getElementById("phone-numbers").innerHTML =
-          translations[language].phoneNumbers;
+
         document.getElementById("write-to-us-title").innerHTML =
           translations[language].writeToUsTitle;
         document.getElementById("email-address").innerHTML =
