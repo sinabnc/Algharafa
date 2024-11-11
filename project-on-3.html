@@ -775,7 +775,7 @@
         location: "إزغاوة",
         areaTitle: "إجمالي المساحة المبنية",
         area: "13439.90 م²",
-        statusTitle: "حالة الملف",
+        statusTitle: "الملف",
         status: "مكتمل",
          totalBuiltUpArea: "29,363.50 م²",
          profileStatusTitle: "حالة الملف",
@@ -820,18 +820,15 @@
           translations[language].page_header;
         document.getElementById("project_description").innerText =
           translations[language].project_description;
-        document.getElementById("location_label").innerText =
-          translations[language].location_label;
-        document.getElementById("location").innerText =
-          translations[language].location;
-        document.getElementById("total_area_label").innerText =
-          translations[language].total_area_label;
-        document.getElementById("total_area").innerText =
-          translations[language].total_area;
-        document.getElementById("status").innerText =
-          translations[language].status;
-        document.getElementById("status_label").innerText =
-          translations[language].status_label;
+        document.getElementById("location-label").innerText = translations[language].locationLabel;
+    document.getElementById("location").innerText = translations[language].location;
+
+    // Update total built-up area
+    document.getElementById('status-title').innerText = translations[language].statusTitle;
+
+    document.getElementById('area-title').innerText = translations[language].areaTitle;
+    document.getElementById('area').innerText = translations[language].area;
+    document.getElementById('status').innerText = translations[language].status;
 
         // Update navigation buttons
         document.getElementById("previousButton").innerText =
